@@ -112,12 +112,14 @@ test("all fourteen manual curse exceptions surface structured and visible GM gui
   }
 });
 
-test("runtime seed contains all sixteen curses in addition to all fourteen diseases", () => {
+test("runtime seed contains all sixteen curses, fourteen diseases, and nineteen GM poison variants", () => {
   const sources = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
   assert.ok(sources.every((source) => source._key === undefined));
   const curseSources = sources.filter((source) => source.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "curse");
   const diseaseSources = sources.filter((source) => source.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "disease");
+  const poisonSources = sources.filter((source) => source.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "poison");
   assert.equal(curseSources.length, 16);
   assert.equal(diseaseSources.length, 14);
-  assert.equal(sources.length, 30);
+  assert.equal(poisonSources.length, 19);
+  assert.equal(sources.length, 49);
 });

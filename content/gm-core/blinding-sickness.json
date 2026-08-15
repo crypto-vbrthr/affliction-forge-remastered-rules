@@ -344,6 +344,7 @@
     },
     "coverageNotes": [
       "Stage 4 uses Affliction Forge 0.1.51 component-specific persistence so only blindness survives permanently; enfeebled remains stage-bound."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

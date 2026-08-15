@@ -159,6 +159,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Initiative-Trigger, Rettungswurf und Verwirrt werden automatisiert; die PF2e-Kampfunfähigkeitsregel dieses Zusatzwurfs wird derzeit nicht automatisch auf den Erfolgsgrad angewendet."
+    "manualComment": "GM-Hinweis: Initiative-Trigger, Rettungswurf und Verwirrt werden automatisiert; die PF2e-Kampfunfähigkeitsregel dieses Zusatzwurfs wird derzeit nicht automatisch auf den Erfolgsgrad angewendet.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

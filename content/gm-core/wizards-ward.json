@@ -116,6 +116,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt."
+    "manualComment": "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

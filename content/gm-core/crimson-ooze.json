@@ -364,6 +364,7 @@
       "Infected-hand use, persistent bleed from using that hand, hand usability/permanent loss, and the Stage 5 confused-ending exception are intentionally manual.",
       "Amputation before Stage 4 is an explicit manual cure option."
     ],
-    "manualComment": "GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden."
+    "manualComment": "GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

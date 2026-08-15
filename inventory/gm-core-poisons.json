@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "sourceWorkId": "gm-core",
+  "sourceWorkLabel": "Kernregeln: Spielleitung",
+  "section": "Alchemistische Gifte",
+  "reviewPolicy": "Source variants remain separate from same-named Player Core 2 poisons; no silent replacement.",
+  "entries": [
+    {
+      "sourceName": "Arsen",
+      "level": 1,
+      "status": "full",
+      "sourcePage": 248,
+      "variantGroupId": "poison.arsenic",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.arsenic",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Eisenhut",
+      "level": 10,
+      "status": "manual",
+      "sourcePage": 248,
+      "variantGroupId": "poison.wolfsbane",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.wolfsbane",
+      "notes": [
+        "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt."
+      ]
+    },
+    {
+      "sourceName": "Faulbrandharz",
+      "level": 11,
+      "status": "full",
+      "sourcePage": 248,
+      "variantGroupId": "poison.blightburn-resin",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.blightburn-resin",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Furchtblumennektar",
+      "level": 4,
+      "status": "full",
+      "sourcePage": 248,
+      "variantGroupId": "poison.fearflower-nectar",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.fearflower-nectar",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Geistesnebel",
+      "level": 15,
+      "status": "full",
+      "sourcePage": 249,
+      "variantGroupId": "poison.mindmist",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.mindmist",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Grabeswurzel",
+      "level": 3,
+      "status": "full",
+      "sourcePage": 249,
+      "variantGroupId": "poison.grave-root",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.grave-root",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Knollenblätterpilzpulver",
+      "level": 13,
+      "status": "full",
+      "sourcePage": 249,
+      "variantGroupId": "poison.deathcap-powder",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.deathcap-powder",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Lethargiegift",
+      "level": 2,
+      "status": "manual",
+      "sourcePage": 249,
+      "variantGroupId": "poison.lethargy-poison",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.lethargy-poison",
+      "notes": [
+        "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
+      ]
+    },
+    {
+      "sourceName": "Riesenskorpiongift",
+      "level": 6,
+      "status": "full",
+      "sourcePage": 249,
+      "variantGroupId": "poison.giant-scorpion-venom",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.giant-scorpion-venom",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Riesentausendfüßlergift",
+      "level": 1,
+      "status": "full",
+      "sourcePage": 249,
+      "variantGroupId": "poison.giant-centipede-venom",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.giant-centipede-venom",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Schierling",
+      "level": 17,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.hemlock",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.hemlock",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Schlummerwein",
+      "level": 12,
+      "status": "manual",
+      "sourcePage": 250,
+      "variantGroupId": "poison.slumber-wine",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.slumber-wine",
+      "notes": [
+        "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt."
+      ]
+    },
+    {
+      "sourceName": "Schwarzer Lotusextrakt",
+      "level": 19,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.black-lotus-extract",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.black-lotus-extract",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Schwarzviperngift",
+      "level": 2,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.black-viper-venom",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.black-viper-venom",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Schwefelschwaden",
+      "level": 16,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.sulfur-fumes",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.sulfur-fumes",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Spinnengift",
+      "level": 5,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.spider-venom",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.spider-venom",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Spinnenwurz",
+      "level": 9,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.spider-root",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.spider-root",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Todestränen",
+      "level": 20,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.tears-of-death",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.tears-of-death",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    },
+    {
+      "sourceName": "Wyverngift",
+      "level": 8,
+      "status": "full",
+      "sourcePage": 250,
+      "variantGroupId": "poison.wyvern-poison",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.wyvern-poison",
+      "notes": [
+        "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+        "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+      ]
+    }
+  ]
+}

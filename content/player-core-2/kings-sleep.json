@@ -231,6 +231,7 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "manualComment": "GM-Hinweis: Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden."
+    "manualComment": "GM-Hinweis: Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden.",
+    "sourceWorkLabel": "Kernregeln: Spieler 2"
   }
 }

@@ -319,6 +319,7 @@
       "Stage 1 carrier status is represented as descriptive transmission metadata without automatic propagation.",
       "Stage 2 and 3 use Affliction Forge 0.1.55 pre-action flat-check gates for concentrate spell casts and item activations.",
       "Stage 3 locks the fatigued condition while the stage remains active."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

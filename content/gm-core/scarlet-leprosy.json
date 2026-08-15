@@ -247,6 +247,7 @@
       "The reaction uses no auxiliary save and relies on the Affliction Forge reaction-chain guard to prevent recursive self-triggering.",
       "Disease-caused damage is protected from healing for the whole affliction; Stage 3 additionally blocks all Hit Point healing.",
       "Virulent progression uses the native consecutive-success recovery contract."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

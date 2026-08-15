@@ -262,6 +262,7 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "manualComment": "GM-Hinweis: Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden."
+    "manualComment": "GM-Hinweis: Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden.",
+    "sourceWorkLabel": "Kernregeln: Spieler 2"
   }
 }

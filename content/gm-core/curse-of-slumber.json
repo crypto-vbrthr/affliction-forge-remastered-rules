@@ -220,6 +220,7 @@
     "automationNotes": [
       "The Medicine DC 30 observer check is informational and does not change the curse controller.",
       "Noise alone does not wake the sleeper; damage invokes the reactive save."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

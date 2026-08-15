@@ -431,6 +431,7 @@
       "Stage 2 and 3 damage-triggered Will saves and temporary confused conditions use event reactions.",
       "Confusion-driven attack replacement with a bite and the Stage 4 exception that damage does not end confused are intentionally manual."
     ],
-    "manualComment": "GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert."
+    "manualComment": "GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

@@ -118,6 +118,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Affliction Forge erzwingt keine Rettungswürfe oder KI-/Verhaltensänderungen bei beliebigen Dritt-Aktoren."
+    "manualComment": "GM-Hinweis: Affliction Forge erzwingt keine Rettungswürfe oder KI-/Verhaltensänderungen bei beliebigen Dritt-Aktoren.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

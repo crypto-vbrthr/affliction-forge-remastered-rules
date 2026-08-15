@@ -117,6 +117,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Die dynamische Wahl der ersten verwendeten Fertigkeit und eine temporäre Kompetenzgrad-Absenkung werden nicht automatisch verändert."
+    "manualComment": "GM-Hinweis: Die dynamische Wahl der ersten verwendeten Fertigkeit und eine temporäre Kompetenzgrad-Absenkung werden nicht automatisch verändert.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

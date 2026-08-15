@@ -48,14 +48,14 @@ function gmExistingExcluding(excludedIds) {
   return BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].map((entry) => entry._id).filter((id) => !excludedIds.has(id));
 }
 
-test("fresh GM startup seeds thirty GM templates plus twenty-nine Player II poison templates and relocks both packs", async () => {
+test("fresh GM startup seeds forty-nine GM templates plus twenty-nine Player II poison templates and relocks both packs", async () => {
   const mock = installFoundryMock({ existingPc2: false });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 59);
+    assert.equal(result.created, 78);
     assert.equal(mock.createCalls.length, 2);
     const byPack = new Map(mock.createCalls.map((call) => [call.operation.pack, call]));
-    assert.equal(byPack.get("affliction-forge-remastered-rules.gm-core").data.length, 30);
+    assert.equal(byPack.get("affliction-forge-remastered-rules.gm-core").data.length, 49);
     assert.equal(byPack.get("affliction-forge-remastered-rules.player-core-2").data.length, 29);
     assert.equal(byPack.get("affliction-forge-remastered-rules.gm-core").operation.keepId, true);
     assert.equal(byPack.get("affliction-forge-remastered-rules.player-core-2").operation.keepId, true);
@@ -65,14 +65,33 @@ test("fresh GM startup seeds thirty GM templates plus twenty-nine Player II pois
   } finally { mock.restore(); }
 });
 
-test("0.1.10 upgrade preserves all GM content and seeds exactly the twenty-nine new Player II poisons", async () => {
-  const mock = installFoundryMock({ existing: true, existingPc2: false });
+test("0.1.11 upgrade preserves thirty GM disease/curse documents plus Player II content and seeds exactly nineteen GM poison variants", async () => {
+  const gmPoisonIds = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"]
+    .filter((entry) => entry.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "poison")
+    .map((entry) => entry._id);
+  assert.equal(gmPoisonIds.length, 19);
+  const mock = installFoundryMock({ existingIds: gmExistingExcluding(new Set(gmPoisonIds)), existingPc2: true });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 29);
+    assert.equal(result.created, 19);
     assert.equal(mock.createCalls.length, 1);
-    assert.equal(mock.createCalls[0].operation.pack, "affliction-forge-remastered-rules.player-core-2");
-    assert.equal(mock.createCalls[0].data.length, 29);
+    assert.equal(mock.createCalls[0].operation.pack, "affliction-forge-remastered-rules.gm-core");
+    assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(gmPoisonIds));
+  } finally { mock.restore(); }
+});
+
+test("0.1.10 upgrade preserves thirty GM disease/curse documents and seeds Player II poisons plus GM poison variants", async () => {
+  const gmPoisonIds = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"]
+    .filter((entry) => entry.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "poison")
+    .map((entry) => entry._id);
+  const mock = installFoundryMock({ existingIds: gmExistingExcluding(new Set(gmPoisonIds)), existingPc2: false });
+  try {
+    const result = await seedBundledContent();
+    assert.equal(result.created, 48);
+    assert.equal(mock.createCalls.length, 2);
+    const byPack = new Map(mock.createCalls.map((call) => [call.operation.pack, call]));
+    assert.equal(byPack.get("affliction-forge-remastered-rules.gm-core").data.length, 19);
+    assert.equal(byPack.get("affliction-forge-remastered-rules.player-core-2").data.length, 29);
   } finally { mock.restore(); }
 });
 

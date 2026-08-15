@@ -229,6 +229,9 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "manualComment": "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt."
+    "manualComment": "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
+    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "variantGroupId": "poison.wolfsbane",
+    "sourceVariant": true
   }
 }

@@ -179,6 +179,7 @@
     "automationNotes": [
       "The world/location trigger is external context; applying the template represents the curse trigger having occurred.",
       "Failure and critical failure are represented as separate unlimited stages solely to preserve the different doomed values."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

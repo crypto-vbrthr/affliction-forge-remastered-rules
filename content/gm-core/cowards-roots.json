@@ -120,6 +120,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Der generische Zugbeginn-Trigger existiert, aber die zustandsabhängige Spielerwahl ist bewusst kein eigenes Choice-Subsystem."
+    "manualComment": "GM-Hinweis: Der generische Zugbeginn-Trigger existiert, aber die zustandsabhängige Spielerwahl ist bewusst kein eigenes Choice-Subsystem.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

@@ -139,6 +139,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Der wöchentliche Wiederholungswurf ist automatisiert; die Hunger-/Verhungern-Regeln selbst werden nicht von Affliction Forge verwaltet."
+    "manualComment": "GM-Hinweis: Der wöchentliche Wiederholungswurf ist automatisiert; die Hunger-/Verhungern-Regeln selbst werden nicht von Affliction Forge verwaltet.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

@@ -118,6 +118,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen."
+    "manualComment": "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

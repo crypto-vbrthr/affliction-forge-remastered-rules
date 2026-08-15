@@ -75,8 +75,8 @@ test("Lethargy Poison surfaces the variable 1d4-hour Stage 4 limitation without 
   assert.deepEqual(stage(poison, 4).restrictions.conditionLocks, [{ slug: "unconscious", minimum: null }]);
 });
 
-test("runtime seed contains all fifty-nine definitions with twenty-nine Player II poisons", () => {
-  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].length, 30);
+test("runtime seed contains all seventy-eight definitions with twenty-nine Player II poisons and GM variants", () => {
+  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].length, 49);
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["player-core-2"].length, 29);
-  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 59);
+  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 78);
 });

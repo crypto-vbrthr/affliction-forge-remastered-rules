@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.1.12 - 2026-08-15
+
+### Added
+
+- Complete **19/19 GM Core alchemical poison source-variant catalog** for the same-named poisons also present in Player Core 2.
+- Stable GM Core definition identities and shared `variantGroupId` metadata, preserving both official source versions instead of silently overwriting one.
+- Explicit GM Core source-work/page metadata for all 19 variants and source-display metadata across existing reviewed content.
+- Regression coverage for all eight reviewed GM Core / Player Core 2 mechanical divergences.
+
+### Changed
+
+- All reviewed content carries a human-readable `sourceWorkLabel` in addition to the stable source-work id.
+- Minimum Affliction Forge dependency raised to **0.1.58** for source-work/page display in the shared library.
+
+### Coverage
+
+- GM diseases: **14/14 published**.
+- GM curses: **16/16 published**.
+- Player II alchemical poisons: **29/29 published**.
+- GM Core alchemical poison variants: **19/19 published**.
+- Total bundled definitions: **78**.
+
 ## 0.1.11 - 2026-08-15
 
 ### Added

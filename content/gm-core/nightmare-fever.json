@@ -409,6 +409,7 @@
     "automationNotes": [
       "This entry models the published slashing-damage version. Optional bludgeoning or piercing variants can be created as editable copies.",
       "Stage 3 and 4 secondary Will saves use Affliction Forge 0.1.50 damage-taken event reactions."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

@@ -226,6 +226,7 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
       "The user-facing name is deliberately neutralized as a Reserved-Material precaution; mechanics remain unchanged."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spieler 2"
   }
 }

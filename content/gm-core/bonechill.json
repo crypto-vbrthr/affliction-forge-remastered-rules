@@ -282,6 +282,7 @@
       "Environmental cold severity shifting is intentionally manual.",
       "If the disease regresses to Stage 1 after reaching Stage 2+, the GM must continue the already-acquired cold-damage healing restriction until the disease ends."
     ],
-    "manualComment": "GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen."
+    "manualComment": "GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

@@ -117,6 +117,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Inventarwert, narrativer Wert, Diebstahlereignisse und Körperteile sind keine generischen Affliction-Forge-Ressourcen."
+    "manualComment": "GM-Hinweis: Inventarwert, narrativer Wert, Diebstahlereignisse und Körperteile sind keine generischen Affliction-Forge-Ressourcen.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

@@ -1,16 +1,17 @@
 # Affliction Forge: Remastered Rules Library
 
-Version **0.1.11** adds the complete reviewed **29-entry Player II alchemical poison catalog** while retaining the complete GM disease and curse catalogs. It requires **PF2E Affliction Forge 0.1.57+**.
+Version **0.1.12** adds the **19 GM Core alchemical poison source variants** alongside the existing 29-entry Player II poison catalog. It requires **PF2E Affliction Forge 0.1.58+** so same-named source variants can be distinguished by source work and page in the library.
 
 ## Current scope
 
 - one external provider
 - one visible, read-only Affliction Forge library
 - four internal PF2e Item compendium packs
-- required dependency on **PF2E Affliction Forge 0.1.57+**
+- required dependency on **PF2E Affliction Forge 0.1.58+**
 - complete reviewed **14-entry GM disease catalog**
 - complete reviewed **16-entry GM curse catalog**
 - complete reviewed **29-entry Player II alchemical poison catalog**
+- complete reviewed **19-entry GM Core alchemical poison source-variant catalog**
 - ORC notice and upstream attribution
 - mechanics-only content policy
 - per-entry license/review metadata contract
@@ -80,6 +81,14 @@ Most entries are fully automated. One user-facing poison name is deliberately ne
 - **Königsschlaf**: Drained is cumulative on every failed save; removal is locked while the poison persists, but extra cumulative increments remain GM-managed.
 - **Lethargiegift**: repeated exposure is correctly ignored and incapacitation is automatic; Stage 4 lasts 1d4 hours, which remains a manual rolled stage duration.
 - **Schlummerwein**: poison-induced unconsciousness is locked; no-food/no-drink and corpse-like presentation remain narrative/GM rules.
+
+## GM Core alchemical poison variants
+
+All **19/19 GM Core alchemical poisons that share a name with Player Core 2 poisons** are now published as separate source variants. They retain their own stable `gm-core.*` definition IDs and `poison.<slug>` variant-group metadata; no Player Core 2 entry is overwritten.
+
+Eight same-named poisons have source-specific mechanical differences that are preserved explicitly: **Arsen, Faulbrandharz, Knollenblätterpilzpulver, Riesentausendfüßlergift, Schierling, Schwarzer Lotusextrakt, Schwarzviperngift,** and **Schwefelschwaden**. The remaining eleven retain the GM Core source identity even where the reviewed mechanics match the Player Core 2 version.
+
+Every reviewed definition now supplies `metadata.sourceWorkLabel` and `metadata.sourcePage` where available. Affliction Forge 0.1.58 renders this source line separately from the common Remastered library label, so duplicate names remain unambiguous without changing user-facing affliction names.
 
 ## Content workflow
 

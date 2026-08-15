@@ -238,6 +238,9 @@
     },
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "variantGroupId": "poison.giant-centipede-venom",
+    "sourceVariant": true
   }
 }

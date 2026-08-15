@@ -117,6 +117,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Actor-Tod wird nicht in eine automatische Geist-/Untoten-Transformation umgeschrieben."
+    "manualComment": "GM-Hinweis: Actor-Tod wird nicht in eine automatische Geist-/Untoten-Transformation umgeschrieben.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

@@ -240,6 +240,7 @@
       "mechanicsOnly": true,
       "reservedMaterial": "passed",
       "nameReview": "passed"
-    }
+    },
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

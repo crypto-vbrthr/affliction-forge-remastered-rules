@@ -242,6 +242,9 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "manualComment": "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt."
+    "manualComment": "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "variantGroupId": "poison.slumber-wine",
+    "sourceVariant": true
   }
 }

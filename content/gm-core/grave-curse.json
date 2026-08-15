@@ -118,6 +118,7 @@
       "nameReview": "passed"
     },
     "sourceLevel": "varies",
-    "manualComment": "GM-Hinweis: Die Quellenstufe variiert; den zugehörigen hohen Zauber-SG beim Anwenden als externen SG übergeben. Untote werden nicht automatisch erzeugt."
+    "manualComment": "GM-Hinweis: Die Quellenstufe variiert; den zugehörigen hohen Zauber-SG beim Anwenden als externen SG übergeben. Untote werden nicht automatisch erzeugt.",
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }

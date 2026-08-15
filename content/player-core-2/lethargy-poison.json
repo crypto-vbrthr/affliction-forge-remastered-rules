@@ -272,6 +272,9 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
+    "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "variantGroupId": "poison.lethargy-poison",
+    "sourceVariant": true
   }
 }

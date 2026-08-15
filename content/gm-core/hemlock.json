@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.hemlock",
+  "name": "Schierling",
+  "description": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 17,
+  "rarity": "common",
+  "traits": [
+    "poison",
+    "ingested"
+  ],
+  "themes": [
+    "poison",
+    "ingested"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 38,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 30,
+    "unit": "minutes"
+  },
+  "maximumDuration": {
+    "value": 60,
+    "unit": "minutes"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "16W6 Giftschaden und Kraftlos 2.",
+      "duration": {
+        "value": 10,
+        "unit": "minutes"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.hemlock.stage-1",
+        "name": "Schierling · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "16d6",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "17W6 Giftschaden und Kraftlos 3.",
+      "duration": {
+        "value": 10,
+        "unit": "minutes"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.hemlock.stage-2",
+        "name": "Schierling · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "17d6",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 3
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "16W6 Giftschaden und Kraftlos 4.",
+      "duration": {
+        "value": 10,
+        "unit": "minutes"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.hemlock.stage-3",
+        "name": "Schierling · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "16d6",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 4
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 250,
+    "sourceSection": "Alchemistische Gifte",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+      "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung",
+    "variantGroupId": "poison.hemlock",
+    "sourceVariant": true
+  }
+}

@@ -300,6 +300,7 @@
     },
     "automationNotes": [
       "A later recurrence is represented by manually reapplying the same Affliction definition; no dormant controller is retained."
-    ]
+    ],
+    "sourceWorkLabel": "Kernregeln: Spielleitung"
   }
 }
