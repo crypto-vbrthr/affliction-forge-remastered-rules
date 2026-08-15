@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "sourceWorkId": "gm-core",
   "section": "Diseases",
-  "reviewPolicy": "Only entries whose complete runtime-relevant rules are represented by Affliction Forge 0.1.50 are publishable as full. Long-term recurrence may be represented by explicit manual reapplication when no dormant runtime state is required.",
+  "reviewPolicy": "Only entries whose complete runtime-relevant rules are represented by Affliction Forge 0.1.51 are publishable as full. Long-term recurrence may be represented by explicit manual reapplication when no dormant runtime state is required.",
   "entries": [
     {
       "sourceName": "Bog Rot",
@@ -70,8 +70,10 @@
       "level": 5,
       "status": "partial",
       "blockers": [
-        "cold-damage-healing-lock",
         "environment-severity-shift"
+      ],
+      "notes": [
+        "Affliction Forge 0.1.51 now covers the cold-damage healing lock; the increased severity of cold-temperature effects remains unsupported generically."
       ]
     },
     {
@@ -87,13 +89,12 @@
     {
       "sourceName": "Blinding Sickness",
       "level": 7,
-      "status": "partial",
-      "blockers": [
-        "component-specific-permanent-consequence"
-      ],
+      "status": "full",
+      "blockers": [],
       "notes": [
-        "Affliction Forge 0.1.49 can preserve a whole stage effect permanently, but Stage 4 requires only blindness to persist while enfeebled 2 remains stage-bound."
-      ]
+        "Stage 4 uses component-specific persistence so blindness is permanent while enfeebled 2 remains stage-bound."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.blinding-sickness"
     },
     {
       "sourceName": "Sewer Haze",

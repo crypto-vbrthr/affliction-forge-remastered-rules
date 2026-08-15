@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.5 - 2026-08-15
+
+### Added
+
+- **Blindfieber** (`Blinding Sickness` mechanics) as the seventh fully reviewed GM disease.
+- Stage 4 uses Affliction Forge 0.1.51 component-specific persistence: `Kraftlos 2` remains stage-bound while `Blind` is detached as a permanent residual consequence.
+- Content-contract validation for the additive 0.1.51 `effectComponentPersistence` and `unhealableDamageTypes` fields.
+
+### Coverage review
+
+- GM disease coverage rises to **7/14 FULL**.
+- `Bonechill` no longer needs a cold-damage healing-lock feature; 0.1.51 covers that rule. It remains PARTIAL because the increased severity of cold-temperature effects is not yet represented generically.
+- `Scarlet Leprosy`, `Tuberculosis`, `Bubonic Plague`, `Brain Worms`, `Bog Rot`, and `Crimson Ooze` remain outside the compiled pack for their listed unresolved runtime rules.
+- Minimum Affliction Forge dependency raised to **0.1.51**.
+
+### Validation
+
+- Runtime seed and prepared pack sources regenerated for seven GM disease definitions.
+- **40/40 module tests green**; content validation **7/7 green**; all seven definitions also normalize and validate cleanly against Affliction Forge 0.1.51.
+
 ## 0.1.4 - 2026-08-15
 
 ### Changed

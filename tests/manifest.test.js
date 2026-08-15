@@ -9,13 +9,13 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "module.json"), "utf8"));
 
-test("manifest requires Affliction Forge 0.1.50 and PF2e", () => {
+test("manifest requires Affliction Forge 0.1.51 and PF2e", () => {
   assert.equal(manifest.id, MODULE_ID);
   assert.equal(manifest.compatibility.minimum, "14");
   assert.equal(manifest.relationships.systems[0].id, "pf2e");
   const dependency = manifest.relationships.requires.find((entry) => entry.id === "pf2e-affliction-forge");
   assert.ok(dependency);
-  assert.equal(dependency.compatibility.minimum, "0.1.50");
+  assert.equal(dependency.compatibility.minimum, "0.1.51");
 });
 
 test("manifest declares exactly the four planned Item packs", () => {

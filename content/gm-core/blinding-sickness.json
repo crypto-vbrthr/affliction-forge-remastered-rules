@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness",
+  "name": "Blindfieber",
+  "description": "Krankheit mit fortschreitender körperlicher Schwächung; in einer fortgeschrittenen Phase kann dauerhafte Blindheit zurückbleiben.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "disease",
+  "level": 7,
+  "rarity": "common",
+  "traits": [
+    "disease"
+  ],
+  "themes": [
+    "disease",
+    "blindness",
+    "weakness"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "unhealableDamageTypes": [],
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 23,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Erkrankt, aber ohne weitere regeltechnische Auswirkungen.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": null,
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Kraftlos 1.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [
+        null
+      ],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-2",
+        "name": "Blindfieber · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Kraftlos 2.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [
+        null
+      ],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-3",
+        "name": "Blindfieber · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "Phase 4",
+      "description": "Kraftlos 2 und dauerhaft Blind.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [
+        null,
+        "permanent"
+      ],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-4",
+        "name": "Blindfieber · Phase 4",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 2
+          },
+          {
+            "type": "condition",
+            "slug": "blinded"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    },
+    {
+      "id": "stage-5",
+      "number": 5,
+      "name": "Phase 5",
+      "description": "Bewusstlos.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [
+        null
+      ],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-5",
+        "name": "Blindfieber · Phase 5",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "unconscious"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    },
+    {
+      "id": "stage-6",
+      "number": 6,
+      "name": "Phase 6",
+      "description": "Tod.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [
+        null
+      ],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-6",
+        "name": "Blindfieber · Phase 6",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "death",
+            "category": "direct"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 89,
+    "sourceSection": "Diseases",
+    "sourceName": "Blinding Sickness",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "coverageNotes": [
+      "Stage 4 uses Affliction Forge 0.1.51 component-specific persistence so only blindness survives permanently; enfeebled remains stage-bound."
+    ]
+  }
+}

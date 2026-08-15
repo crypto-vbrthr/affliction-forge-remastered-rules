@@ -77,6 +77,12 @@ function validateRestrictions(errors, value, path) {
     }
   }
   if (!HEALING_RESTRICTION_MODES.has(value.healing)) errors.push(`${path}.healing is unsupported: ${value.healing}`);
+  if (value.unhealableDamageTypes != null) {
+    if (!Array.isArray(value.unhealableDamageTypes)) errors.push(`${path}.unhealableDamageTypes must be an array when present.`);
+    else for (const [index, damageType] of value.unhealableDamageTypes.entries()) {
+      if (!nonEmptyString(damageType)) errors.push(`${path}.unhealableDamageTypes[${index}] must be a non-empty damage-type slug.`);
+    }
+  }
   if (!Array.isArray(value.blockedCapabilities)) errors.push(`${path}.blockedCapabilities must be an array.`);
   else for (const capability of value.blockedCapabilities) {
     if (!AFFLICTION_CAPABILITIES.has(capability)) errors.push(`${path}.blockedCapabilities contains unsupported capability: ${capability}`);
@@ -108,7 +114,7 @@ export function deterministicDocumentId(definitionId) {
 export function validateDefinition(definition, { pack }) {
   const errors = [];
   if (!isObject(definition)) return ["Definition must be an object."];
-  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.50.");
+  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.51.");
   if (!nonEmptyString(definition.id)) errors.push("id is required.");
   if (nonEmptyString(definition.id) && !definition.id.startsWith(`${MODULE_ID}.`)) {
     errors.push(`id must use stable ${MODULE_ID}. prefix.`);
@@ -167,6 +173,16 @@ export function validateDefinition(definition, { pack }) {
       validateDuration(errors, stage.duration, `${path}.duration`, { nullable: false });
       validateRestrictions(errors, stage.restrictions, `${path}.restrictions`);
       if (!STAGE_EFFECT_PERSISTENCE_MODES.has(stage.effectPersistence)) errors.push(`${path}.effectPersistence is unsupported: ${stage.effectPersistence}`);
+      if (stage.effectComponentPersistence != null) {
+        if (!Array.isArray(stage.effectComponentPersistence)) errors.push(`${path}.effectComponentPersistence must be an array when present.`);
+        else {
+          const componentCount = Array.isArray(stage.effect?.components) ? stage.effect.components.length : 0;
+          if (stage.effectComponentPersistence.length > componentCount) errors.push(`${path}.effectComponentPersistence has more entries than effect components.`);
+          for (const [componentIndex, mode] of stage.effectComponentPersistence.entries()) {
+            if (mode != null && !STAGE_EFFECT_PERSISTENCE_MODES.has(mode)) errors.push(`${path}.effectComponentPersistence[${componentIndex}] is unsupported: ${mode}`);
+          }
+        }
+      }
       if (stage.reactions != null) {
         if (!Array.isArray(stage.reactions)) errors.push(`${path}.reactions must be an array.`);
         else {

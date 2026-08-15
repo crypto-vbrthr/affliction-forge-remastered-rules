@@ -129,11 +129,22 @@ test("official CLI pack source carries a LevelDB _key while runtime source does 
 });
 
 
-test("0.1.50 restriction and persistence fields are accepted by the content contract", () => {
+test("0.1.51 restriction and persistence fields are accepted by the content contract", () => {
   const definition = validDefinition();
   definition.restrictions.conditionLocks.push({ slug: "sickened", minimum: null });
+  definition.restrictions.unhealableDamageTypes = ["cold"];
   definition.stages[0].restrictions.blockedCapabilities.push("speak");
+  definition.stages[0].effect = {
+    schemaVersion: 2,
+    id: "test.component-persistence.effect",
+    name: "Persistent component",
+    duration: { value: -1, unit: "unlimited", expiry: null },
+    components: [{ type: "condition", slug: "blinded" }],
+    application: {},
+    metadata: {}
+  };
   definition.stages[0].effectPersistence = "permanent";
+  definition.stages[0].effectComponentPersistence = ["permanent"];
   assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
 });
 
@@ -145,6 +156,16 @@ test("unsupported capability restrictions are rejected", () => {
 });
 
 
+
+
+test("invalid 0.1.51 component persistence and typed healing-lock values are rejected", () => {
+  const definition = validDefinition();
+  definition.restrictions.unhealableDamageTypes = [""];
+  definition.stages[0].effectComponentPersistence = ["forever"];
+  const issues = validateDefinition(definition, { pack: "gm-core" });
+  assert.ok(issues.some((issue) => /damage-type slug/i.test(issue)));
+  assert.ok(issues.some((issue) => /effectComponentPersistence/i.test(issue)));
+});
 test("0.1.50 damage-taken event reactions are accepted by the content contract", () => {
   const definition = validDefinition();
   definition.stages[0].reactions = [{
