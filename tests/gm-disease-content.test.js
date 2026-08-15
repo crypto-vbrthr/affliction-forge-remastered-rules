@@ -10,7 +10,8 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const inventory = JSON.parse(fs.readFileSync(path.join(root, "inventory/gm-core-diseases.json"), "utf8"));
 const files = fs.readdirSync(path.join(root, "content/gm-core")).filter((name) => name.endsWith(".json")).sort();
-const diseases = files.map((name) => JSON.parse(fs.readFileSync(path.join(root, "content/gm-core", name), "utf8")));
+const allGmDefinitions = files.map((name) => JSON.parse(fs.readFileSync(path.join(root, "content/gm-core", name), "utf8")));
+const diseases = allGmDefinitions.filter((entry) => entry.afflictionType === "disease");
 const bySource = new Map(diseases.map((entry) => [entry.metadata.sourceName, entry]));
 
 function stage(definition, number) {
@@ -26,8 +27,8 @@ test("GM disease inventory tracks all fourteen reviewed source diseases", () => 
 
 test("GM content filenames match the stable language-neutral definition keys", () => {
   for (const filename of files) {
-    const disease = JSON.parse(fs.readFileSync(path.join(root, "content/gm-core", filename), "utf8"));
-    const key = disease.id.split(".").at(-1);
+    const definition = JSON.parse(fs.readFileSync(path.join(root, "content/gm-core", filename), "utf8"));
+    const key = definition.id.split(".").at(-1);
     assert.equal(filename, `${key}.json`);
   }
 });
@@ -254,8 +255,9 @@ test("no GM disease remains partial after the 0.1.55 concentrate gate", () => {
 
 test("runtime seed contains all fourteen GM diseases and no CLI-only _key", () => {
   const sources = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
-  assert.equal(sources.length, 14);
   assert.ok(sources.every((source) => source._key === undefined));
-  const ids = new Set(sources.map((source) => source.flags["pf2e-affliction-forge"].definitionId));
+  const diseaseSources = sources.filter((source) => source.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "disease");
+  assert.equal(diseaseSources.length, 14);
+  const ids = new Set(diseaseSources.map((source) => source.flags["pf2e-affliction-forge"].definitionId));
   assert.deepEqual(ids, new Set(diseases.map((entry) => entry.id)));
 });

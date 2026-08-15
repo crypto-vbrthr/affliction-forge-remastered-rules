@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.1.9 - 2026-08-15
+
+### Added
+
+- Complete **16-entry GM Core curse coverage inventory** with explicit generic blocker categories.
+- First fully supported GM curse template: **Feindselige Erde** (`Reviling Earth` mechanics), level 12, Fortitude DC 30, applying Doomed 1 on failure and Doomed 2 on critical failure.
+- Curse-specific review policy: external narrative/location triggers are treated as application context rather than engine blockers.
+- Upgrade-seeding coverage proving a 0.1.8 installation receives only the new deterministic curse document.
+
+### Coverage
+
+- GM disease catalog remains **14/14 published**: 11 FULL and 3 intentional manual exceptions.
+- GM curse catalog is **16/16 reviewed**, with **1/16 FULL published** and **15/16 inventory-only** pending reusable runtime contracts or future explicit manual-exception treatment.
+- No bespoke rest, inventory, body-part, third-party AI, proficiency, or source-relative weakness subsystem is introduced solely for one curse.
+
+### Compatibility
+
+- Minimum Affliction Forge dependency remains **0.1.55**.
+
 ## 0.1.8 - 2026-08-15
 
 ### Added

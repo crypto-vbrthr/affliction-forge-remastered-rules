@@ -67,9 +67,9 @@ test("GM startup seeds a missing bundled template into its compendium and relock
   const mock = installFoundryMock();
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 14);
+    assert.equal(result.created, 15);
     assert.equal(mock.createCalls.length, 1);
-    assert.equal(mock.createCalls[0].data.length, 14);
+    assert.equal(mock.createCalls[0].data.length, 15);
     assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(mock.expectedIds));
     assert.equal(mock.createCalls[0].operation.pack, "affliction-forge-remastered-rules.gm-core");
     assert.equal(mock.createCalls[0].operation.keepId, true);
@@ -82,7 +82,7 @@ test("GM startup seeds a missing bundled template into its compendium and relock
 
 
 
-test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the thirteen later GM diseases", async () => {
+test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the fourteen later GM entries", async () => {
   const sewerSource = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].find((entry) =>
     entry.flags?.["pf2e-affliction-forge"]?.definitionId === "affliction-forge-remastered-rules.gm-core.sewer-haze"
   );
@@ -90,9 +90,9 @@ test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the thirtee
   const mock = installFoundryMock({ existingIds: [sewerSource._id] });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 13);
+    assert.equal(result.created, 14);
     assert.equal(mock.createCalls.length, 1);
-    assert.equal(mock.createCalls[0].data.length, 13);
+    assert.equal(mock.createCalls[0].data.length, 14);
     assert.ok(mock.createCalls[0].data.every((entry) => entry._id !== sewerSource._id));
     assert.deepEqual(mock.configureCalls.filter((entry) => entry.name === "gm-core").map((entry) => entry.value.locked), [false, true]);
   } finally {
@@ -100,7 +100,7 @@ test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the thirtee
   }
 });
 
-test("0.1.2 upgrade keeps the five existing GM diseases and seeds the nine later diseases", async () => {
+test("0.1.2 upgrade keeps the five existing GM diseases and seeds the ten later GM entries", async () => {
   const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
   const newDefinitions = new Set([
     "affliction-forge-remastered-rules.gm-core.nightmare-fever",
@@ -111,15 +111,16 @@ test("0.1.2 upgrade keeps the five existing GM diseases and seeds the nine later
     "affliction-forge-remastered-rules.gm-core.tuberculosis",
     "affliction-forge-remastered-rules.gm-core.bonechill",
     "affliction-forge-remastered-rules.gm-core.brain-worms",
-    "affliction-forge-remastered-rules.gm-core.crimson-ooze"
+    "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+    "affliction-forge-remastered-rules.gm-core.reviling-earth"
   ]);
   const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
-  assert.equal(newSources.length, 9);
+  assert.equal(newSources.length, 10);
   const existingIds = current.filter((entry) => !newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId)).map((entry) => entry._id);
   const mock = installFoundryMock({ existingIds });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 9);
+    assert.equal(result.created, 10);
     assert.equal(mock.createCalls.length, 1);
     assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
     assert.deepEqual(mock.configureCalls.filter((entry) => entry.name === "gm-core").map((entry) => entry.value.locked), [false, true]);
@@ -128,7 +129,7 @@ test("0.1.2 upgrade keeps the five existing GM diseases and seeds the nine later
   }
 });
 
-test("0.1.4 upgrade seeds the eight diseases added through 0.1.8", async () => {
+test("0.1.4 upgrade seeds the eight later diseases plus Reviling Earth", async () => {
   const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
   const newDefinitions = new Set([
     "affliction-forge-remastered-rules.gm-core.blinding-sickness",
@@ -138,22 +139,23 @@ test("0.1.4 upgrade seeds the eight diseases added through 0.1.8", async () => {
     "affliction-forge-remastered-rules.gm-core.tuberculosis",
     "affliction-forge-remastered-rules.gm-core.bonechill",
     "affliction-forge-remastered-rules.gm-core.brain-worms",
-    "affliction-forge-remastered-rules.gm-core.crimson-ooze"
+    "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+    "affliction-forge-remastered-rules.gm-core.reviling-earth"
   ]);
   const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
-  assert.equal(newSources.length, 8);
+  assert.equal(newSources.length, 9);
   const existingIds = current.filter((entry) => !newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId)).map((entry) => entry._id);
   const mock = installFoundryMock({ existingIds });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 8);
+    assert.equal(result.created, 9);
     assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
   } finally {
     mock.restore();
   }
 });
 
-test("0.1.5 upgrade seeds the seven diseases added after 0.1.5", async () => {
+test("0.1.5 upgrade seeds the seven later diseases plus Reviling Earth", async () => {
   const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
   const newDefinitions = new Set([
     "affliction-forge-remastered-rules.gm-core.bog-rot",
@@ -162,15 +164,16 @@ test("0.1.5 upgrade seeds the seven diseases added after 0.1.5", async () => {
     "affliction-forge-remastered-rules.gm-core.tuberculosis",
     "affliction-forge-remastered-rules.gm-core.bonechill",
     "affliction-forge-remastered-rules.gm-core.brain-worms",
-    "affliction-forge-remastered-rules.gm-core.crimson-ooze"
+    "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+    "affliction-forge-remastered-rules.gm-core.reviling-earth"
   ]);
   const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
-  assert.equal(newSources.length, 7);
+  assert.equal(newSources.length, 8);
   const existingIds = current.filter((entry) => !newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId)).map((entry) => entry._id);
   const mock = installFoundryMock({ existingIds });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 7);
+    assert.equal(result.created, 8);
     assert.equal(mock.createCalls.length, 1);
     assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
   } finally {
@@ -178,14 +181,38 @@ test("0.1.5 upgrade seeds the seven diseases added after 0.1.5", async () => {
   }
 });
 
-test("0.1.6 upgrade seeds Scarlet Leprosy plus the four 0.1.8 disease entries", async () => {
+test("0.1.6 upgrade seeds Scarlet Leprosy, the four 0.1.8 disease entries, and Reviling Earth", async () => {
   const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
   const newDefinitions = new Set([
     "affliction-forge-remastered-rules.gm-core.scarlet-leprosy",
     "affliction-forge-remastered-rules.gm-core.tuberculosis",
     "affliction-forge-remastered-rules.gm-core.bonechill",
     "affliction-forge-remastered-rules.gm-core.brain-worms",
-    "affliction-forge-remastered-rules.gm-core.crimson-ooze"
+    "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+    "affliction-forge-remastered-rules.gm-core.reviling-earth"
+  ]);
+  const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
+  assert.equal(newSources.length, 6);
+  const existingIds = current.filter((entry) => !newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId)).map((entry) => entry._id);
+  const mock = installFoundryMock({ existingIds });
+  try {
+    const result = await seedBundledContent();
+    assert.equal(result.created, 6);
+    assert.equal(mock.createCalls.length, 1);
+    assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
+  } finally {
+    mock.restore();
+  }
+});
+
+test("0.1.7 upgrade seeds Tuberculosis, the three manual-exception templates, and Reviling Earth", async () => {
+  const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
+  const newDefinitions = new Set([
+    "affliction-forge-remastered-rules.gm-core.tuberculosis",
+    "affliction-forge-remastered-rules.gm-core.bonechill",
+    "affliction-forge-remastered-rules.gm-core.brain-worms",
+    "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+    "affliction-forge-remastered-rules.gm-core.reviling-earth"
   ]);
   const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
   assert.equal(newSources.length, 5);
@@ -194,29 +221,27 @@ test("0.1.6 upgrade seeds Scarlet Leprosy plus the four 0.1.8 disease entries", 
   try {
     const result = await seedBundledContent();
     assert.equal(result.created, 5);
-    assert.equal(mock.createCalls.length, 1);
     assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
   } finally {
     mock.restore();
   }
 });
 
-test("0.1.7 upgrade seeds Tuberculosis plus the three manual-exception templates", async () => {
+test("0.1.8 upgrade seeds only Reviling Earth", async () => {
   const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
-  const newDefinitions = new Set([
-    "affliction-forge-remastered-rules.gm-core.tuberculosis",
-    "affliction-forge-remastered-rules.gm-core.bonechill",
-    "affliction-forge-remastered-rules.gm-core.brain-worms",
-    "affliction-forge-remastered-rules.gm-core.crimson-ooze"
-  ]);
-  const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
-  assert.equal(newSources.length, 4);
-  const existingIds = current.filter((entry) => !newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId)).map((entry) => entry._id);
+  const curse = current.find((entry) =>
+    entry.flags?.["pf2e-affliction-forge"]?.definitionId === "affliction-forge-remastered-rules.gm-core.reviling-earth"
+  );
+  assert.ok(curse);
+  const existingIds = current.filter((entry) => entry._id !== curse._id).map((entry) => entry._id);
   const mock = installFoundryMock({ existingIds });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 4);
-    assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
+    assert.equal(result.created, 1);
+    assert.equal(mock.createCalls.length, 1);
+    assert.equal(mock.createCalls[0].data.length, 1);
+    assert.equal(mock.createCalls[0].data[0]._id, curse._id);
+    assert.deepEqual(mock.configureCalls.filter((entry) => entry.name === "gm-core").map((entry) => entry.value.locked), [false, true]);
   } finally {
     mock.restore();
   }

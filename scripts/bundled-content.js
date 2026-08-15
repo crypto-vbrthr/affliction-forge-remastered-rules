@@ -3466,6 +3466,251 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     },
     {
+      "_id": "vV23VInApJTHziwE",
+      "name": "Feindselige Erde",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Gebietsgebundener Fluch. Wird er beim Betreten des betroffenen Gebietes ausgelöst, verursacht ein misslungener Rettungswurf Todgeweiht 1; bei einem kritischen Fehlschlag Todgeweiht 2.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical",
+            "death"
+          ],
+          "otherTags": [
+            "curse",
+            "region",
+            "doomed"
+          ]
+        },
+        "level": {
+          "value": 12
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.reviling-earth",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.reviling-earth",
+            "name": "Feindselige Erde",
+            "description": "Gebietsgebundener Fluch. Wird er beim Betreten des betroffenen Gebietes ausgelöst, verursacht ein misslungener Rettungswurf Todgeweiht 1; bei einem kritischen Fehlschlag Todgeweiht 2.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 12,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical",
+              "death"
+            ],
+            "themes": [
+              "curse",
+              "region",
+              "doomed"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 30,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "Todgeweiht 1.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.reviling-earth.stage-1",
+                  "name": "Feindselige Erde · Todgeweiht 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "doomed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Kritische Wirkung",
+                "description": "Todgeweiht 2.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.reviling-earth.stage-2",
+                  "name": "Feindselige Erde · Todgeweiht 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "doomed",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Reviling Earth",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The world/location trigger is external context; applying the template represents the curse trigger having occurred.",
+                "Failure and critical failure are represented as separate unlimited stages solely to preserve the different doomed values."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "TXl6oVoip6R0spoS",
       "name": "Scharlachfieber",
       "type": "effect",

@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "sourceWorkId": "gm-core",
+  "section": "Curses",
+  "reviewPolicy": "GM Core curses are reviewed as trigger-driven single-effect afflictions. Only curses whose complete post-trigger mechanics are faithfully represented by Affliction Forge 0.1.55 ship as full. External world triggers are not engine blockers: applying a curse template represents that trigger having occurred. One-off narrative, inventory, body-part, third-party AI, rest-system, proficiency, or source-relative weakness rules do not justify bespoke Affliction Forge subsystems and remain inventory-only until a reusable contract exists or are later published as explicit manual-exception templates.",
+  "entries": [
+    {
+      "sourceName": "Curse of Nightmares",
+      "level": 2,
+      "status": "blocked",
+      "blockers": [
+        "rest-duration-override",
+        "rest-benefit-block"
+      ],
+      "notes": [
+        "Requires changing the rest duration needed to avoid fatigued while also suppressing rest and long-term-rest benefits but allowing daily preparations."
+      ]
+    },
+    {
+      "sourceName": "Theft of Thought",
+      "level": 3,
+      "status": "blocked",
+      "blockers": [
+        "first-skill-use-trigger",
+        "dynamic-skill-proficiency-downgrade"
+      ],
+      "notes": [
+        "The affected skill is selected dynamically by the first trained-or-better skill check made after the curse takes hold."
+      ]
+    },
+    {
+      "sourceName": "Slayer's Haunt",
+      "level": 4,
+      "status": "blocked",
+      "blockers": [
+        "identity-illusion-overlay",
+        "pre-interaction-save"
+      ],
+      "notes": [
+        "Requires a Will save before identification, Recall Knowledge, or other interactions that depend on perceiving a creature's true form."
+      ]
+    },
+    {
+      "sourceName": "Cowards's Roots",
+      "level": 5,
+      "status": "blocked",
+      "blockers": [
+        "turn-start-condition-choice"
+      ],
+      "notes": [
+        "At turn start while frightened, the victim chooses fleeing or immobilized until end of turn."
+      ]
+    },
+    {
+      "sourceName": "Curse of the Ravenous",
+      "level": 5,
+      "status": "blocked",
+      "blockers": [
+        "starvation-rule-integration"
+      ],
+      "notes": [
+        "The weekly repeat save is representable, but the core effect is integration with the starvation rules rather than an Affliction-stage effect."
+      ]
+    },
+    {
+      "sourceName": "Wizard's Ward",
+      "level": 6,
+      "status": "blocked",
+      "blockers": [
+        "source-damage-type-copy"
+      ],
+      "notes": [
+        "The curse deals 5d6 damage matching the damage type used against the protected book. Repairing the book is a manual cure condition and is not itself an engine blocker."
+      ]
+    },
+    {
+      "sourceName": "Oath of the Flesh",
+      "level": 7,
+      "status": "blocked",
+      "blockers": [
+        "promise-created-trigger",
+        "promise-broken-trigger"
+      ],
+      "notes": [
+        "Breaking any tracked promise deals 3d6 slashing damage that cannot be healed while the curse remains."
+      ]
+    },
+    {
+      "sourceName": "Sellsword's Folly",
+      "level": 9,
+      "status": "blocked",
+      "blockers": [
+        "combat-initiative-trigger"
+      ],
+      "notes": [
+        "Each combat initiative roll triggers a new save; failure causes confused for 1 round as an incapacitation effect."
+      ]
+    },
+    {
+      "sourceName": "Curse of Slumber",
+      "level": 11,
+      "status": "blocked",
+      "blockers": [
+        "outcome-specific-duration",
+        "damage-triggered-curse-resave",
+        "appears-dead-medicine-check"
+      ],
+      "notes": [
+        "Failure sleeps for 1 round, critical failure sleeps indefinitely, and damage grants a new save against the curse."
+      ]
+    },
+    {
+      "sourceName": "Reviling Earth",
+      "level": 12,
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.reviling-earth",
+      "notes": [
+        "The geographical trigger remains world/GM context. Applying the template represents entering the cursed area after the trigger occurs. Failure applies doomed 1; critical failure applies doomed 2 until the curse is removed."
+      ]
+    },
+    {
+      "sourceName": "Spirit Anchor",
+      "level": 13,
+      "status": "blocked",
+      "blockers": [
+        "death-transformation"
+      ],
+      "notes": [
+        "Dying while cursed transforms the victim into a ghost or other incorporeal undead."
+      ]
+    },
+    {
+      "sourceName": "Unending Thirst",
+      "level": 15,
+      "status": "blocked",
+      "blockers": [
+        "thirst-rule-integration"
+      ],
+      "notes": [
+        "The daily repeat save is representable, but the core effect is integration with the thirst/dehydration rules."
+      ]
+    },
+    {
+      "sourceName": "Reviled of Nature",
+      "level": 18,
+      "status": "blocked",
+      "blockers": [
+        "third-party-awareness-trigger",
+        "third-party-hostility-save"
+      ],
+      "notes": [
+        "Every animal that becomes aware of the cursed creature must save and may become hostile until death."
+      ]
+    },
+    {
+      "sourceName": "Thief's Retribution",
+      "level": 19,
+      "status": "blocked",
+      "blockers": [
+        "theft-trigger",
+        "inventory-value-selection",
+        "item-removal",
+        "body-part-loss"
+      ],
+      "notes": [
+        "A theft removes a more valuable carried possession, or otherwise removes a limb and deals unhealable slashing damage until restitution."
+      ]
+    },
+    {
+      "sourceName": "Sword of Anathema",
+      "level": 20,
+      "status": "blocked",
+      "blockers": [
+        "source-relative-weakness"
+      ],
+      "notes": [
+        "Weakness 10 applies only to damage caused by worshippers of the deity that imposed the curse."
+      ]
+    },
+    {
+      "sourceName": "Grave Curse",
+      "level": "varies",
+      "status": "blocked",
+      "blockers": [
+        "nightly-flat-check-trigger",
+        "graveyard-entry-trigger",
+        "temporary-undead-spawn"
+      ],
+      "notes": [
+        "The curse DC scales from the curse level; nightly and burial-ground flat checks create temporary undead harassment. Returning the stolen goods is a manual cure condition."
+      ]
+    }
+  ]
+}
