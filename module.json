@@ -1,0 +1,98 @@
+{
+  "id": "affliction-forge-remastered-rules",
+  "title": "Affliction Forge: Remastered Rules Library",
+  "description": "Read-only Remastered rules-content library for Affliction Forge. Initial 0.1.0 establishes the provider, one logical library, four source packs, and strict ORC/content-review tooling; no rules entries are shipped yet.",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "crypto-vbrthr"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.1.2"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "pf2e-affliction-forge",
+        "type": "module",
+        "compatibility": {
+          "minimum": "0.1.47"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "languages": [
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "player-core",
+      "label": "Core Rules: Player I",
+      "path": "packs/player-core",
+      "type": "Item",
+      "system": "pf2e",
+      "private": false
+    },
+    {
+      "name": "gm-core",
+      "label": "Core Rules: GM",
+      "path": "packs/gm-core",
+      "type": "Item",
+      "system": "pf2e",
+      "private": false
+    },
+    {
+      "name": "player-core-2",
+      "label": "Core Rules: Player II",
+      "path": "packs/player-core-2",
+      "type": "Item",
+      "system": "pf2e",
+      "private": false
+    },
+    {
+      "name": "treasure-vault-remastered",
+      "label": "Treasure Rules (Remastered)",
+      "path": "packs/treasure-vault-remastered",
+      "type": "Item",
+      "system": "pf2e",
+      "private": false
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Affliction Forge: Remastered Rules",
+      "sorting": "m",
+      "packs": [
+        "player-core",
+        "gm-core",
+        "player-core-2",
+        "treasure-vault-remastered"
+      ]
+    }
+  ],
+  "license": "LICENSE",
+  "readme": "README.md"
+}

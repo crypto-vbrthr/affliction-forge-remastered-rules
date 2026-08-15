@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "libraryId": "affliction-forge-remastered-rules.rules",
+  "contentLanguage": "de",
+  "contentPolicy": "mechanics-only",
+  "license": "ORC",
+  "packs": [
+    {
+      "id": "player-core",
+      "sourceWorkId": "player-core",
+      "status": "ready-for-content",
+      "entries": 0
+    },
+    {
+      "id": "gm-core",
+      "sourceWorkId": "gm-core",
+      "status": "ready-for-content",
+      "entries": 0
+    },
+    {
+      "id": "player-core-2",
+      "sourceWorkId": "player-core-2",
+      "status": "ready-for-content",
+      "entries": 0
+    },
+    {
+      "id": "treasure-vault-remastered",
+      "sourceWorkId": "treasure-vault-remastered",
+      "status": "ready-for-content",
+      "entries": 0
+    }
+  ]
+}

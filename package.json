@@ -1,0 +1,14 @@
+{
+  "name": "affliction-forge-remastered-rules",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-concurrency=1",
+    "validate": "node tools/validate-content.mjs",
+    "prepare:packs": "node tools/prepare-pack-sources.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,32 @@
+Affliction Forge: Remastered Rules Library - License Summary
+
+SOFTWARE
+
+Copyright (c) 2026 crypto-vbrthr
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the software source code contained in scripts/, tools/, and tests/ (the
+"Software"), to deal in the Software without restriction, including without
+limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom
+the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+GAME CONTENT
+
+Game-mechanics data in content/ and the compiled equivalents in packs/ are not
+licensed under the MIT terms above. They are governed by the Open RPG Creative
+(ORC) License and the upstream notices in ORC_NOTICE.md.
+
+No license is granted here to Paizo Reserved Material. This project is designed
+to exclude such material from its distributed rules-data library.
