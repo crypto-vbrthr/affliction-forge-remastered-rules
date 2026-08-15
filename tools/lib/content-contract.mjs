@@ -14,6 +14,9 @@ export const RARITIES = new Set(["common", "uncommon", "rare", "unique"]);
 export const DC_MODES = new Set(["fixed", "source"]);
 export const SAVE_STATISTICS = new Set(["fortitude", "reflex", "will"]);
 export const DURATION_UNITS = new Set(["rounds", "minutes", "hours", "days", "unlimited"]);
+export const HEALING_RESTRICTION_MODES = new Set(["none", "all", "affliction-damage"]);
+export const STAGE_EFFECT_PERSISTENCE_MODES = new Set(["stage", "affliction", "permanent"]);
+export const AFFLICTION_CAPABILITIES = new Set(["speak"]);
 
 // Deliberately short and conservative. This is not a legal classifier. It is a
 // release guard for terms already known to be Reserved Material or branding.
@@ -51,6 +54,33 @@ function validateDuration(errors, value, path, { nullable = true } = {}) {
   }
 }
 
+
+function validateRestrictions(errors, value, path) {
+  if (!isObject(value)) {
+    errors.push(`${path} must be an object.`);
+    return;
+  }
+  if (!Array.isArray(value.conditionLocks)) errors.push(`${path}.conditionLocks must be an array.`);
+  else {
+    const slugs = new Set();
+    for (const [index, lock] of value.conditionLocks.entries()) {
+      const lockPath = `${path}.conditionLocks[${index}]`;
+      if (!isObject(lock)) { errors.push(`${lockPath} must be an object.`); continue; }
+      if (!nonEmptyString(lock.slug)) errors.push(`${lockPath}.slug is required.`);
+      else if (slugs.has(lock.slug)) errors.push(`${lockPath}.slug is duplicated: ${lock.slug}`);
+      else slugs.add(lock.slug);
+      if (lock.minimum != null && (!Number.isInteger(lock.minimum) || lock.minimum < 1)) {
+        errors.push(`${lockPath}.minimum must be null or a positive integer.`);
+      }
+    }
+  }
+  if (!HEALING_RESTRICTION_MODES.has(value.healing)) errors.push(`${path}.healing is unsupported: ${value.healing}`);
+  if (!Array.isArray(value.blockedCapabilities)) errors.push(`${path}.blockedCapabilities must be an array.`);
+  else for (const capability of value.blockedCapabilities) {
+    if (!AFFLICTION_CAPABILITIES.has(capability)) errors.push(`${path}.blockedCapabilities contains unsupported capability: ${capability}`);
+  }
+}
+
 function collectUserFacingStrings(definition) {
   const values = [definition.name, definition.description];
   for (const stage of definition.stages ?? []) values.push(stage?.name, stage?.description);
@@ -69,7 +99,7 @@ export function deterministicDocumentId(definitionId) {
 export function validateDefinition(definition, { pack }) {
   const errors = [];
   if (!isObject(definition)) return ["Definition must be an object."];
-  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.47.");
+  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.49.");
   if (!nonEmptyString(definition.id)) errors.push("id is required.");
   if (nonEmptyString(definition.id) && !definition.id.startsWith(`${MODULE_ID}.`)) {
     errors.push(`id must use stable ${MODULE_ID}. prefix.`);
@@ -81,6 +111,7 @@ export function validateDefinition(definition, { pack }) {
   if (!RARITIES.has(definition.rarity)) errors.push(`Unsupported rarity: ${definition.rarity}`);
   if (!Array.isArray(definition.traits)) errors.push("traits must be an array.");
   if (!Array.isArray(definition.themes)) errors.push("themes must be an array.");
+  validateRestrictions(errors, definition.restrictions, "restrictions");
 
   if (!Array.isArray(definition.checks) || definition.checks.length === 0) {
     errors.push("checks must contain at least one save check.");
@@ -125,6 +156,8 @@ export function validateDefinition(definition, { pack }) {
       if (stage.number !== index + 1) errors.push(`${path}.number must be ${index + 1}.`);
       if (!nonEmptyString(stage.id)) errors.push(`${path}.id is required.`);
       validateDuration(errors, stage.duration, `${path}.duration`, { nullable: false });
+      validateRestrictions(errors, stage.restrictions, `${path}.restrictions`);
+      if (!STAGE_EFFECT_PERSISTENCE_MODES.has(stage.effectPersistence)) errors.push(`${path}.effectPersistence is unsupported: ${stage.effectPersistence}`);
     }
   }
 

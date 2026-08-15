@@ -1,21 +1,35 @@
 # Affliction Forge: Remastered Rules Library
 
-Version **0.1.1** begins the reviewed content phase of the external Affliction Forge library.
+Version **0.1.2** expands the reviewed GM disease content made possible by Affliction Forge 0.1.49.
 
 ## Current scope
 
 - one external provider
 - one visible, read-only Affliction Forge library
 - four internal PF2e Item compendium packs
-- required dependency on **PF2E Affliction Forge 0.1.47+**
+- required dependency on **PF2E Affliction Forge 0.1.49+**
 - ORC notice and upstream attribution
 - mechanics-only content policy
 - per-entry license/review metadata contract
 - deterministic stable Item IDs for compiled pack content
 - GM-only idempotent runtime bootstrap for development installs with uncompiled packs
-- Node validation/tests for provider wiring, manifest structure, and content gates
+- Node validation/tests for provider wiring, manifest structure, content gates, restrictions, and persistence fields
 
-**0.1.1 ships one fully automatable GM disease entry:** **Kanalisationsdunst**, an independent German presentation of the ORC-licensed `Sewer Haze` mechanics. A 14-entry coverage inventory records why the remaining GM diseases are not yet eligible for the strict FULL-only release set.
+**0.1.2 ships five fully reviewed GM disease entries:**
+
+- **Scharlachfieber** (`Scarlet Fever` mechanics)
+- **Tetanus** (`Tetanus` mechanics)
+- **Malaria** (`Malaria` mechanics)
+- **Erstickungsseuche** (`Choking Death` mechanics)
+- **Kanalisationsdunst** (`Sewer Haze` mechanics)
+
+The names and descriptions presented to users are independently formulated German mechanics text. The source-work names are retained only in internal source/review metadata where needed for traceability.
+
+The 14-entry GM disease coverage inventory records the remaining blockers. Version 0.1.49 resolves condition-reduction locks and speech restrictions, but several diseases still need more general engine capabilities such as triggered checks, repeating sub-timers, speed/status modifiers, damage-type-wide healing locks, or component-specific permanent consequences.
+
+## Malaria recurrence
+
+The later recurrence rule does **not** keep a dormant Affliction controller alive for months. If recurrence occurs, the same Malaria definition is applied again. This is an explicit content/runtime policy rather than a missing scheduler feature.
 
 ## Library architecture
 
@@ -37,10 +51,10 @@ The module does not use Paizo branding or compatibility logos. Exact upstream pr
 
 ## Content workflow
 
-1. Extract only functional rules material from an approved English ORC source.
-2. Independently formulate German user-facing text.
+1. Extract only functional rules material from an approved ORC source.
+2. Independently formulate German user-facing mechanics text.
 3. Remove or replace Reserved Material, including setting-specific proper nouns.
-4. Mark only fully automatable entries as `automationStatus: "full"`.
+4. Mark only sufficiently automatable entries as `automationStatus: "full"`.
 5. Run `npm test` and `npm run validate`.
 6. Run `npm run prepare:packs` and `npm run generate:seed`.
 7. Compile prepared Item JSON with the official Foundry VTT CLI into LevelDB packs for release builds. Until a pack is precompiled, the GM-only runtime bootstrap inserts missing bundled entries once and relocks the pack.

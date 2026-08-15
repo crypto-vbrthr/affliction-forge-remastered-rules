@@ -23,6 +23,7 @@ function validDefinition(overrides = {}) {
     saveDefaults: { execution: "player", visibility: "public" },
     identification: { initialState: "identified" },
     delivery: { injuryPoison: false },
+    restrictions: { conditionLocks: [], healing: "none", blockedCapabilities: [] },
     checks: [{ id: "primary", label: "", kind: "save", statistic: "fortitude", dcMode: "fixed", dc: 15, policy: null }],
     initialCheck: {
       checkIds: ["primary"],
@@ -47,7 +48,7 @@ function validDefinition(overrides = {}) {
       }
     },
     progression: { belowStageOne: "recover", aboveMaximumStage: "clamp", virulent: false },
-    stages: [{ id: "stage-1", number: 1, name: "", description: "", duration: { value: 1, unit: "days" }, check: null, effect: null }],
+    stages: [{ id: "stage-1", number: 1, name: "", description: "", duration: { value: 1, unit: "days" }, check: null, restrictions: { conditionLocks: [], healing: "none", blockedCapabilities: [] }, effectPersistence: "stage", effect: null }],
     metadata: {
       originModule: MODULE_ID,
       originFeature: "remastered-rules-library",
@@ -118,4 +119,20 @@ test("official CLI pack source carries a LevelDB _key while runtime source does 
   assert.equal(runtime._key, undefined);
   assert.equal(packed._key, `!items!${runtime._id}`);
   assert.equal(packed._id, runtime._id);
+});
+
+
+test("0.1.49 restriction and persistence fields are accepted by the content contract", () => {
+  const definition = validDefinition();
+  definition.restrictions.conditionLocks.push({ slug: "sickened", minimum: null });
+  definition.stages[0].restrictions.blockedCapabilities.push("speak");
+  definition.stages[0].effectPersistence = "permanent";
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+});
+
+test("unsupported capability restrictions are rejected", () => {
+  const definition = validDefinition();
+  definition.stages[0].restrictions.blockedCapabilities.push("telepathy");
+  const issues = validateDefinition(definition, { pack: "gm-core" });
+  assert.ok(issues.some((issue) => /unsupported capability/i.test(issue)));
 });
