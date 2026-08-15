@@ -2,6 +2,15 @@
 
 Add one JSON definition to the matching `content/<source-pack>/` directory.
 
+Use a language-neutral, lowercase kebab-case filename that exactly matches the final segment of the stable definition ID. Example:
+
+```text
+content/gm-core/nightmare-fever.json
+affliction-forge-remastered-rules.gm-core.nightmare-fever
+```
+
+The visible `name` may be localized; filenames and stable IDs must not be localized.
+
 Required metadata shape:
 
 ```json

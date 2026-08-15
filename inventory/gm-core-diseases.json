@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "sourceWorkId": "gm-core",
+  "section": "Diseases",
+  "reviewPolicy": "Only entries whose complete runtime-relevant rules are represented by Affliction Forge 0.1.50 are publishable as full. Long-term recurrence may be represented by explicit manual reapplication when no dormant runtime state is required.",
+  "entries": [
+    {
+      "sourceName": "Bog Rot",
+      "level": 0,
+      "status": "partial",
+      "blockers": [
+        "speed-status-penalty",
+        "alternate-amputation-cure"
+      ]
+    },
+    {
+      "sourceName": "Scarlet Fever",
+      "level": 1,
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.scarlet-fever"
+    },
+    {
+      "sourceName": "Tetanus",
+      "level": 1,
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.tetanus",
+      "notes": [
+        "Muscle spasms are descriptive; the rules-facing Stage 3 condition is paralyzed."
+      ]
+    },
+    {
+      "sourceName": "Tuberculosis",
+      "level": 1,
+      "status": "partial",
+      "blockers": [
+        "carrier-transmission",
+        "concentrate-flat-check"
+      ]
+    },
+    {
+      "sourceName": "Malaria",
+      "level": 2,
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.malaria",
+      "notes": [
+        "Later recurrence is handled by manually reapplying the same definition."
+      ]
+    },
+    {
+      "sourceName": "Bubonic Plague",
+      "level": 3,
+      "status": "partial",
+      "blockers": [
+        "repeating-persistent-bleed-timer"
+      ]
+    },
+    {
+      "sourceName": "Scarlet Leprosy",
+      "level": 4,
+      "status": "partial",
+      "blockers": [
+        "wounded-value-trigger"
+      ]
+    },
+    {
+      "sourceName": "Bonechill",
+      "level": 5,
+      "status": "partial",
+      "blockers": [
+        "cold-damage-healing-lock",
+        "environment-severity-shift"
+      ]
+    },
+    {
+      "sourceName": "Choking Death",
+      "level": 6,
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.choking-death",
+      "notes": [
+        "Hoarse voice in Stage 1 is descriptive; Stage 3 uses the speak capability restriction."
+      ]
+    },
+    {
+      "sourceName": "Blinding Sickness",
+      "level": 7,
+      "status": "partial",
+      "blockers": [
+        "component-specific-permanent-consequence"
+      ],
+      "notes": [
+        "Affliction Forge 0.1.49 can preserve a whole stage effect permanently, but Stage 4 requires only blindness to persist while enfeebled 2 remains stage-bound."
+      ]
+    },
+    {
+      "sourceName": "Sewer Haze",
+      "level": 7,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.sewer-haze",
+      "blockers": []
+    },
+    {
+      "sourceName": "Nightmare Fever",
+      "level": 8,
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.nightmare-fever",
+      "notes": [
+        "The published slashing-damage version is represented; optional bludgeoning or piercing variants can be made as editable copies.",
+        "Damage-triggered secondary Will saves are handled by Affliction Forge 0.1.50 event reactions."
+      ]
+    },
+    {
+      "sourceName": "Brain Worms",
+      "level": 11,
+      "status": "partial",
+      "blockers": [
+        "confusion-attack-rewrite",
+        "confused-ending-exception"
+      ],
+      "notes": [
+        "Affliction Forge 0.1.50 now covers the damage-triggered secondary Will saves.",
+        "The disease still requires attacks made due to confusion to become bites and later prevents damage from ending confused; these mechanics are not yet represented generically."
+      ]
+    },
+    {
+      "sourceName": "Crimson Ooze",
+      "level": 15,
+      "status": "partial",
+      "blockers": [
+        "alternate-amputation-cure",
+        "infected-hand-use-trigger",
+        "hand-usability",
+        "permanent-hand-loss",
+        "confused-ending-exception"
+      ]
+    }
+  ]
+}

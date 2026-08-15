@@ -5,6 +5,7 @@ import {
   buildItemSource,
   buildPackSource,
   deterministicDocumentId,
+  expectedContentFilename,
   validateDefinition
 } from "../tools/lib/content-contract.mjs";
 
@@ -93,6 +94,12 @@ test("pack/source mismatch is rejected", () => {
   assert.ok(issues.some((issue) => /must match pack/i.test(issue)));
 });
 
+test("content filename is derived from the stable language-neutral definition key", () => {
+  assert.equal(expectedContentFilename(`${MODULE_ID}.gm-core.nightmare-fever`), "nightmare-fever.json");
+  assert.equal(expectedContentFilename(`${MODULE_ID}.gm-core.sewer-haze`), "sewer-haze.json");
+  assert.equal(expectedContentFilename(`${MODULE_ID}.gm-core.Nightmare Fever`), null);
+});
+
 test("stable document ID is deterministic and Foundry-sized", () => {
   const first = deterministicDocumentId(`${MODULE_ID}.gm-core.test-affliction`);
   const second = deterministicDocumentId(`${MODULE_ID}.gm-core.test-affliction`);
@@ -122,7 +129,7 @@ test("official CLI pack source carries a LevelDB _key while runtime source does 
 });
 
 
-test("0.1.49 restriction and persistence fields are accepted by the content contract", () => {
+test("0.1.50 restriction and persistence fields are accepted by the content contract", () => {
   const definition = validDefinition();
   definition.restrictions.conditionLocks.push({ slug: "sickened", minimum: null });
   definition.stages[0].restrictions.blockedCapabilities.push("speak");
@@ -135,4 +142,26 @@ test("unsupported capability restrictions are rejected", () => {
   definition.stages[0].restrictions.blockedCapabilities.push("telepathy");
   const issues = validateDefinition(definition, { pack: "gm-core" });
   assert.ok(issues.some((issue) => /unsupported capability/i.test(issue)));
+});
+
+
+test("0.1.50 damage-taken event reactions are accepted by the content contract", () => {
+  const definition = validDefinition();
+  definition.stages[0].reactions = [{
+    id: "slashing-reaction",
+    label: "Slashing reaction",
+    trigger: { event: "damage-taken", damageTypes: ["slashing"] },
+    checkId: "primary",
+    applyOn: ["failure", "criticalFailure"],
+    effect: {
+      schemaVersion: 2,
+      id: "test.reaction.effect",
+      name: "Reaction Effect",
+      duration: { value: 1, unit: "rounds", expiry: null },
+      components: [{ type: "condition", slug: "paralyzed" }],
+      application: {},
+      metadata: {}
+    }
+  }];
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
 });

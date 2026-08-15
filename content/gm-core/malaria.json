@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.malaria",
+  "name": "Malaria",
+  "description": "Krankheit mit wiederkehrendem Fieber; der durch sie verursachte Zustand Kränkelnd kann während des Leidens nicht reduziert werden.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "disease",
+  "level": 2,
+  "rarity": "common",
+  "traits": [
+    "disease"
+  ],
+  "themes": [
+    "disease",
+    "fever",
+    "recurrence"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [
+      {
+        "slug": "sickened",
+        "minimum": null
+      }
+    ],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 16,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 10,
+    "unit": "days"
+  },
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Kränkelnd 1.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-1",
+        "name": "Malaria · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "sickened",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Kränkelnd 2.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-2",
+        "name": "Malaria · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "sickened",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Kränkelnd 2. Nach Erreichen dieser Phase kann die Krankheit später erneut auftreten; dies wird durch erneutes Anwenden derselben Definition gehandhabt.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-3",
+        "name": "Malaria · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "sickened",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "Phase 4",
+      "description": "Bewusstlos.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-4",
+        "name": "Malaria · Phase 4",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "unconscious"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-5",
+      "number": 5,
+      "name": "Phase 5",
+      "description": "Tod.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-5",
+        "name": "Malaria · Phase 5",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "death",
+            "category": "direct"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 88,
+    "sourceSection": "Diseases",
+    "sourceName": "Malaria",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "A later recurrence is represented by manually reapplying the same Affliction definition; no dormant controller is retained."
+    ]
+  }
+}

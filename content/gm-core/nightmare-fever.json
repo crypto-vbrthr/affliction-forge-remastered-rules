@@ -1,0 +1,414 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever",
+  "name": "Albtraumfieber",
+  "description": "Traumgebundene Krankheit, die beim Erwachen körperliche Schnittwunden hinterlässt. Von der Krankheit verursachter Schaden und Erschöpfung können nicht beseitigt werden, solange das Leiden anhält.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "disease",
+  "level": 8,
+  "rarity": "common",
+  "traits": [
+    "disease"
+  ],
+  "themes": [
+    "disease",
+    "nightmare",
+    "mental"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "affliction-damage",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Willen",
+      "kind": "save",
+      "statistic": "will",
+      "dcMode": "fixed",
+      "dc": 25,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "2W6 Hiebschaden und Erschöpft.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [
+          {
+            "slug": "fatigued",
+            "minimum": null
+          }
+        ],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-1",
+        "name": "Albtraumfieber · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "2d6",
+            "damageType": "slashing"
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "4W6 Hiebschaden und Erschöpft.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [
+          {
+            "slug": "fatigued",
+            "minimum": null
+          }
+        ],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-2",
+        "name": "Albtraumfieber · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "4d6",
+            "damageType": "slashing"
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "4W6 Hiebschaden und Erschöpft. Bei erlittenem Hiebschaden folgt ein zusätzlicher Willenswurf gegen SG 25; bei Fehlschlag wird die Kreatur Verängstigt 2.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [
+          {
+            "slug": "fatigued",
+            "minimum": null
+          }
+        ],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-3",
+        "name": "Albtraumfieber · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "4d6",
+            "damageType": "slashing"
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": [
+        {
+          "id": "slashing-fright",
+          "label": "Schreckreaktion auf Hiebschaden",
+          "trigger": {
+            "event": "damage-taken",
+            "damageTypes": [
+              "slashing"
+            ]
+          },
+          "checkId": "primary",
+          "applyOn": [
+            "failure",
+            "criticalFailure"
+          ],
+          "effect": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-3.reaction",
+            "name": "Albtraumfieber · Verängstigt",
+            "duration": {
+              "value": -1,
+              "unit": "unlimited",
+              "expiry": null
+            },
+            "components": [
+              {
+                "type": "condition",
+                "slug": "frightened",
+                "value": 2
+              }
+            ],
+            "application": {},
+            "metadata": {}
+          }
+        }
+      ]
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "Phase 4",
+      "description": "6W6 Hiebschaden und Erschöpft. Bei erlittenem Hiebschaden folgt ein zusätzlicher Willenswurf gegen SG 25; bei Fehlschlag wird die Kreatur 1 Runde lang Gelähmt.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [
+          {
+            "slug": "fatigued",
+            "minimum": null
+          }
+        ],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-4",
+        "name": "Albtraumfieber · Phase 4",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "6d6",
+            "damageType": "slashing"
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": [
+        {
+          "id": "slashing-paralysis",
+          "label": "Lähmungsreaktion auf Hiebschaden",
+          "trigger": {
+            "event": "damage-taken",
+            "damageTypes": [
+              "slashing"
+            ]
+          },
+          "checkId": "primary",
+          "applyOn": [
+            "failure",
+            "criticalFailure"
+          ],
+          "effect": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-4.reaction",
+            "name": "Albtraumfieber · Gelähmt",
+            "duration": {
+              "value": 1,
+              "unit": "rounds",
+              "expiry": null
+            },
+            "components": [
+              {
+                "type": "condition",
+                "slug": "paralyzed"
+              }
+            ],
+            "application": {},
+            "metadata": {}
+          }
+        }
+      ]
+    },
+    {
+      "id": "stage-5",
+      "number": 5,
+      "name": "Phase 5",
+      "description": "6W6 Hiebschaden und Bewusstlos.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-5",
+        "name": "Albtraumfieber · Phase 5",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "6d6",
+            "damageType": "slashing"
+          },
+          {
+            "type": "condition",
+            "slug": "unconscious"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 89,
+    "sourceSection": "Diseases",
+    "sourceName": "Nightmare Fever",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "This entry models the published slashing-damage version. Optional bludgeoning or piercing variants can be created as editable copies.",
+      "Stage 3 and 4 secondary Will saves use Affliction Forge 0.1.50 damage-taken event reactions."
+    ]
+  }
+}

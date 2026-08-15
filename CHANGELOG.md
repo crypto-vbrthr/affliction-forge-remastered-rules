@@ -1,5 +1,43 @@
 # Changelog
 
+## 0.1.4 - 2026-08-15
+
+### Changed
+
+- Standardized reviewed content JSON filenames on language-neutral stable keys rather than German display names.
+- Renamed `albtraumfieber.json` → `nightmare-fever.json`, `erstickungsseuche.json` → `choking-death.json`, `kanalisationsdunst.json` → `sewer-haze.json`, and `scharlachfieber.json` → `scarlet-fever.json`.
+- `malaria.json` and `tetanus.json` already matched their stable language-neutral keys and remain unchanged.
+- User-facing German names and all deterministic definition/document IDs remain unchanged, so existing seeded compendium entries are not duplicated or migrated.
+- Content validation now rejects a JSON filename that does not match the final segment of its stable definition ID.
+
+### Validation
+
+- No rules-content changes.
+- Six GM disease definitions remain publishable.
+- **36/36 module tests green**; content validation **6/6 green**; pack-source and runtime-seed generation complete.
+
+## 0.1.3 - 2026-08-15
+
+### Added
+
+- **Albtraumfieber** (`Nightmare Fever` mechanics) as the first library disease using Affliction Forge 0.1.50 event reactions.
+- Stage 3 reacts to positive slashing damage with a Will save against the disease DC and applies Frightened 2 on a failed result.
+- Stage 4 reacts in the same way and applies Paralyzed for 1 round on a failed result.
+- Native `affliction-damage` healing restriction and a fatigue condition lock preserve the disease's recovery restrictions.
+- Content-contract validation for `damage-taken` reactions, referenced checks, result filters, and reaction effect envelopes.
+
+### Coverage review
+
+- The GM disease pack now contains **6/14 FULL** entries.
+- `Brain Worms` is **not** promoted to FULL yet. Affliction Forge 0.1.50 covers its damage-triggered Will saves, but the disease also rewrites attacks made due to Confused into bites and later prevents damage from ending Confused. Those two mechanics still need generic engine support.
+- The published slashing-damage form of Nightmare Fever is the bundled definition. The optional bludgeoning/piercing variants can be created from an editable copy.
+
+### Validation
+
+- **34/34 module tests green** and content validation **6/6 green**.
+- Upgrade seeding tests cover 0.1.1 → 0.1.3 and 0.1.2 → 0.1.3 without duplicating deterministic documents.
+- Minimum Affliction Forge dependency raised to **0.1.50**.
+
 ## 0.1.2 - 2026-08-15
 
 ### Added

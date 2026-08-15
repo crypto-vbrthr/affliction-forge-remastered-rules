@@ -17,6 +17,8 @@ export const DURATION_UNITS = new Set(["rounds", "minutes", "hours", "days", "un
 export const HEALING_RESTRICTION_MODES = new Set(["none", "all", "affliction-damage"]);
 export const STAGE_EFFECT_PERSISTENCE_MODES = new Set(["stage", "affliction", "permanent"]);
 export const AFFLICTION_CAPABILITIES = new Set(["speak"]);
+export const EVENT_REACTION_EVENTS = new Set(["damage-taken"]);
+export const REACTION_OUTCOMES = new Set(["criticalSuccess", "success", "failure", "criticalFailure"]);
 
 // Deliberately short and conservative. This is not a legal classifier. It is a
 // release guard for terms already known to be Reserved Material or branding.
@@ -88,6 +90,13 @@ function collectUserFacingStrings(definition) {
   return values.filter((value) => typeof value === "string");
 }
 
+export function expectedContentFilename(definitionId) {
+  if (!nonEmptyString(definitionId)) return null;
+  const slug = definitionId.trim().split(".").at(-1);
+  if (!slug || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null;
+  return `${slug}.json`;
+}
+
 export function deterministicDocumentId(definitionId) {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   const digest = crypto.createHash("sha256").update(String(definitionId)).digest();
@@ -99,7 +108,7 @@ export function deterministicDocumentId(definitionId) {
 export function validateDefinition(definition, { pack }) {
   const errors = [];
   if (!isObject(definition)) return ["Definition must be an object."];
-  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.49.");
+  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.50.");
   if (!nonEmptyString(definition.id)) errors.push("id is required.");
   if (nonEmptyString(definition.id) && !definition.id.startsWith(`${MODULE_ID}.`)) {
     errors.push(`id must use stable ${MODULE_ID}. prefix.`);
@@ -158,6 +167,39 @@ export function validateDefinition(definition, { pack }) {
       validateDuration(errors, stage.duration, `${path}.duration`, { nullable: false });
       validateRestrictions(errors, stage.restrictions, `${path}.restrictions`);
       if (!STAGE_EFFECT_PERSISTENCE_MODES.has(stage.effectPersistence)) errors.push(`${path}.effectPersistence is unsupported: ${stage.effectPersistence}`);
+      if (stage.reactions != null) {
+        if (!Array.isArray(stage.reactions)) errors.push(`${path}.reactions must be an array.`);
+        else {
+          const checkIds = new Set((definition.checks ?? []).map((check) => check?.id).filter(Boolean));
+          const reactionIds = new Set();
+          for (const [reactionIndex, reaction] of stage.reactions.entries()) {
+            const reactionPath = `${path}.reactions[${reactionIndex}]`;
+            if (!isObject(reaction)) { errors.push(`${reactionPath} must be an object.`); continue; }
+            if (!nonEmptyString(reaction.id)) errors.push(`${reactionPath}.id is required.`);
+            else if (reactionIds.has(reaction.id)) errors.push(`${reactionPath}.id is duplicated: ${reaction.id}`);
+            else reactionIds.add(reaction.id);
+            if (!isObject(reaction.trigger)) errors.push(`${reactionPath}.trigger must be an object.`);
+            else {
+              if (!EVENT_REACTION_EVENTS.has(reaction.trigger.event)) errors.push(`${reactionPath}.trigger.event is unsupported: ${reaction.trigger.event}`);
+              if (!Array.isArray(reaction.trigger.damageTypes)) errors.push(`${reactionPath}.trigger.damageTypes must be an array.`);
+              else if (reaction.trigger.damageTypes.some((entry) => !nonEmptyString(entry))) errors.push(`${reactionPath}.trigger.damageTypes must contain only non-empty strings.`);
+            }
+            if (!checkIds.has(reaction.checkId)) errors.push(`${reactionPath}.checkId references an unknown check: ${reaction.checkId}`);
+            if (!Array.isArray(reaction.applyOn) || reaction.applyOn.length === 0) errors.push(`${reactionPath}.applyOn must contain at least one outcome.`);
+            else for (const outcome of reaction.applyOn) if (!REACTION_OUTCOMES.has(outcome)) errors.push(`${reactionPath}.applyOn contains unsupported outcome: ${outcome}`);
+            if (reaction.effect != null) {
+              if (!isObject(reaction.effect)) errors.push(`${reactionPath}.effect must be an object or null.`);
+              else {
+                if (reaction.effect.schemaVersion !== 2) errors.push(`${reactionPath}.effect.schemaVersion must be 2.`);
+                if (!nonEmptyString(reaction.effect.id)) errors.push(`${reactionPath}.effect.id is required.`);
+                if (!nonEmptyString(reaction.effect.name)) errors.push(`${reactionPath}.effect.name is required.`);
+                validateDuration(errors, reaction.effect.duration, `${reactionPath}.effect.duration`, { nullable: false });
+                if (!Array.isArray(reaction.effect.components)) errors.push(`${reactionPath}.effect.components must be an array.`);
+              }
+            }
+          }
+        }
+      }
     }
   }
 

@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import {
   SUPPORTED_PACKS,
   deterministicDocumentId,
+  expectedContentFilename,
   validateDefinition
 } from "./lib/content-contract.mjs";
 
@@ -37,6 +38,16 @@ for (const pack of SUPPORTED_PACKS) {
 
     for (const issue of validateDefinition(definition, { pack })) {
       failures.push(`${path.relative(root, file)}: ${issue}`);
+    }
+
+    if (definition?.id) {
+      const expectedFilename = expectedContentFilename(definition.id);
+      const actualFilename = path.basename(file);
+      if (!expectedFilename) {
+        failures.push(`${path.relative(root, file)}: stable definition id must end in a lowercase kebab-case content key.`);
+      } else if (actualFilename !== expectedFilename) {
+        failures.push(`${path.relative(root, file)}: filename must match stable content key ${expectedFilename}.`);
+      }
     }
 
     if (definition?.id) {

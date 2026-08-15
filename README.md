@@ -1,31 +1,34 @@
 # Affliction Forge: Remastered Rules Library
 
-Version **0.1.2** expands the reviewed GM disease content made possible by Affliction Forge 0.1.49.
+Version **0.1.4** standardizes source JSON filenames on stable, language-neutral keys while retaining the six reviewed GM disease entries and Affliction Forge 0.1.50 reaction support.
 
 ## Current scope
 
 - one external provider
 - one visible, read-only Affliction Forge library
 - four internal PF2e Item compendium packs
-- required dependency on **PF2E Affliction Forge 0.1.49+**
+- required dependency on **PF2E Affliction Forge 0.1.50+**
 - ORC notice and upstream attribution
 - mechanics-only content policy
 - per-entry license/review metadata contract
 - deterministic stable Item IDs for compiled pack content
 - GM-only idempotent runtime bootstrap for development installs with uncompiled packs
-- Node validation/tests for provider wiring, manifest structure, content gates, restrictions, and persistence fields
+- Node validation/tests for provider wiring, manifest structure, content gates, restrictions, persistence fields, and event reactions
 
-**0.1.2 ships five fully reviewed GM disease entries:**
+**0.1.4 ships six fully reviewed GM disease entries:**
 
 - **Scharlachfieber** (`Scarlet Fever` mechanics)
 - **Tetanus** (`Tetanus` mechanics)
 - **Malaria** (`Malaria` mechanics)
 - **Erstickungsseuche** (`Choking Death` mechanics)
 - **Kanalisationsdunst** (`Sewer Haze` mechanics)
+- **Albtraumfieber** (`Nightmare Fever` mechanics)
 
 The names and descriptions presented to users are independently formulated German mechanics text. The source-work names are retained only in internal source/review metadata where needed for traceability.
 
-The 14-entry GM disease coverage inventory records the remaining blockers. Version 0.1.49 resolves condition-reduction locks and speech restrictions, but several diseases still need more general engine capabilities such as triggered checks, repeating sub-timers, speed/status modifiers, damage-type-wide healing locks, or component-specific permanent consequences.
+Source JSON filenames are language-neutral and match the final stable definition-ID segment, for example `nightmare-fever.json` for `affliction-forge-remastered-rules.gm-core.nightmare-fever`. User-facing localization is never encoded in filenames or stable IDs.
+
+The 14-entry GM disease coverage inventory records the remaining blockers. Version 0.1.50 adds damage-triggered secondary checks, allowing Nightmare Fever to ship as FULL. Brain Worms still remains outside the compiled pack because its confusion-driven attack rewrite and its exception to the normal confused-ending rule are not yet represented generically. Other diseases still need repeating sub-timers, speed/status modifiers, damage-type-wide healing locks, component-specific permanent consequences, or pre-action checks.
 
 ## Malaria recurrence
 
