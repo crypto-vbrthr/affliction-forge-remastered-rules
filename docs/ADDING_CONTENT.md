@@ -32,6 +32,8 @@ Required metadata shape:
 }
 ```
 
+For an intentional manual exception, use `"automationStatus": "manual"`, add a structured `metadata.manualComment`, and include a visible `GM-Hinweis` in the template description.
+
 Stable definition IDs must begin with `affliction-forge-remastered-rules.`. Keep source variants distinct, for example by including the neutral source key in the ID.
 
 A source file is not publishable until `npm test` and `npm run validate` are green. `npm run prepare:packs` then creates serialized PF2e Item sources for the official Foundry pack compiler.

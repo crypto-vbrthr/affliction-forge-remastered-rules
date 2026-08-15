@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "sourceWorkId": "gm-core",
   "section": "Diseases",
-  "reviewPolicy": "Entries whose complete runtime-relevant rules are represented by Affliction Forge 0.1.53 may ship as full. Long-term recurrence may use explicit manual reapplication. Bonechill, Brain Worms, and Crimson Ooze are intentionally classified as manual exceptions rather than drivers for new generic engine subsystems; their unsupported source rules must be surfaced as explicit GM comments when those entries are later published.",
+  "reviewPolicy": "Entries fully represented by Affliction Forge 0.1.55 ship as full. Bonechill, Brain Worms, and Crimson Ooze are published as intentional manual-exception templates: supported staged mechanics are automated, while the unsupported environmental, confusion-behavior, or body-part rules are surfaced as visible GM guidance rather than driving bespoke engine subsystems.",
   "entries": [
     {
       "sourceName": "Bog Rot",
@@ -35,14 +35,14 @@
     {
       "sourceName": "Tuberculosis",
       "level": 1,
-      "status": "partial",
-      "blockers": [
-        "concentrate-flat-check"
-      ],
+      "status": "full",
+      "blockers": [],
       "notes": [
-        "Carrier status is descriptive/transmission metadata and is not an engine blocker.",
-        "The remaining blocker is the pre-action check that can prevent concentrate spells or item activations."
-      ]
+        "Carrier status remains descriptive/transmission metadata and does not auto-propagate the disease.",
+        "Stages 2 and 3 use Affliction Forge 0.1.55 pre-action flat-check gates for concentrate spell casts and item activations.",
+        "Stage 3 locks fatigued recovery while active."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.tuberculosis"
     },
     {
       "sourceName": "Malaria",
@@ -67,9 +67,13 @@
     {
       "sourceName": "Scarlet Leprosy",
       "level": 4,
-      "status": "partial",
-      "blockers": [
-        "wounded-value-trigger"
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy",
+      "notes": [
+        "Stage 2 uses Affliction Forge 0.1.54 condition-increased event reactions to add +1 to wounded whenever wounded is gained or increased.",
+        "The disease-wide affliction-damage healing restriction and Stage 3 complete healing lock are represented natively.",
+        "Virulent progression uses the native two-consecutive-success rule."
       ]
     },
     {
@@ -81,7 +85,8 @@
         "Affliction Forge 0.1.51 already covers the cold-damage healing lock.",
         "Intentional manual exception: environment severity shifting is not planned as a generic Affliction Forge feature."
       ],
-      "manualComment": "In stages 3 and 4, effects of cold temperatures are one severity step worse for the victim. This environmental severity rewrite is intentionally left for the GM rather than added as a generic Affliction Forge subsystem."
+      "manualComment": "GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Die ab Phase 2 erworbene Heilungssperre für Kälteschaden bleibt bis zur Heilung der Krankheit bestehen; fällt die Krankheit wieder auf Phase 1, muss diese fortbestehende Sperre manuell berücksichtigt werden.",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.bonechill"
     },
     {
       "sourceName": "Choking Death",
@@ -130,18 +135,20 @@
         "Affliction Forge 0.1.50 covers the damage-triggered secondary Will saves.",
         "Intentional manual exception: confusion attack rewriting and the special confused-ending rule are not planned as generic engine behavior."
       ],
-      "manualComment": "When confusion forces attacks, those attacks must become bites; at the later stage, taking damage does not end confused. These confusion-behavior overrides are intentionally handled manually."
+      "manualComment": "GM-Hinweis: Angriffe aufgrund von Verwirrt werden als Bisse abgewickelt. In Phase 4 beendet erlittener Schaden Verwirrt nicht. Diese Verhaltensausnahmen werden manuell abgewickelt.",
+      "definitionId": "affliction-forge-remastered-rules.gm-core.brain-worms"
     },
     {
       "sourceName": "Crimson Ooze",
       "level": 15,
       "status": "manual",
       "blockers": [],
-      "manualComment": "The disease tracks one infected hand: using it can cause persistent bleed damage, later the hand becomes unusable and can be permanently lost, and the final confused stage is not ended by damage. These body-part and confusion exceptions are intentionally handled manually.",
+      "manualComment": "GM-Hinweis: Die befallene Hand wird manuell verfolgt. Ihre Benutzung verursacht in Phase 2 3W6 anhaltenden Blutungsschaden; in Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Amputation vor Phase 4 ist eine manuelle Heiloption.",
       "notes": [
         "The alternate cure by amputation before stage 4 is a manual cure option, not an engine blocker.",
         "Intentional manual exception: infected-hand use, hand usability/loss, and the special confused-ending rule are not planned as generic engine behavior."
-      ]
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.crimson-ooze"
     }
   ]
 }

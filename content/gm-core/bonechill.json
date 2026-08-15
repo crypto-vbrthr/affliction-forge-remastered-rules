@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.bonechill",
+  "name": "Knochenfrost",
+  "description": "Teilautomatisierte Krankheit mit fortschreitender Kältestarre. GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "disease",
+  "level": 5,
+  "rarity": "common",
+  "traits": [
+    "disease"
+  ],
+  "themes": [
+    "disease",
+    "cold",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "unhealableDamageTypes": [],
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 20,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 1,
+    "unit": "days"
+  },
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Unbeholfen 1.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-1",
+        "name": "Knochenfrost · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "clumsy",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Unbeholfen 2. Kälteschaden kann nicht geheilt werden, solange die Krankheit nicht geheilt ist.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [
+          "cold"
+        ],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-2",
+        "name": "Knochenfrost · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "clumsy",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Unbeholfen 3. GM-Hinweis: Kalte Temperaturen wirken eine Stufe schwerwiegender.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [
+          "cold"
+        ],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-3",
+        "name": "Knochenfrost · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "clumsy",
+            "value": 3
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "Phase 4",
+      "description": "Gelähmt. GM-Hinweis: Kalte Temperaturen wirken eine Stufe schwerwiegender.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [
+          "cold"
+        ],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-4",
+        "name": "Knochenfrost · Phase 4",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "paralyzed"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 88,
+    "sourceSection": "Diseases",
+    "sourceName": "Bonechill",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Stage 2-4 use typed cold-damage healing locks while those stages are active.",
+      "Environmental cold severity shifting is intentionally manual.",
+      "If the disease regresses to Stage 1 after reaching Stage 2+, the GM must continue the already-acquired cold-damage healing restriction until the disease ends."
+    ],
+    "manualComment": "GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen."
+  }
+}

@@ -19,8 +19,8 @@ function stage(definition, number) {
 
 test("GM disease inventory tracks all fourteen reviewed source diseases", () => {
   assert.equal(inventory.entries.length, 14);
-  assert.equal(inventory.entries.filter((entry) => entry.status === "full").length, 9);
-  assert.equal(inventory.entries.filter((entry) => entry.status === "partial").length, 2);
+  assert.equal(inventory.entries.filter((entry) => entry.status === "full").length, 11);
+  assert.equal(inventory.entries.filter((entry) => entry.status === "partial").length, 0);
   assert.equal(inventory.entries.filter((entry) => entry.status === "manual").length, 3);
 });
 
@@ -32,8 +32,8 @@ test("GM content filenames match the stable language-neutral definition keys", (
   }
 });
 
-test("all nine publishable GM diseases pass the 0.1.53 content contract", () => {
-  assert.equal(diseases.length, 9);
+test("all fourteen published GM diseases pass the 0.1.55 content contract", () => {
+  assert.equal(diseases.length, 14);
   for (const disease of diseases) assert.deepEqual(validateDefinition(disease, { pack: "gm-core" }), [], disease.name);
 });
 
@@ -153,23 +153,108 @@ test("Bubonic Plague locks fatigue and runs a 1d20-minute recurring persistent b
   assert.deepEqual(periodic.effect.components, [{ type: "damage", formula: "1d6", damageType: "bleed", persistent: true }]);
 });
 
-test("three high-cost disease exceptions are explicitly classified as manual with GM comments", () => {
+test("Scarlet Leprosy uses virulent progression, wounded escalation, and layered healing locks", () => {
+  const disease = bySource.get("Scarlet Leprosy");
+  assert.equal(disease.name, "Karmesin-Lepra");
+  assert.equal(disease.level, 4);
+  assert.equal(disease.checks[0].statistic, "fortitude");
+  assert.equal(disease.checks[0].dc, 19);
+  assert.deepEqual(disease.onset, { value: 1, unit: "days" });
+  assert.equal(disease.progression.virulent, true);
+  assert.equal(disease.restrictions.healing, "affliction-damage");
+  assert.deepEqual(stage(disease, 1).effect.components, [{ type: "damage", formula: "2d6", damageType: "bludgeoning" }]);
+  const reaction = stage(disease, 2).reactions[0];
+  assert.equal(reaction.trigger.event, "condition-increased");
+  assert.deepEqual(reaction.trigger.conditionSlugs, ["wounded"]);
+  assert.equal(reaction.checkId, null);
+  assert.deepEqual(reaction.applyOn, []);
+  assert.equal(reaction.conditionValueDelta, 1);
+  assert.equal(reaction.effect, null);
+  assert.equal(stage(disease, 3).restrictions.healing, "all");
+  assert.deepEqual(stage(disease, 3).effect.components, [{ type: "damage", formula: "4d6", damageType: "bludgeoning" }]);
+});
+
+test("Tuberculosis uses 0.1.55 concentrate pre-action gates and fatigued locking", () => {
+  const disease = bySource.get("Tuberculosis");
+  assert.equal(disease.name, "Tuberkulose");
+  assert.equal(disease.level, 1);
+  assert.equal(disease.checks[0].dc, 15);
+  assert.deepEqual(disease.onset, { value: 7, unit: "days" });
+  assert.equal(stage(disease, 1).effect, null);
+  assert.deepEqual(stage(disease, 2).preActionGates[0], {
+    id: "cough-concentrate",
+    label: "Husten: Konzentration",
+    trigger: { actionKinds: ["spell-cast", "item-activation"], requiredTraits: ["concentrate"] },
+    check: { kind: "flat", dc: 5 },
+    blockOnFailure: true
+  });
+  assert.deepEqual(stage(disease, 3).restrictions.conditionLocks, [{ slug: "fatigued", minimum: null }]);
+  assert.equal(stage(disease, 3).preActionGates[0].check.dc, 15);
+  assert.deepEqual(stage(disease, 4).effect.components, [{ type: "condition", slug: "unconscious" }]);
+  assert.deepEqual(stage(disease, 5).effect.components, [{ type: "death", category: "direct" }]);
+});
+
+test("three high-cost disease exceptions are published with visible GM guidance", () => {
   for (const sourceName of ["Bonechill", "Brain Worms", "Crimson Ooze"]) {
     const entry = inventory.entries.find((item) => item.sourceName === sourceName);
     assert.equal(entry.status, "manual", sourceName);
     assert.deepEqual(entry.blockers, [], sourceName);
-    assert.match(entry.manualComment, /manual|GM|handled manually|intentionally/i, sourceName);
+    assert.match(entry.manualComment, /GM-Hinweis/i, sourceName);
+    const disease = bySource.get(sourceName);
+    assert.equal(disease.metadata.automationStatus, "manual", sourceName);
+    assert.match(disease.description, /GM-Hinweis/i, sourceName);
+    assert.match(disease.metadata.manualComment, /GM-Hinweis/i, sourceName);
   }
 });
 
-test("Tuberculosis and Scarlet Leprosy remain the only partial disease entries", () => {
-  const partial = inventory.entries.filter((entry) => entry.status === "partial").map((entry) => entry.sourceName).sort();
-  assert.deepEqual(partial, ["Scarlet Leprosy", "Tuberculosis"]);
+test("Bonechill automates staged conditions and active cold healing locks while leaving environmental severity manual", () => {
+  const disease = bySource.get("Bonechill");
+  assert.equal(disease.name, "Knochenfrost");
+  assert.equal(disease.checks[0].dc, 20);
+  assert.deepEqual(disease.onset, { value: 1, unit: "days" });
+  assert.deepEqual(stage(disease, 2).restrictions.unhealableDamageTypes, ["cold"]);
+  assert.deepEqual(stage(disease, 3).effect.components, [{ type: "condition", slug: "clumsy", value: 3 }]);
+  assert.deepEqual(stage(disease, 4).effect.components, [{ type: "condition", slug: "paralyzed" }]);
 });
 
-test("runtime seed contains exactly the nine publishable GM diseases and no CLI-only _key", () => {
+test("Brain Worms automates virulent progression and damage-triggered Will saves while keeping confusion behavior manual", () => {
+  const disease = bySource.get("Brain Worms");
+  assert.equal(disease.name, "Hirnwürmer");
+  assert.equal(disease.progression.virulent, true);
+  assert.equal(disease.checks.find((check) => check.id === "mind").statistic, "will");
+  assert.equal(disease.checks.find((check) => check.id === "mind").dc, 28);
+  assert.deepEqual(stage(disease, 2).reactions[0].trigger, { event: "damage-taken", damageTypes: [] });
+  assert.deepEqual(stage(disease, 2).reactions[0].effect.duration, { value: 1, unit: "rounds", expiry: null });
+  assert.deepEqual(stage(disease, 3).reactions[0].effect.duration, { value: 1, unit: "minutes", expiry: null });
+  assert.deepEqual(stage(disease, 4).effect.components, [
+    { type: "condition", slug: "stupefied", value: 4 },
+    { type: "condition", slug: "confused" }
+  ]);
+});
+
+test("Crimson Ooze/Bluthand automates ordinary stage conditions and death while hand-specific rules remain manual", () => {
+  const disease = bySource.get("Crimson Ooze");
+  assert.equal(disease.name, "Bluthand");
+  assert.equal(disease.progression.virulent, true);
+  assert.equal(disease.checks[0].dc, 34);
+  assert.deepEqual(disease.onset, { value: 1, unit: "days" });
+  assert.deepEqual(stage(disease, 2).effect.components, [{ type: "condition", slug: "clumsy", value: 2 }]);
+  assert.deepEqual(stage(disease, 3).effect.components, [
+    { type: "condition", slug: "clumsy", value: 2 },
+    { type: "condition", slug: "stupefied", value: 2 }
+  ]);
+  assert.deepEqual(stage(disease, 5).effect.components, [{ type: "condition", slug: "confused" }]);
+  assert.deepEqual(stage(disease, 6).effect.components, [{ type: "death", category: "direct" }]);
+});
+
+test("no GM disease remains partial after the 0.1.55 concentrate gate", () => {
+  const partial = inventory.entries.filter((entry) => entry.status === "partial");
+  assert.deepEqual(partial, []);
+});
+
+test("runtime seed contains all fourteen GM diseases and no CLI-only _key", () => {
   const sources = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
-  assert.equal(sources.length, 9);
+  assert.equal(sources.length, 14);
   assert.ok(sources.every((source) => source._key === undefined));
   const ids = new Set(sources.map((source) => source.flags["pf2e-affliction-forge"].definitionId));
   assert.deepEqual(ids, new Set(diseases.map((entry) => entry.id)));

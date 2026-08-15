@@ -1,36 +1,46 @@
 # Changelog
 
-## 0.1.6 - 2026-08-15
+## 0.1.8 - 2026-08-15
 
 ### Added
 
-- **Sumpffäule** (`Bog Rot` mechanics) with phase-dependent PF2e status penalties to all Speeds through Affliction Forge numeric modifiers.
-- **Beulenpest** (`Bubonic Plague` mechanics) with a Stage 3 formula-based periodic effect that rerolls `1d20` minutes and applies `1d6` persistent bleed damage.
-- Add-on content-contract validation for Affliction Forge 0.1.52 numeric modifiers and periodic stage effects.
-- Explicit `manual` coverage classification and GM comments for Bonechill, Brain Worms, and Crimson Ooze; these three intentionally do not drive new generic environment, body-part, or confusion-behavior subsystems.
+- **Tuberkulose** as the eleventh fully automated GM disease, using Affliction Forge 0.1.55 pre-action concentrate gates (DC 5 in Stage 2, DC 15 in Stage 3) and Stage 3 fatigue locking.
+- Published the three intentional manual-exception templates with visible **GM-Hinweis** guidance:
+  - **Knochenfrost** (`Bonechill`)
+  - **Hirnwürmer** (`Brain Worms`)
+  - **Bluthand** (`Crimson Ooze`)
+- Manual-exception content-contract support requiring both structured `metadata.manualComment` and visible GM guidance in the template description.
+- Add-on contract validation for Affliction Forge 0.1.55 `preActionGates`.
 
-### Changed
+### Coverage
 
-- GM disease coverage rises from **7/14 FULL** to **9/14 FULL**. Two diseases remain partial because reusable generic hooks are still worthwhile; three are intentional manual exceptions.
-- Tuberculosis carrier status is no longer treated as an automation blocker; only its pre-action concentrate check remains.
-- Sumpffäule's alternate cure by amputation is recorded as a manual cure note rather than an engine blocker.
-- Minimum Affliction Forge dependency raised to **0.1.53**.
-- Module/package/runtime constants and README are synchronized at version **0.1.6**.
+- GM disease catalog is now **14/14 published**.
+- **11/14 FULL** and **3/14 intentional manual exceptions**.
+- No disease remains in the partial/unpublished state.
 
-### Validation
+### Compatibility
 
-- Runtime seeding includes exactly nine deterministic GM disease templates and upgrade tests cover existing 0.1.1, 0.1.2, 0.1.4, and 0.1.5 content.
+- Minimum Affliction Forge dependency raised to **0.1.55**.
 
-## 0.1.5 - 2026-08-15
+## 0.1.7 - 2026-08-15
 
 ### Added
 
-- **Blindfieber** (`Blinding Sickness` mechanics), using Affliction Forge 0.1.51 component-specific persistence so only Blind remains permanent in the relevant phase while simultaneous Enfeebled remains stage-bound.
+- **Karmesin-Lepra** (`Scarlet Leprosy` mechanics) as the tenth FULL GM disease.
+- Stage 2 uses Affliction Forge 0.1.54 `condition-increased` reactions to add one extra point of `wounded` whenever the condition is gained or increased.
+- Disease-wide `affliction-damage` healing protection and a Stage 3 complete healing lock.
+- Native virulent progression for the two-consecutive-success recovery rule.
+- Content-contract validation for 0.1.54 direct condition-event reactions without an auxiliary saving throw.
 
-### Changed
+### Coverage
 
-- GM disease coverage increased to **7/14 FULL**.
-- Minimum Affliction Forge dependency raised to **0.1.51**.
+- GM disease coverage is now **10/14 FULL**, **1/14 partial**, **3/14 intentional manual exceptions**.
+- `Tuberculosis` remains the only partial disease pending a generic pre-action/concentrate gate.
+- `Bonechill`, `Brain Worms`, and `Crimson Ooze` remain intentional manual exceptions and will receive explicit GM guidance instead of bespoke engine subsystems.
+
+### Compatibility
+
+- Minimum Affliction Forge dependency raised to **0.1.54**.
 
 ## 0.1.4 - 2026-08-15
 

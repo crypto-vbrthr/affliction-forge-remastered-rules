@@ -723,6 +723,848 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     },
     {
+      "_id": "W8awvKeaZCPK2vUJ",
+      "name": "Knochenfrost",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierte Krankheit mit fortschreitender Kältestarre. GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "disease"
+          ],
+          "otherTags": [
+            "disease",
+            "cold",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 5
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.bonechill",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.bonechill",
+            "name": "Knochenfrost",
+            "description": "Teilautomatisierte Krankheit mit fortschreitender Kältestarre. GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "disease",
+            "level": 5,
+            "rarity": "common",
+            "traits": [
+              "disease"
+            ],
+            "themes": [
+              "disease",
+              "cold",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 20,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Unbeholfen 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-1",
+                  "name": "Knochenfrost · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Unbeholfen 2. Kälteschaden kann nicht geheilt werden, solange die Krankheit nicht geheilt ist.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [
+                    "cold"
+                  ],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-2",
+                  "name": "Knochenfrost · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Unbeholfen 3. GM-Hinweis: Kalte Temperaturen wirken eine Stufe schwerwiegender.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [
+                    "cold"
+                  ],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-3",
+                  "name": "Knochenfrost · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "Phase 4",
+                "description": "Gelähmt. GM-Hinweis: Kalte Temperaturen wirken eine Stufe schwerwiegender.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [
+                    "cold"
+                  ],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-4",
+                  "name": "Knochenfrost · Phase 4",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "paralyzed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 88,
+              "sourceSection": "Diseases",
+              "sourceName": "Bonechill",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Stage 2-4 use typed cold-damage healing locks while those stages are active.",
+                "Environmental cold severity shifting is intentionally manual.",
+                "If the disease regresses to Stage 1 after reaching Stage 2+, the GM must continue the already-acquired cold-damage healing restriction until the disease ends."
+              ],
+              "manualComment": "GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "Exk37qPqbYJPBAlE",
+      "name": "Hirnwürmer",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierte ausgeprägte Krankheit mit neurologischen Ausfällen. GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "disease"
+          ],
+          "otherTags": [
+            "disease",
+            "virulent",
+            "mental",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 11
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.brain-worms",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.brain-worms",
+            "name": "Hirnwürmer",
+            "description": "Teilautomatisierte ausgeprägte Krankheit mit neurologischen Ausfällen. GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "disease",
+            "level": 11,
+            "rarity": "common",
+            "traits": [
+              "disease"
+            ],
+            "themes": [
+              "disease",
+              "virulent",
+              "mental",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 28,
+                "policy": null
+              },
+              {
+                "id": "mind",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 28,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Benommen 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-1",
+                  "name": "Hirnwürmer · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Benommen 2. Nach erlittenem Schaden folgt ein Willenswurf gegen SG 28; bei Fehlschlag 1 Runde Verwirrt.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-2",
+                  "name": "Hirnwürmer · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": [
+                  {
+                    "id": "damage-confusion",
+                    "label": "Verwirrung nach Schaden",
+                    "trigger": {
+                      "event": "damage-taken",
+                      "damageTypes": []
+                    },
+                    "checkId": "mind",
+                    "applyOn": [
+                      "failure",
+                      "criticalFailure"
+                    ],
+                    "effect": {
+                      "schemaVersion": 2,
+                      "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-2.reaction",
+                      "name": "Hirnwürmer · Verwirrt",
+                      "duration": {
+                        "value": 1,
+                        "unit": "rounds",
+                        "expiry": null
+                      },
+                      "components": [
+                        {
+                          "type": "condition",
+                          "slug": "confused"
+                        }
+                      ],
+                      "application": {},
+                      "metadata": {}
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Benommen 3. Nach erlittenem Schaden folgt ein Willenswurf gegen SG 28; bei Fehlschlag 1 Minute Verwirrt.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-3",
+                  "name": "Hirnwürmer · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": [
+                  {
+                    "id": "damage-confusion",
+                    "label": "Verwirrung nach Schaden",
+                    "trigger": {
+                      "event": "damage-taken",
+                      "damageTypes": []
+                    },
+                    "checkId": "mind",
+                    "applyOn": [
+                      "failure",
+                      "criticalFailure"
+                    ],
+                    "effect": {
+                      "schemaVersion": 2,
+                      "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-3.reaction",
+                      "name": "Hirnwürmer · Verwirrt",
+                      "duration": {
+                        "value": 1,
+                        "unit": "minutes",
+                        "expiry": null
+                      },
+                      "components": [
+                        {
+                          "type": "condition",
+                          "slug": "confused"
+                        }
+                      ],
+                      "application": {},
+                      "metadata": {}
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "Phase 4",
+                "description": "Benommen 4 und Verwirrt. GM-Hinweis: Schaden beendet Verwirrt in dieser Phase nicht.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-4",
+                  "name": "Hirnwürmer · Phase 4",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 4
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-5",
+                "number": 5,
+                "name": "Phase 5",
+                "description": "Bewusstlos.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-5",
+                  "name": "Hirnwürmer · Phase 5",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-6",
+                "number": 6,
+                "name": "Phase 6",
+                "description": "Tod.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-6",
+                  "name": "Hirnwürmer · Phase 6",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "death",
+                      "category": "direct"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 89,
+              "sourceSection": "Diseases",
+              "sourceName": "Brain Worms",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Virulent stage progression is fully automated.",
+                "Stage 2 and 3 damage-triggered Will saves and temporary confused conditions use event reactions.",
+                "Confusion-driven attack replacement with a bite and the Stage 4 exception that damage does not end confused are intentionally manual."
+              ],
+              "manualComment": "GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "HgITTGjMFVc3Bjoe",
       "name": "Beulenpest",
       "type": "effect",
@@ -1344,6 +2186,435 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               }
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "sElWSZJ4XrfP1QLu",
+      "name": "Bluthand",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierte ausgeprägte Pilzerkrankung einer Hand. GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "disease"
+          ],
+          "otherTags": [
+            "disease",
+            "virulent",
+            "body-part",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 15
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+            "name": "Bluthand",
+            "description": "Teilautomatisierte ausgeprägte Pilzerkrankung einer Hand. GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "disease",
+            "level": 15,
+            "rarity": "common",
+            "traits": [
+              "disease"
+            ],
+            "themes": [
+              "disease",
+              "virulent",
+              "body-part",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 34,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Unbeholfen 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-1",
+                  "name": "Bluthand · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Unbeholfen 2. GM-Hinweis: Benutzung der befallenen Hand verursacht 3W6 anhaltenden Blutungsschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-2",
+                  "name": "Bluthand · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Unbeholfen 2 und Benommen 2. GM-Hinweis: Die befallene Hand ist nicht nutzbar.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-3",
+                  "name": "Bluthand · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "Phase 4",
+                "description": "Unbeholfen 3 und Benommen 3. GM-Hinweis: Die befallene Hand ist dauerhaft nicht nutzbar.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-4",
+                  "name": "Bluthand · Phase 4",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 3
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-5",
+                "number": 5,
+                "name": "Phase 5",
+                "description": "Verwirrt. GM-Hinweis: Schaden beendet Verwirrt nicht.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-5",
+                  "name": "Bluthand · Phase 5",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-6",
+                "number": 6,
+                "name": "Phase 6",
+                "description": "Tod.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-6",
+                  "name": "Bluthand · Phase 6",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "death",
+                      "category": "direct"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 89,
+              "sourceSection": "Diseases",
+              "sourceName": "Crimson Ooze",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Virulent progression and ordinary condition stages are automated.",
+                "Infected-hand use, persistent bleed from using that hand, hand usability/permanent loss, and the Stage 5 confused-ending exception are intentionally manual.",
+                "Amputation before Stage 4 is an explicit manual cure option."
+              ],
+              "manualComment": "GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden."
             }
           },
           "originModule": "affliction-forge-remastered-rules",
@@ -2521,6 +3792,317 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     },
     {
+      "_id": "rGktqETKg8Ncwa20",
+      "name": "Karmesin-Lepra",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Ausgeprägte Krankheit mit zunehmenden inneren Verletzungen. Durch die Krankheit verursachter Schaden kann erst geheilt werden, wenn das Leiden endet; in der letzten Phase ist jegliche Trefferpunktheilung blockiert.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "disease"
+          ],
+          "otherTags": [
+            "disease",
+            "virulent",
+            "wounded"
+          ]
+        },
+        "level": {
+          "value": 4
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy",
+            "name": "Karmesin-Lepra",
+            "description": "Ausgeprägte Krankheit mit zunehmenden inneren Verletzungen. Durch die Krankheit verursachter Schaden kann erst geheilt werden, wenn das Leiden endet; in der letzten Phase ist jegliche Trefferpunktheilung blockiert.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "disease",
+            "level": 4,
+            "rarity": "common",
+            "traits": [
+              "disease"
+            ],
+            "themes": [
+              "disease",
+              "virulent",
+              "wounded"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "affliction-damage",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 19,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "2W6 Wuchtschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-1",
+                  "name": "Karmesin-Lepra · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "bludgeoning"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "2W6 Wuchtschaden. Wenn Verletzt neu erhalten oder erhöht wird, steigt der Zustandswert zusätzlich um 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-2",
+                  "name": "Karmesin-Lepra · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "bludgeoning"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "reactions": [
+                  {
+                    "id": "wounded-escalation",
+                    "label": "Verletzt zusätzlich erhöhen",
+                    "trigger": {
+                      "event": "condition-increased",
+                      "damageTypes": [],
+                      "conditionSlugs": [
+                        "wounded"
+                      ]
+                    },
+                    "checkId": null,
+                    "applyOn": [],
+                    "conditionValueDelta": 1,
+                    "effect": null
+                  }
+                ]
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "4W6 Wuchtschaden; Trefferpunktschaden kann während dieser Phase nicht geheilt werden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "all",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-3",
+                  "name": "Karmesin-Lepra · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "bludgeoning"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 88,
+              "sourceSection": "Diseases",
+              "sourceName": "Scarlet Leprosy",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Stage 2 uses Affliction Forge 0.1.54 condition-increased reactions to add exactly +1 wounded when wounded is gained or increased.",
+                "The reaction uses no auxiliary save and relies on the Affliction Forge reaction-chain guard to prevent recursive self-triggering.",
+                "Disease-caused damage is protected from healing for the whole affliction; Stage 3 additionally blocks all Hit Point healing.",
+                "Virulent progression uses the native consecutive-success recovery contract."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "vyVzf4wShxRLyRMl",
       "name": "Kanalisationsdunst",
       "type": "effect",
@@ -3123,6 +4705,389 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               }
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "ylGRvhGjGhDwVd8g",
+      "name": "Tuberkulose",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Atemwegserkrankung mit schweren Hustenanfällen. In fortgeschrittenen Phasen können Konzentrationshandlungen durch einen Einfachen Wurf verhindert werden.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "disease"
+          ],
+          "otherTags": [
+            "disease",
+            "respiratory",
+            "concentrate"
+          ]
+        },
+        "level": {
+          "value": 1
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.tuberculosis",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.tuberculosis",
+            "name": "Tuberkulose",
+            "description": "Atemwegserkrankung mit schweren Hustenanfällen. In fortgeschrittenen Phasen können Konzentrationshandlungen durch einen Einfachen Wurf verhindert werden.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "disease",
+            "level": 1,
+            "rarity": "common",
+            "traits": [
+              "disease"
+            ],
+            "themes": [
+              "disease",
+              "respiratory",
+              "concentrate"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 15,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 7,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Überträger ohne weitere regeltechnische Auswirkungen.",
+                "duration": {
+                  "value": 7,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": null,
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Vor dem Wirken eines Zaubers oder Aktivieren eines Gegenstands mit Konzentration ist ein Einfacher Wurf gegen SG 5 nötig; bei Fehlschlag wird die Handlung verhindert.",
+                "duration": {
+                  "value": 7,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": null,
+                "preActionGates": [
+                  {
+                    "id": "cough-concentrate",
+                    "label": "Husten: Konzentration",
+                    "trigger": {
+                      "actionKinds": [
+                        "spell-cast",
+                        "item-activation"
+                      ],
+                      "requiredTraits": [
+                        "concentrate"
+                      ]
+                    },
+                    "check": {
+                      "kind": "flat",
+                      "dc": 5
+                    },
+                    "blockOnFailure": true
+                  }
+                ],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Erschöpft; der Zustand kann in dieser Phase nicht entfernt werden. Vor Konzentrationshandlungen ist ein Einfacher Wurf gegen SG 15 nötig.",
+                "duration": {
+                  "value": 7,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "fatigued",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-3",
+                  "name": "Tuberkulose · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [
+                  {
+                    "id": "cough-concentrate",
+                    "label": "Husten: Konzentration",
+                    "trigger": {
+                      "actionKinds": [
+                        "spell-cast",
+                        "item-activation"
+                      ],
+                      "requiredTraits": [
+                        "concentrate"
+                      ]
+                    },
+                    "check": {
+                      "kind": "flat",
+                      "dc": 15
+                    },
+                    "blockOnFailure": true
+                  }
+                ],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "Phase 4",
+                "description": "Bewusstlos.",
+                "duration": {
+                  "value": 7,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-4",
+                  "name": "Tuberkulose · Phase 4",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-5",
+                "number": 5,
+                "name": "Phase 5",
+                "description": "Tod.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-5",
+                  "name": "Tuberkulose · Phase 5",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "death",
+                      "category": "direct"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 88,
+              "sourceSection": "Diseases",
+              "sourceName": "Tuberculosis",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Stage 1 carrier status is represented as descriptive transmission metadata without automatic propagation.",
+                "Stage 2 and 3 use Affliction Forge 0.1.55 pre-action flat-check gates for concentrate spell casts and item activations.",
+                "Stage 3 locks the fatigued condition while the stage remains active."
+              ]
             }
           },
           "originModule": "affliction-forge-remastered-rules",

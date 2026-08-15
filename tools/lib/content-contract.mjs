@@ -18,8 +18,10 @@ export const HEALING_RESTRICTION_MODES = new Set(["none", "all", "affliction-dam
 export const STAGE_EFFECT_PERSISTENCE_MODES = new Set(["stage", "affliction", "permanent"]);
 export const NUMERIC_MODIFIER_TYPES = new Set(["untyped", "status", "circumstance", "item"]);
 export const AFFLICTION_CAPABILITIES = new Set(["speak"]);
-export const EVENT_REACTION_EVENTS = new Set(["damage-taken"]);
+export const EVENT_REACTION_EVENTS = new Set(["damage-taken", "condition-increased"]);
 export const REACTION_OUTCOMES = new Set(["criticalSuccess", "success", "failure", "criticalFailure"]);
+export const PRE_ACTION_KINDS = new Set(["spell-cast", "item-activation"]);
+export const AUTOMATION_STATUSES = new Set(["full", "manual"]);
 
 // Deliberately short and conservative. This is not a legal classifier. It is a
 // release guard for terms already known to be Reserved Material or branding.
@@ -115,7 +117,7 @@ export function deterministicDocumentId(definitionId) {
 export function validateDefinition(definition, { pack }) {
   const errors = [];
   if (!isObject(definition)) return ["Definition must be an object."];
-  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.53.");
+  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.55.");
   if (!nonEmptyString(definition.id)) errors.push("id is required.");
   if (nonEmptyString(definition.id) && !definition.id.startsWith(`${MODULE_ID}.`)) {
     errors.push(`id must use stable ${MODULE_ID}. prefix.`);
@@ -230,6 +232,32 @@ export function validateDefinition(definition, { pack }) {
           }
         }
       }
+      if (stage.preActionGates != null) {
+        if (!Array.isArray(stage.preActionGates)) errors.push(`${path}.preActionGates must be an array.`);
+        else {
+          const gateIds = new Set();
+          for (const [gateIndex, gate] of stage.preActionGates.entries()) {
+            const gatePath = `${path}.preActionGates[${gateIndex}]`;
+            if (!isObject(gate)) { errors.push(`${gatePath} must be an object.`); continue; }
+            if (!nonEmptyString(gate.id)) errors.push(`${gatePath}.id is required.`);
+            else if (gateIds.has(gate.id)) errors.push(`${gatePath}.id is duplicated: ${gate.id}`);
+            else gateIds.add(gate.id);
+            if (!isObject(gate.trigger)) errors.push(`${gatePath}.trigger must be an object.`);
+            else {
+              if (!Array.isArray(gate.trigger.actionKinds) || gate.trigger.actionKinds.length === 0) errors.push(`${gatePath}.trigger.actionKinds must contain at least one action kind.`);
+              else for (const kind of gate.trigger.actionKinds) if (!PRE_ACTION_KINDS.has(kind)) errors.push(`${gatePath}.trigger.actionKinds contains unsupported kind: ${kind}`);
+              if (!Array.isArray(gate.trigger.requiredTraits)) errors.push(`${gatePath}.trigger.requiredTraits must be an array.`);
+              else if (gate.trigger.requiredTraits.some((entry) => !nonEmptyString(entry))) errors.push(`${gatePath}.trigger.requiredTraits must contain only non-empty strings.`);
+            }
+            if (!isObject(gate.check)) errors.push(`${gatePath}.check must be an object.`);
+            else {
+              if (gate.check.kind !== "flat") errors.push(`${gatePath}.check.kind must be flat.`);
+              if (!Number.isInteger(gate.check.dc) || gate.check.dc < 1 || gate.check.dc > 20) errors.push(`${gatePath}.check.dc must be an integer from 1 to 20.`);
+            }
+            if (typeof gate.blockOnFailure !== "boolean") errors.push(`${gatePath}.blockOnFailure must be boolean.`);
+          }
+        }
+      }
       if (stage.reactions != null) {
         if (!Array.isArray(stage.reactions)) errors.push(`${path}.reactions must be an array.`);
         else {
@@ -244,12 +272,26 @@ export function validateDefinition(definition, { pack }) {
             if (!isObject(reaction.trigger)) errors.push(`${reactionPath}.trigger must be an object.`);
             else {
               if (!EVENT_REACTION_EVENTS.has(reaction.trigger.event)) errors.push(`${reactionPath}.trigger.event is unsupported: ${reaction.trigger.event}`);
-              if (!Array.isArray(reaction.trigger.damageTypes)) errors.push(`${reactionPath}.trigger.damageTypes must be an array.`);
-              else if (reaction.trigger.damageTypes.some((entry) => !nonEmptyString(entry))) errors.push(`${reactionPath}.trigger.damageTypes must contain only non-empty strings.`);
+              if (reaction.trigger.damageTypes != null) {
+                if (!Array.isArray(reaction.trigger.damageTypes)) errors.push(`${reactionPath}.trigger.damageTypes must be an array when present.`);
+                else if (reaction.trigger.damageTypes.some((entry) => !nonEmptyString(entry))) errors.push(`${reactionPath}.trigger.damageTypes must contain only non-empty strings.`);
+              }
+              if (reaction.trigger.conditionSlugs != null) {
+                if (!Array.isArray(reaction.trigger.conditionSlugs)) errors.push(`${reactionPath}.trigger.conditionSlugs must be an array when present.`);
+                else if (reaction.trigger.conditionSlugs.some((entry) => !nonEmptyString(entry))) errors.push(`${reactionPath}.trigger.conditionSlugs must contain only non-empty strings.`);
+              }
+              if (reaction.trigger.event === "damage-taken" && !Array.isArray(reaction.trigger.damageTypes)) errors.push(`${reactionPath}.trigger.damageTypes must be an array for damage-taken.`);
+              if (reaction.trigger.event === "condition-increased" && !Array.isArray(reaction.trigger.conditionSlugs)) errors.push(`${reactionPath}.trigger.conditionSlugs must be an array for condition-increased.`);
             }
-            if (!checkIds.has(reaction.checkId)) errors.push(`${reactionPath}.checkId references an unknown check: ${reaction.checkId}`);
-            if (!Array.isArray(reaction.applyOn) || reaction.applyOn.length === 0) errors.push(`${reactionPath}.applyOn must contain at least one outcome.`);
-            else for (const outcome of reaction.applyOn) if (!REACTION_OUTCOMES.has(outcome)) errors.push(`${reactionPath}.applyOn contains unsupported outcome: ${outcome}`);
+            const hasCheck = reaction.checkId != null && String(reaction.checkId).trim() !== "";
+            if (hasCheck && !checkIds.has(reaction.checkId)) errors.push(`${reactionPath}.checkId references an unknown check: ${reaction.checkId}`);
+            if (hasCheck) {
+              if (!Array.isArray(reaction.applyOn) || reaction.applyOn.length === 0) errors.push(`${reactionPath}.applyOn must contain at least one outcome for a checked reaction.`);
+              else for (const outcome of reaction.applyOn) if (!REACTION_OUTCOMES.has(outcome)) errors.push(`${reactionPath}.applyOn contains unsupported outcome: ${outcome}`);
+            } else if (!Array.isArray(reaction.applyOn)) errors.push(`${reactionPath}.applyOn must be an array.`);
+            if (reaction.conditionValueDelta != null && !Number.isInteger(reaction.conditionValueDelta)) errors.push(`${reactionPath}.conditionValueDelta must be an integer when present.`);
+            if (Number(reaction.conditionValueDelta ?? 0) !== 0 && reaction.trigger?.event !== "condition-increased") errors.push(`${reactionPath}.conditionValueDelta is only supported for condition-increased reactions.`);
+            if (reaction.effect == null && Number(reaction.conditionValueDelta ?? 0) === 0) errors.push(`${reactionPath} has no mechanical output.`);
             if (reaction.effect != null) {
               if (!isObject(reaction.effect)) errors.push(`${reactionPath}.effect must be an object or null.`);
               else {
@@ -278,7 +320,11 @@ export function validateDefinition(definition, { pack }) {
     if (metadata.translation !== "independent-from-english-orc-source") {
       errors.push("metadata.translation must declare independent-from-english-orc-source.");
     }
-    if (metadata.automationStatus !== "full") errors.push("Only automationStatus=full entries may ship in the first release set.");
+    if (!AUTOMATION_STATUSES.has(metadata.automationStatus)) errors.push(`Unsupported metadata.automationStatus: ${metadata.automationStatus}`);
+    if (metadata.automationStatus === "manual") {
+      if (!nonEmptyString(metadata.manualComment)) errors.push("metadata.manualComment is required for manual-exception entries.");
+      if (!/gm-hinweis/i.test(String(definition.description ?? ""))) errors.push("Manual-exception entries must surface a visible GM-Hinweis in description.");
+    }
     if (!isObject(metadata.licenseReview)) errors.push("metadata.licenseReview is required.");
     else {
       if (metadata.licenseReview.mechanicsOnly !== true) errors.push("licenseReview.mechanicsOnly must be true.");

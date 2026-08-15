@@ -187,6 +187,20 @@ test("0.1.50 damage-taken event reactions are accepted by the content contract",
   assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
 });
 
+test("0.1.54 condition-increased reactions can resolve directly without an auxiliary save", () => {
+  const definition = validDefinition();
+  definition.stages[0].reactions = [{
+    id: "wounded-escalation",
+    label: "Wounded escalation",
+    trigger: { event: "condition-increased", damageTypes: [], conditionSlugs: ["wounded"] },
+    checkId: null,
+    applyOn: [],
+    conditionValueDelta: 1,
+    effect: null
+  }];
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+});
+
 test("0.1.52 numeric modifiers and periodic stage effects are accepted by the content contract", () => {
   const definition = validDefinition();
   definition.stages[0].numericModifiers = [{
@@ -223,4 +237,29 @@ test("invalid numeric and periodic authoring values are rejected", () => {
   assert.ok(issues.some((issue) => /non-zero finite/i.test(issue)));
   assert.ok(issues.some((issue) => /positive value or a dice formula/i.test(issue)));
   assert.ok(issues.some((issue) => /effect must be an effect object/i.test(issue)));
+});
+
+
+test("0.1.55 pre-action concentrate gates are accepted by the content contract", () => {
+  const definition = validDefinition();
+  definition.stages[0].preActionGates = [{
+    id: "cough",
+    label: "Cough",
+    trigger: { actionKinds: ["spell-cast", "item-activation"], requiredTraits: ["concentrate"] },
+    check: { kind: "flat", dc: 5 },
+    blockOnFailure: true
+  }];
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+});
+
+test("manual-exception entries require visible GM guidance", () => {
+  const definition = validDefinition();
+  definition.metadata.automationStatus = "manual";
+  definition.metadata.manualComment = "GM-Hinweis: Manuell abwickeln.";
+  definition.description = "Teilautomatisiert. GM-Hinweis: Manuell abwickeln.";
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+
+  delete definition.metadata.manualComment;
+  const issues = validateDefinition(definition, { pack: "gm-core" });
+  assert.ok(issues.some((issue) => /manualComment/i.test(issue)));
 });

@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze",
+  "name": "Bluthand",
+  "description": "Teilautomatisierte ausgeprägte Pilzerkrankung einer Hand. GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "disease",
+  "level": 15,
+  "rarity": "common",
+  "traits": [
+    "disease"
+  ],
+  "themes": [
+    "disease",
+    "virulent",
+    "body-part",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "unhealableDamageTypes": [],
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 34,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 1,
+    "unit": "days"
+  },
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": true
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Unbeholfen 1.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-1",
+        "name": "Bluthand · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "clumsy",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Unbeholfen 2. GM-Hinweis: Benutzung der befallenen Hand verursacht 3W6 anhaltenden Blutungsschaden.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-2",
+        "name": "Bluthand · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "clumsy",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Unbeholfen 2 und Benommen 2. GM-Hinweis: Die befallene Hand ist nicht nutzbar.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-3",
+        "name": "Bluthand · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "clumsy",
+            "value": 2
+          },
+          {
+            "type": "condition",
+            "slug": "stupefied",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "Phase 4",
+      "description": "Unbeholfen 3 und Benommen 3. GM-Hinweis: Die befallene Hand ist dauerhaft nicht nutzbar.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-4",
+        "name": "Bluthand · Phase 4",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "clumsy",
+            "value": 3
+          },
+          {
+            "type": "condition",
+            "slug": "stupefied",
+            "value": 3
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-5",
+      "number": 5,
+      "name": "Phase 5",
+      "description": "Verwirrt. GM-Hinweis: Schaden beendet Verwirrt nicht.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-5",
+        "name": "Bluthand · Phase 5",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "confused"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-6",
+      "number": 6,
+      "name": "Phase 6",
+      "description": "Tod.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-6",
+        "name": "Bluthand · Phase 6",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "death",
+            "category": "direct"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 89,
+    "sourceSection": "Diseases",
+    "sourceName": "Crimson Ooze",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Virulent progression and ordinary condition stages are automated.",
+      "Infected-hand use, persistent bleed from using that hand, hand usability/permanent loss, and the Stage 5 confused-ending exception are intentionally manual.",
+      "Amputation before Stage 4 is an explicit manual cure option."
+    ],
+    "manualComment": "GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden."
+  }
+}

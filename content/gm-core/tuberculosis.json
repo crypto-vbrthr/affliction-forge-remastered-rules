@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.tuberculosis",
+  "name": "Tuberkulose",
+  "description": "Atemwegserkrankung mit schweren Hustenanfällen. In fortgeschrittenen Phasen können Konzentrationshandlungen durch einen Einfachen Wurf verhindert werden.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "disease",
+  "level": 1,
+  "rarity": "common",
+  "traits": [
+    "disease"
+  ],
+  "themes": [
+    "disease",
+    "respiratory",
+    "concentrate"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "unhealableDamageTypes": [],
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 15,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 7,
+    "unit": "days"
+  },
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Überträger ohne weitere regeltechnische Auswirkungen.",
+      "duration": {
+        "value": 7,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": null,
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Vor dem Wirken eines Zaubers oder Aktivieren eines Gegenstands mit Konzentration ist ein Einfacher Wurf gegen SG 5 nötig; bei Fehlschlag wird die Handlung verhindert.",
+      "duration": {
+        "value": 7,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": null,
+      "preActionGates": [
+        {
+          "id": "cough-concentrate",
+          "label": "Husten: Konzentration",
+          "trigger": {
+            "actionKinds": [
+              "spell-cast",
+              "item-activation"
+            ],
+            "requiredTraits": [
+              "concentrate"
+            ]
+          },
+          "check": {
+            "kind": "flat",
+            "dc": 5
+          },
+          "blockOnFailure": true
+        }
+      ],
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Erschöpft; der Zustand kann in dieser Phase nicht entfernt werden. Vor Konzentrationshandlungen ist ein Einfacher Wurf gegen SG 15 nötig.",
+      "duration": {
+        "value": 7,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [
+          {
+            "slug": "fatigued",
+            "minimum": null
+          }
+        ],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-3",
+        "name": "Tuberkulose · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [
+        {
+          "id": "cough-concentrate",
+          "label": "Husten: Konzentration",
+          "trigger": {
+            "actionKinds": [
+              "spell-cast",
+              "item-activation"
+            ],
+            "requiredTraits": [
+              "concentrate"
+            ]
+          },
+          "check": {
+            "kind": "flat",
+            "dc": 15
+          },
+          "blockOnFailure": true
+        }
+      ],
+      "reactions": []
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "Phase 4",
+      "description": "Bewusstlos.",
+      "duration": {
+        "value": 7,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-4",
+        "name": "Tuberkulose · Phase 4",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "unconscious"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-5",
+      "number": 5,
+      "name": "Phase 5",
+      "description": "Tod.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-5",
+        "name": "Tuberkulose · Phase 5",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "death",
+            "category": "direct"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 88,
+    "sourceSection": "Diseases",
+    "sourceName": "Tuberculosis",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Stage 1 carrier status is represented as descriptive transmission metadata without automatic propagation.",
+      "Stage 2 and 3 use Affliction Forge 0.1.55 pre-action flat-check gates for concentrate spell casts and item activations.",
+      "Stage 3 locks the fatigued condition while the stage remains active."
+    ]
+  }
+}
