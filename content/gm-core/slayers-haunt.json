@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.slayers-haunt",
+  "name": "Spuk der Erschlagenen",
+  "description": "Teilautomatisierter Illusionsfluch. GM-Hinweis: Vor Identifikation, Wissen abrufen oder anderer Interaktion, die die wahre Gestalt einer Kreatur voraussetzt, ist ein Willenswurf SG 19 nötig; bei kritischem Fehlschlag zusätzlich Verängstigt 1.",
+  "img": "icons/svg/terror.svg",
+  "afflictionType": "curse",
+  "level": 4,
+  "rarity": "common",
+  "traits": [
+    "curse",
+    "illusion",
+    "magical",
+    "visual"
+  ],
+  "themes": [
+    "curse",
+    "illusion",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "unhealableDamageTypes": [],
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Willen",
+      "kind": "save",
+      "statistic": "will",
+      "dcMode": "fixed",
+      "dc": 19,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 1
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": null,
+  "defaultStageCheck": null,
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Wirkung",
+      "description": "GM-Hinweis: Wahrnehmungsabhängige Zusatzwürfe und Verängstigt 1 bei kritischem Fehlschlag manuell abwickeln.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": null,
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 86,
+    "sourceSection": "Curses",
+    "sourceName": "Slayer's Haunt",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "manualComment": "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen."
+  }
+}

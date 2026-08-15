@@ -1,6 +1,6 @@
 {
   "name": "affliction-forge-remastered-rules",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "private": true,
   "type": "module",
   "scripts": {

@@ -1,5 +1,53 @@
 # Changelog
 
+## 0.1.11 - 2026-08-15
+
+### Added
+
+- Complete **29/29 Player Core 2 alchemical poison catalog** as published library content.
+- Twelve injury poisons use Affliction Forge 0.1.57 injury delivery metadata.
+- Lethargy Poison uses `multipleExposure: "ignore"`, `incapacitation`, and `sleep` traits.
+- Native virulent progression for King's Sleep, Black Lotus Extract, and Tears of Death.
+- Root condition locks and stage numeric modifiers for poison-specific recovery and movement rules.
+- Visible GM guidance for the few source mechanics that remain intentionally non-generic, including variable Stage 4 duration, cross-affliction cure, 24-hour residual condition duration, cumulative Drained, and narrative sleep details.
+- Player II poison coverage inventory and regression tests for count, delivery split, repeated exposure, virulent flags, injury metadata, incapacitation, and manual guidance.
+- Add-on content contract validation for Affliction Forge 0.1.57 `multipleExposure`.
+
+### Coverage
+
+- GM diseases remain **14/14 published**.
+- GM curses remain **16/16 published**.
+- Player II alchemical poisons are now **29/29 published**.
+- Total bundled definitions: **59**.
+
+### Compatibility
+
+- Minimum Affliction Forge dependency raised to **0.1.57**.
+
+
+## 0.1.10 - 2026-08-15
+
+### Added
+
+- Completed the **16/16 GM Core curse catalog** as published library content.
+- **Fluch des Schlummerns** (`Curse of Slumber` mechanics) as a fully automated 0.1.56 lifecycle curse using finite-stage recovery and damage-triggered reactive recovery.
+- Fifteen additional deterministic curse templates beyond the prior single-entry release, including visible GM guidance for intentionally non-generic rules.
+- **Söldnerwahn** initiative-trigger automation through `initiative-rolled`; the incapacitation degree adjustment remains an explicit GM exception.
+- Automated weekly repeat saves for **Fluch der Gefräßigen** and daily repeat saves for **Unendlicher Durst** while leaving starvation/thirst subsystems external.
+- **Grabesfluch** as a variable-level manual exception using an external/dynamic save DC and an explicit technical level placeholder.
+- Add-on contract validation for Affliction Forge 0.1.56 lifecycle reaction `controllerActions`, `initiative-rolled` / `turn-start`, and stage `expiryAction`.
+- Upgrade-seeding coverage proving 0.1.9 installations receive only the fifteen newly published curse documents.
+
+### Coverage
+
+- GM diseases remain **14/14 published**: 11 FULL and 3 intentional manual exceptions.
+- GM curses are now **16/16 published**: 2 FULL and 14 intentional manual exceptions with visible GM guidance.
+- No bespoke rest, inventory, body-part, third-party AI, proficiency, deity-relative weakness, promise tracking, or creature-spawning subsystem is introduced only to satisfy individual curses.
+
+### Compatibility
+
+- Minimum Affliction Forge dependency raised to **0.1.56**.
+
 ## 0.1.9 - 2026-08-15
 
 ### Added

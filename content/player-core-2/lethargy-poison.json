@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
+  "name": "Lethargiegift",
+  "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 2,
+  "rarity": "uncommon",
+  "traits": [
+    "poison",
+    "injury",
+    "incapacitation",
+    "sleep"
+  ],
+  "themes": [
+    "poison",
+    "injury"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": true
+  },
+  "multipleExposure": "ignore",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 18,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": {
+    "value": 4,
+    "unit": "hours"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Verlangsamt 1.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-1",
+        "name": "Lethargiegift · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "slowed",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Verlangsamt 1.",
+      "duration": {
+        "value": 1,
+        "unit": "minutes"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-2",
+        "name": "Lethargiegift · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "slowed",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Bewusstlos.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [
+          {
+            "slug": "unconscious",
+            "minimum": null
+          }
+        ],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-3",
+        "name": "Lethargiegift · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "unconscious"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "Phase 4",
+      "description": "Bewusstlos.",
+      "duration": {
+        "value": 4,
+        "unit": "hours"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [
+          {
+            "slug": "unconscious",
+            "minimum": null
+          }
+        ],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-4",
+        "name": "Lethargiegift · Phase 4",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "unconscious"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "player-core-2",
+    "sourcePage": 293,
+    "sourceSection": "Alchemical Poisons",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+    ],
+    "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
+  }
+}

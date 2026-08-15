@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom",
+  "name": "Schwarzviperngift",
+  "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 2,
+  "rarity": "common",
+  "traits": [
+    "poison",
+    "injury"
+  ],
+  "themes": [
+    "poison",
+    "injury"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": true
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 18,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": {
+    "value": 3,
+    "unit": "rounds"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "1W4 Giftschaden.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-1",
+        "name": "Schwarzviperngift · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "1d4",
+            "damageType": "poison"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "1W6 Giftschaden.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-2",
+        "name": "Schwarzviperngift · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "1d6",
+            "damageType": "poison"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "1W8 Giftschaden.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-3",
+        "name": "Schwarzviperngift · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "1d8",
+            "damageType": "poison"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "player-core-2",
+    "sourcePage": 294,
+    "sourceSection": "Alchemical Poisons",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+    ]
+  }
+}

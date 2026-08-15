@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep",
+  "name": "Königsschlaf",
+  "description": "Eingenommenes Gift der Stufe 18 mit Zähigkeitswurf SG 41. GM-Hinweis:  Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 18,
+  "rarity": "common",
+  "traits": [
+    "poison",
+    "ingested"
+  ],
+  "themes": [
+    "poison",
+    "ingested"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [
+      {
+        "slug": "drained",
+        "minimum": null
+      }
+    ],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 41,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 1,
+    "unit": "days"
+  },
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": true
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Ausgelaugt 1.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "affliction",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-1",
+        "name": "Königsschlaf · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "drained",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Ausgelaugt 1.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "affliction",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-2",
+        "name": "Königsschlaf · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "drained",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Ausgelaugt 2.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "affliction",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-3",
+        "name": "Königsschlaf · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "drained",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "player-core-2",
+    "sourcePage": 293,
+    "sourceSection": "Alchemical Poisons",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+    ],
+    "manualComment": "GM-Hinweis: Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden."
+  }
+}

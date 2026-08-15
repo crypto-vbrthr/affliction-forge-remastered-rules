@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.wizards-ward",
+  "name": "Schutz des Magiers",
+  "description": "Teilautomatisierter Schutzfluch eines Buches. GM-Hinweis: Nach misslungenem Rettungswurf 5W6 Schaden derselben Schadensart wie die Beschädigung des geschützten Buches zufügen; dieser Schaden bleibt bis zur Reparatur des Buches unheilbar. Die Reparatur beendet den Fluch.",
+  "img": "icons/svg/terror.svg",
+  "afflictionType": "curse",
+  "level": 6,
+  "rarity": "common",
+  "traits": [
+    "curse",
+    "magical"
+  ],
+  "themes": [
+    "curse",
+    "damage",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "unhealableDamageTypes": [],
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Willen",
+      "kind": "save",
+      "statistic": "will",
+      "dcMode": "fixed",
+      "dc": 22,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 1
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": null,
+  "defaultStageCheck": null,
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Wirkung",
+      "description": "GM-Hinweis: Schadensart aus dem auslösenden Buchschaden übernehmen, 5W6 Schaden manuell zufügen und die Heilung dieses Schadens bis zur Reparatur blockieren.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": null,
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 86,
+    "sourceSection": "Curses",
+    "sourceName": "Wizard's Ward",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "manualComment": "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt."
+  }
+}

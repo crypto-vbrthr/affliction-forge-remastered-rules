@@ -263,3 +263,58 @@ test("manual-exception entries require visible GM guidance", () => {
   const issues = validateDefinition(definition, { pack: "gm-core" });
   assert.ok(issues.some((issue) => /manualComment/i.test(issue)));
 });
+
+test("0.1.56 lifecycle reactions and stage expiry actions are accepted by the content contract", () => {
+  const definition = validDefinition();
+  definition.stages[0].duration = { value: 1, unit: "rounds" };
+  definition.stages[0].expiryAction = "recover";
+  definition.stages[0].reactions = [{
+    id: "wake-on-damage",
+    label: "Wake",
+    trigger: { event: "damage-taken", damageTypes: [], conditionSlugs: [] },
+    checkId: "primary",
+    applyOn: [],
+    conditionValueDelta: 0,
+    controllerActions: { criticalSuccess: "recover", success: "recover", failure: "none", criticalFailure: "none" },
+    effect: null
+  }];
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+});
+
+test("0.1.56 initiative and turn-start reaction events are accepted", () => {
+  for (const event of ["initiative-rolled", "turn-start"]) {
+    const definition = validDefinition();
+    definition.stages[0].reactions = [{
+      id: `event-${event}`,
+      label: event,
+      trigger: { event, damageTypes: [], conditionSlugs: [] },
+      checkId: "primary",
+      applyOn: ["failure"],
+      conditionValueDelta: 0,
+      controllerActions: { criticalSuccess: "none", success: "none", failure: "none", criticalFailure: "none" },
+      effect: {
+        schemaVersion: 2,
+        id: `test.${event}.effect`,
+        name: "Reaction",
+        duration: { value: 1, unit: "rounds", expiry: null },
+        components: [{ type: "condition", slug: "confused" }],
+        application: {},
+        metadata: {}
+      }
+    }];
+    assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), [], event);
+  }
+});
+
+test("0.1.57 repeated-exposure modes are accepted for poisons", () => {
+  const definition = validDefinition({ afflictionType: "poison", multipleExposure: "ignore", delivery: { injuryPoison: true } });
+  definition.traits = ["poison", "injury"];
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+});
+
+test("non-poisons cannot use injury delivery or non-default repeated exposure", () => {
+  const definition = validDefinition({ afflictionType: "disease", multipleExposure: "ignore", delivery: { injuryPoison: true } });
+  const issues = validateDefinition(definition, { pack: "gm-core" });
+  assert.ok(issues.some((issue) => /multipleExposure/i.test(issue)));
+  assert.ok(issues.some((issue) => /injury poisons/i.test(issue)));
+});

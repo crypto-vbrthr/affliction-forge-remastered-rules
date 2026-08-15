@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes",
+  "name": "Schwefelschwaden",
+  "description": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 16,
+  "rarity": "common",
+  "traits": [
+    "poison",
+    "inhaled"
+  ],
+  "themes": [
+    "poison",
+    "inhaled"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 36,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 1,
+    "unit": "rounds"
+  },
+  "maximumDuration": {
+    "value": 6,
+    "unit": "rounds"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "7W8 Giftschaden und Kraftlos 1.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-1",
+        "name": "Schwefelschwaden · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "7d8",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "8W8 Giftschaden und Kraftlos 2.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-2",
+        "name": "Schwefelschwaden · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "8d8",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "10W8 Giftschaden und Kraftlos 3.",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-3",
+        "name": "Schwefelschwaden · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "10d8",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 3
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "player-core-2",
+    "sourcePage": 294,
+    "sourceSection": "Alchemical Poisons",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+    ]
+  }
+}

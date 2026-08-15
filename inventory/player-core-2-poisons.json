@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "sourceWorkId": "player-core-2",
+  "section": "Alchemical Poisons",
+  "reviewPolicy": "All 29 Player Core 2 alchemical poison definitions are published. Affliction Forge 0.1.57 handles repeated poison exposure, injury-poison delivery hardening, one injury poison per host, and incapacitation saves. Source-specific mechanics that still exceed the generic engine are preserved as visible GM guidance rather than bespoke subsystems.",
+  "entries": [
+    {
+      "sourceName": "Arsen",
+      "level": 1,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.arsenic",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Belladonna",
+      "level": 2,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.belladonna",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Bleibein",
+      "level": 4,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.leadfoot",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Geisttrübungsöl",
+      "level": 3,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.mindfog-oil",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57. User-facing name neutralized as a Reserved-Material precaution."
+      ]
+    },
+    {
+      "sourceName": "Eisenhut",
+      "level": 10,
+      "status": "manual",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.wolfsbane",
+      "notes": [
+        "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt."
+      ],
+      "manualComment": "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt."
+    },
+    {
+      "sourceName": "Erschöpfendes Pulver",
+      "level": 9,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Faulbrandharz",
+      "level": 11,
+      "status": "full",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.blightburn-resin",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Furchtblumennektar",
+      "level": 4,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Geistesnebel",
+      "level": 15,
+      "status": "full",
+      "delivery": "inhaled",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.mindmist",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Grabeswurzel",
+      "level": 3,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.grave-root",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Grauschattierung",
+      "level": 10,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.gray-shadow",
+      "notes": [
+        "GM-Hinweis: Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden."
+      ],
+      "manualComment": "GM-Hinweis: Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden."
+    },
+    {
+      "sourceName": "Himmelblaue Geißel",
+      "level": 16,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Höhlenwurmgift",
+      "level": 12,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Knollenblätterpilzpulver",
+      "level": 13,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.deathcap-powder",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Königsschlaf",
+      "level": 18,
+      "status": "manual",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.kings-sleep",
+      "notes": [
+        "GM-Hinweis: Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden."
+      ],
+      "manualComment": "GM-Hinweis: Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden."
+    },
+    {
+      "sourceName": "Lethargiegift",
+      "level": 2,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
+      "notes": [
+        "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
+      ],
+      "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
+    },
+    {
+      "sourceName": "Nesselkrautkonzentrat",
+      "level": 8,
+      "status": "full",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Riesenskorpiongift",
+      "level": 6,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Riesentausendfüßlergift",
+      "level": 1,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Schierling",
+      "level": 17,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.hemlock",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Schlummerwein",
+      "level": 12,
+      "status": "manual",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.slumber-wine",
+      "notes": [
+        "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt."
+      ],
+      "manualComment": "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt."
+    },
+    {
+      "sourceName": "Schwarzer Lotusextrakt",
+      "level": 19,
+      "status": "full",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Schwarzviperngift",
+      "level": 2,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.black-viper-venom",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Schwefelschwaden",
+      "level": 16,
+      "status": "full",
+      "delivery": "inhaled",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Spinnengift",
+      "level": 5,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.spider-venom",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Spinnenwurz",
+      "level": 9,
+      "status": "full",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.spider-root",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Todestränen",
+      "level": 20,
+      "status": "full",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.tears-of-death",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Wurzelorchideengift",
+      "level": 7,
+      "status": "full",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    },
+    {
+      "sourceName": "Wyverngift",
+      "level": 8,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.player-core-2.wyvern-poison",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.57."
+      ]
+    }
+  ]
+}

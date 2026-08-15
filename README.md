@@ -1,22 +1,22 @@
 # Affliction Forge: Remastered Rules Library
 
-Version **0.1.9** begins the reviewed **GM curse catalog** and retains the complete 14-entry GM disease catalog. It requires **PF2E Affliction Forge 0.1.55+**.
+Version **0.1.11** adds the complete reviewed **29-entry Player II alchemical poison catalog** while retaining the complete GM disease and curse catalogs. It requires **PF2E Affliction Forge 0.1.57+**.
 
 ## Current scope
 
 - one external provider
 - one visible, read-only Affliction Forge library
 - four internal PF2e Item compendium packs
-- required dependency on **PF2E Affliction Forge 0.1.55+**
-- complete reviewed GM disease catalog
-- reviewed inventory of all 16 GM Core curses
-- first fully supported GM curse published
+- required dependency on **PF2E Affliction Forge 0.1.57+**
+- complete reviewed **14-entry GM disease catalog**
+- complete reviewed **16-entry GM curse catalog**
+- complete reviewed **29-entry Player II alchemical poison catalog**
 - ORC notice and upstream attribution
 - mechanics-only content policy
 - per-entry license/review metadata contract
 - deterministic stable Item IDs for compiled pack content
 - GM-only idempotent runtime bootstrap for development installs with uncompiled packs
-- Node validation/tests for provider wiring, manifest structure, content gates, restrictions, persistence, periodic effects, numeric modifiers, event reactions, and pre-action gates
+- Node validation/tests for provider wiring, manifest structure, content gates, restrictions, persistence, periodic effects, numeric modifiers, event reactions, pre-action gates, lifecycle reactions, and stage-expiry actions
 
 ## GM disease catalog
 
@@ -42,51 +42,44 @@ All **14/14 reviewed GM diseases** are published.
 - **Hirnwürmer** (`Brain Worms` mechanics)
 - **Bluthand** (`Crimson Ooze` mechanics)
 
-The three manual-exception templates still automate their ordinary staged conditions, saves, virulent progression, and supported event reactions. Unsupported rules are shown directly in the user-facing description and affected stages as **GM-Hinweis** text. No bespoke environment, confusion-behavior, or body-part subsystem is added only for these entries.
+The three manual-exception disease templates automate their ordinary staged conditions, saves, virulent progression, and supported event reactions. Unsupported rules are shown directly as **GM-Hinweis** text rather than forcing environment, confusion-behavior, or body-part subsystems into the core engine.
 
-## GM curse catalog: first pass
+## GM curse catalog
 
-GM Core presents curses differently from most diseases: they usually apply a single lasting effect after a failed save, and many are removed only by a specific action or condition rather than normal stage recovery. The external narrative/world trigger is therefore **not** treated as an Affliction Forge blocker. Applying a curse template means that its trigger has already occurred.
+All **16/16 reviewed GM Core curses** are published.
 
-All **16 GM Core curses** have been reviewed for the 0.1.55 runtime contract.
+GM Core curses usually apply one lasting post-trigger effect and often depend on removal conditions or world events rather than normal stage progression. Applying a curse template means its external narrative/world trigger has already occurred.
 
-### Published FULL: 1/16
+### Fully automated: 2/16
 
-- **Feindselige Erde** (`Reviling Earth` mechanics), level 12. Fortitude DC 30; failure applies Doomed 1, critical failure Doomed 2. The geographical trigger remains GM/world context.
+- **Feindselige Erde** (`Reviling Earth` mechanics): Fortitude DC 30; failure applies Doomed 1, critical failure Doomed 2.
+- **Fluch des Schlummerns** (`Curse of Slumber` mechanics): Fortitude DC 28; failure sleeps for 1 round and recovers automatically, critical failure sleeps indefinitely; damage triggers a new save and success recovers the controller.
 
-### Reviewed, inventory-only: 15/16
+### Intentional manual exceptions: 14/16
 
-The remaining curses currently require mechanics that are broader than a single curse template, including rest-system overrides, dynamic skill-proficiency changes, turn-start choices, starvation/thirst integration, source-relative damage, promise or theft tracking, initiative/death triggers, third-party hostility, or undead spawning.
+The other curses are shipped as usable curse markers with every safely reusable mechanic automated and a visible **GM-Hinweis** for the remaining rule.
 
-They remain in `inventory/gm-core-curses.json` until a genuinely reusable engine contract exists. We do **not** add bespoke one-off subsystems merely to force a curse into FULL automation. Later, where partial automation is useful and the missing rule is clearly explainable, a curse may instead ship as an explicit manual-exception template with a visible GM note.
+Notable partial automation includes:
 
-## Tuberkulose coverage
+- **Söldnerwahn**: initiative changes automatically trigger the Will save and apply Confused for 1 round on failure. The source marks this auxiliary effect as **incapacitation**, so degree adjustment remains GM-managed until Affliction Forge has a generic source-level incapacitation contract.
+- **Fluch der Gefräßigen**: weekly recovery saves are scheduled automatically; starvation effects remain under the normal survival rules.
+- **Unendlicher Durst**: daily recovery saves are scheduled automatically; thirst/dehydration effects remain under the normal survival rules.
+- **Grabesfluch**: uses an external/dynamic Will DC because its source level varies. Nightly/graveyard flat checks and temporary undead remain GM-managed. Level 0 in the template is only a technical placeholder for the variable source level.
 
-Tuberkulose uses Affliction Forge 0.1.55 pre-action gates. Stage 2 requires a flat check against DC 5 before matching `concentrate` spell casts or item activations; Stage 3 raises this to DC 15 and also locks recovery from `fatigued`. The gate runs before supported PF2e workflows spend their resource. Carrier status is descriptive/transmission metadata and does not automatically spread the disease.
+Other manual-exception curses intentionally leave rest overrides, dynamic skill-rank mutation, perception/identity overlays, turn-start player choices, source-relative damage, promise/theft tracking, death transformation, third-party animal hostility, body-part removal, deity-relative weaknesses, or temporary creature spawning to the GM. Those mechanics are too specific to justify one-off Affliction Forge subsystems.
 
-## Manual-exception policy
 
-- **Knochenfrost:** staged clumsy/paralyzed effects and active typed cold-healing locks are automated. Environmental cold severity changes remain GM-managed. If the disease falls back to Stage 1 after reaching Stage 2+, the already-acquired cold-damage healing restriction must also be carried manually until recovery.
-- **Hirnwürmer:** virulent progression and damage-triggered Will saves are automated. Confusion-driven bite replacement and the Stage 4 exception that damage does not end `confused` remain GM-managed.
-- **Bluthand:** ordinary stage conditions, virulent progression, and death are automated. The infected hand, hand-use bleed trigger, hand usability/permanent loss, Stage 5 confusion exception, and optional amputation cure remain GM-managed.
+## Player II alchemical poison catalog
 
-## Malaria recurrence
+All **29/29 reviewed alchemical poisons** are published. Delivery metadata distinguishes **12 injury**, **9 ingested**, **6 contact**, and **2 inhaled** poisons. Affliction Forge 0.1.57 supplies repeated-exposure handling, injury-poison slashing/piercing delivery rules, one injury poison per host, and incapacitation save adjustment.
 
-The later recurrence rule does **not** keep a dormant Affliction controller alive for months. If recurrence occurs, the same Malaria definition is applied again. This is an explicit content/runtime policy rather than a missing scheduler feature.
+Most entries are fully automated. One user-facing poison name is deliberately neutralized as a Reserved-Material precaution. The following source-specific rules remain visible **GM-Hinweis** exceptions rather than one-off engine subsystems:
 
-## Library architecture
-
-```text
-Affliction Forge: Remastered Rules Library
-└─ Provider: affliction-forge-remastered-rules
-   └─ Library: affliction-forge-remastered-rules.rules
-      ├─ Core Rules: Player I
-      ├─ Core Rules: GM
-      ├─ Core Rules: Player II
-      └─ Treasure Rules (Remastered)
-```
-
-The four compendium packs are internal source partitions. Affliction Forge sees them as one provider library through `api.providers.register()`.
+- **Eisenhut**: surviving Stage 3 can remove lycanthropy; cross-affliction cure remains manual.
+- **Grauschattierung**: Enfeebled lasts 24 hours; the condition is preserved beyond poison recovery and must be removed by the GM after 24 hours.
+- **Königsschlaf**: Drained is cumulative on every failed save; removal is locked while the poison persists, but extra cumulative increments remain GM-managed.
+- **Lethargiegift**: repeated exposure is correctly ignored and incapacitation is automatic; Stage 4 lasts 1d4 hours, which remains a manual rolled stage duration.
+- **Schlummerwein**: poison-induced unconsciousness is locked; no-food/no-drink and corpse-like presentation remain narrative/GM rules.
 
 ## Content workflow
 
@@ -94,7 +87,7 @@ The four compendium packs are internal source partitions. Affliction Forge sees 
 2. Independently formulate German user-facing mechanics text.
 3. Remove or replace Reserved Material, including setting-specific proper nouns.
 4. Mark faithful entries as `automationStatus: "full"`; use `automationStatus: "manual"` only for intentional exceptions with a visible `GM-Hinweis` and structured `metadata.manualComment`.
-5. Keep reviewed-but-unpublished entries in inventory files with explicit blocker categories rather than weakening their rules.
+5. Prefer partial use of existing generic mechanics over bespoke one-entry runtime hooks.
 6. Run `npm test` and `npm run validate`.
 7. Run `npm run prepare:packs` and `npm run generate:seed`.
 8. Compile prepared Item JSON with the official Foundry VTT CLI into LevelDB packs for release builds. Until a pack is precompiled, the GM-only runtime bootstrap inserts missing bundled entries once and relocks the pack.

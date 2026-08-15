@@ -12,14 +12,17 @@ export const SOURCE_WORK_IDS = new Set(SUPPORTED_PACKS);
 export const AFFLICTION_TYPES = new Set(["poison", "disease", "curse", "other"]);
 export const RARITIES = new Set(["common", "uncommon", "rare", "unique"]);
 export const DC_MODES = new Set(["fixed", "source"]);
+export const MULTIPLE_EXPOSURE_MODES = new Set(["default", "ignore"]);
 export const SAVE_STATISTICS = new Set(["fortitude", "reflex", "will"]);
 export const DURATION_UNITS = new Set(["rounds", "minutes", "hours", "days", "unlimited"]);
 export const HEALING_RESTRICTION_MODES = new Set(["none", "all", "affliction-damage"]);
 export const STAGE_EFFECT_PERSISTENCE_MODES = new Set(["stage", "affliction", "permanent"]);
 export const NUMERIC_MODIFIER_TYPES = new Set(["untyped", "status", "circumstance", "item"]);
 export const AFFLICTION_CAPABILITIES = new Set(["speak"]);
-export const EVENT_REACTION_EVENTS = new Set(["damage-taken", "condition-increased"]);
+export const EVENT_REACTION_EVENTS = new Set(["damage-taken", "condition-increased", "initiative-rolled", "turn-start"]);
 export const REACTION_OUTCOMES = new Set(["criticalSuccess", "success", "failure", "criticalFailure"]);
+export const REACTION_CONTROLLER_ACTIONS = new Set(["none", "recover", "end"]);
+export const STAGE_EXPIRY_ACTIONS = new Set(["check", "recover", "end", "stay"]);
 export const PRE_ACTION_KINDS = new Set(["spell-cast", "item-activation"]);
 export const AUTOMATION_STATUSES = new Set(["full", "manual"]);
 
@@ -117,7 +120,7 @@ export function deterministicDocumentId(definitionId) {
 export function validateDefinition(definition, { pack }) {
   const errors = [];
   if (!isObject(definition)) return ["Definition must be an object."];
-  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.55.");
+  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.56.");
   if (!nonEmptyString(definition.id)) errors.push("id is required.");
   if (nonEmptyString(definition.id) && !definition.id.startsWith(`${MODULE_ID}.`)) {
     errors.push(`id must use stable ${MODULE_ID}. prefix.`);
@@ -129,6 +132,13 @@ export function validateDefinition(definition, { pack }) {
   if (!RARITIES.has(definition.rarity)) errors.push(`Unsupported rarity: ${definition.rarity}`);
   if (!Array.isArray(definition.traits)) errors.push("traits must be an array.");
   if (!Array.isArray(definition.themes)) errors.push("themes must be an array.");
+  if (definition.afflictionType === "poison") {
+    if (!MULTIPLE_EXPOSURE_MODES.has(definition.multipleExposure ?? "default")) errors.push(`Unsupported multipleExposure: ${definition.multipleExposure}`);
+  } else if (definition.multipleExposure != null && definition.multipleExposure !== "default") {
+    errors.push("Only poison definitions may override multipleExposure.");
+  }
+  if (!isObject(definition.delivery) || typeof definition.delivery.injuryPoison !== "boolean") errors.push("delivery.injuryPoison must be a boolean.");
+  else if (definition.delivery.injuryPoison && definition.afflictionType !== "poison") errors.push("Only poison definitions may be injury poisons.");
   validateRestrictions(errors, definition.restrictions, "restrictions");
 
   if (!Array.isArray(definition.checks) || definition.checks.length === 0) {
@@ -174,6 +184,8 @@ export function validateDefinition(definition, { pack }) {
       if (stage.number !== index + 1) errors.push(`${path}.number must be ${index + 1}.`);
       if (!nonEmptyString(stage.id)) errors.push(`${path}.id is required.`);
       validateDuration(errors, stage.duration, `${path}.duration`, { nullable: false });
+      if (stage.expiryAction != null && !STAGE_EXPIRY_ACTIONS.has(stage.expiryAction)) errors.push(`${path}.expiryAction is unsupported: ${stage.expiryAction}`);
+      if (stage.duration?.unit === "unlimited" && stage.expiryAction != null && stage.expiryAction !== "check") errors.push(`${path}.expiryAction ${stage.expiryAction} is unreachable for an unlimited stage.`);
       validateRestrictions(errors, stage.restrictions, `${path}.restrictions`);
       if (!STAGE_EFFECT_PERSISTENCE_MODES.has(stage.effectPersistence)) errors.push(`${path}.effectPersistence is unsupported: ${stage.effectPersistence}`);
       if (stage.effectComponentPersistence != null) {
@@ -285,13 +297,25 @@ export function validateDefinition(definition, { pack }) {
             }
             const hasCheck = reaction.checkId != null && String(reaction.checkId).trim() !== "";
             if (hasCheck && !checkIds.has(reaction.checkId)) errors.push(`${reactionPath}.checkId references an unknown check: ${reaction.checkId}`);
+            const controllerActionsPresent = isObject(reaction.controllerActions) && [...REACTION_OUTCOMES].some((outcome) => ["recover", "end"].includes(reaction.controllerActions?.[outcome]));
             if (hasCheck) {
-              if (!Array.isArray(reaction.applyOn) || reaction.applyOn.length === 0) errors.push(`${reactionPath}.applyOn must contain at least one outcome for a checked reaction.`);
-              else for (const outcome of reaction.applyOn) if (!REACTION_OUTCOMES.has(outcome)) errors.push(`${reactionPath}.applyOn contains unsupported outcome: ${outcome}`);
+              if (!Array.isArray(reaction.applyOn)) errors.push(`${reactionPath}.applyOn must be an array for a checked reaction.`);
+              else {
+                for (const outcome of reaction.applyOn) if (!REACTION_OUTCOMES.has(outcome)) errors.push(`${reactionPath}.applyOn contains unsupported outcome: ${outcome}`);
+                if (reaction.applyOn.length === 0 && !controllerActionsPresent) errors.push(`${reactionPath}.applyOn must contain at least one outcome unless controllerActions supplies the mechanical result.`);
+              }
             } else if (!Array.isArray(reaction.applyOn)) errors.push(`${reactionPath}.applyOn must be an array.`);
+            if (reaction.controllerActions != null) {
+              if (!isObject(reaction.controllerActions)) errors.push(`${reactionPath}.controllerActions must be an object when present.`);
+              else for (const outcome of REACTION_OUTCOMES) {
+                const action = reaction.controllerActions[outcome] ?? "none";
+                if (!REACTION_CONTROLLER_ACTIONS.has(action)) errors.push(`${reactionPath}.controllerActions.${outcome} is unsupported: ${action}`);
+              }
+            }
             if (reaction.conditionValueDelta != null && !Number.isInteger(reaction.conditionValueDelta)) errors.push(`${reactionPath}.conditionValueDelta must be an integer when present.`);
             if (Number(reaction.conditionValueDelta ?? 0) !== 0 && reaction.trigger?.event !== "condition-increased") errors.push(`${reactionPath}.conditionValueDelta is only supported for condition-increased reactions.`);
-            if (reaction.effect == null && Number(reaction.conditionValueDelta ?? 0) === 0) errors.push(`${reactionPath} has no mechanical output.`);
+            const hasControllerAction = isObject(reaction.controllerActions) && [...REACTION_OUTCOMES].some((outcome) => ["recover", "end"].includes(reaction.controllerActions?.[outcome]));
+            if (reaction.effect == null && Number(reaction.conditionValueDelta ?? 0) === 0 && !hasControllerAction) errors.push(`${reactionPath} has no mechanical output.`);
             if (reaction.effect != null) {
               if (!isObject(reaction.effect)) errors.push(`${reactionPath}.effect must be an object or null.`);
               else {

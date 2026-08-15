@@ -2200,6 +2200,195 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     },
     {
+      "_id": "kJ6RHOeqHlFZC8I8",
+      "name": "Fluch des Feiglings",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Furchtfluch. GM-Hinweis: Beginnt der Betroffene seinen Zug mit Verängstigt, wählt er bis zum Ende dieses Zuges entweder Fliehend oder Bewegungsunfähig.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "fear",
+            "emotion",
+            "magical",
+            "mental"
+          ],
+          "otherTags": [
+            "curse",
+            "fear",
+            "turn-start",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 5
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.cowards-roots",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.cowards-roots",
+            "name": "Fluch des Feiglings",
+            "description": "Teilautomatisierter Furchtfluch. GM-Hinweis: Beginnt der Betroffene seinen Zug mit Verängstigt, wählt er bis zum Ende dieses Zuges entweder Fliehend oder Bewegungsunfähig.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 5,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "fear",
+              "emotion",
+              "magical",
+              "mental"
+            ],
+            "themes": [
+              "curse",
+              "fear",
+              "turn-start",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 20,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Wahl zwischen Fliehend und Bewegungsunfähig zu Zugbeginn manuell treffen und anwenden.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 86,
+              "sourceSection": "Curses",
+              "sourceName": "Coward's Roots",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Der generische Zugbeginn-Trigger existiert, aber die zustandsabhängige Spielerwahl ist bewusst kein eigenes Choice-Subsystem."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "sElWSZJ4XrfP1QLu",
       "name": "Bluthand",
       "type": "effect",
@@ -2615,6 +2804,864 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Amputation before Stage 4 is an explicit manual cure option."
               ],
               "manualComment": "GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "ZPfXqqzokxmMUTbz",
+      "name": "Fluch der Albträume",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Fluch, der erholsamen Schlaf verhindert. GM-Hinweis: Um Erschöpft zu vermeiden, sind 12 statt 8 Stunden Ruhe nötig; Ausruhen und längere Rast gewähren keine normalen Vorteile, tägliche Vorbereitungen bleiben möglich.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical",
+            "mental"
+          ],
+          "otherTags": [
+            "curse",
+            "rest",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 2
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-nightmares",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.curse-of-nightmares",
+            "name": "Fluch der Albträume",
+            "description": "Teilautomatisierter Fluch, der erholsamen Schlaf verhindert. GM-Hinweis: Um Erschöpft zu vermeiden, sind 12 statt 8 Stunden Ruhe nötig; Ausruhen und längere Rast gewähren keine normalen Vorteile, tägliche Vorbereitungen bleiben möglich.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 2,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical",
+              "mental"
+            ],
+            "themes": [
+              "curse",
+              "rest",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 16,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Ruhe- und Rastregeln gemäß Beschreibung manuell anwenden.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 86,
+              "sourceSection": "Curses",
+              "sourceName": "Curse of Nightmares",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Die veränderte Ruhedauer und die blockierten Rastvorteile werden nicht automatisch in das PF2e-Rastsystem eingehängt."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "jL7A2OtD0NGbgCSV",
+      "name": "Fluch des Schlummerns",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Schlaf-Fluch. Bei Fehlschlag schläft der Betroffene 1 Runde, bei kritischem Fehlschlag unbegrenzt. Schaden erlaubt sofort einen neuen Rettungswurf gegen den Fluch; bei Erfolg endet er. Lärm allein weckt nicht. Ein Heilkunde-Wurf SG 30 kann erkennen, dass der Schlafende noch lebt.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "incapacitation",
+            "magical",
+            "sleep"
+          ],
+          "otherTags": [
+            "curse",
+            "sleep",
+            "reactive-recovery"
+          ]
+        },
+        "level": {
+          "value": 11
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-slumber",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.curse-of-slumber",
+            "name": "Fluch des Schlummerns",
+            "description": "Schlaf-Fluch. Bei Fehlschlag schläft der Betroffene 1 Runde, bei kritischem Fehlschlag unbegrenzt. Schaden erlaubt sofort einen neuen Rettungswurf gegen den Fluch; bei Erfolg endet er. Lärm allein weckt nicht. Ein Heilkunde-Wurf SG 30 kann erkennen, dass der Schlafende noch lebt.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 11,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "incapacitation",
+              "magical",
+              "sleep"
+            ],
+            "themes": [
+              "curse",
+              "sleep",
+              "reactive-recovery"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 28,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Kurzer Schlaf",
+                "description": "Bewusstlos durch magischen Schlaf für 1 Runde; Schaden erlaubt einen neuen Rettungswurf.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "recover",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.curse-of-slumber.stage-1",
+                  "name": "Fluch des Schlummerns · Schlaf",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": [
+                  {
+                    "id": "wake-on-damage",
+                    "label": "Aufwachen nach Schaden",
+                    "trigger": {
+                      "event": "damage-taken",
+                      "damageTypes": [],
+                      "conditionSlugs": []
+                    },
+                    "checkId": "primary",
+                    "applyOn": [],
+                    "conditionValueDelta": 0,
+                    "controllerActions": {
+                      "criticalSuccess": "recover",
+                      "success": "recover",
+                      "failure": "none",
+                      "criticalFailure": "none"
+                    },
+                    "effect": null
+                  }
+                ]
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Dauerhafter Schlaf",
+                "description": "Bewusstlos durch magischen Schlaf ohne feste Dauer; Schaden erlaubt einen neuen Rettungswurf.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.curse-of-slumber.stage-2",
+                  "name": "Fluch des Schlummerns · Tiefer Schlaf",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": [
+                  {
+                    "id": "wake-on-damage",
+                    "label": "Aufwachen nach Schaden",
+                    "trigger": {
+                      "event": "damage-taken",
+                      "damageTypes": [],
+                      "conditionSlugs": []
+                    },
+                    "checkId": "primary",
+                    "applyOn": [],
+                    "conditionValueDelta": 0,
+                    "controllerActions": {
+                      "criticalSuccess": "recover",
+                      "success": "recover",
+                      "failure": "none",
+                      "criticalFailure": "none"
+                    },
+                    "effect": null
+                  }
+                ]
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Curse of Slumber",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The Medicine DC 30 observer check is informational and does not change the curse controller.",
+                "Noise alone does not wake the sleeper; damage invokes the reactive save."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "pNluevGZaEHc7ZJn",
+      "name": "Fluch der Gefräßigen",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Hungerfluch. Nach einem Tag beginnt der Betroffene trotz Nahrung zu hungern. Die Forge fordert danach jede Woche den erneuten Rettungswurf an. GM-Hinweis: Die eigentlichen Hungerfolgen werden über die normalen Überlebensregeln manuell geführt.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical"
+          ],
+          "otherTags": [
+            "curse",
+            "hunger",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 5
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-the-ravenous",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.curse-of-the-ravenous",
+            "name": "Fluch der Gefräßigen",
+            "description": "Teilautomatisierter Hungerfluch. Nach einem Tag beginnt der Betroffene trotz Nahrung zu hungern. Die Forge fordert danach jede Woche den erneuten Rettungswurf an. GM-Hinweis: Die eigentlichen Hungerfolgen werden über die normalen Überlebensregeln manuell geführt.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 5,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical"
+            ],
+            "themes": [
+              "curse",
+              "hunger",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 20,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "Nach einem Tag beginnt Hunger; der wöchentliche Rettungswurf wird automatisiert. GM-Hinweis: Hungerfolgen manuell anwenden.",
+                "duration": {
+                  "value": 7,
+                  "unit": "days"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 86,
+              "sourceSection": "Curses",
+              "sourceName": "Curse of the Ravenous",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Der wöchentliche Wiederholungswurf ist automatisiert; die Hunger-/Verhungern-Regeln selbst werden nicht von Affliction Forge verwaltet."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "jcmJbsMDFibSVq3n",
+      "name": "Grabesfluch",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Grabfluch mit variabler Stufe. Beim Anwenden muss der passende externe Willens-SG angegeben werden. GM-Hinweis: Jede Nacht und beim Betreten eines Bestattungsortes ist ein Einfacher Wurf SG 15 nötig; bei Fehlschlag erscheint vorübergehend ein passender Untoter. Rückgabe des entwendeten Grabguts beendet den Fluch. Die angezeigte Stufe 0 ist nur ein technischer Platzhalter für die variable Quellenstufe.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical"
+          ],
+          "otherTags": [
+            "curse",
+            "undead",
+            "variable-level",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 0
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.grave-curse",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.grave-curse",
+            "name": "Grabesfluch",
+            "description": "Teilautomatisierter Grabfluch mit variabler Stufe. Beim Anwenden muss der passende externe Willens-SG angegeben werden. GM-Hinweis: Jede Nacht und beim Betreten eines Bestattungsortes ist ein Einfacher Wurf SG 15 nötig; bei Fehlschlag erscheint vorübergehend ein passender Untoter. Rückgabe des entwendeten Grabguts beendet den Fluch. Die angezeigte Stufe 0 ist nur ein technischer Platzhalter für die variable Quellenstufe.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 0,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical"
+            ],
+            "themes": [
+              "curse",
+              "undead",
+              "variable-level",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "source",
+                "dc": null,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Nächtliche und ortsgebundene SG-15-Würfe, vorübergehende Untote und die Rückgabe-Heilbedingung manuell abwickeln.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Grave Curse",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "sourceLevel": "varies",
+              "manualComment": "GM-Hinweis: Die Quellenstufe variiert; den zugehörigen hohen Zauber-SG beim Anwenden als externen SG übergeben. Untote werden nicht automatisch erzeugt."
             }
           },
           "originModule": "affliction-forge-remastered-rules",
@@ -3452,6 +4499,372 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "This entry models the published slashing-damage version. Optional bludgeoning or piercing variants can be created as editable copies.",
                 "Stage 3 and 4 secondary Will saves use Affliction Forge 0.1.50 damage-taken event reactions."
               ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "sswyslQPjGZiiMoB",
+      "name": "Schwur des Fleisches",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Schwurfluch. GM-Hinweis: Jedes nach Eintritt des Fluchs gegebene Versprechen wird markiert; beim Bruch verursacht es 3W6 Hiebschaden, der nicht heilbar ist, solange der Fluch besteht.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical"
+          ],
+          "otherTags": [
+            "curse",
+            "promise",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 7
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.oath-of-the-flesh",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.oath-of-the-flesh",
+            "name": "Schwur des Fleisches",
+            "description": "Teilautomatisierter Schwurfluch. GM-Hinweis: Jedes nach Eintritt des Fluchs gegebene Versprechen wird markiert; beim Bruch verursacht es 3W6 Hiebschaden, der nicht heilbar ist, solange der Fluch besteht.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 7,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical"
+            ],
+            "themes": [
+              "curse",
+              "promise",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 23,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Versprechen und deren Bruch manuell protokollieren; bei Bruch 3W6 Hiebschaden zufügen und bis zum Ende des Fluchs als unheilbar behandeln.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Oath of the Flesh",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Versprechen sind narrativer Zustand und werden nicht als automatisch auswertbare Actor-Ressource modelliert."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "7xxULHCibxMy4khW",
+      "name": "Fluch des Verschmähten",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Naturfluch. GM-Hinweis: Jedes Tier, das den Betroffenen wahrnimmt, legt einen Willenswurf SG 38 ab; bei Fehlschlag greift es ihn an und kämpft bis zum Tod.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "emotion",
+            "magical",
+            "mental"
+          ],
+          "otherTags": [
+            "curse",
+            "animals",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 18
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.reviled-of-nature",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.reviled-of-nature",
+            "name": "Fluch des Verschmähten",
+            "description": "Teilautomatisierter Naturfluch. GM-Hinweis: Jedes Tier, das den Betroffenen wahrnimmt, legt einen Willenswurf SG 38 ab; bei Fehlschlag greift es ihn an und kämpft bis zum Tod.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 18,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "emotion",
+              "magical",
+              "mental"
+            ],
+            "themes": [
+              "curse",
+              "animals",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 38,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Wahrnehmung durch Tiere, deren Rettungswürfe und Feindseligkeit manuell abwickeln.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Reviled of Nature",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Affliction Forge erzwingt keine Rettungswürfe oder KI-/Verhaltensänderungen bei beliebigen Dritt-Aktoren."
             }
           },
           "originModule": "affliction-forge-remastered-rules",
@@ -4348,6 +5761,233 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     },
     {
+      "_id": "Uyrda6Fk5IZsLme0",
+      "name": "Söldnerwahn",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Kampfesfluch. Bei jedem Initiativewurf fordert die Forge einen Willenswurf SG 26 an; bei Fehlschlag oder kritischem Fehlschlag wird 1 Runde Verwirrt angewendet. GM-Hinweis: Dieser Zusatzwurf ist ein Kampfunfähigkeits-Effekt; die entsprechende Gradverbesserung bei zu hochstufigen Zielen muss manuell berücksichtigt werden.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "emotion",
+            "magical",
+            "mental"
+          ],
+          "otherTags": [
+            "curse",
+            "initiative",
+            "incapacitation",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 9
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.sellswords-folly",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.sellswords-folly",
+            "name": "Söldnerwahn",
+            "description": "Teilautomatisierter Kampfesfluch. Bei jedem Initiativewurf fordert die Forge einen Willenswurf SG 26 an; bei Fehlschlag oder kritischem Fehlschlag wird 1 Runde Verwirrt angewendet. GM-Hinweis: Dieser Zusatzwurf ist ein Kampfunfähigkeits-Effekt; die entsprechende Gradverbesserung bei zu hochstufigen Zielen muss manuell berücksichtigt werden.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 9,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "emotion",
+              "magical",
+              "mental"
+            ],
+            "themes": [
+              "curse",
+              "initiative",
+              "incapacitation",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 26,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "Bei jedem Initiativewurf neuer Willenswurf; bei Fehlschlag 1 Runde Verwirrt. GM-Hinweis: Kampfunfähigkeit manuell auf den Erfolgsgrad anwenden.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": [
+                  {
+                    "id": "initiative-confusion",
+                    "label": "Söldnerwahn bei Initiative",
+                    "trigger": {
+                      "event": "initiative-rolled",
+                      "damageTypes": [],
+                      "conditionSlugs": []
+                    },
+                    "checkId": "primary",
+                    "applyOn": [
+                      "failure",
+                      "criticalFailure"
+                    ],
+                    "conditionValueDelta": 0,
+                    "controllerActions": {
+                      "criticalSuccess": "none",
+                      "success": "none",
+                      "failure": "none",
+                      "criticalFailure": "none"
+                    },
+                    "effect": {
+                      "schemaVersion": 2,
+                      "id": "affliction-forge-remastered-rules.gm-core.sellswords-folly.initiative-confusion",
+                      "name": "Söldnerwahn · Verwirrt",
+                      "duration": {
+                        "value": 1,
+                        "unit": "rounds",
+                        "expiry": null
+                      },
+                      "components": [
+                        {
+                          "type": "condition",
+                          "slug": "confused"
+                        }
+                      ],
+                      "application": {},
+                      "metadata": {}
+                    }
+                  }
+                ]
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Sellsword's Folly",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Initiative-Trigger, Rettungswurf und Verwirrt werden automatisiert; die PF2e-Kampfunfähigkeitsregel dieses Zusatzwurfs wird derzeit nicht automatisch auf den Erfolgsgrad angewendet."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "vyVzf4wShxRLyRMl",
       "name": "Kanalisationsdunst",
       "type": "effect",
@@ -4630,6 +6270,557 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "conditionLocks": [],
               "healing": "none",
               "blockedCapabilities": []
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "iEiQC5y9lxSuHYVM",
+      "name": "Spuk der Erschlagenen",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Illusionsfluch. GM-Hinweis: Vor Identifikation, Wissen abrufen oder anderer Interaktion, die die wahre Gestalt einer Kreatur voraussetzt, ist ein Willenswurf SG 19 nötig; bei kritischem Fehlschlag zusätzlich Verängstigt 1.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "illusion",
+            "magical",
+            "visual"
+          ],
+          "otherTags": [
+            "curse",
+            "illusion",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 4
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.slayers-haunt",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.slayers-haunt",
+            "name": "Spuk der Erschlagenen",
+            "description": "Teilautomatisierter Illusionsfluch. GM-Hinweis: Vor Identifikation, Wissen abrufen oder anderer Interaktion, die die wahre Gestalt einer Kreatur voraussetzt, ist ein Willenswurf SG 19 nötig; bei kritischem Fehlschlag zusätzlich Verängstigt 1.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 4,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "illusion",
+              "magical",
+              "visual"
+            ],
+            "themes": [
+              "curse",
+              "illusion",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 19,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Wahrnehmungsabhängige Zusatzwürfe und Verängstigt 1 bei kritischem Fehlschlag manuell abwickeln.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 86,
+              "sourceSection": "Curses",
+              "sourceName": "Slayer's Haunt",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "CDgLd1UxTCVBPyY3",
+      "name": "Seelenanker",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Todesfluch. GM-Hinweis: Stirbt der Betroffene während des Fluchs, bleibt seine Seele auf der materiellen Ebene gebunden und er wird zu einem Geist oder anderen körperlosen Untoten.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical"
+          ],
+          "otherTags": [
+            "curse",
+            "death",
+            "transformation",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 13
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.spirit-anchor",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.spirit-anchor",
+            "name": "Seelenanker",
+            "description": "Teilautomatisierter Todesfluch. GM-Hinweis: Stirbt der Betroffene während des Fluchs, bleibt seine Seele auf der materiellen Ebene gebunden und er wird zu einem Geist oder anderen körperlosen Untoten.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 13,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical"
+            ],
+            "themes": [
+              "curse",
+              "death",
+              "transformation",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 31,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Transformation bei Tod manuell abwickeln.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Spirit Anchor",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Actor-Tod wird nicht in eine automatische Geist-/Untoten-Transformation umgeschrieben."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "L4UE2Z8qaQenlfYS",
+      "name": "Schwert des Kirchenbanns",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter göttlicher Fluch. GM-Hinweis: Der Betroffene besitzt Schwäche 10 ausschließlich gegen Schaden, den Anhänger der Gottheit verursachen, die den Fluch verhängt hat.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "divine"
+          ],
+          "otherTags": [
+            "curse",
+            "weakness",
+            "divine",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 20
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.sword-of-anathema",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.sword-of-anathema",
+            "name": "Schwert des Kirchenbanns",
+            "description": "Teilautomatisierter göttlicher Fluch. GM-Hinweis: Der Betroffene besitzt Schwäche 10 ausschließlich gegen Schaden, den Anhänger der Gottheit verursachen, die den Fluch verhängt hat.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 20,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "divine"
+            ],
+            "themes": [
+              "curse",
+              "weakness",
+              "divine",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 40,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Quellenabhängige Schwäche 10 manuell berücksichtigen.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Sword of Anathema",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Eine Schwäche, die von der Religion/Quelle des jeweiligen Schadensverursachers abhängt, wird nicht als globale Actor-Schwäche automatisiert."
             }
           },
           "originModule": "affliction-forge-remastered-rules",
@@ -4950,6 +7141,372 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               }
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "PbbcFVu0vA0cnDL3",
+      "name": "Gedankendiebstahl",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Fluch mit Gedächtnisverlust. GM-Hinweis: Beim ersten Fertigkeitswurf nach Eintritt des Fluchs, für den mindestens Geübt vorliegt, sinkt der Kompetenzgrad dieser verwendeten Fertigkeit um einen Rang, solange der Fluch anhält.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical",
+            "mental"
+          ],
+          "otherTags": [
+            "curse",
+            "skill",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 3
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.theft-of-thought",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.theft-of-thought",
+            "name": "Gedankendiebstahl",
+            "description": "Teilautomatisierter Fluch mit Gedächtnisverlust. GM-Hinweis: Beim ersten Fertigkeitswurf nach Eintritt des Fluchs, für den mindestens Geübt vorliegt, sinkt der Kompetenzgrad dieser verwendeten Fertigkeit um einen Rang, solange der Fluch anhält.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 3,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical",
+              "mental"
+            ],
+            "themes": [
+              "curse",
+              "skill",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 18,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Die erste passende Fertigkeit und deren Kompetenzgrad manuell verfolgen.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 86,
+              "sourceSection": "Curses",
+              "sourceName": "Theft of Thought",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Die dynamische Wahl der ersten verwendeten Fertigkeit und eine temporäre Kompetenzgrad-Absenkung werden nicht automatisch verändert."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "F8TUadAT6S4TWX83",
+      "name": "Vergeltung des Diebstahls",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Diebstahlsfluch. GM-Hinweis: Bei jedem Diebstahl verschwindet ein wertvollerer Besitz; fehlt ein solcher Gegenstand, geht stattdessen eine Gliedmaße verloren und der Betroffene erleidet 10W6 Hiebschaden. Schaden und Gliedmaßenverlust bleiben bis zur Rückgabe des gestohlenen Gegenstands bestehen.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical"
+          ],
+          "otherTags": [
+            "curse",
+            "theft",
+            "inventory",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 19
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.thiefs-retribution",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.thiefs-retribution",
+            "name": "Vergeltung des Diebstahls",
+            "description": "Teilautomatisierter Diebstahlsfluch. GM-Hinweis: Bei jedem Diebstahl verschwindet ein wertvollerer Besitz; fehlt ein solcher Gegenstand, geht stattdessen eine Gliedmaße verloren und der Betroffene erleidet 10W6 Hiebschaden. Schaden und Gliedmaßenverlust bleiben bis zur Rückgabe des gestohlenen Gegenstands bestehen.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 19,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical"
+            ],
+            "themes": [
+              "curse",
+              "theft",
+              "inventory",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 39,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Diebstahl, Auswahl/Entfernung des Besitzes, Gliedmaßenverlust und 10W6 Hiebschaden manuell abwickeln.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Thief's Retribution",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Inventarwert, narrativer Wert, Diebstahlereignisse und Körperteile sind keine generischen Affliction-Forge-Ressourcen."
             }
           },
           "originModule": "affliction-forge-remastered-rules",
@@ -5345,8 +7902,9227 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       "ownership": {
         "default": 0
       }
+    },
+    {
+      "_id": "Y4fdDVwBOEZ3oUny",
+      "name": "Unendlicher Durst",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Durstfluch. Flüssigkeiten verschaffen keinen Nutzen; die Forge fordert täglich den erneuten Rettungswurf an. GM-Hinweis: Durst- und Dehydrierungsfolgen werden über die normalen Überlebensregeln manuell geführt.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical"
+          ],
+          "otherTags": [
+            "curse",
+            "thirst",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 15
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.unending-thirst",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.unending-thirst",
+            "name": "Unendlicher Durst",
+            "description": "Teilautomatisierter Durstfluch. Flüssigkeiten verschaffen keinen Nutzen; die Forge fordert täglich den erneuten Rettungswurf an. GM-Hinweis: Durst- und Dehydrierungsfolgen werden über die normalen Überlebensregeln manuell geführt.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 15,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical"
+            ],
+            "themes": [
+              "curse",
+              "thirst",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "Täglicher Rettungswurf wird automatisiert. GM-Hinweis: Durstfolgen manuell anwenden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 87,
+              "sourceSection": "Curses",
+              "sourceName": "Unending Thirst",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Der tägliche Wiederholungswurf ist automatisiert; die Durst-/Dehydrierungsregeln selbst werden nicht von Affliction Forge verwaltet."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "uLkO2GAeZlkl0HwZ",
+      "name": "Schutz des Magiers",
+      "type": "effect",
+      "img": "icons/svg/terror.svg",
+      "system": {
+        "description": {
+          "value": "Teilautomatisierter Schutzfluch eines Buches. GM-Hinweis: Nach misslungenem Rettungswurf 5W6 Schaden derselben Schadensart wie die Beschädigung des geschützten Buches zufügen; dieser Schaden bleibt bis zur Reparatur des Buches unheilbar. Die Reparatur beendet den Fluch.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "curse",
+            "magical"
+          ],
+          "otherTags": [
+            "curse",
+            "damage",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 6
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.wizards-ward",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.wizards-ward",
+            "name": "Schutz des Magiers",
+            "description": "Teilautomatisierter Schutzfluch eines Buches. GM-Hinweis: Nach misslungenem Rettungswurf 5W6 Schaden derselben Schadensart wie die Beschädigung des geschützten Buches zufügen; dieser Schaden bleibt bis zur Reparatur des Buches unheilbar. Die Reparatur beendet den Fluch.",
+            "img": "icons/svg/terror.svg",
+            "afflictionType": "curse",
+            "level": 6,
+            "rarity": "common",
+            "traits": [
+              "curse",
+              "magical"
+            ],
+            "themes": [
+              "curse",
+              "damage",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "unhealableDamageTypes": [],
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Willen",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 22,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Wirkung",
+                "description": "GM-Hinweis: Schadensart aus dem auslösenden Buchschaden übernehmen, 5W6 Schaden manuell zufügen und die Heilung dieses Schadens bis zur Reparatur blockieren.",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "unhealableDamageTypes": [],
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 86,
+              "sourceSection": "Curses",
+              "sourceName": "Wizard's Ward",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "manualComment": "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
     }
   ],
-  "player-core-2": [],
+  "player-core-2": [
+    {
+      "_id": "1hFIzJUN7bGIBjMk",
+      "name": "Arsen",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 1 mit Zähigkeitswurf SG 18.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 1
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.arsenic",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.arsenic",
+            "name": "Arsen",
+            "description": "Eingenommenes Gift der Stufe 1 mit Zähigkeitswurf SG 18.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 1,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [
+                {
+                  "slug": "sickened",
+                  "minimum": null
+                }
+              ],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 18,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 5,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W4 Giftschaden und Kränkelnd 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.arsenic.stage-1",
+                  "name": "Arsen · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W6 Giftschaden und Kränkelnd 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.arsenic.stage-2",
+                  "name": "Arsen · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "1W8 Giftschaden und Kränkelnd 3.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.arsenic.stage-3",
+                  "name": "Arsen · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 291,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "C0eDMEqWCFrU8FD0",
+      "name": "Belladonna",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 2 mit Zähigkeitswurf SG 19.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 2
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.belladonna",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.belladonna",
+            "name": "Belladonna",
+            "description": "Eingenommenes Gift der Stufe 2 mit Zähigkeitswurf SG 19.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 2,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 19,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 30,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Geblendet.",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.belladonna.stage-1",
+                  "name": "Belladonna · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W6 Giftschaden und Kränkelnd 1.",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.belladonna.stage-2",
+                  "name": "Belladonna · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "1W6 Giftschaden und Verwirrt und Kränkelnd 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.belladonna.stage-3",
+                  "name": "Belladonna · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 291,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "1mFzZbQ59aqsUBL5",
+      "name": "Schwarzer Lotusextrakt",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Kontaktgift der Stufe 19 mit Zähigkeitswurf SG 42.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact"
+          ]
+        },
+        "level": {
+          "value": 19
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract",
+            "name": "Schwarzer Lotusextrakt",
+            "description": "Kontaktgift der Stufe 19 mit Zähigkeitswurf SG 42.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 19,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 42,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "13W6 Giftschaden und Ausgelaugt 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract.stage-1",
+                  "name": "Schwarzer Lotusextrakt · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "13d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "15W6 Giftschaden und Ausgelaugt 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract.stage-2",
+                  "name": "Schwarzer Lotusextrakt · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "15d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "17W6 Giftschaden und Ausgelaugt 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract.stage-3",
+                  "name": "Schwarzer Lotusextrakt · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "17d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "bknmr8u8UjQSVSVr",
+      "name": "Schwarzviperngift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 2
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.black-viper-venom",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom",
+            "name": "Schwarzviperngift",
+            "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 2,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 18,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 3,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W4 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-1",
+                  "name": "Schwarzviperngift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d4",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-2",
+                  "name": "Schwarzviperngift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "1W8 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-3",
+                  "name": "Schwarzviperngift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "wKKexfWgkfRmEAeq",
+      "name": "Faulbrandharz",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Kontaktgift der Stufe 11 mit Zähigkeitswurf SG 30.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact"
+          ]
+        },
+        "level": {
+          "value": 11
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.blightburn-resin",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin",
+            "name": "Faulbrandharz",
+            "description": "Kontaktgift der Stufe 11 mit Zähigkeitswurf SG 30.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 11,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 30,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "6W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-1",
+                  "name": "Faulbrandharz · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "7W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-2",
+                  "name": "Faulbrandharz · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "7d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "9W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-3",
+                  "name": "Faulbrandharz · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "9d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "bbRS8k5DgQksWJxp",
+      "name": "Höhlenwurmgift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 12 mit Zähigkeitswurf SG 32.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 12
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom",
+            "name": "Höhlenwurmgift",
+            "description": "Verwundungsgift der Stufe 12 mit Zähigkeitswurf SG 32.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 12,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "5W6 Giftschaden und Kraftlos 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom.stage-1",
+                  "name": "Höhlenwurmgift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "5d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "6W6 Giftschaden und Kraftlos 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom.stage-2",
+                  "name": "Höhlenwurmgift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "8W6 Giftschaden und Kraftlos 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom.stage-3",
+                  "name": "Höhlenwurmgift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "tWVgXnQb95ZUpPeZ",
+      "name": "Knollenblätterpilzpulver",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 13 mit Zähigkeitswurf SG 33.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 13
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.deathcap-powder",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder",
+            "name": "Knollenblätterpilzpulver",
+            "description": "Eingenommenes Gift der Stufe 13 mit Zähigkeitswurf SG 33.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 13,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 33,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "7W8 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-1",
+                  "name": "Knollenblätterpilzpulver · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "7d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "9W6 Giftschaden und Kränkelnd 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-2",
+                  "name": "Knollenblätterpilzpulver · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "9d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "8W10 Giftschaden und Kränkelnd 3.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-3",
+                  "name": "Knollenblätterpilzpulver · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "ij6dTBXWLdM0P2Hm",
+      "name": "Erschöpfendes Pulver",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 9 mit Zähigkeitswurf SG 28.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 9
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder",
+            "name": "Erschöpfendes Pulver",
+            "description": "Eingenommenes Gift der Stufe 9 mit Zähigkeitswurf SG 28.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 9,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 28,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Erschöpft.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder.stage-1",
+                  "name": "Erschöpfendes Pulver · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "5W6 Giftschaden und Erschöpft.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder.stage-2",
+                  "name": "Erschöpfendes Pulver · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "5d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "6W6 Giftschaden und Erschöpft und Gelähmt.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder.stage-3",
+                  "name": "Erschöpfendes Pulver · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "paralyzed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "hDvTTeU37AQYmeSc",
+      "name": "Furchtblumennektar",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 4 mit Zähigkeitswurf SG 21.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 4
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar",
+            "name": "Furchtblumennektar",
+            "description": "Verwundungsgift der Stufe 4 mit Zähigkeitswurf SG 21.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 4,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 21,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W6 Giftschaden und Verängstigt 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar.stage-1",
+                  "name": "Furchtblumennektar · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "frightened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W6 Giftschaden und Verängstigt 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar.stage-2",
+                  "name": "Furchtblumennektar · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "frightened",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "1W6 Giftschaden und Verängstigt 3.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar.stage-3",
+                  "name": "Furchtblumennektar · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "frightened",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "vEsvOBVAXRKa7k6F",
+      "name": "Riesentausendfüßlergift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 1 mit Zähigkeitswurf SG 17.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 1
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom",
+            "name": "Riesentausendfüßlergift",
+            "description": "Verwundungsgift der Stufe 1 mit Zähigkeitswurf SG 17.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 1,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 17,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W4 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom.stage-1",
+                  "name": "Riesentausendfüßlergift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d4",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W4 Giftschaden und Erschöpft.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom.stage-2",
+                  "name": "Riesentausendfüßlergift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "1W4 Giftschaden und Unbeholfen 1 und Erschöpft.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom.stage-3",
+                  "name": "Riesentausendfüßlergift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 293,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "fiBHp7EpfsDLBovY",
+      "name": "Riesenskorpiongift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 6 mit Zähigkeitswurf SG 22.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 6
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom",
+            "name": "Riesenskorpiongift",
+            "description": "Verwundungsgift der Stufe 6 mit Zähigkeitswurf SG 22.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 6,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 22,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "2W6 Giftschaden und Kraftlos 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom.stage-1",
+                  "name": "Riesenskorpiongift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "2W8 Giftschaden und Kraftlos 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom.stage-2",
+                  "name": "Riesenskorpiongift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "2W10 Giftschaden und Kraftlos 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom.stage-3",
+                  "name": "Riesenskorpiongift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 293,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "hXlKFalXht1xmUAy",
+      "name": "Grabeswurzel",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 3
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.grave-root",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.grave-root",
+            "name": "Grabeswurzel",
+            "description": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 3,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 19,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 4,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W8 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.grave-root.stage-1",
+                  "name": "Grabeswurzel · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W10 Giftschaden und Benommen 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.grave-root.stage-2",
+                  "name": "Grabeswurzel · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "2W6 Giftschaden und Benommen 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.grave-root.stage-3",
+                  "name": "Grabeswurzel · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "IB5zgD5AFlmGmHrc",
+      "name": "Grauschattierung",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 10 mit Zähigkeitswurf SG 29. GM-Hinweis:  Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury",
+            "void"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 10
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.gray-shadow",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow",
+            "name": "Grauschattierung",
+            "description": "Verwundungsgift der Stufe 10 mit Zähigkeitswurf SG 29. GM-Hinweis:  Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 10,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury",
+              "void"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 29,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "2W6 Leerenschaden und 2W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow.stage-1",
+                  "name": "Grauschattierung · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "void"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "3W6 Leerenschaden und 2W6 Giftschaden und Kraftlos 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow.stage-2",
+                  "name": "Grauschattierung · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "void"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "effectComponentPersistence": [
+                  null,
+                  null,
+                  "permanent"
+                ]
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "3W6 Leerenschaden und 3W6 Giftschaden und Kraftlos 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow.stage-3",
+                  "name": "Grauschattierung · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "void"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "effectComponentPersistence": [
+                  null,
+                  null,
+                  "permanent"
+                ]
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ],
+              "manualComment": "GM-Hinweis: Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "wVEn7CJtoGqgoIKT",
+      "name": "Schierling",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 17
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.hemlock",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.hemlock",
+            "name": "Schierling",
+            "description": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 17,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 38,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 30,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 60,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "16W6 Giftschaden und Kraftlos 2.",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-1",
+                  "name": "Schierling · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "16d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "17W6 Giftschaden und Kraftlos 3.",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-2",
+                  "name": "Schierling · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "17d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "18W6 Giftschaden und Kraftlos 4.",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-3",
+                  "name": "Schierling · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "18d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 4
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 293,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "2vxUBy0N34zxz3Nz",
+      "name": "Königsschlaf",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 18 mit Zähigkeitswurf SG 41. GM-Hinweis:  Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 18
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.kings-sleep",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep",
+            "name": "Königsschlaf",
+            "description": "Eingenommenes Gift der Stufe 18 mit Zähigkeitswurf SG 41. GM-Hinweis:  Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 18,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [
+                {
+                  "slug": "drained",
+                  "minimum": null
+                }
+              ],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 41,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Ausgelaugt 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "affliction",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-1",
+                  "name": "Königsschlaf · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Ausgelaugt 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "affliction",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-2",
+                  "name": "Königsschlaf · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Ausgelaugt 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "affliction",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-3",
+                  "name": "Königsschlaf · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 293,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ],
+              "manualComment": "GM-Hinweis: Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "oEQuzVPSsh0E55FL",
+      "name": "Bleibein",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 4 mit Zähigkeitswurf SG 20.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 4
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.leadfoot",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.leadfoot",
+            "name": "Bleibein",
+            "description": "Eingenommenes Gift der Stufe 4 mit Zähigkeitswurf SG 20.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 4,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 20,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W10 Giftschaden und Zustandsmalus 1.5 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-1",
+                  "name": "Bleibein · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Bleibein · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -5
+                  }
+                ]
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "2W6 Giftschaden und Zustandsmalus 3 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-2",
+                  "name": "Bleibein · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Bleibein · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -10
+                  }
+                ]
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "2W6 Giftschaden und Zustandsmalus 6 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-3",
+                  "name": "Bleibein · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Bleibein · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -20
+                  }
+                ]
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 291,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "zn1Q9p2QHvTmPTpD",
+      "name": "Lethargiegift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury",
+            "incapacitation",
+            "sleep"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 2
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
+            "name": "Lethargiegift",
+            "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 2,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "injury",
+              "incapacitation",
+              "sleep"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "ignore",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 18,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 4,
+              "unit": "hours"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Verlangsamt 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-1",
+                  "name": "Lethargiegift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Verlangsamt 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-2",
+                  "name": "Lethargiegift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Bewusstlos.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "unconscious",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-3",
+                  "name": "Lethargiegift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "Phase 4",
+                "description": "Bewusstlos.",
+                "duration": {
+                  "value": 4,
+                  "unit": "hours"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "unconscious",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-4",
+                  "name": "Lethargiegift · Phase 4",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 293,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ],
+              "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "qIx6dqtzGpR9Bz72",
+      "name": "Geisttrübungsöl",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19. Die Bezeichnung ist bewusst neutral gehalten, damit kein möglicherweise setting-spezifischer Eigenname in der Bibliothek ausgeliefert wird.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 3
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.mindfog-oil",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil",
+            "name": "Geisttrübungsöl",
+            "description": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19. Die Bezeichnung ist bewusst neutral gehalten, damit kein möglicherweise setting-spezifischer Eigenname in der Bibliothek ausgeliefert wird.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 3,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 19,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 4,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W8 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-1",
+                  "name": "Geisttrübungsöl · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W10 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-2",
+                  "name": "Geisttrübungsöl · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "2W8 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-3",
+                  "name": "Geisttrübungsöl · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 291,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
+                "The user-facing name is deliberately neutralized as a Reserved-Material precaution; mechanics remain unchanged."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "EjEQSSEIdM3nglya",
+      "name": "Geistesnebel",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingeatmetes Gift der Stufe 15 mit Zähigkeitswurf SG 35.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "inhaled"
+          ],
+          "otherTags": [
+            "poison",
+            "inhaled"
+          ]
+        },
+        "level": {
+          "value": 15
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.mindmist",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.mindmist",
+            "name": "Geistesnebel",
+            "description": "Eingeatmetes Gift der Stufe 15 mit Zähigkeitswurf SG 35.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 15,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "inhaled"
+            ],
+            "themes": [
+              "poison",
+              "inhaled"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 35,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "rounds"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Benommen 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.mindmist.stage-1",
+                  "name": "Geistesnebel · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Verwirrt und Benommen 3.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.mindmist.stage-2",
+                  "name": "Geistesnebel · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Verwirrt und Benommen 4.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.mindmist.stage-3",
+                  "name": "Geistesnebel · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 4
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "y8HUu1oBQFahJiCo",
+      "name": "Nesselkrautkonzentrat",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Kontaktgift der Stufe 8 mit Zähigkeitswurf SG 27.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact"
+          ]
+        },
+        "level": {
+          "value": 8
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate",
+            "name": "Nesselkrautkonzentrat",
+            "description": "Kontaktgift der Stufe 8 mit Zähigkeitswurf SG 27.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 8,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 27,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "3W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate.stage-1",
+                  "name": "Nesselkrautkonzentrat · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "4W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate.stage-2",
+                  "name": "Nesselkrautkonzentrat · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "6W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate.stage-3",
+                  "name": "Nesselkrautkonzentrat · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 293,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "bAaOmtiWmJdZHEOO",
+      "name": "Wurzelorchideengift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Kontaktgift der Stufe 7 mit Zähigkeitswurf SG 26.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact"
+          ]
+        },
+        "level": {
+          "value": 7
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison",
+            "name": "Wurzelorchideengift",
+            "description": "Kontaktgift der Stufe 7 mit Zähigkeitswurf SG 26.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 7,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 26,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Unbeholfen 1 und Zustandsmalus 3 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-1",
+                  "name": "Wurzelorchideengift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Wurzelorchideengift · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -10
+                  }
+                ]
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Unbeholfen 2 und Zustandsmalus 6 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-2",
+                  "name": "Wurzelorchideengift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Wurzelorchideengift · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -20
+                  }
+                ]
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Unbeholfen 3 und Auf dem Falschen Fuß und Zustandsmalus 9 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-3",
+                  "name": "Wurzelorchideengift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 3
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Wurzelorchideengift · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -30
+                  }
+                ]
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "ReDygTTxxNttc33g",
+      "name": "Himmelblaue Geißel",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 16 mit Zähigkeitswurf SG 37.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 16
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge",
+            "name": "Himmelblaue Geißel",
+            "description": "Verwundungsgift der Stufe 16 mit Zähigkeitswurf SG 37.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 16,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 37,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "10W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge.stage-1",
+                  "name": "Himmelblaue Geißel · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "10d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "12W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge.stage-2",
+                  "name": "Himmelblaue Geißel · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "12d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "14W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge.stage-3",
+                  "name": "Himmelblaue Geißel · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "14d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "skJROjaRGAUD69HW",
+      "name": "Schlummerwein",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 12 mit Zähigkeitswurf SG 32. GM-Hinweis:  Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested",
+            "sleep"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 12
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.slumber-wine",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine",
+            "name": "Schlummerwein",
+            "description": "Eingenommenes Gift der Stufe 12 mit Zähigkeitswurf SG 32. GM-Hinweis:  Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 12,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested",
+              "sleep"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "hours"
+            },
+            "maximumDuration": {
+              "value": 7,
+              "unit": "days"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Bewusstlos.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "unconscious",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine.stage-1",
+                  "name": "Schlummerwein · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Bewusstlos.",
+                "duration": {
+                  "value": 2,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "unconscious",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine.stage-2",
+                  "name": "Schlummerwein · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Bewusstlos.",
+                "duration": {
+                  "value": 3,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "unconscious",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine.stage-3",
+                  "name": "Schlummerwein · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 293,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ],
+              "manualComment": "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "RqkqTpFV7LNEgCBX",
+      "name": "Spinnenwurz",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Kontaktgift der Stufe 9 mit Zähigkeitswurf SG 28.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact"
+          ]
+        },
+        "level": {
+          "value": 9
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.spider-root",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.spider-root",
+            "name": "Spinnenwurz",
+            "description": "Kontaktgift der Stufe 9 mit Zähigkeitswurf SG 28.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 9,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 28,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "3W6 Giftschaden und Unbeholfen 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.spider-root.stage-1",
+                  "name": "Spinnenwurz · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "4W6 Giftschaden und Unbeholfen 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.spider-root.stage-2",
+                  "name": "Spinnenwurz · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "6W6 Giftschaden und Unbeholfen 3.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.spider-root.stage-3",
+                  "name": "Spinnenwurz · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "hZTCkTwFKRPrlCQM",
+      "name": "Spinnengift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 5 mit Zähigkeitswurf SG 22.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 5
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.spider-venom",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.spider-venom",
+            "name": "Spinnengift",
+            "description": "Verwundungsgift der Stufe 5 mit Zähigkeitswurf SG 22.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 5,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 22,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "1W10 Giftschaden und Kränkelnd 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.spider-venom.stage-1",
+                  "name": "Spinnengift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "1W12 Giftschaden und Unbeholfen 1 und Kränkelnd 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.spider-venom.stage-2",
+                  "name": "Spinnengift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d12",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "2W6 Giftschaden und Unbeholfen 2 und Kränkelnd 3.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.spider-venom.stage-3",
+                  "name": "Spinnengift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "9zcuMarhFc3WSMCG",
+      "name": "Schwefelschwaden",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "inhaled"
+          ],
+          "otherTags": [
+            "poison",
+            "inhaled"
+          ]
+        },
+        "level": {
+          "value": 16
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes",
+            "name": "Schwefelschwaden",
+            "description": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 16,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "inhaled"
+            ],
+            "themes": [
+              "poison",
+              "inhaled"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 36,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "rounds"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "7W8 Giftschaden und Kraftlos 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-1",
+                  "name": "Schwefelschwaden · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "7d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "8W8 Giftschaden und Kraftlos 2.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-2",
+                  "name": "Schwefelschwaden · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "10W8 Giftschaden und Kraftlos 3.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-3",
+                  "name": "Schwefelschwaden · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "10d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "XN2H1UDxANAsxZUE",
+      "name": "Todestränen",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Kontaktgift der Stufe 20 mit Zähigkeitswurf SG 44.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact"
+          ]
+        },
+        "level": {
+          "value": 20
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.tears-of-death",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death",
+            "name": "Todestränen",
+            "description": "Kontaktgift der Stufe 20 mit Zähigkeitswurf SG 44.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 20,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 44,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "20W6 Giftschaden und Gelähmt.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death.stage-1",
+                  "name": "Todestränen · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "20d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "paralyzed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "22W6 Giftschaden und Gelähmt.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death.stage-2",
+                  "name": "Todestränen · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "22d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "paralyzed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "24W6 Giftschaden und Gelähmt.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death.stage-3",
+                  "name": "Todestränen · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "24d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "paralyzed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "85AA7CPfeEg9YBRD",
+      "name": "Eisenhut",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Eingenommenes Gift der Stufe 10 mit Zähigkeitswurf SG 30. GM-Hinweis:  Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 10
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.wolfsbane",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane",
+            "name": "Eisenhut",
+            "description": "Eingenommenes Gift der Stufe 10 mit Zähigkeitswurf SG 30. GM-Hinweis:  Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 10,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 30,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "3W10 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane.stage-1",
+                  "name": "Eisenhut · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "4W10 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane.stage-2",
+                  "name": "Eisenhut · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "5W10 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane.stage-3",
+                  "name": "Eisenhut · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "5d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 292,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ],
+              "manualComment": "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt."
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "kllMe2X1OsGYNA5f",
+      "name": "Wyverngift",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Verwundungsgift der Stufe 8 mit Zähigkeitswurf SG 26.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 8
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.player-core-2.wyvern-poison",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison",
+            "name": "Wyverngift",
+            "description": "Verwundungsgift der Stufe 8 mit Zähigkeitswurf SG 26.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 8,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 26,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "3W6 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison.stage-1",
+                  "name": "Wyverngift · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "3W8 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison.stage-2",
+                  "name": "Wyverngift · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "3W10 Giftschaden.",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison.stage-3",
+                  "name": "Wyverngift · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "player-core-2",
+              "sourcePage": 294,
+              "sourceSection": "Alchemical Poisons",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
   "treasure-vault-remastered": []
 });

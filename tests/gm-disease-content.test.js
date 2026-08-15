@@ -33,7 +33,7 @@ test("GM content filenames match the stable language-neutral definition keys", (
   }
 });
 
-test("all fourteen published GM diseases pass the 0.1.55 content contract", () => {
+test("all fourteen published GM diseases pass the current content contract", () => {
   assert.equal(diseases.length, 14);
   for (const disease of diseases) assert.deepEqual(validateDefinition(disease, { pack: "gm-core" }), [], disease.name);
 });

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.oath-of-the-flesh",
+  "name": "Schwur des Fleisches",
+  "description": "Teilautomatisierter Schwurfluch. GM-Hinweis: Jedes nach Eintritt des Fluchs gegebene Versprechen wird markiert; beim Bruch verursacht es 3W6 Hiebschaden, der nicht heilbar ist, solange der Fluch besteht.",
+  "img": "icons/svg/terror.svg",
+  "afflictionType": "curse",
+  "level": 7,
+  "rarity": "common",
+  "traits": [
+    "curse",
+    "magical"
+  ],
+  "themes": [
+    "curse",
+    "promise",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "unhealableDamageTypes": [],
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 23,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 1
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": null,
+  "defaultStageCheck": null,
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Wirkung",
+      "description": "GM-Hinweis: Versprechen und deren Bruch manuell protokollieren; bei Bruch 3W6 Hiebschaden zufügen und bis zum Ende des Fluchs als unheilbar behandeln.",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "unhealableDamageTypes": [],
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": null,
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 87,
+    "sourceSection": "Curses",
+    "sourceName": "Oath of the Flesh",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "manualComment": "GM-Hinweis: Versprechen sind narrativer Zustand und werden nicht als automatisch auswertbare Actor-Ressource modelliert."
+  }
+}

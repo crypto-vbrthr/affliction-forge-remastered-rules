@@ -15,13 +15,13 @@
       "id": "gm-core",
       "sourceWorkId": "gm-core",
       "status": "content-started",
-      "entries": 15
+      "entries": 30
     },
     {
       "id": "player-core-2",
       "sourceWorkId": "player-core-2",
-      "status": "ready-for-content",
-      "entries": 0
+      "status": "content-started",
+      "entries": 29
     },
     {
       "id": "treasure-vault-remastered",

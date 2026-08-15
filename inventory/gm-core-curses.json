@@ -2,112 +2,105 @@
   "schemaVersion": 1,
   "sourceWorkId": "gm-core",
   "section": "Curses",
-  "reviewPolicy": "GM Core curses are reviewed as trigger-driven single-effect afflictions. Only curses whose complete post-trigger mechanics are faithfully represented by Affliction Forge 0.1.55 ship as full. External world triggers are not engine blockers: applying a curse template represents that trigger having occurred. One-off narrative, inventory, body-part, third-party AI, rest-system, proficiency, or source-relative weakness rules do not justify bespoke Affliction Forge subsystems and remain inventory-only until a reusable contract exists or are later published as explicit manual-exception templates.",
+  "reviewPolicy": "GM Core curse templates are all published. Affliction Forge 0.1.56 provides generic lifecycle reactions and reactive recovery; supported curse mechanics use them directly. Rules that would require rest-system overrides, dynamic skill-proficiency mutation, player-choice orchestration, hunger/thirst integration, narrative promise/theft tracking, body-part models, third-party AI, source-relative weakness, or temporary creature spawning are intentional manual exceptions with visible GM guidance rather than bespoke engine subsystems.",
   "entries": [
     {
       "sourceName": "Curse of Nightmares",
       "level": 2,
-      "status": "blocked",
-      "blockers": [
-        "rest-duration-override",
-        "rest-benefit-block"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Requires changing the rest duration needed to avoid fatigued while also suppressing rest and long-term-rest benefits but allowing daily preparations."
-      ]
+        "GM-Hinweis: Die veränderte Ruhedauer und die blockierten Rastvorteile werden nicht automatisch in das PF2e-Rastsystem eingehängt."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-nightmares",
+      "manualComment": "GM-Hinweis: Die veränderte Ruhedauer und die blockierten Rastvorteile werden nicht automatisch in das PF2e-Rastsystem eingehängt."
     },
     {
       "sourceName": "Theft of Thought",
       "level": 3,
-      "status": "blocked",
-      "blockers": [
-        "first-skill-use-trigger",
-        "dynamic-skill-proficiency-downgrade"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "The affected skill is selected dynamically by the first trained-or-better skill check made after the curse takes hold."
-      ]
+        "GM-Hinweis: Die dynamische Wahl der ersten verwendeten Fertigkeit und eine temporäre Kompetenzgrad-Absenkung werden nicht automatisch verändert."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.theft-of-thought",
+      "manualComment": "GM-Hinweis: Die dynamische Wahl der ersten verwendeten Fertigkeit und eine temporäre Kompetenzgrad-Absenkung werden nicht automatisch verändert."
     },
     {
       "sourceName": "Slayer's Haunt",
       "level": 4,
-      "status": "blocked",
-      "blockers": [
-        "identity-illusion-overlay",
-        "pre-interaction-save"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Requires a Will save before identification, Recall Knowledge, or other interactions that depend on perceiving a creature's true form."
-      ]
+        "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.slayers-haunt",
+      "manualComment": "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen."
     },
     {
-      "sourceName": "Cowards's Roots",
+      "sourceName": "Coward's Roots",
       "level": 5,
-      "status": "blocked",
-      "blockers": [
-        "turn-start-condition-choice"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "At turn start while frightened, the victim chooses fleeing or immobilized until end of turn."
-      ]
+        "GM-Hinweis: Der generische Zugbeginn-Trigger existiert, aber die zustandsabhängige Spielerwahl ist bewusst kein eigenes Choice-Subsystem."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.cowards-roots",
+      "manualComment": "GM-Hinweis: Der generische Zugbeginn-Trigger existiert, aber die zustandsabhängige Spielerwahl ist bewusst kein eigenes Choice-Subsystem."
     },
     {
       "sourceName": "Curse of the Ravenous",
       "level": 5,
-      "status": "blocked",
-      "blockers": [
-        "starvation-rule-integration"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "The weekly repeat save is representable, but the core effect is integration with the starvation rules rather than an Affliction-stage effect."
-      ]
+        "GM-Hinweis: Der wöchentliche Wiederholungswurf ist automatisiert; die Hunger-/Verhungern-Regeln selbst werden nicht von Affliction Forge verwaltet."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-the-ravenous",
+      "manualComment": "GM-Hinweis: Der wöchentliche Wiederholungswurf ist automatisiert; die Hunger-/Verhungern-Regeln selbst werden nicht von Affliction Forge verwaltet."
     },
     {
       "sourceName": "Wizard's Ward",
       "level": 6,
-      "status": "blocked",
-      "blockers": [
-        "source-damage-type-copy"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "The curse deals 5d6 damage matching the damage type used against the protected book. Repairing the book is a manual cure condition and is not itself an engine blocker."
-      ]
+        "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.wizards-ward",
+      "manualComment": "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt."
     },
     {
       "sourceName": "Oath of the Flesh",
       "level": 7,
-      "status": "blocked",
-      "blockers": [
-        "promise-created-trigger",
-        "promise-broken-trigger"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Breaking any tracked promise deals 3d6 slashing damage that cannot be healed while the curse remains."
-      ]
+        "GM-Hinweis: Versprechen sind narrativer Zustand und werden nicht als automatisch auswertbare Actor-Ressource modelliert."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.oath-of-the-flesh",
+      "manualComment": "GM-Hinweis: Versprechen sind narrativer Zustand und werden nicht als automatisch auswertbare Actor-Ressource modelliert."
     },
     {
       "sourceName": "Sellsword's Folly",
       "level": 9,
-      "status": "blocked",
-      "blockers": [
-        "combat-initiative-trigger"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Each combat initiative roll triggers a new save; failure causes confused for 1 round as an incapacitation effect."
-      ]
+        "GM-Hinweis: Initiative-Trigger, Rettungswurf und Verwirrt werden automatisiert; die PF2e-Kampfunfähigkeitsregel dieses Zusatzwurfs wird derzeit nicht automatisch auf den Erfolgsgrad angewendet."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.sellswords-folly",
+      "manualComment": "GM-Hinweis: Initiative-Trigger, Rettungswurf und Verwirrt werden automatisiert; die PF2e-Kampfunfähigkeitsregel dieses Zusatzwurfs wird derzeit nicht automatisch auf den Erfolgsgrad angewendet."
     },
     {
       "sourceName": "Curse of Slumber",
       "level": 11,
-      "status": "blocked",
-      "blockers": [
-        "outcome-specific-duration",
-        "damage-triggered-curse-resave",
-        "appears-dead-medicine-check"
-      ],
+      "status": "full",
+      "blockers": [],
       "notes": [
-        "Failure sleeps for 1 round, critical failure sleeps indefinitely, and damage grants a new save against the curse."
-      ]
+        "Published with complete supported post-trigger mechanics under Affliction Forge 0.1.56."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-slumber"
     },
     {
       "sourceName": "Reviling Earth",
@@ -122,74 +115,68 @@
     {
       "sourceName": "Spirit Anchor",
       "level": 13,
-      "status": "blocked",
-      "blockers": [
-        "death-transformation"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Dying while cursed transforms the victim into a ghost or other incorporeal undead."
-      ]
+        "GM-Hinweis: Actor-Tod wird nicht in eine automatische Geist-/Untoten-Transformation umgeschrieben."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.spirit-anchor",
+      "manualComment": "GM-Hinweis: Actor-Tod wird nicht in eine automatische Geist-/Untoten-Transformation umgeschrieben."
     },
     {
       "sourceName": "Unending Thirst",
       "level": 15,
-      "status": "blocked",
-      "blockers": [
-        "thirst-rule-integration"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "The daily repeat save is representable, but the core effect is integration with the thirst/dehydration rules."
-      ]
+        "GM-Hinweis: Der tägliche Wiederholungswurf ist automatisiert; die Durst-/Dehydrierungsregeln selbst werden nicht von Affliction Forge verwaltet."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.unending-thirst",
+      "manualComment": "GM-Hinweis: Der tägliche Wiederholungswurf ist automatisiert; die Durst-/Dehydrierungsregeln selbst werden nicht von Affliction Forge verwaltet."
     },
     {
       "sourceName": "Reviled of Nature",
       "level": 18,
-      "status": "blocked",
-      "blockers": [
-        "third-party-awareness-trigger",
-        "third-party-hostility-save"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Every animal that becomes aware of the cursed creature must save and may become hostile until death."
-      ]
+        "GM-Hinweis: Affliction Forge erzwingt keine Rettungswürfe oder KI-/Verhaltensänderungen bei beliebigen Dritt-Aktoren."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.reviled-of-nature",
+      "manualComment": "GM-Hinweis: Affliction Forge erzwingt keine Rettungswürfe oder KI-/Verhaltensänderungen bei beliebigen Dritt-Aktoren."
     },
     {
       "sourceName": "Thief's Retribution",
       "level": 19,
-      "status": "blocked",
-      "blockers": [
-        "theft-trigger",
-        "inventory-value-selection",
-        "item-removal",
-        "body-part-loss"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "A theft removes a more valuable carried possession, or otherwise removes a limb and deals unhealable slashing damage until restitution."
-      ]
+        "GM-Hinweis: Inventarwert, narrativer Wert, Diebstahlereignisse und Körperteile sind keine generischen Affliction-Forge-Ressourcen."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.thiefs-retribution",
+      "manualComment": "GM-Hinweis: Inventarwert, narrativer Wert, Diebstahlereignisse und Körperteile sind keine generischen Affliction-Forge-Ressourcen."
     },
     {
       "sourceName": "Sword of Anathema",
       "level": 20,
-      "status": "blocked",
-      "blockers": [
-        "source-relative-weakness"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Weakness 10 applies only to damage caused by worshippers of the deity that imposed the curse."
-      ]
+        "GM-Hinweis: Eine Schwäche, die von der Religion/Quelle des jeweiligen Schadensverursachers abhängt, wird nicht als globale Actor-Schwäche automatisiert."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.sword-of-anathema",
+      "manualComment": "GM-Hinweis: Eine Schwäche, die von der Religion/Quelle des jeweiligen Schadensverursachers abhängt, wird nicht als globale Actor-Schwäche automatisiert."
     },
     {
       "sourceName": "Grave Curse",
       "level": "varies",
-      "status": "blocked",
-      "blockers": [
-        "nightly-flat-check-trigger",
-        "graveyard-entry-trigger",
-        "temporary-undead-spawn"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "The curse DC scales from the curse level; nightly and burial-ground flat checks create temporary undead harassment. Returning the stolen goods is a manual cure condition."
-      ]
+        "GM-Hinweis: Die Quellenstufe variiert; den zugehörigen hohen Zauber-SG beim Anwenden als externen SG übergeben. Untote werden nicht automatisch erzeugt."
+      ],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.grave-curse",
+      "manualComment": "GM-Hinweis: Die Quellenstufe variiert; den zugehörigen hohen Zauber-SG beim Anwenden als externen SG übergeben. Untote werden nicht automatisch erzeugt."
     }
   ]
 }
