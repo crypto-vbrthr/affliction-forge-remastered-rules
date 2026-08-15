@@ -4,14 +4,32 @@ import {
   MODULE_ID,
   PROVIDER_ID
 } from "./constants.js";
+import { seedBundledContent } from "./content-seeder.js";
 import { registerProvider } from "./provider.js";
 
 let registered = false;
+let seeded = false;
+let seedPromise = null;
 
 function log(level, message, data = undefined) {
   const fn = console[level] ?? console.log;
   if (data === undefined) fn(`${MODULE_ID} | ${message}`);
   else fn(`${MODULE_ID} | ${message}`, data);
+}
+
+async function ensureSeeded() {
+  if (seeded) return null;
+  seedPromise ??= seedBundledContent()
+    .then((result) => {
+      seeded = true;
+      if (result?.created) log("info", `Seeded ${result.created} bundled Affliction template(s) into module compendia.`, result);
+      return result;
+    })
+    .catch((error) => {
+      seedPromise = null;
+      throw error;
+    });
+  return seedPromise;
 }
 
 function tryRegister(api, source) {
@@ -34,13 +52,22 @@ function tryRegister(api, source) {
   }
 }
 
-Hooks.once("pf2eAfflictionForgeReady", (api) => {
+Hooks.once("pf2eAfflictionForgeReady", async (api) => {
+  try {
+    await ensureSeeded();
+  } catch (error) {
+    log("error", "Bundled content seeding failed before provider registration.", error);
+  }
   tryRegister(api, "pf2eAfflictionForgeReady");
 });
 
-Hooks.once("ready", () => {
-  // Defensive fallback for unusual module load orders. Normal registration is
-  // expected to happen through pf2eAfflictionForgeReady.
+Hooks.once("ready", async () => {
+  try {
+    await ensureSeeded();
+  } catch (error) {
+    log("error", "Bundled content seeding failed at ready.", error);
+  }
+
   if (registered) return;
   const api = game.modules.get(AFFLICTION_FORGE_ID)?.api;
   if (!tryRegister(api, "ready-fallback")) {

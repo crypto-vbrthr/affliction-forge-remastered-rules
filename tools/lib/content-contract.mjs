@@ -199,3 +199,11 @@ export function buildItemSource(definition) {
     ownership: { default: 0 }
   };
 }
+
+export function buildPackSource(definition) {
+  const item = buildItemSource(definition);
+  return {
+    _key: `!items!${item._id}`,
+    ...item
+  };
+}

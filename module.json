@@ -1,8 +1,8 @@
 {
   "id": "affliction-forge-remastered-rules",
   "title": "Affliction Forge: Remastered Rules Library",
-  "description": "Read-only Remastered rules-content library for Affliction Forge. Initial 0.1.0 establishes the provider, one logical library, four source packs, and strict ORC/content-review tooling; no rules entries are shipped yet.",
-  "version": "0.1.0",
+  "description": "Read-only Remastered rules-content library for Affliction Forge. Version 0.1.1 starts the reviewed GM disease content with one fully automatable ORC rules entry and a complete coverage inventory for the remaining GM diseases.",
+  "version": "0.1.1",
   "authors": [
     {
       "name": "crypto-vbrthr"

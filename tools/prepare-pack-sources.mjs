@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { SUPPORTED_PACKS, buildItemSource, validateDefinition } from "./lib/content-contract.mjs";
+import { SUPPORTED_PACKS, buildPackSource, validateDefinition } from "./lib/content-contract.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
@@ -30,7 +30,7 @@ for (const pack of SUPPORTED_PACKS) {
     if (issues.length) {
       throw new Error(`${path.relative(root, sourcePath)} is not publishable:\n${issues.map((issue) => `- ${issue}`).join("\n")}`);
     }
-    const item = buildItemSource(definition);
+    const item = buildPackSource(definition);
     await fs.writeFile(path.join(outDir, safeFilename(definition)), `${JSON.stringify(item, null, 2)}\n`, "utf8");
     total += 1;
   }

@@ -1,5 +1,5 @@
 export const MODULE_ID = "affliction-forge-remastered-rules";
-export const MODULE_VERSION = "0.1.0";
+export const MODULE_VERSION = "0.1.1";
 export const AFFLICTION_FORGE_ID = "pf2e-affliction-forge";
 export const MIN_AFFLICTION_FORGE_VERSION = "0.1.47";
 

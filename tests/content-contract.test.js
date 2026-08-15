@@ -3,6 +3,7 @@ import test from "node:test";
 import {
   MODULE_ID,
   buildItemSource,
+  buildPackSource,
   deterministicDocumentId,
   validateDefinition
 } from "../tools/lib/content-contract.mjs";
@@ -107,4 +108,14 @@ test("prepared Item source is an Affliction Forge template Effect", () => {
   assert.equal(item.flags["pf2e-affliction-forge"].documentKind, "affliction-template");
   assert.equal(item.flags["pf2e-affliction-forge"].definitionId, definition.id);
   assert.equal(item.flags["pf2e-affliction-forge"].originModule, MODULE_ID);
+});
+
+
+test("official CLI pack source carries a LevelDB _key while runtime source does not", () => {
+  const definition = validDefinition();
+  const runtime = buildItemSource(definition);
+  const packed = buildPackSource(definition);
+  assert.equal(runtime._key, undefined);
+  assert.equal(packed._key, `!items!${runtime._id}`);
+  assert.equal(packed._id, runtime._id);
 });

@@ -1,12 +1,14 @@
 {
   "name": "affliction-forge-remastered-rules",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node --test --test-concurrency=1",
     "validate": "node tools/validate-content.mjs",
-    "prepare:packs": "node tools/prepare-pack-sources.mjs"
+    "prepare:packs": "node tools/prepare-pack-sources.mjs",
+    "generate:seed": "node tools/generate-runtime-seed.mjs",
+    "build:content": "npm run validate && npm run prepare:packs && npm run generate:seed"
   },
   "engines": {
     "node": ">=20"
