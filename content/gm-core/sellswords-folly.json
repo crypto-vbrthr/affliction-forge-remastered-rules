@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.sellswords-folly",
-  "name": "Söldnerwahn",
-  "description": "Teilautomatisierter Kampfesfluch. Bei jedem Initiativewurf fordert die Forge einen Willenswurf SG 26 an; bei Fehlschlag oder kritischem Fehlschlag wird 1 Runde Verwirrt angewendet. GM-Hinweis: Dieser Zusatzwurf ist ein Kampfunfähigkeits-Effekt; die entsprechende Gradverbesserung bei zu hochstufigen Zielen muss manuell berücksichtigt werden.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 9,
@@ -38,7 +38,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Willen",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Checks.1.Label",
       "kind": "save",
       "statistic": "will",
       "dcMode": "fixed",
@@ -80,8 +80,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "Bei jedem Initiativewurf neuer Willenswurf; bei Fehlschlag 1 Runde Verwirrt. GM-Hinweis: Kampfunfähigkeit manuell auf den Erfolgsgrad anwenden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -103,7 +103,7 @@
       "reactions": [
         {
           "id": "initiative-confusion",
-          "label": "Söldnerwahn bei Initiative",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Reactions.1.Label",
           "trigger": {
             "event": "initiative-rolled",
             "damageTypes": [],
@@ -124,7 +124,7 @@
           "effect": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.sellswords-folly.initiative-confusion",
-            "name": "Söldnerwahn · Verwirrt",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Reactions.1.Effect.Name",
             "duration": {
               "value": 1,
               "unit": "rounds",
@@ -148,10 +148,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 87,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Metadata.SourceSection",
     "sourceName": "Sellsword's Folly",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -159,7 +159,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Initiative-Trigger, Rettungswurf und Verwirrt werden automatisiert; die PF2e-Kampfunfähigkeitsregel dieses Zusatzwurfs wird derzeit nicht automatisch auf den Erfolgsgrad angewendet.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Metadata.SourceWorkLabel"
   }
 }

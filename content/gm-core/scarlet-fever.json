@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever",
-  "name": "Scharlachfieber",
-  "description": "Krankheit mit zunehmender Übelkeit; der durch sie verursachte Zustand Kränkelnd kann während des Leidens nicht reduziert werden.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 1,
@@ -37,7 +37,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -105,8 +105,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Kränkelnd 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -121,7 +121,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-1",
-        "name": "Scharlachfieber · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -141,8 +141,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Kränkelnd 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -157,7 +157,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-2",
-        "name": "Scharlachfieber · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -177,8 +177,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Kränkelnd 3; die betroffene Kreatur kann nicht sprechen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -195,7 +195,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-3",
-        "name": "Scharlachfieber · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -215,8 +215,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Tod.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.4.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -231,7 +231,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-4",
-        "name": "Scharlachfieber · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -253,10 +253,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Metadata.SourceSection",
     "sourceName": "Scarlet Fever",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -264,6 +264,6 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Metadata.SourceWorkLabel"
   }
 }

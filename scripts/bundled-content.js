@@ -4,12 +4,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
   "gm-core": [
     {
       "_id": "qF1ZNPEvgC4uQdUB",
-      "name": "Arsen",
+      "name": "Arsenic",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 1 mit Zähigkeitswurf SG 18.",
+          "value": "Ingested level 1 poison with a DC 18 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -49,12 +49,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.arsenic",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.arsenic",
-            "name": "Arsen",
-            "description": "Eingenommenes Gift der Stufe 1 mit Zähigkeitswurf SG 18.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 1,
@@ -91,7 +91,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -162,8 +162,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W4 Giftschaden und Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -178,7 +178,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.arsenic.stage-1",
-                  "name": "Arsen · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -203,8 +203,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W6 Giftschaden und Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -219,7 +219,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.arsenic.stage-2",
-                  "name": "Arsen · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -244,8 +244,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W6 Giftschaden und Kränkelnd 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -260,7 +260,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.arsenic.stage-3",
-                  "name": "Arsen · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -288,9 +288,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 248,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -302,13 +302,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.arsenic.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.arsenic",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -320,12 +323,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "VwhOtyfVWoE8aOpD",
-      "name": "Schwarzer Lotusextrakt",
+      "name": "Black Lotus Extract",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 19 mit Zähigkeitswurf SG 42.",
+          "value": "Contact level 19 poison with a DC 42 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -365,12 +368,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.black-lotus-extract",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.black-lotus-extract",
-            "name": "Schwarzer Lotusextrakt",
-            "description": "Kontaktgift der Stufe 19 mit Zähigkeitswurf SG 42.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 19,
@@ -402,7 +405,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -473,8 +476,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "15W6 Giftschaden und Ausgelaugt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -489,7 +492,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.black-lotus-extract.stage-1",
-                  "name": "Schwarzer Lotusextrakt · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -514,8 +517,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "17W6 Giftschaden und Ausgelaugt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -530,7 +533,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.black-lotus-extract.stage-2",
-                  "name": "Schwarzer Lotusextrakt · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -555,8 +558,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "20W6 Giftschaden und Ausgelaugt 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -571,7 +574,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.black-lotus-extract.stage-3",
-                  "name": "Schwarzer Lotusextrakt · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -599,9 +602,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -613,13 +616,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-lotus-extract.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.black-lotus-extract",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -631,12 +637,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "kYio878RTUCeUgwD",
-      "name": "Schwarzviperngift",
+      "name": "Black Viper Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18.",
+          "value": "Injury level 2 poison with a DC 18 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -676,12 +682,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.black-viper-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.black-viper-venom",
-            "name": "Schwarzviperngift",
-            "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 2,
@@ -713,7 +719,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -781,8 +787,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -797,7 +803,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.black-viper-venom.stage-1",
-                  "name": "Schwarzviperngift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -817,8 +823,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -833,7 +839,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.black-viper-venom.stage-2",
-                  "name": "Schwarzviperngift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -853,8 +859,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -869,7 +875,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.black-viper-venom.stage-3",
-                  "name": "Schwarzviperngift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -892,9 +898,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -906,13 +912,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.black-viper-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.black-viper-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -924,12 +933,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "p1i5HWZgSgdpIrtI",
-      "name": "Faulbrandharz",
+      "name": "Blightburn Resin",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 11 mit Zähigkeitswurf SG 31.",
+          "value": "Contact level 11 poison with a DC 31 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -969,12 +978,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.blightburn-resin",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.blightburn-resin",
-            "name": "Faulbrandharz",
-            "description": "Kontaktgift der Stufe 11 mit Zähigkeitswurf SG 31.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 11,
@@ -1006,7 +1015,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -1077,8 +1086,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "8W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -1093,7 +1102,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blightburn-resin.stage-1",
-                  "name": "Faulbrandharz · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1113,8 +1122,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "10W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -1129,7 +1138,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blightburn-resin.stage-2",
-                  "name": "Faulbrandharz · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1149,8 +1158,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "15W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -1165,7 +1174,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blightburn-resin.stage-3",
-                  "name": "Faulbrandharz · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1188,9 +1197,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 248,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -1202,13 +1211,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blightburn-resin.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.blightburn-resin",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -1220,12 +1232,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "usjSb0r3Qs4G7eRq",
-      "name": "Blindfieber",
+      "name": "Blinding Sickness",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Krankheit mit fortschreitender körperlicher Schwächung; in einer fortgeschrittenen Phase kann dauerhafte Blindheit zurückbleiben.",
+          "value": "Level 7 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -1265,12 +1277,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.blinding-sickness",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness",
-            "name": "Blindfieber",
-            "description": "Krankheit mit fortschreitender körperlicher Schwächung; in einer fortgeschrittenen Phase kann dauerhafte Blindheit zurückbleiben.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 7,
@@ -1302,7 +1314,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -1367,8 +1379,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Erkrankt, aber ohne weitere regeltechnische Auswirkungen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1388,8 +1400,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1408,7 +1420,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-2",
-                  "name": "Blindfieber · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1429,8 +1441,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1449,7 +1461,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-3",
-                  "name": "Blindfieber · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1470,8 +1482,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Kraftlos 2 und dauerhaft Blind.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.4.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1491,7 +1503,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-4",
-                  "name": "Blindfieber · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1516,8 +1528,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-5",
                 "number": 5,
-                "name": "Phase 5",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.5.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.5.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1536,7 +1548,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-5",
-                  "name": "Blindfieber · Phase 5",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.5.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1556,8 +1568,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-6",
                 "number": 6,
-                "name": "Phase 6",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.6.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.6.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -1576,7 +1588,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-6",
-                  "name": "Blindfieber · Phase 6",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.6.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1599,10 +1611,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 89,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Metadata.SourceSection",
               "sourceName": "Blinding Sickness",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -1613,11 +1625,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "coverageNotes": [
                 "Stage 4 uses Affliction Forge 0.1.51 component-specific persistence so only blindness survives permanently; enfeebled remains stage-bound."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -1629,12 +1644,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "12jCdSYC5489AmQ1",
-      "name": "Sumpffäule",
+      "name": "Bog Rot",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Feuchtigkeitsbedingte Krankheit mit zunehmender Ungeschicklichkeit und verlangsamter Fortbewegung. Eine Amputation der betroffenen Gliedmaßen kann die Krankheit alternativ beenden; diese Heilungsmöglichkeit wird manuell abgewickelt.",
+          "value": "Level 0 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -1674,12 +1689,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.bog-rot",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.bog-rot",
-            "name": "Sumpffäule",
-            "description": "Feuchtigkeitsbedingte Krankheit mit zunehmender Ungeschicklichkeit und verlangsamter Fortbewegung. Eine Amputation der betroffenen Gliedmaßen kann die Krankheit alternativ beenden; diese Heilungsmöglichkeit wird manuell abgewickelt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 0,
@@ -1710,7 +1725,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -1778,8 +1793,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Unbeholfen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1794,7 +1809,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-1",
-                  "name": "Sumpffäule · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1814,8 +1829,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Unbeholfen 1 und Zustandsmalus von 1,50 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1830,7 +1845,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-2",
-                  "name": "Sumpffäule · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1849,7 +1864,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Sumpffäule · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -1861,8 +1876,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Unbeholfen 2 und Zustandsmalus von 3 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -1877,7 +1892,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-3",
-                  "name": "Sumpffäule · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -1896,7 +1911,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Sumpffäule · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -1911,10 +1926,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Metadata.SourceSection",
               "sourceName": "Bog Rot",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -1926,11 +1941,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "The alternate cure by amputating the affected limbs is intentionally handled manually and does not require a generic body-part subsystem.",
                 "PF2e speed modifiers use the system-native 5-foot unit: -5 corresponds to -1.5 m and -10 to -3 m in metric display."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -1942,12 +1960,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "W8awvKeaZCPK2vUJ",
-      "name": "Knochenfrost",
+      "name": "Bonechill",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierte Krankheit mit fortschreitender Kältestarre. GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen.",
+          "value": "Level 5 disease. See its stages for the mechanical effects. GM Note: In Stages 3 and 4, increase the severity of cold-temperature effects by one step manually. Cold damage affected by the healing lock from Stage 2 onward remains unhealable until the disease ends; if the affliction later falls back to Stage 1, continue that lock manually for cold damage already affected.",
           "gm": ""
         },
         "rules": [],
@@ -1987,12 +2005,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.bonechill",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.bonechill",
-            "name": "Knochenfrost",
-            "description": "Teilautomatisierte Krankheit mit fortschreitender Kältestarre. GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 5,
@@ -2024,7 +2042,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -2092,8 +2110,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Unbeholfen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2109,7 +2127,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-1",
-                  "name": "Knochenfrost · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2131,8 +2149,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Unbeholfen 2. Kälteschaden kann nicht geheilt werden, solange die Krankheit nicht geheilt ist.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2150,7 +2168,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-2",
-                  "name": "Knochenfrost · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2172,8 +2190,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Unbeholfen 3. GM-Hinweis: Kalte Temperaturen wirken eine Stufe schwerwiegender.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2191,7 +2209,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-3",
-                  "name": "Knochenfrost · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2213,8 +2231,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Gelähmt. GM-Hinweis: Kalte Temperaturen wirken eine Stufe schwerwiegender.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.4.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2232,7 +2250,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bonechill.stage-4",
-                  "name": "Knochenfrost · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2256,10 +2274,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Metadata.SourceSection",
               "sourceName": "Bonechill",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -2272,12 +2290,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Environmental cold severity shifting is intentionally manual.",
                 "If the disease regresses to Stage 1 after reaching Stage 2+, the GM must continue the already-acquired cold-damage healing restriction until the disease ends."
               ],
-              "manualComment": "GM-Hinweis: In Phase 3 und 4 müssen die Auswirkungen kalter Temperaturen manuell um eine Schweregradstufe erhöht werden. Kälteschaden, der ab Phase 2 unter die Heilungssperre fällt, bleibt bis zur Heilung der Krankheit unheilbar; fällt das Leiden später auf Phase 1 zurück, diese Sperre für bereits betroffenen Kälteschaden manuell fortführen.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bonechill.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -2289,12 +2310,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "Exk37qPqbYJPBAlE",
-      "name": "Hirnwürmer",
+      "name": "Brain Worms",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierte ausgeprägte Krankheit mit neurologischen Ausfällen. GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
+          "value": "Level 11 disease. See its stages for the mechanical effects. GM Note: Attacks made because of confused must be resolved as bites. In Stage 4, taking damage does not end confused. These two behavior rules are not altered automatically.",
           "gm": ""
         },
         "rules": [],
@@ -2335,12 +2356,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.brain-worms",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.brain-worms",
-            "name": "Hirnwürmer",
-            "description": "Teilautomatisierte ausgeprägte Krankheit mit neurologischen Ausfällen. GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 11,
@@ -2373,7 +2394,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -2382,7 +2403,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               },
               {
                 "id": "mind",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Checks.2.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -2450,8 +2471,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Benommen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2467,7 +2488,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-1",
-                  "name": "Hirnwürmer · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2489,8 +2510,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Benommen 2. Nach erlittenem Schaden folgt ein Willenswurf gegen SG 28; bei Fehlschlag 1 Runde Verwirrt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2506,7 +2527,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-2",
-                  "name": "Hirnwürmer · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2526,7 +2547,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "damage-confusion",
-                    "label": "Verwirrung nach Schaden",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Reactions.1.Label",
                     "trigger": {
                       "event": "damage-taken",
                       "damageTypes": []
@@ -2539,7 +2560,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                     "effect": {
                       "schemaVersion": 2,
                       "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-2.reaction",
-                      "name": "Hirnwürmer · Verwirrt",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Reactions.1.Effect.Name",
                       "duration": {
                         "value": 1,
                         "unit": "rounds",
@@ -2560,8 +2581,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Benommen 3. Nach erlittenem Schaden folgt ein Willenswurf gegen SG 28; bei Fehlschlag 1 Minute Verwirrt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2577,7 +2598,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-3",
-                  "name": "Hirnwürmer · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2597,7 +2618,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "damage-confusion",
-                    "label": "Verwirrung nach Schaden",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Reactions.1.Label",
                     "trigger": {
                       "event": "damage-taken",
                       "damageTypes": []
@@ -2610,7 +2631,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                     "effect": {
                       "schemaVersion": 2,
                       "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-3.reaction",
-                      "name": "Hirnwürmer · Verwirrt",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Reactions.1.Effect.Name",
                       "duration": {
                         "value": 1,
                         "unit": "minutes",
@@ -2631,8 +2652,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Benommen 4 und Verwirrt. GM-Hinweis: Schaden beendet Verwirrt in dieser Phase nicht.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.4.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2648,7 +2669,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-4",
-                  "name": "Hirnwürmer · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2674,8 +2695,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-5",
                 "number": 5,
-                "name": "Phase 5",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.5.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.5.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2691,7 +2712,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-5",
-                  "name": "Hirnwürmer · Phase 5",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.5.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2712,8 +2733,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-6",
                 "number": 6,
-                "name": "Phase 6",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.6.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.6.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -2729,7 +2750,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-6",
-                  "name": "Hirnwürmer · Phase 6",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.6.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2753,10 +2774,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 89,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Metadata.SourceSection",
               "sourceName": "Brain Worms",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -2769,12 +2790,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Stage 2 and 3 damage-triggered Will saves and temporary confused conditions use event reactions.",
                 "Confusion-driven attack replacement with a bite and the Stage 4 exception that damage does not end confused are intentionally manual."
               ],
-              "manualComment": "GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -2786,12 +2810,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "HgITTGjMFVc3Bjoe",
-      "name": "Beulenpest",
+      "name": "Bubonic Plague",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Schwere Krankheit mit zunehmender körperlicher Schwächung. Erschöpfung kann während des Leidens nicht entfernt werden; in der letzten Phase treten in zufälligen Abständen wiederkehrende Blutungen auf.",
+          "value": "Level 3 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -2831,12 +2855,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.bubonic-plague",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague",
-            "name": "Beulenpest",
-            "description": "Schwere Krankheit mit zunehmender körperlicher Schwächung. Erschöpfung kann während des Leidens nicht entfernt werden; in der letzten Phase treten in zufälligen Abständen wiederkehrende Blutungen auf.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 3,
@@ -2872,7 +2896,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -2940,8 +2964,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2956,7 +2980,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-1",
-                  "name": "Beulenpest · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -2975,8 +2999,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Kraftlos 2 und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -2991,7 +3015,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-2",
-                  "name": "Beulenpest · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3015,8 +3039,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Kraftlos 3 und Erschöpft; zusätzlich tritt alle 1W20 Minuten 1W6 anhaltender Blutungsschaden auf.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3031,7 +3055,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3",
-                  "name": "Beulenpest · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3054,7 +3078,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "periodicEffects": [
                   {
                     "id": "recurring-bleed",
-                    "label": "Wiederkehrende Blutung",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.PeriodicEffects.1.Label",
                     "interval": {
                       "formula": "1d20",
                       "unit": "minutes"
@@ -3062,7 +3086,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                     "effect": {
                       "schemaVersion": 2,
                       "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3.recurring-bleed.periodic-effect",
-                      "name": "Beulenpest · Wiederkehrende Blutung",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.PeriodicEffects.1.Effect.Name",
                       "duration": {
                         "value": -1,
                         "unit": "unlimited",
@@ -3088,10 +3112,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Metadata.SourceSection",
               "sourceName": "Bubonic Plague",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -3103,11 +3127,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Stage 3 uses Affliction Forge periodic stage effects. The 1d20-minute interval is rerolled after every execution.",
                 "The recurring damage is applied as 1d6 persistent bleed damage through the Critical Forge effect contract."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -3119,12 +3146,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "UpYV0d7D6gL6z2B4",
-      "name": "Erstickungsseuche",
+      "name": "Choking Death",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Schwere Atemwegserkrankung mit fortschreitender Schwächung und Sprachverlust.",
+          "value": "Level 6 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -3163,12 +3190,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.choking-death",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.choking-death",
-            "name": "Erstickungsseuche",
-            "description": "Schwere Atemwegserkrankung mit fortschreitender Schwächung und Sprachverlust.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 6,
@@ -3198,7 +3225,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -3266,8 +3293,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Heisere Stimme; keine weiteren regeltechnischen Auswirkungen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3284,8 +3311,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Ausgelaugt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3300,7 +3327,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.choking-death.stage-2",
-                  "name": "Erstickungsseuche · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3320,8 +3347,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Ausgelaugt 2; die betroffene Kreatur kann nicht sprechen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3338,7 +3365,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.choking-death.stage-3",
-                  "name": "Erstickungsseuche · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3358,8 +3385,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.4.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -3374,7 +3401,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.choking-death.stage-4",
-                  "name": "Erstickungsseuche · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3396,10 +3423,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Metadata.SourceSection",
               "sourceName": "Choking Death",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -3407,11 +3434,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -3423,12 +3453,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "kJ6RHOeqHlFZC8I8",
-      "name": "Fluch des Feiglings",
+      "name": "Coward's Roots",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Furchtfluch. GM-Hinweis: Beginnt der Betroffene seinen Zug mit Verängstigt, wählt er bis zum Ende dieses Zuges entweder Fliehend oder Bewegungsunfähig.",
+          "value": "Level 5 curse. See its effect and GM note for handling details. GM Note: The generic turn-start trigger exists, but the condition-dependent player choice deliberately isn't implemented as a separate choice subsystem.",
           "gm": ""
         },
         "rules": [],
@@ -3473,12 +3503,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.cowards-roots",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.cowards-roots",
-            "name": "Fluch des Feiglings",
-            "description": "Teilautomatisierter Furchtfluch. GM-Hinweis: Beginnt der Betroffene seinen Zug mit Verängstigt, wählt er bis zum Ende dieses Zuges entweder Fliehend oder Bewegungsunfähig.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 5,
@@ -3515,7 +3545,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -3557,8 +3587,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Wahl zwischen Fliehend und Bewegungsunfähig zu Zugbeginn manuell treffen und anwenden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -3585,10 +3615,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 86,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Metadata.SourceSection",
               "sourceName": "Coward's Roots",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -3596,12 +3626,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Der generische Zugbeginn-Trigger existiert, aber die zustandsabhängige Spielerwahl ist bewusst kein eigenes Choice-Subsystem.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.cowards-roots.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -3613,12 +3646,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "sElWSZJ4XrfP1QLu",
-      "name": "Bluthand",
+      "name": "Crimson Ooze",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierte ausgeprägte Pilzerkrankung einer Hand. GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden.",
+          "value": "Level 15 disease. See its stages for the mechanical effects. GM Note: The infected hand is not tracked as a separate body part. In Stage 2, using it manually causes 3d6 persistent bleed damage. In Stage 3 it is unusable, in Stage 4 permanently unusable. In Stage 5, damage does not end confused. Amputation before Stage 4 can end the disease at the GM's discretion.",
           "gm": ""
         },
         "rules": [],
@@ -3659,12 +3692,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.crimson-ooze",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze",
-            "name": "Bluthand",
-            "description": "Teilautomatisierte ausgeprägte Pilzerkrankung einer Hand. GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 15,
@@ -3697,7 +3730,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -3765,8 +3798,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Unbeholfen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3782,7 +3815,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-1",
-                  "name": "Bluthand · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3804,8 +3837,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Unbeholfen 2. GM-Hinweis: Benutzung der befallenen Hand verursacht 3W6 anhaltenden Blutungsschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3821,7 +3854,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-2",
-                  "name": "Bluthand · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3843,8 +3876,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Unbeholfen 2 und Benommen 2. GM-Hinweis: Die befallene Hand ist nicht nutzbar.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3860,7 +3893,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-3",
-                  "name": "Bluthand · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3887,8 +3920,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Unbeholfen 3 und Benommen 3. GM-Hinweis: Die befallene Hand ist dauerhaft nicht nutzbar.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.4.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3904,7 +3937,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-4",
-                  "name": "Bluthand · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3931,8 +3964,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-5",
                 "number": 5,
-                "name": "Phase 5",
-                "description": "Verwirrt. GM-Hinweis: Schaden beendet Verwirrt nicht.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.5.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.5.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -3948,7 +3981,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-5",
-                  "name": "Bluthand · Phase 5",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.5.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -3969,8 +4002,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-6",
                 "number": 6,
-                "name": "Phase 6",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.6.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.6.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -3986,7 +4019,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.crimson-ooze.stage-6",
-                  "name": "Bluthand · Phase 6",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Stages.6.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -4010,10 +4043,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 89,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Metadata.SourceSection",
               "sourceName": "Crimson Ooze",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -4026,12 +4059,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Infected-hand use, persistent bleed from using that hand, hand usability/permanent loss, and the Stage 5 confused-ending exception are intentionally manual.",
                 "Amputation before Stage 4 is an explicit manual cure option."
               ],
-              "manualComment": "GM-Hinweis: Die befallene Hand wird nicht als eigenes Körperteil verfolgt. In Phase 2 verursacht ihre Benutzung manuell 3W6 anhaltenden Blutungsschaden. In Phase 3 ist sie unbenutzbar, in Phase 4 dauerhaft unbenutzbar. In Phase 5 beendet Schaden Verwirrt nicht. Eine Amputation vor Phase 4 kann die Krankheit nach SL-Entscheidung beenden.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.crimson-ooze.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -4043,12 +4079,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "ZPfXqqzokxmMUTbz",
-      "name": "Fluch der Albträume",
+      "name": "Curse of Nightmares",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Fluch, der erholsamen Schlaf verhindert. GM-Hinweis: Um Erschöpft zu vermeiden, sind 12 statt 8 Stunden Ruhe nötig; Ausruhen und längere Rast gewähren keine normalen Vorteile, tägliche Vorbereitungen bleiben möglich.",
+          "value": "Level 2 curse. See its effect and GM note for handling details. GM Note: The altered rest duration and blocked rest benefits are not automatically integrated into PF2e's rest system.",
           "gm": ""
         },
         "rules": [],
@@ -4090,12 +4126,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-nightmares",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.curse-of-nightmares",
-            "name": "Fluch der Albträume",
-            "description": "Teilautomatisierter Fluch, der erholsamen Schlaf verhindert. GM-Hinweis: Um Erschöpft zu vermeiden, sind 12 statt 8 Stunden Ruhe nötig; Ausruhen und längere Rast gewähren keine normalen Vorteile, tägliche Vorbereitungen bleiben möglich.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 2,
@@ -4129,7 +4165,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -4171,8 +4207,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Ruhe- und Rastregeln gemäß Beschreibung manuell anwenden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -4199,10 +4235,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 86,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Metadata.SourceSection",
               "sourceName": "Curse of Nightmares",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -4210,12 +4246,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Die veränderte Ruhedauer und die blockierten Rastvorteile werden nicht automatisch in das PF2e-Rastsystem eingehängt.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-nightmares.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -4227,12 +4266,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "jL7A2OtD0NGbgCSV",
-      "name": "Fluch des Schlummerns",
+      "name": "Curse of Slumber",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Schlaf-Fluch. Bei Fehlschlag schläft der Betroffene 1 Runde, bei kritischem Fehlschlag unbegrenzt. Schaden erlaubt sofort einen neuen Rettungswurf gegen den Fluch; bei Erfolg endet er. Lärm allein weckt nicht. Ein Heilkunde-Wurf SG 30 kann erkennen, dass der Schlafende noch lebt.",
+          "value": "Level 11 curse. See its effect and GM note for handling details.",
           "gm": ""
         },
         "rules": [],
@@ -4275,12 +4314,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-slumber",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.curse-of-slumber",
-            "name": "Fluch des Schlummerns",
-            "description": "Schlaf-Fluch. Bei Fehlschlag schläft der Betroffene 1 Runde, bei kritischem Fehlschlag unbegrenzt. Schaden erlaubt sofort einen neuen Rettungswurf gegen den Fluch; bei Erfolg endet er. Lärm allein weckt nicht. Ein Heilkunde-Wurf SG 30 kann erkennen, dass der Schlafende noch lebt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 11,
@@ -4315,7 +4354,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -4357,8 +4396,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Kurzer Schlaf",
-                "description": "Bewusstlos durch magischen Schlaf für 1 Runde; Schaden erlaubt einen neuen Rettungswurf.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -4376,7 +4415,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.curse-of-slumber.stage-1",
-                  "name": "Fluch des Schlummerns · Schlaf",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -4397,7 +4436,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "wake-on-damage",
-                    "label": "Aufwachen nach Schaden",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.1.Reactions.1.Label",
                     "trigger": {
                       "event": "damage-taken",
                       "damageTypes": [],
@@ -4419,8 +4458,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Dauerhafter Schlaf",
-                "description": "Bewusstlos durch magischen Schlaf ohne feste Dauer; Schaden erlaubt einen neuen Rettungswurf.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.2.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -4438,7 +4477,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.curse-of-slumber.stage-2",
-                  "name": "Fluch des Schlummerns · Tiefer Schlaf",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -4459,7 +4498,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "wake-on-damage",
-                    "label": "Aufwachen nach Schaden",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Stages.2.Reactions.1.Label",
                     "trigger": {
                       "event": "damage-taken",
                       "damageTypes": [],
@@ -4484,10 +4523,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Metadata.SourceSection",
               "sourceName": "Curse of Slumber",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -4499,11 +4538,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "The Medicine DC 30 observer check is informational and does not change the curse controller.",
                 "Noise alone does not wake the sleeper; damage invokes the reactive save."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-slumber.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -4515,12 +4557,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "pNluevGZaEHc7ZJn",
-      "name": "Fluch der Gefräßigen",
+      "name": "Curse of the Ravenous",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Hungerfluch. Nach einem Tag beginnt der Betroffene trotz Nahrung zu hungern. Die Forge fordert danach jede Woche den erneuten Rettungswurf an. GM-Hinweis: Die eigentlichen Hungerfolgen werden über die normalen Überlebensregeln manuell geführt.",
+          "value": "Level 5 curse. See its effect and GM note for handling details. GM Note: The weekly repeat save is automated; hunger and starvation rules themselves aren't managed by Affliction Forge.",
           "gm": ""
         },
         "rules": [],
@@ -4561,12 +4603,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.curse-of-the-ravenous",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.curse-of-the-ravenous",
-            "name": "Fluch der Gefräßigen",
-            "description": "Teilautomatisierter Hungerfluch. Nach einem Tag beginnt der Betroffene trotz Nahrung zu hungern. Die Forge fordert danach jede Woche den erneuten Rettungswurf an. GM-Hinweis: Die eigentlichen Hungerfolgen werden über die normalen Überlebensregeln manuell geführt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 5,
@@ -4599,7 +4641,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -4664,8 +4706,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "Nach einem Tag beginnt Hunger; der wöchentliche Rettungswurf wird automatisiert. GM-Hinweis: Hungerfolgen manuell anwenden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Stages.1.Description",
                 "duration": {
                   "value": 7,
                   "unit": "days"
@@ -4692,10 +4734,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 86,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Metadata.SourceSection",
               "sourceName": "Curse of the Ravenous",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -4703,12 +4745,224 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Der wöchentliche Wiederholungswurf ist automatisiert; die Hunger-/Verhungern-Regeln selbst werden nicht von Affliction Forge verwaltet.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "4M7bYWWDqzZsCQig",
+      "name": "Dagger Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level level 5 poison with a DC 21 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "weapon-activation"
+          ]
+        },
+        "level": {
+          "value": 5
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.dagger-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.dagger-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 5,
+            "rarity": "common",
+            "traits": [
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "weapon-activation"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 21,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 1
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 4,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": null,
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Stages.1.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.dagger-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 243,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Metadata.SourceSection",
+              "sourceName": "Dagger Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Die Quelle nennt für die einzige Phase kein Intervall. Die Vorlage führt daher keine wiederholten Phasenrettungswürfe aus und endet über die maximale Wirkungsdauer von 4 Runden.",
+                "Das Gift wird durch die Aktivierung eines Gegenstands nach verursachtem Schaden verabreicht und ist kein standardmäßiges Verwundungsgift zum Auftragen auf Waffen."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -4720,12 +4974,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "xNL1dPyYBkC8DRbh",
-      "name": "Knollenblätterpilzpulver",
+      "name": "Deathcap Powder",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 13 mit Zähigkeitswurf SG 33.",
+          "value": "Ingested level 13 poison with a DC 33 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -4765,12 +5019,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.deathcap-powder",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.deathcap-powder",
-            "name": "Knollenblätterpilzpulver",
-            "description": "Eingenommenes Gift der Stufe 13 mit Zähigkeitswurf SG 33.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 13,
@@ -4802,7 +5056,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -4873,8 +5127,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "13W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -4889,7 +5143,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.deathcap-powder.stage-1",
-                  "name": "Knollenblätterpilzpulver · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -4909,8 +5163,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "17W6 Giftschaden und Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -4925,7 +5179,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.deathcap-powder.stage-2",
-                  "name": "Knollenblätterpilzpulver · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -4950,8 +5204,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "20W6 Giftschaden und Kränkelnd 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -4966,7 +5220,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.deathcap-powder.stage-3",
-                  "name": "Knollenblätterpilzpulver · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -4994,9 +5248,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 249,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -5008,13 +5262,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.deathcap-powder.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.deathcap-powder",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -5026,12 +5283,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "rxyjKgjbTKIHl1cC",
-      "name": "Furchtblumennektar",
+      "name": "Fearflower Nectar",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 4 mit Zähigkeitswurf SG 21.",
+          "value": "Injury level 4 poison with a DC 21 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -5071,12 +5328,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.fearflower-nectar",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.fearflower-nectar",
-            "name": "Furchtblumennektar",
-            "description": "Verwundungsgift der Stufe 4 mit Zähigkeitswurf SG 21.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 4,
@@ -5108,7 +5365,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -5176,8 +5433,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W6 Giftschaden und Verängstigt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5192,7 +5449,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.fearflower-nectar.stage-1",
-                  "name": "Furchtblumennektar · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5217,8 +5474,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W6 Giftschaden und Verängstigt 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5233,7 +5490,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.fearflower-nectar.stage-2",
-                  "name": "Furchtblumennektar · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5258,8 +5515,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "1W6 Giftschaden und Verängstigt 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5274,7 +5531,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.fearflower-nectar.stage-3",
-                  "name": "Furchtblumennektar · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5302,9 +5559,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 248,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -5316,13 +5573,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.fearflower-nectar.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.fearflower-nectar",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -5334,12 +5594,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "7fRVIYsaVTC03Jbx",
-      "name": "Riesentausendfüßlergift",
+      "name": "Giant Centipede Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 1 mit Zähigkeitswurf SG 17.",
+          "value": "Injury level 1 poison with a DC 17 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -5379,12 +5639,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.giant-centipede-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.giant-centipede-venom",
-            "name": "Riesentausendfüßlergift",
-            "description": "Verwundungsgift der Stufe 1 mit Zähigkeitswurf SG 17.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 1,
@@ -5416,7 +5676,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -5484,8 +5744,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5500,7 +5760,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.giant-centipede-venom.stage-1",
-                  "name": "Riesentausendfüßlergift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5520,8 +5780,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W4 Giftschaden und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5536,7 +5796,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.giant-centipede-venom.stage-2",
-                  "name": "Riesentausendfüßlergift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5560,8 +5820,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "1W4 Giftschaden und Unbeholfen 1 und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5576,7 +5836,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.giant-centipede-venom.stage-3",
-                  "name": "Riesentausendfüßlergift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5608,9 +5868,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 249,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -5622,13 +5882,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-centipede-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.giant-centipede-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -5640,12 +5903,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "KHaqtTZJHhvwFUYl",
-      "name": "Riesenskorpiongift",
+      "name": "Giant Scorpion Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 6 mit Zähigkeitswurf SG 22.",
+          "value": "Injury level 6 poison with a DC 22 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -5685,12 +5948,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.giant-scorpion-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.giant-scorpion-venom",
-            "name": "Riesenskorpiongift",
-            "description": "Verwundungsgift der Stufe 6 mit Zähigkeitswurf SG 22.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 6,
@@ -5722,7 +5985,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -5790,8 +6053,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "2W6 Giftschaden und Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5806,7 +6069,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.giant-scorpion-venom.stage-1",
-                  "name": "Riesenskorpiongift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5831,8 +6094,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "2W8 Giftschaden und Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5847,7 +6110,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.giant-scorpion-venom.stage-2",
-                  "name": "Riesenskorpiongift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5872,8 +6135,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W10 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -5888,7 +6151,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.giant-scorpion-venom.stage-3",
-                  "name": "Riesenskorpiongift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -5916,9 +6179,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 249,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -5930,13 +6193,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.giant-scorpion-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.giant-scorpion-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -5948,12 +6214,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "jcmJbsMDFibSVq3n",
-      "name": "Grabesfluch",
+      "name": "Grave Curse",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Grabfluch mit variabler Stufe. Beim Anwenden muss der passende externe Willens-SG angegeben werden. GM-Hinweis: Jede Nacht und beim Betreten eines Bestattungsortes ist ein Einfacher Wurf SG 15 nötig; bei Fehlschlag erscheint vorübergehend ein passender Untoter. Rückgabe des entwendeten Grabguts beendet den Fluch. Die angezeigte Stufe 0 ist nur ein technischer Platzhalter für die variable Quellenstufe.",
+          "value": "Level 0 curse. See its effect and GM note for handling details. GM Note: The source level varies; provide the associated high spell DC as an external DC when applying the curse. Undead are not created automatically.",
           "gm": ""
         },
         "rules": [],
@@ -5995,12 +6261,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.grave-curse",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.grave-curse",
-            "name": "Grabesfluch",
-            "description": "Teilautomatisierter Grabfluch mit variabler Stufe. Beim Anwenden muss der passende externe Willens-SG angegeben werden. GM-Hinweis: Jede Nacht und beim Betreten eines Bestattungsortes ist ein Einfacher Wurf SG 15 nötig; bei Fehlschlag erscheint vorübergehend ein passender Untoter. Rückgabe des entwendeten Grabguts beendet den Fluch. Die angezeigte Stufe 0 ist nur ein technischer Platzhalter für die variable Quellenstufe.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 0,
@@ -6034,7 +6300,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "source",
@@ -6076,8 +6342,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Nächtliche und ortsgebundene SG-15-Würfe, vorübergehende Untote und die Rückgabe-Heilbedingung manuell abwickeln.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -6104,10 +6370,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Metadata.SourceSection",
               "sourceName": "Grave Curse",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -6116,12 +6382,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "nameReview": "passed"
               },
               "sourceLevel": "varies",
-              "manualComment": "GM-Hinweis: Die Quellenstufe variiert; den zugehörigen hohen Zauber-SG beim Anwenden als externen SG übergeben. Untote werden nicht automatisch erzeugt.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -6133,12 +6402,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "7vFaxFl4XFXTwnut",
-      "name": "Grabeswurzel",
+      "name": "Grave Root",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19.",
+          "value": "Injury level 3 poison with a DC 19 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -6178,12 +6447,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.grave-root",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.grave-root",
-            "name": "Grabeswurzel",
-            "description": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 3,
@@ -6215,7 +6484,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -6283,8 +6552,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -6299,7 +6568,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.grave-root.stage-1",
-                  "name": "Grabeswurzel · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6319,8 +6588,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W10 Giftschaden und Benommen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -6335,7 +6604,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.grave-root.stage-2",
-                  "name": "Grabeswurzel · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6360,8 +6629,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W6 Giftschaden und Benommen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -6376,7 +6645,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.grave-root.stage-3",
-                  "name": "Grabeswurzel · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6404,9 +6673,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 249,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -6418,13 +6687,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-root.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.grave-root",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -6436,12 +6708,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "VWF7YgATMh2VAAiN",
-      "name": "Schierling",
+      "name": "Hemlock",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+          "value": "Ingested level 17 poison with a DC 38 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -6481,12 +6753,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.hemlock",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.hemlock",
-            "name": "Schierling",
-            "description": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 17,
@@ -6518,7 +6790,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -6589,8 +6861,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "16W6 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.1.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -6605,7 +6877,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.hemlock.stage-1",
-                  "name": "Schierling · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6630,8 +6902,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "17W6 Giftschaden und Kraftlos 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.2.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -6646,7 +6918,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.hemlock.stage-2",
-                  "name": "Schierling · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6671,8 +6943,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "16W6 Giftschaden und Kraftlos 4.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.3.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -6687,7 +6959,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.hemlock.stage-3",
-                  "name": "Schierling · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6715,9 +6987,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -6729,13 +7001,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.hemlock.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.hemlock",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -6747,12 +7022,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "cPZ6PBjI1SLsyFS8",
-      "name": "Lethargiegift",
+      "name": "Lethargy Poison",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+          "value": "Injury level 2 poison with a DC 18 Fortitude save. GM Note: Stage 4 lasts 1d4 hours; the current stage-duration contract doesn't support a dice formula. Roll 1d4 hours on entering Stage 4 and handle its end or next stage save manually. During Stages 3 and 4, the creature can't wake with a Perception check.",
           "gm": ""
         },
         "rules": [],
@@ -6794,12 +7069,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.lethargy-poison",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison",
-            "name": "Lethargiegift",
-            "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 2,
@@ -6833,7 +7108,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -6901,8 +7176,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Verlangsamt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -6917,7 +7192,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-1",
-                  "name": "Lethargiegift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6937,8 +7212,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Verlangsamt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -6953,7 +7228,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-2",
-                  "name": "Lethargiegift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -6973,8 +7248,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -6994,7 +7269,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-3",
-                  "name": "Lethargiegift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7013,8 +7288,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Description",
                 "duration": {
                   "value": 4,
                   "unit": "hours"
@@ -7034,7 +7309,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-4",
-                  "name": "Lethargiegift · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7056,9 +7331,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 249,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -7070,14 +7345,17 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.lethargy-poison",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -7094,7 +7372,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Krankheit mit wiederkehrendem Fieber; der durch sie verursachte Zustand Kränkelnd kann während des Leidens nicht reduziert werden.",
+          "value": "Level 2 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -7134,12 +7412,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.malaria",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.malaria",
-            "name": "Malaria",
-            "description": "Krankheit mit wiederkehrendem Fieber; der durch sie verursachte Zustand Kränkelnd kann während des Leidens nicht reduziert werden.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 2,
@@ -7175,7 +7453,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -7243,8 +7521,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -7259,7 +7537,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-1",
-                  "name": "Malaria · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7279,8 +7557,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -7295,7 +7573,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-2",
-                  "name": "Malaria · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7315,8 +7593,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Kränkelnd 2. Nach Erreichen dieser Phase kann die Krankheit später erneut auftreten; dies wird durch erneutes Anwenden derselben Definition gehandhabt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -7331,7 +7609,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-3",
-                  "name": "Malaria · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7351,8 +7629,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.4.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -7367,7 +7645,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-4",
-                  "name": "Malaria · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7386,8 +7664,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-5",
                 "number": 5,
-                "name": "Phase 5",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.5.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.5.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -7402,7 +7680,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-5",
-                  "name": "Malaria · Phase 5",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.5.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7424,10 +7702,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Metadata.SourceSection",
               "sourceName": "Malaria",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -7438,11 +7716,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "A later recurrence is represented by manually reapplying the same Affliction definition; no dormant controller is retained."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -7454,12 +7735,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "1blcL6ByS1GPf5vF",
-      "name": "Geistesnebel",
+      "name": "Mindmist",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingeatmetes Gift der Stufe 15 mit Zähigkeitswurf SG 35.",
+          "value": "Inhaled level 15 poison with a DC 35 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -7499,12 +7780,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.mindmist",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.mindmist",
-            "name": "Geistesnebel",
-            "description": "Eingeatmetes Gift der Stufe 15 mit Zähigkeitswurf SG 35.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 15,
@@ -7536,7 +7817,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -7607,8 +7888,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Benommen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -7623,7 +7904,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.mindmist.stage-1",
-                  "name": "Geistesnebel · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7643,8 +7924,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Verwirrt und Benommen 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -7659,7 +7940,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.mindmist.stage-2",
-                  "name": "Geistesnebel · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7683,8 +7964,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Verwirrt und Benommen 4.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -7699,7 +7980,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.mindmist.stage-3",
-                  "name": "Geistesnebel · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7726,9 +8007,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 249,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -7740,13 +8021,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.mindmist.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.mindmist",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -7758,12 +8042,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "vd5MsIpCIeIiP0ou",
-      "name": "Albtraumfieber",
+      "name": "Nightmare Fever",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Traumgebundene Krankheit, die beim Erwachen körperliche Schnittwunden hinterlässt. Von der Krankheit verursachter Schaden und Erschöpfung können nicht beseitigt werden, solange das Leiden anhält.",
+          "value": "Level 8 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -7803,12 +8087,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.nightmare-fever",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever",
-            "name": "Albtraumfieber",
-            "description": "Traumgebundene Krankheit, die beim Erwachen körperliche Schnittwunden hinterlässt. Von der Krankheit verursachter Schaden und Erschöpfung können nicht beseitigt werden, solange das Leiden anhält.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 8,
@@ -7839,7 +8123,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -7904,8 +8188,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "2W6 Hiebschaden und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -7925,7 +8209,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-1",
-                  "name": "Albtraumfieber · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7950,8 +8234,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "4W6 Hiebschaden und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -7971,7 +8255,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-2",
-                  "name": "Albtraumfieber · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -7996,8 +8280,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "4W6 Hiebschaden und Erschöpft. Bei erlittenem Hiebschaden folgt ein zusätzlicher Willenswurf gegen SG 25; bei Fehlschlag wird die Kreatur Verängstigt 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -8017,7 +8301,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-3",
-                  "name": "Albtraumfieber · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -8040,7 +8324,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "slashing-fright",
-                    "label": "Schreckreaktion auf Hiebschaden",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.3.Reactions.1.Label",
                     "trigger": {
                       "event": "damage-taken",
                       "damageTypes": [
@@ -8055,7 +8339,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                     "effect": {
                       "schemaVersion": 2,
                       "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-3.reaction",
-                      "name": "Albtraumfieber · Verängstigt",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.3.Reactions.1.Effect.Name",
                       "duration": {
                         "value": -1,
                         "unit": "unlimited",
@@ -8077,8 +8361,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "6W6 Hiebschaden und Erschöpft. Bei erlittenem Hiebschaden folgt ein zusätzlicher Willenswurf gegen SG 25; bei Fehlschlag wird die Kreatur 1 Runde lang Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.4.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -8098,7 +8382,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-4",
-                  "name": "Albtraumfieber · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -8121,7 +8405,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "slashing-paralysis",
-                    "label": "Lähmungsreaktion auf Hiebschaden",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.4.Reactions.1.Label",
                     "trigger": {
                       "event": "damage-taken",
                       "damageTypes": [
@@ -8136,7 +8420,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                     "effect": {
                       "schemaVersion": 2,
                       "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-4.reaction",
-                      "name": "Albtraumfieber · Gelähmt",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.4.Reactions.1.Effect.Name",
                       "duration": {
                         "value": 1,
                         "unit": "rounds",
@@ -8157,8 +8441,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-5",
                 "number": 5,
-                "name": "Phase 5",
-                "description": "6W6 Hiebschaden und Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.5.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.5.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -8173,7 +8457,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.nightmare-fever.stage-5",
-                  "name": "Albtraumfieber · Phase 5",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Stages.5.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -8201,10 +8485,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 89,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Metadata.SourceSection",
               "sourceName": "Nightmare Fever",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -8216,11 +8500,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "This entry models the published slashing-damage version. Optional bludgeoning or piercing variants can be created as editable copies.",
                 "Stage 3 and 4 secondary Will saves use Affliction Forge 0.1.50 damage-taken event reactions."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.nightmare-fever.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -8232,12 +8519,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "sswyslQPjGZiiMoB",
-      "name": "Schwur des Fleisches",
+      "name": "Oath of the Flesh",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Schwurfluch. GM-Hinweis: Jedes nach Eintritt des Fluchs gegebene Versprechen wird markiert; beim Bruch verursacht es 3W6 Hiebschaden, der nicht heilbar ist, solange der Fluch besteht.",
+          "value": "Level 7 curse. See its effect and GM note for handling details. GM Note: Promises are narrative state and aren't modeled as an automatically evaluated actor resource.",
           "gm": ""
         },
         "rules": [],
@@ -8278,12 +8565,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.oath-of-the-flesh",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.oath-of-the-flesh",
-            "name": "Schwur des Fleisches",
-            "description": "Teilautomatisierter Schwurfluch. GM-Hinweis: Jedes nach Eintritt des Fluchs gegebene Versprechen wird markiert; beim Bruch verursacht es 3W6 Hiebschaden, der nicht heilbar ist, solange der Fluch besteht.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 7,
@@ -8316,7 +8603,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -8358,8 +8645,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Versprechen und deren Bruch manuell protokollieren; bei Bruch 3W6 Hiebschaden zufügen und bis zum Ende des Fluchs als unheilbar behandeln.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -8386,10 +8673,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Metadata.SourceSection",
               "sourceName": "Oath of the Flesh",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -8397,12 +8684,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Versprechen sind narrativer Zustand und werden nicht als automatisch auswertbare Actor-Ressource modelliert.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -8414,12 +8704,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "7xxULHCibxMy4khW",
-      "name": "Fluch des Verschmähten",
+      "name": "Reviled of Nature",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Naturfluch. GM-Hinweis: Jedes Tier, das den Betroffenen wahrnimmt, legt einen Willenswurf SG 38 ab; bei Fehlschlag greift es ihn an und kämpft bis zum Tod.",
+          "value": "Level 18 curse. See its effect and GM note for handling details. GM Note: Affliction Forge doesn't force saves or AI/behavior changes on arbitrary third-party actors.",
           "gm": ""
         },
         "rules": [],
@@ -8462,12 +8752,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.reviled-of-nature",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.reviled-of-nature",
-            "name": "Fluch des Verschmähten",
-            "description": "Teilautomatisierter Naturfluch. GM-Hinweis: Jedes Tier, das den Betroffenen wahrnimmt, legt einen Willenswurf SG 38 ab; bei Fehlschlag greift es ihn an und kämpft bis zum Tod.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 18,
@@ -8502,7 +8792,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -8544,8 +8834,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Wahrnehmung durch Tiere, deren Rettungswürfe und Feindseligkeit manuell abwickeln.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -8572,10 +8862,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Metadata.SourceSection",
               "sourceName": "Reviled of Nature",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -8583,12 +8873,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Affliction Forge erzwingt keine Rettungswürfe oder KI-/Verhaltensänderungen bei beliebigen Dritt-Aktoren.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -8600,12 +8893,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "vV23VInApJTHziwE",
-      "name": "Feindselige Erde",
+      "name": "Reviling Earth",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Gebietsgebundener Fluch. Wird er beim Betreten des betroffenen Gebietes ausgelöst, verursacht ein misslungener Rettungswurf Todgeweiht 1; bei einem kritischen Fehlschlag Todgeweiht 2.",
+          "value": "Level 12 curse. See its effect and GM note for handling details.",
           "gm": ""
         },
         "rules": [],
@@ -8647,12 +8940,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.reviling-earth",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.reviling-earth",
-            "name": "Feindselige Erde",
-            "description": "Gebietsgebundener Fluch. Wird er beim Betreten des betroffenen Gebietes ausgelöst, verursacht ein misslungener Rettungswurf Todgeweiht 1; bei einem kritischen Fehlschlag Todgeweiht 2.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 12,
@@ -8686,7 +8979,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -8728,8 +9021,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "Todgeweiht 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -8746,7 +9039,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.reviling-earth.stage-1",
-                  "name": "Feindselige Erde · Todgeweiht 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -8770,8 +9063,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Kritische Wirkung",
-                "description": "Todgeweiht 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.2.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -8788,7 +9081,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.reviling-earth.stage-2",
-                  "name": "Feindselige Erde · Todgeweiht 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -8815,10 +9108,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Metadata.SourceSection",
               "sourceName": "Reviling Earth",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -8830,11 +9123,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "The world/location trigger is external context; applying the template represents the curse trigger having occurred.",
                 "Failure and critical failure are represented as separate unlimited stages solely to preserve the different doomed values."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -8846,12 +9142,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "TXl6oVoip6R0spoS",
-      "name": "Scharlachfieber",
+      "name": "Scarlet Fever",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Krankheit mit zunehmender Übelkeit; der durch sie verursachte Zustand Kränkelnd kann während des Leidens nicht reduziert werden.",
+          "value": "Level 1 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -8890,12 +9186,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.scarlet-fever",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever",
-            "name": "Scharlachfieber",
-            "description": "Krankheit mit zunehmender Übelkeit; der durch sie verursachte Zustand Kränkelnd kann während des Leidens nicht reduziert werden.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 1,
@@ -8930,7 +9226,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -8998,8 +9294,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9014,7 +9310,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-1",
-                  "name": "Scharlachfieber · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9034,8 +9330,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9050,7 +9346,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-2",
-                  "name": "Scharlachfieber · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9070,8 +9366,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Kränkelnd 3; die betroffene Kreatur kann nicht sprechen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9088,7 +9384,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-3",
-                  "name": "Scharlachfieber · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9108,8 +9404,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.4.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -9124,7 +9420,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.scarlet-fever.stage-4",
-                  "name": "Scharlachfieber · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9146,10 +9442,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Metadata.SourceSection",
               "sourceName": "Scarlet Fever",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -9157,11 +9453,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-fever.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -9173,12 +9472,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "rGktqETKg8Ncwa20",
-      "name": "Karmesin-Lepra",
+      "name": "Scarlet Leprosy",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Ausgeprägte Krankheit mit zunehmenden inneren Verletzungen. Durch die Krankheit verursachter Schaden kann erst geheilt werden, wenn das Leiden endet; in der letzten Phase ist jegliche Trefferpunktheilung blockiert.",
+          "value": "Level 4 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -9218,12 +9517,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy",
-            "name": "Karmesin-Lepra",
-            "description": "Ausgeprägte Krankheit mit zunehmenden inneren Verletzungen. Durch die Krankheit verursachter Schaden kann erst geheilt werden, wenn das Leiden endet; in der letzten Phase ist jegliche Trefferpunktheilung blockiert.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 4,
@@ -9254,7 +9553,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -9322,8 +9621,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "2W6 Wuchtschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9338,7 +9637,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-1",
-                  "name": "Karmesin-Lepra · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9359,8 +9658,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "2W6 Wuchtschaden. Wenn Verletzt neu erhalten oder erhöht wird, steigt der Zustandswert zusätzlich um 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9375,7 +9674,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-2",
-                  "name": "Karmesin-Lepra · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9394,7 +9693,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "wounded-escalation",
-                    "label": "Verletzt zusätzlich erhöhen",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Reactions.1.Label",
                     "trigger": {
                       "event": "condition-increased",
                       "damageTypes": [],
@@ -9412,8 +9711,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "4W6 Wuchtschaden; Trefferpunktschaden kann während dieser Phase nicht geheilt werden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9428,7 +9727,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-3",
-                  "name": "Karmesin-Lepra · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9452,10 +9751,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Metadata.SourceSection",
               "sourceName": "Scarlet Leprosy",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -9469,11 +9768,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Disease-caused damage is protected from healing for the whole affliction; Stage 3 additionally blocks all Hit Point healing.",
                 "Virulent progression uses the native consecutive-success recovery contract."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -9485,12 +9787,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "Uyrda6Fk5IZsLme0",
-      "name": "Söldnerwahn",
+      "name": "Sellsword's Folly",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Kampfesfluch. Bei jedem Initiativewurf fordert die Forge einen Willenswurf SG 26 an; bei Fehlschlag oder kritischem Fehlschlag wird 1 Runde Verwirrt angewendet. GM-Hinweis: Dieser Zusatzwurf ist ein Kampfunfähigkeits-Effekt; die entsprechende Gradverbesserung bei zu hochstufigen Zielen muss manuell berücksichtigt werden.",
+          "value": "Level 9 curse. See its effect and GM note for handling details. GM Note: The initiative trigger, save, and confused condition are automated; the PF2e incapacitation rule for this additional save is not currently applied automatically to the degree of success.",
           "gm": ""
         },
         "rules": [],
@@ -9534,12 +9836,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.sellswords-folly",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.sellswords-folly",
-            "name": "Söldnerwahn",
-            "description": "Teilautomatisierter Kampfesfluch. Bei jedem Initiativewurf fordert die Forge einen Willenswurf SG 26 an; bei Fehlschlag oder kritischem Fehlschlag wird 1 Runde Verwirrt angewendet. GM-Hinweis: Dieser Zusatzwurf ist ein Kampfunfähigkeits-Effekt; die entsprechende Gradverbesserung bei zu hochstufigen Zielen muss manuell berücksichtigt werden.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 9,
@@ -9575,7 +9877,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -9617,8 +9919,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "Bei jedem Initiativewurf neuer Willenswurf; bei Fehlschlag 1 Runde Verwirrt. GM-Hinweis: Kampfunfähigkeit manuell auf den Erfolgsgrad anwenden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -9640,7 +9942,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reactions": [
                   {
                     "id": "initiative-confusion",
-                    "label": "Söldnerwahn bei Initiative",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Reactions.1.Label",
                     "trigger": {
                       "event": "initiative-rolled",
                       "damageTypes": [],
@@ -9661,7 +9963,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                     "effect": {
                       "schemaVersion": 2,
                       "id": "affliction-forge-remastered-rules.gm-core.sellswords-folly.initiative-confusion",
-                      "name": "Söldnerwahn · Verwirrt",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Stages.1.Reactions.1.Effect.Name",
                       "duration": {
                         "value": 1,
                         "unit": "rounds",
@@ -9685,10 +9987,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Metadata.SourceSection",
               "sourceName": "Sellsword's Folly",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -9696,12 +9998,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Initiative-Trigger, Rettungswurf und Verwirrt werden automatisiert; die PF2e-Kampfunfähigkeitsregel dieses Zusatzwurfs wird derzeit nicht automatisch auf den Erfolgsgrad angewendet.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sellswords-folly.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -9713,12 +10018,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "vyVzf4wShxRLyRMl",
-      "name": "Kanalisationsdunst",
+      "name": "Sewer Haze",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Ausgeprägte Krankheit mit zunehmend starker Benommenheit und Ausgelaugtheit.",
+          "value": "Level 7 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -9758,12 +10063,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.sewer-haze",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.sewer-haze",
-            "name": "Kanalisationsdunst",
-            "description": "Ausgeprägte Krankheit mit zunehmend starker Benommenheit und Ausgelaugtheit.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 7,
@@ -9789,7 +10094,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -9857,8 +10162,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Benommen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9867,7 +10172,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.sewer-haze.stage-1",
-                  "name": "Kanalisationsdunst · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9893,8 +10198,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Ausgelaugt 2 und Benommen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9903,7 +10208,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.sewer-haze.stage-2",
-                  "name": "Kanalisationsdunst · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9934,8 +10239,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Ausgelaugt 3 und Benommen 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -9944,7 +10249,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.sewer-haze.stage-3",
-                  "name": "Kanalisationsdunst · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -9978,10 +10283,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 89,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Metadata.SourceSection",
               "sourceName": "Sewer Haze",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -9989,7 +10294,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Metadata.SourceWorkLabel"
             },
             "restrictions": {
               "conditionLocks": [],
@@ -9999,6 +10304,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -10010,12 +10318,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "iEiQC5y9lxSuHYVM",
-      "name": "Spuk der Erschlagenen",
+      "name": "Slayer's Haunt",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Illusionsfluch. GM-Hinweis: Vor Identifikation, Wissen abrufen oder anderer Interaktion, die die wahre Gestalt einer Kreatur voraussetzt, ist ein Willenswurf SG 19 nötig; bei kritischem Fehlschlag zusätzlich Verängstigt 1.",
+          "value": "Level 4 curse. See its effect and GM note for handling details. GM Note: The Forge doesn't override creature identity or force preliminary checks before Recall Knowledge or interaction actions.",
           "gm": ""
         },
         "rules": [],
@@ -10058,12 +10366,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.slayers-haunt",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.slayers-haunt",
-            "name": "Spuk der Erschlagenen",
-            "description": "Teilautomatisierter Illusionsfluch. GM-Hinweis: Vor Identifikation, Wissen abrufen oder anderer Interaktion, die die wahre Gestalt einer Kreatur voraussetzt, ist ein Willenswurf SG 19 nötig; bei kritischem Fehlschlag zusätzlich Verängstigt 1.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 4,
@@ -10098,7 +10406,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -10140,8 +10448,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Wahrnehmungsabhängige Zusatzwürfe und Verängstigt 1 bei kritischem Fehlschlag manuell abwickeln.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -10168,10 +10476,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 86,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Metadata.SourceSection",
               "sourceName": "Slayer's Haunt",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -10179,12 +10487,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -10196,12 +10507,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "Q7Cgpclt82fQEhKO",
-      "name": "Schlummerwein",
+      "name": "Slumber Wine",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 12 mit Zähigkeitswurf SG 32. GM-Hinweis:  Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+          "value": "Ingested level 12 poison with a DC 32 Fortitude save. GM Note: While unconscious from the poison, the creature can't wake and doesn't need to eat or drink. The deathlike appearance and Medicine DC to recognize it are handled manually.",
           "gm": ""
         },
         "rules": [],
@@ -10242,12 +10553,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.slumber-wine",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.slumber-wine",
-            "name": "Schlummerwein",
-            "description": "Eingenommenes Gift der Stufe 12 mit Zähigkeitswurf SG 32. GM-Hinweis:  Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 12,
@@ -10280,7 +10591,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -10351,8 +10662,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -10372,7 +10683,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.slumber-wine.stage-1",
-                  "name": "Schlummerwein · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -10391,8 +10702,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.2.Description",
                 "duration": {
                   "value": 2,
                   "unit": "days"
@@ -10412,7 +10723,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.slumber-wine.stage-2",
-                  "name": "Schlummerwein · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -10431,8 +10742,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.3.Description",
                 "duration": {
                   "value": 3,
                   "unit": "days"
@@ -10452,7 +10763,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.slumber-wine.stage-3",
-                  "name": "Schlummerwein · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -10474,9 +10785,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -10488,14 +10799,17 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "manualComment": "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.slumber-wine",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -10507,12 +10821,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "ZzHS1nsL34lSdpjm",
-      "name": "Spinnenwurz",
+      "name": "Spider Root",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 9 mit Zähigkeitswurf SG 28.",
+          "value": "Contact level 9 poison with a DC 28 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -10552,12 +10866,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.spider-root",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.spider-root",
-            "name": "Spinnenwurz",
-            "description": "Kontaktgift der Stufe 9 mit Zähigkeitswurf SG 28.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 9,
@@ -10589,7 +10903,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -10660,8 +10974,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "3W6 Giftschaden und Unbeholfen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -10676,7 +10990,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.spider-root.stage-1",
-                  "name": "Spinnenwurz · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -10701,8 +11015,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "4W6 Giftschaden und Unbeholfen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -10717,7 +11031,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.spider-root.stage-2",
-                  "name": "Spinnenwurz · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -10742,8 +11056,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "6W6 Giftschaden und Unbeholfen 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -10758,7 +11072,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.spider-root.stage-3",
-                  "name": "Spinnenwurz · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -10786,9 +11100,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -10800,13 +11114,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-root.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.spider-root",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -10818,12 +11135,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "9QnV5FyCdMWQf6e1",
-      "name": "Spinnengift",
+      "name": "Spider Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 5 mit Zähigkeitswurf SG 22.",
+          "value": "Injury level 5 poison with a DC 22 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -10863,12 +11180,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.spider-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.spider-venom",
-            "name": "Spinnengift",
-            "description": "Verwundungsgift der Stufe 5 mit Zähigkeitswurf SG 22.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 5,
@@ -10900,7 +11217,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -10968,8 +11285,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W10 Giftschaden und Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -10984,7 +11301,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.spider-venom.stage-1",
-                  "name": "Spinnengift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -11009,8 +11326,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W12 Giftschaden und Unbeholfen 1 und Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -11025,7 +11342,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.spider-venom.stage-2",
-                  "name": "Spinnengift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -11055,8 +11372,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W6 Giftschaden und Unbeholfen 2 und Kränkelnd 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -11071,7 +11388,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.spider-venom.stage-3",
-                  "name": "Spinnengift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -11104,9 +11421,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -11118,13 +11435,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spider-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.spider-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -11136,12 +11456,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "CDgLd1UxTCVBPyY3",
-      "name": "Seelenanker",
+      "name": "Spirit Anchor",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Todesfluch. GM-Hinweis: Stirbt der Betroffene während des Fluchs, bleibt seine Seele auf der materiellen Ebene gebunden und er wird zu einem Geist oder anderen körperlosen Untoten.",
+          "value": "Level 13 curse. See its effect and GM note for handling details. GM Note: Actor death is not converted into an automatic ghost/undead transformation.",
           "gm": ""
         },
         "rules": [],
@@ -11183,12 +11503,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.spirit-anchor",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.spirit-anchor",
-            "name": "Seelenanker",
-            "description": "Teilautomatisierter Todesfluch. GM-Hinweis: Stirbt der Betroffene während des Fluchs, bleibt seine Seele auf der materiellen Ebene gebunden und er wird zu einem Geist oder anderen körperlosen Untoten.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 13,
@@ -11222,7 +11542,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -11264,8 +11584,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Transformation bei Tod manuell abwickeln.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -11292,10 +11612,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Metadata.SourceSection",
               "sourceName": "Spirit Anchor",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -11303,12 +11623,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Actor-Tod wird nicht in eine automatische Geist-/Untoten-Transformation umgeschrieben.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.spirit-anchor.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -11320,12 +11643,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "KkXuH9KS68s7ipPT",
-      "name": "Schwefelschwaden",
+      "name": "Sulfur Fumes",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+          "value": "Inhaled level 16 poison with a DC 36 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -11365,12 +11688,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.sulfur-fumes",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes",
-            "name": "Schwefelschwaden",
-            "description": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 16,
@@ -11402,7 +11725,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -11473,8 +11796,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "7W6 Giftschaden und Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -11489,7 +11812,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes.stage-1",
-                  "name": "Schwefelschwaden · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -11514,8 +11837,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "8W6 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -11530,7 +11853,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes.stage-2",
-                  "name": "Schwefelschwaden · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -11555,8 +11878,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "10W6 Giftschaden und Kraftlos 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -11571,7 +11894,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes.stage-3",
-                  "name": "Schwefelschwaden · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -11599,9 +11922,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -11613,13 +11936,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.sulfur-fumes",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -11631,12 +11957,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "L4UE2Z8qaQenlfYS",
-      "name": "Schwert des Kirchenbanns",
+      "name": "Sword of Anathema",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter göttlicher Fluch. GM-Hinweis: Der Betroffene besitzt Schwäche 10 ausschließlich gegen Schaden, den Anhänger der Gottheit verursachen, die den Fluch verhängt hat.",
+          "value": "Level 20 curse. See its effect and GM note for handling details. GM Note: A weakness that depends on the religion or source of the individual damage dealer is not automated as a global actor weakness.",
           "gm": ""
         },
         "rules": [],
@@ -11678,12 +12004,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.sword-of-anathema",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.sword-of-anathema",
-            "name": "Schwert des Kirchenbanns",
-            "description": "Teilautomatisierter göttlicher Fluch. GM-Hinweis: Der Betroffene besitzt Schwäche 10 ausschließlich gegen Schaden, den Anhänger der Gottheit verursachen, die den Fluch verhängt hat.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 20,
@@ -11717,7 +12043,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -11759,8 +12085,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Quellenabhängige Schwäche 10 manuell berücksichtigen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -11787,10 +12113,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Metadata.SourceSection",
               "sourceName": "Sword of Anathema",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -11798,12 +12124,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Eine Schwäche, die von der Religion/Quelle des jeweiligen Schadensverursachers abhängt, wird nicht als globale Actor-Schwäche automatisiert.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sword-of-anathema.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -11815,12 +12144,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "JLdih7Pg8cEvwDL5",
-      "name": "Todestränen",
+      "name": "Tears of Death",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 20 mit Zähigkeitswurf SG 44.",
+          "value": "Contact level 20 poison with a DC 44 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -11860,12 +12189,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.tears-of-death",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.tears-of-death",
-            "name": "Todestränen",
-            "description": "Kontaktgift der Stufe 20 mit Zähigkeitswurf SG 44.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 20,
@@ -11897,7 +12226,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -11968,8 +12297,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "20W6 Giftschaden und Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -11984,7 +12313,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tears-of-death.stage-1",
-                  "name": "Todestränen · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -12008,8 +12337,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "22W6 Giftschaden und Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -12024,7 +12353,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tears-of-death.stage-2",
-                  "name": "Todestränen · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -12048,8 +12377,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "24W6 Giftschaden und Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -12064,7 +12393,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tears-of-death.stage-3",
-                  "name": "Todestränen · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -12091,9 +12420,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -12105,13 +12434,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tears-of-death.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.tears-of-death",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -12128,7 +12460,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Krankheit mit zunehmender Muskelsteife und schweren Krämpfen.",
+          "value": "Level 1 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -12167,12 +12499,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.tetanus",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.tetanus",
-            "name": "Tetanus",
-            "description": "Krankheit mit zunehmender Muskelsteife und schweren Krämpfen.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 1,
@@ -12202,7 +12534,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -12270,8 +12602,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Unbeholfen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.1.Description",
                 "duration": {
                   "value": 7,
                   "unit": "days"
@@ -12286,7 +12618,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-1",
-                  "name": "Tetanus · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -12306,8 +12638,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Unbeholfen 2; die betroffene Kreatur kann nicht sprechen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -12324,7 +12656,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-2",
-                  "name": "Tetanus · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -12344,8 +12676,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Gelähmt; die Erkrankung äußert sich in schweren Muskelkrämpfen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -12360,7 +12692,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-3",
-                  "name": "Tetanus · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -12379,8 +12711,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.4.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -12395,7 +12727,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-4",
-                  "name": "Tetanus · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -12417,10 +12749,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Metadata.SourceSection",
               "sourceName": "Tetanus",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -12428,11 +12760,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -12444,12 +12779,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "PbbcFVu0vA0cnDL3",
-      "name": "Gedankendiebstahl",
+      "name": "Theft of Thought",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Fluch mit Gedächtnisverlust. GM-Hinweis: Beim ersten Fertigkeitswurf nach Eintritt des Fluchs, für den mindestens Geübt vorliegt, sinkt der Kompetenzgrad dieser verwendeten Fertigkeit um einen Rang, solange der Fluch anhält.",
+          "value": "Level 3 curse. See its effect and GM note for handling details. GM Note: The dynamic choice of the first skill used and a temporary proficiency-rank reduction are not changed automatically.",
           "gm": ""
         },
         "rules": [],
@@ -12491,12 +12826,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.theft-of-thought",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.theft-of-thought",
-            "name": "Gedankendiebstahl",
-            "description": "Teilautomatisierter Fluch mit Gedächtnisverlust. GM-Hinweis: Beim ersten Fertigkeitswurf nach Eintritt des Fluchs, für den mindestens Geübt vorliegt, sinkt der Kompetenzgrad dieser verwendeten Fertigkeit um einen Rang, solange der Fluch anhält.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 3,
@@ -12530,7 +12865,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -12572,8 +12907,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Die erste passende Fertigkeit und deren Kompetenzgrad manuell verfolgen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -12600,10 +12935,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 86,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Metadata.SourceSection",
               "sourceName": "Theft of Thought",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -12611,12 +12946,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Die dynamische Wahl der ersten verwendeten Fertigkeit und eine temporäre Kompetenzgrad-Absenkung werden nicht automatisch verändert.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -12628,12 +12966,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "F8TUadAT6S4TWX83",
-      "name": "Vergeltung des Diebstahls",
+      "name": "Thief's Retribution",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Diebstahlsfluch. GM-Hinweis: Bei jedem Diebstahl verschwindet ein wertvollerer Besitz; fehlt ein solcher Gegenstand, geht stattdessen eine Gliedmaße verloren und der Betroffene erleidet 10W6 Hiebschaden. Schaden und Gliedmaßenverlust bleiben bis zur Rückgabe des gestohlenen Gegenstands bestehen.",
+          "value": "Level 19 curse. See its effect and GM note for handling details. GM Note: Inventory value, narrative value, theft events, and body parts are not generic Affliction Forge resources.",
           "gm": ""
         },
         "rules": [],
@@ -12675,12 +13013,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.thiefs-retribution",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.thiefs-retribution",
-            "name": "Vergeltung des Diebstahls",
-            "description": "Teilautomatisierter Diebstahlsfluch. GM-Hinweis: Bei jedem Diebstahl verschwindet ein wertvollerer Besitz; fehlt ein solcher Gegenstand, geht stattdessen eine Gliedmaße verloren und der Betroffene erleidet 10W6 Hiebschaden. Schaden und Gliedmaßenverlust bleiben bis zur Rückgabe des gestohlenen Gegenstands bestehen.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 19,
@@ -12714,7 +13052,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -12756,8 +13094,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Diebstahl, Auswahl/Entfernung des Besitzes, Gliedmaßenverlust und 10W6 Hiebschaden manuell abwickeln.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -12784,10 +13122,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Metadata.SourceSection",
               "sourceName": "Thief's Retribution",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -12795,12 +13133,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Inventarwert, narrativer Wert, Diebstahlereignisse und Körperteile sind keine generischen Affliction-Forge-Ressourcen.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -12812,12 +13153,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "ylGRvhGjGhDwVd8g",
-      "name": "Tuberkulose",
+      "name": "Tuberculosis",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Atemwegserkrankung mit schweren Hustenanfällen. In fortgeschrittenen Phasen können Konzentrationshandlungen durch einen Einfachen Wurf verhindert werden.",
+          "value": "Level 1 disease. See its stages for the mechanical effects.",
           "gm": ""
         },
         "rules": [],
@@ -12857,12 +13198,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.tuberculosis",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.tuberculosis",
-            "name": "Tuberkulose",
-            "description": "Atemwegserkrankung mit schweren Hustenanfällen. In fortgeschrittenen Phasen können Konzentrationshandlungen durch einen Einfachen Wurf verhindert werden.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "disease",
             "level": 1,
@@ -12894,7 +13235,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -12962,8 +13303,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Überträger ohne weitere regeltechnische Auswirkungen.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.1.Description",
                 "duration": {
                   "value": 7,
                   "unit": "days"
@@ -12983,8 +13324,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Vor dem Wirken eines Zaubers oder Aktivieren eines Gegenstands mit Konzentration ist ein Einfacher Wurf gegen SG 5 nötig; bei Fehlschlag wird die Handlung verhindert.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.2.Description",
                 "duration": {
                   "value": 7,
                   "unit": "days"
@@ -13001,7 +13342,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "preActionGates": [
                   {
                     "id": "cough-concentrate",
-                    "label": "Husten: Konzentration",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.2.PreActionGates.1.Label",
                     "trigger": {
                       "actionKinds": [
                         "spell-cast",
@@ -13023,8 +13364,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Erschöpft; der Zustand kann in dieser Phase nicht entfernt werden. Vor Konzentrationshandlungen ist ein Einfacher Wurf gegen SG 15 nötig.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.Description",
                 "duration": {
                   "value": 7,
                   "unit": "days"
@@ -13045,7 +13386,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-3",
-                  "name": "Tuberkulose · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -13063,7 +13404,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "preActionGates": [
                   {
                     "id": "cough-concentrate",
-                    "label": "Husten: Konzentration",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.PreActionGates.1.Label",
                     "trigger": {
                       "actionKinds": [
                         "spell-cast",
@@ -13085,8 +13426,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.4.Description",
                 "duration": {
                   "value": 7,
                   "unit": "days"
@@ -13102,7 +13443,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-4",
-                  "name": "Tuberkulose · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -13123,8 +13464,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-5",
                 "number": 5,
-                "name": "Phase 5",
-                "description": "Tod.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.5.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.5.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -13140,7 +13481,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-5",
-                  "name": "Tuberkulose · Phase 5",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.5.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -13164,10 +13505,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 88,
-              "sourceSection": "Diseases",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Metadata.SourceSection",
               "sourceName": "Tuberculosis",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -13180,11 +13521,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Stage 2 and 3 use Affliction Forge 0.1.55 pre-action flat-check gates for concentrate spell casts and item activations.",
                 "Stage 3 locks the fatigued condition while the stage remains active."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -13196,12 +13540,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "Y4fdDVwBOEZ3oUny",
-      "name": "Unendlicher Durst",
+      "name": "Unending Thirst",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Durstfluch. Flüssigkeiten verschaffen keinen Nutzen; die Forge fordert täglich den erneuten Rettungswurf an. GM-Hinweis: Durst- und Dehydrierungsfolgen werden über die normalen Überlebensregeln manuell geführt.",
+          "value": "Level 15 curse. See its effect and GM note for handling details. GM Note: The daily repeat save is automated; thirst and dehydration rules themselves aren't managed by Affliction Forge.",
           "gm": ""
         },
         "rules": [],
@@ -13242,12 +13586,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.unending-thirst",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.unending-thirst",
-            "name": "Unendlicher Durst",
-            "description": "Teilautomatisierter Durstfluch. Flüssigkeiten verschaffen keinen Nutzen; die Forge fordert täglich den erneuten Rettungswurf an. GM-Hinweis: Durst- und Dehydrierungsfolgen werden über die normalen Überlebensregeln manuell geführt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 15,
@@ -13280,7 +13624,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -13345,8 +13689,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "Täglicher Rettungswurf wird automatisiert. GM-Hinweis: Durstfolgen manuell anwenden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -13373,10 +13717,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 87,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Metadata.SourceSection",
               "sourceName": "Unending Thirst",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -13384,12 +13728,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Der tägliche Wiederholungswurf ist automatisiert; die Durst-/Dehydrierungsregeln selbst werden nicht von Affliction Forge verwaltet.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -13401,12 +13748,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "uLkO2GAeZlkl0HwZ",
-      "name": "Schutz des Magiers",
+      "name": "Wizard's Ward",
       "type": "effect",
       "img": "icons/svg/terror.svg",
       "system": {
         "description": {
-          "value": "Teilautomatisierter Schutzfluch eines Buches. GM-Hinweis: Nach misslungenem Rettungswurf 5W6 Schaden derselben Schadensart wie die Beschädigung des geschützten Buches zufügen; dieser Schaden bleibt bis zur Reparatur des Buches unheilbar. Die Reparatur beendet den Fluch.",
+          "value": "Level 6 curse. See its effect and GM note for handling details. GM Note: The triggering damage type and repair of the external book item are world context and aren't tracked automatically.",
           "gm": ""
         },
         "rules": [],
@@ -13447,12 +13794,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.wizards-ward",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.wizards-ward",
-            "name": "Schutz des Magiers",
-            "description": "Teilautomatisierter Schutzfluch eines Buches. GM-Hinweis: Nach misslungenem Rettungswurf 5W6 Schaden derselben Schadensart wie die Beschädigung des geschützten Buches zufügen; dieser Schaden bleibt bis zur Reparatur des Buches unheilbar. Die Reparatur beendet den Fluch.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Description",
             "img": "icons/svg/terror.svg",
             "afflictionType": "curse",
             "level": 6,
@@ -13485,7 +13832,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Willen",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Checks.1.Label",
                 "kind": "save",
                 "statistic": "will",
                 "dcMode": "fixed",
@@ -13527,8 +13874,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Wirkung",
-                "description": "GM-Hinweis: Schadensart aus dem auslösenden Buchschaden übernehmen, 5W6 Schaden manuell zufügen und die Heilung dieses Schadens bis zur Reparatur blockieren.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Stages.1.Description",
                 "duration": {
                   "value": -1,
                   "unit": "unlimited"
@@ -13555,10 +13902,10 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 86,
-              "sourceSection": "Curses",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Metadata.SourceSection",
               "sourceName": "Wizard's Ward",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -13566,12 +13913,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
-              "manualComment": "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -13583,12 +13933,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "GHb78NXHUSzlHaeR",
-      "name": "Eisenhut",
+      "name": "Wolfsbane",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 10 mit Zähigkeitswurf SG 30. GM-Hinweis:  Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
+          "value": "Ingested level 10 poison with a DC 30 Fortitude save. GM Note: If a creature affected by lycanthropy survives Stage 3, that lycanthropy ends. This interaction with another affliction is handled manually.",
           "gm": ""
         },
         "rules": [],
@@ -13628,12 +13978,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.wolfsbane",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.wolfsbane",
-            "name": "Eisenhut",
-            "description": "Eingenommenes Gift der Stufe 10 mit Zähigkeitswurf SG 30. GM-Hinweis:  Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 10,
@@ -13665,7 +14015,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -13736,8 +14086,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "3W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -13752,7 +14102,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.wolfsbane.stage-1",
-                  "name": "Eisenhut · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -13772,8 +14122,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "4W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -13788,7 +14138,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.wolfsbane.stage-2",
-                  "name": "Eisenhut · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -13808,8 +14158,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "5W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -13824,7 +14174,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.wolfsbane.stage-3",
-                  "name": "Eisenhut · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -13847,9 +14197,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 248,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -13861,14 +14211,17 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "manualComment": "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wolfsbane.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.wolfsbane",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -13880,12 +14233,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "RG5MJoknEVQC0xD8",
-      "name": "Wyverngift",
+      "name": "Wyvern Poison",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 8 mit Zähigkeitswurf SG 26.",
+          "value": "Injury level 8 poison with a DC 26 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -13925,12 +14278,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.gm-core.wyvern-poison",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison",
-            "name": "Wyverngift",
-            "description": "Verwundungsgift der Stufe 8 mit Zähigkeitswurf SG 26.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 8,
@@ -13962,7 +14315,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -14030,8 +14383,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "3W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -14046,7 +14399,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison.stage-1",
-                  "name": "Wyverngift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14066,8 +14419,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "3W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -14082,7 +14435,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison.stage-2",
-                  "name": "Wyverngift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14102,8 +14455,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "3W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -14118,7 +14471,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison.stage-3",
-                  "name": "Wyverngift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14141,9 +14494,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "gm-core",
               "sourcePage": 250,
-              "sourceSection": "Alchemistische Gifte",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -14155,13 +14508,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
               ],
-              "sourceWorkLabel": "Kernregeln: Spielleitung",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.wyvern-poison",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -14175,12 +14531,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
   "player-core-2": [
     {
       "_id": "1hFIzJUN7bGIBjMk",
-      "name": "Arsen",
+      "name": "Arsenic",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 1 mit Zähigkeitswurf SG 18.",
+          "value": "Ingested level 1 poison with a DC 18 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -14220,12 +14576,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.arsenic",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.arsenic",
-            "name": "Arsen",
-            "description": "Eingenommenes Gift der Stufe 1 mit Zähigkeitswurf SG 18.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 1,
@@ -14262,7 +14618,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -14333,8 +14689,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W4 Giftschaden und Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -14349,7 +14705,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.arsenic.stage-1",
-                  "name": "Arsen · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14374,8 +14730,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W6 Giftschaden und Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -14390,7 +14746,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.arsenic.stage-2",
-                  "name": "Arsen · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14415,8 +14771,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "1W8 Giftschaden und Kränkelnd 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -14431,7 +14787,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.arsenic.stage-3",
-                  "name": "Arsen · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14459,9 +14815,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 291,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -14472,13 +14828,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.arsenic.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.arsenic",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -14495,7 +14854,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 2 mit Zähigkeitswurf SG 19.",
+          "value": "Ingested level 2 poison with a DC 19 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -14535,12 +14894,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.belladonna",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.belladonna",
-            "name": "Belladonna",
-            "description": "Eingenommenes Gift der Stufe 2 mit Zähigkeitswurf SG 19.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 2,
@@ -14572,7 +14931,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -14643,8 +15002,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Geblendet.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.1.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -14659,7 +15018,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.belladonna.stage-1",
-                  "name": "Belladonna · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14678,8 +15037,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W6 Giftschaden und Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.2.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -14694,7 +15053,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.belladonna.stage-2",
-                  "name": "Belladonna · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14719,8 +15078,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "1W6 Giftschaden und Verwirrt und Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -14735,7 +15094,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.belladonna.stage-3",
-                  "name": "Belladonna · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14767,9 +15126,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 291,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -14780,11 +15139,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.belladonna.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -14796,12 +15158,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "1mFzZbQ59aqsUBL5",
-      "name": "Schwarzer Lotusextrakt",
+      "name": "Black Lotus Extract",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 19 mit Zähigkeitswurf SG 42.",
+          "value": "Contact level 19 poison with a DC 42 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -14841,12 +15203,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract",
-            "name": "Schwarzer Lotusextrakt",
-            "description": "Kontaktgift der Stufe 19 mit Zähigkeitswurf SG 42.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 19,
@@ -14878,7 +15240,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -14949,8 +15311,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "13W6 Giftschaden und Ausgelaugt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -14965,7 +15327,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract.stage-1",
-                  "name": "Schwarzer Lotusextrakt · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -14990,8 +15352,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "15W6 Giftschaden und Ausgelaugt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15006,7 +15368,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract.stage-2",
-                  "name": "Schwarzer Lotusextrakt · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15031,8 +15393,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "17W6 Giftschaden und Ausgelaugt 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15047,7 +15409,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.black-lotus-extract.stage-3",
-                  "name": "Schwarzer Lotusextrakt · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15075,9 +15437,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -15088,13 +15450,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-lotus-extract.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.black-lotus-extract",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -15106,12 +15471,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "bknmr8u8UjQSVSVr",
-      "name": "Schwarzviperngift",
+      "name": "Black Viper Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18.",
+          "value": "Injury level 2 poison with a DC 18 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -15151,12 +15516,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.black-viper-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom",
-            "name": "Schwarzviperngift",
-            "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 2,
@@ -15188,7 +15553,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -15256,8 +15621,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W4 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15272,7 +15637,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-1",
-                  "name": "Schwarzviperngift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15292,8 +15657,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15308,7 +15673,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-2",
-                  "name": "Schwarzviperngift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15328,8 +15693,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "1W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15344,7 +15709,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.black-viper-venom.stage-3",
-                  "name": "Schwarzviperngift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15367,9 +15732,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -15380,13 +15745,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.black-viper-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.black-viper-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -15398,12 +15766,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "wKKexfWgkfRmEAeq",
-      "name": "Faulbrandharz",
+      "name": "Blightburn Resin",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 11 mit Zähigkeitswurf SG 30.",
+          "value": "Contact level 11 poison with a DC 30 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -15443,12 +15811,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.blightburn-resin",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin",
-            "name": "Faulbrandharz",
-            "description": "Kontaktgift der Stufe 11 mit Zähigkeitswurf SG 30.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 11,
@@ -15480,7 +15848,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -15551,8 +15919,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "6W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15567,7 +15935,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-1",
-                  "name": "Faulbrandharz · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15587,8 +15955,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "7W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15603,7 +15971,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-2",
-                  "name": "Faulbrandharz · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15623,8 +15991,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "9W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15639,7 +16007,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-3",
-                  "name": "Faulbrandharz · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15662,9 +16030,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -15675,13 +16043,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.blightburn-resin",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -15693,12 +16064,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "bbRS8k5DgQksWJxp",
-      "name": "Höhlenwurmgift",
+      "name": "Cave Worm Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 12 mit Zähigkeitswurf SG 32.",
+          "value": "Injury level 12 poison with a DC 32 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -15738,12 +16109,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom",
-            "name": "Höhlenwurmgift",
-            "description": "Verwundungsgift der Stufe 12 mit Zähigkeitswurf SG 32.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 12,
@@ -15775,7 +16146,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -15843,8 +16214,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "5W6 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15859,7 +16230,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom.stage-1",
-                  "name": "Höhlenwurmgift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15884,8 +16255,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "6W6 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15900,7 +16271,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom.stage-2",
-                  "name": "Höhlenwurmgift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15925,8 +16296,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "8W6 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -15941,7 +16312,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.cave-worm-venom.stage-3",
-                  "name": "Höhlenwurmgift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -15969,9 +16340,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -15982,11 +16353,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.cave-worm-venom.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -15998,12 +16372,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "tWVgXnQb95ZUpPeZ",
-      "name": "Knollenblätterpilzpulver",
+      "name": "Deathcap Powder",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 13 mit Zähigkeitswurf SG 33.",
+          "value": "Ingested level 13 poison with a DC 33 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -16043,12 +16417,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.deathcap-powder",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder",
-            "name": "Knollenblätterpilzpulver",
-            "description": "Eingenommenes Gift der Stufe 13 mit Zähigkeitswurf SG 33.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 13,
@@ -16080,7 +16454,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -16151,8 +16525,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "7W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -16167,7 +16541,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-1",
-                  "name": "Knollenblätterpilzpulver · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16187,8 +16561,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "9W6 Giftschaden und Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -16203,7 +16577,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-2",
-                  "name": "Knollenblätterpilzpulver · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16228,8 +16602,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "8W10 Giftschaden und Kränkelnd 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -16244,7 +16618,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-3",
-                  "name": "Knollenblätterpilzpulver · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16272,9 +16646,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -16285,13 +16659,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.deathcap-powder",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -16303,12 +16680,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "ij6dTBXWLdM0P2Hm",
-      "name": "Erschöpfendes Pulver",
+      "name": "Fatiguing Powder",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 9 mit Zähigkeitswurf SG 28.",
+          "value": "Ingested level 9 poison with a DC 28 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -16348,12 +16725,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder",
-            "name": "Erschöpfendes Pulver",
-            "description": "Eingenommenes Gift der Stufe 9 mit Zähigkeitswurf SG 28.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 9,
@@ -16385,7 +16762,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -16456,8 +16833,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -16472,7 +16849,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder.stage-1",
-                  "name": "Erschöpfendes Pulver · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16491,8 +16868,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "5W6 Giftschaden und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -16507,7 +16884,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder.stage-2",
-                  "name": "Erschöpfendes Pulver · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16531,8 +16908,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "6W6 Giftschaden und Erschöpft und Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -16547,7 +16924,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.fatiguing-powder.stage-3",
-                  "name": "Erschöpfendes Pulver · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16578,9 +16955,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -16591,11 +16968,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fatiguing-powder.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -16607,12 +16987,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "hDvTTeU37AQYmeSc",
-      "name": "Furchtblumennektar",
+      "name": "Fearflower Nectar",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 4 mit Zähigkeitswurf SG 21.",
+          "value": "Injury level 4 poison with a DC 21 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -16652,12 +17032,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar",
-            "name": "Furchtblumennektar",
-            "description": "Verwundungsgift der Stufe 4 mit Zähigkeitswurf SG 21.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 4,
@@ -16689,7 +17069,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -16757,8 +17137,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W6 Giftschaden und Verängstigt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -16773,7 +17153,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar.stage-1",
-                  "name": "Furchtblumennektar · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16798,8 +17178,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W6 Giftschaden und Verängstigt 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -16814,7 +17194,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar.stage-2",
-                  "name": "Furchtblumennektar · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16839,8 +17219,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "1W6 Giftschaden und Verängstigt 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -16855,7 +17235,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.fearflower-nectar.stage-3",
-                  "name": "Furchtblumennektar · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -16883,9 +17263,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -16896,13 +17276,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.fearflower-nectar.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.fearflower-nectar",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -16914,12 +17297,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "vEsvOBVAXRKa7k6F",
-      "name": "Riesentausendfüßlergift",
+      "name": "Giant Centipede Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 1 mit Zähigkeitswurf SG 17.",
+          "value": "Injury level 1 poison with a DC 17 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -16959,12 +17342,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom",
-            "name": "Riesentausendfüßlergift",
-            "description": "Verwundungsgift der Stufe 1 mit Zähigkeitswurf SG 17.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 1,
@@ -16996,7 +17379,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -17064,8 +17447,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W4 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17080,7 +17463,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom.stage-1",
-                  "name": "Riesentausendfüßlergift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17100,8 +17483,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W4 Giftschaden und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17116,7 +17499,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom.stage-2",
-                  "name": "Riesentausendfüßlergift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17140,8 +17523,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "1W4 Giftschaden und Unbeholfen 1 und Erschöpft.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17156,7 +17539,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.giant-centipede-venom.stage-3",
-                  "name": "Riesentausendfüßlergift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17188,9 +17571,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 293,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -17201,13 +17584,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-centipede-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.giant-centipede-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -17219,12 +17605,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "fiBHp7EpfsDLBovY",
-      "name": "Riesenskorpiongift",
+      "name": "Giant Scorpion Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 6 mit Zähigkeitswurf SG 22.",
+          "value": "Injury level 6 poison with a DC 22 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -17264,12 +17650,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom",
-            "name": "Riesenskorpiongift",
-            "description": "Verwundungsgift der Stufe 6 mit Zähigkeitswurf SG 22.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 6,
@@ -17301,7 +17687,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -17369,8 +17755,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "2W6 Giftschaden und Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17385,7 +17771,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom.stage-1",
-                  "name": "Riesenskorpiongift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17410,8 +17796,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "2W8 Giftschaden und Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17426,7 +17812,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom.stage-2",
-                  "name": "Riesenskorpiongift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17451,8 +17837,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W10 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17467,7 +17853,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.giant-scorpion-venom.stage-3",
-                  "name": "Riesenskorpiongift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17495,9 +17881,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 293,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -17508,13 +17894,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.giant-scorpion-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.giant-scorpion-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -17526,12 +17915,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "hXlKFalXht1xmUAy",
-      "name": "Grabeswurzel",
+      "name": "Grave Root",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19.",
+          "value": "Injury level 3 poison with a DC 19 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -17571,12 +17960,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.grave-root",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.grave-root",
-            "name": "Grabeswurzel",
-            "description": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 3,
@@ -17608,7 +17997,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -17676,8 +18065,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17692,7 +18081,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.grave-root.stage-1",
-                  "name": "Grabeswurzel · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17712,8 +18101,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W10 Giftschaden und Benommen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17728,7 +18117,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.grave-root.stage-2",
-                  "name": "Grabeswurzel · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17753,8 +18142,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W6 Giftschaden und Benommen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17769,7 +18158,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.grave-root.stage-3",
-                  "name": "Grabeswurzel · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -17797,9 +18186,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -17810,13 +18199,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.grave-root.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.grave-root",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -17828,12 +18220,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "IB5zgD5AFlmGmHrc",
-      "name": "Grauschattierung",
+      "name": "Gray Shadow",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 10 mit Zähigkeitswurf SG 29. GM-Hinweis:  Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden.",
+          "value": "Injury level 10 poison with a DC 29 Fortitude save. GM Note: Enfeebled lasts for 24 hours. The Forge preserves this condition beyond the end of the poison; remove it manually after 24 hours.",
           "gm": ""
         },
         "rules": [],
@@ -17874,12 +18266,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.gray-shadow",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow",
-            "name": "Grauschattierung",
-            "description": "Verwundungsgift der Stufe 10 mit Zähigkeitswurf SG 29. GM-Hinweis:  Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 10,
@@ -17912,7 +18304,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -17980,8 +18372,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "2W6 Leerenschaden und 2W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -17996,7 +18388,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow.stage-1",
-                  "name": "Grauschattierung · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18021,8 +18413,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "3W6 Leerenschaden und 2W6 Giftschaden und Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -18037,7 +18429,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow.stage-2",
-                  "name": "Grauschattierung · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18072,8 +18464,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "3W6 Leerenschaden und 3W6 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -18088,7 +18480,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.gray-shadow.stage-3",
-                  "name": "Grauschattierung · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18126,9 +18518,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -18139,12 +18531,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "manualComment": "GM-Hinweis: Kraftlos hält 24 Stunden an. Die Forge erhält diese Zustandskomponente deshalb über das Giftende hinaus; der GM entfernt sie nach 24 Stunden.",
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.gray-shadow.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -18156,12 +18551,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "wVEn7CJtoGqgoIKT",
-      "name": "Schierling",
+      "name": "Hemlock",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+          "value": "Ingested level 17 poison with a DC 38 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -18201,12 +18596,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.hemlock",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.hemlock",
-            "name": "Schierling",
-            "description": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 17,
@@ -18238,7 +18633,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -18309,8 +18704,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "16W6 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.1.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -18325,7 +18720,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-1",
-                  "name": "Schierling · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18350,8 +18745,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "17W6 Giftschaden und Kraftlos 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.2.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -18366,7 +18761,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-2",
-                  "name": "Schierling · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18391,8 +18786,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "18W6 Giftschaden und Kraftlos 4.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.3.Description",
                 "duration": {
                   "value": 10,
                   "unit": "minutes"
@@ -18407,7 +18802,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-3",
-                  "name": "Schierling · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18435,9 +18830,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 293,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -18448,13 +18843,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.hemlock",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -18466,12 +18864,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "2vxUBy0N34zxz3Nz",
-      "name": "Königsschlaf",
+      "name": "King's Sleep",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 18 mit Zähigkeitswurf SG 41. GM-Hinweis:  Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden.",
+          "value": "Ingested level 18 poison with a DC 41 Fortitude save. GM Note: Drained is cumulative on each failed save. The Forge prevents its removal while the poison lasts and preserves the stage values; apply any additional cumulative increases manually as needed.",
           "gm": ""
         },
         "rules": [],
@@ -18511,12 +18909,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.kings-sleep",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep",
-            "name": "Königsschlaf",
-            "description": "Eingenommenes Gift der Stufe 18 mit Zähigkeitswurf SG 41. GM-Hinweis:  Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 18,
@@ -18553,7 +18951,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -18621,8 +19019,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Ausgelaugt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -18637,7 +19035,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-1",
-                  "name": "Königsschlaf · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18657,8 +19055,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Ausgelaugt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -18673,7 +19071,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-2",
-                  "name": "Königsschlaf · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18693,8 +19091,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Ausgelaugt 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -18709,7 +19107,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.kings-sleep.stage-3",
-                  "name": "Königsschlaf · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18732,9 +19130,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 293,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -18745,12 +19143,15 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "manualComment": "GM-Hinweis: Ausgelaugt ist bei jedem gescheiterten Rettungswurf kumulativ. Die Forge verhindert die Entfernung während des Gifts und hält die Phasenwerte fest; zusätzliche kumulative Erhöhungen müssen bei Bedarf manuell ergänzt werden.",
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.kings-sleep.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -18762,12 +19163,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "oEQuzVPSsh0E55FL",
-      "name": "Bleibein",
+      "name": "Leadfoot",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 4 mit Zähigkeitswurf SG 20.",
+          "value": "Ingested level 4 poison with a DC 20 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -18807,12 +19208,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.leadfoot",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.leadfoot",
-            "name": "Bleibein",
-            "description": "Eingenommenes Gift der Stufe 4 mit Zähigkeitswurf SG 20.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 4,
@@ -18844,7 +19245,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -18912,8 +19313,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W10 Giftschaden und Zustandsmalus 1.5 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -18928,7 +19329,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-1",
-                  "name": "Bleibein · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18947,7 +19348,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Bleibein · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -18959,8 +19360,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "2W6 Giftschaden und Zustandsmalus 3 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -18975,7 +19376,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-2",
-                  "name": "Bleibein · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -18994,7 +19395,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Bleibein · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -19006,8 +19407,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W6 Giftschaden und Zustandsmalus 6 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19022,7 +19423,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-3",
-                  "name": "Bleibein · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19041,7 +19442,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Bleibein · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -19056,9 +19457,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 291,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -19069,11 +19470,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -19085,12 +19489,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "zn1Q9p2QHvTmPTpD",
-      "name": "Lethargiegift",
+      "name": "Lethargy Poison",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+          "value": "Injury level 2 poison with a DC 18 Fortitude save. GM Note: Stage 4 lasts 1d4 hours; the current stage-duration contract doesn't support a dice formula. Roll 1d4 hours on entering Stage 4 and handle its end or next stage save manually. During Stages 3 and 4, the creature can't wake with a Perception check.",
           "gm": ""
         },
         "rules": [],
@@ -19132,12 +19536,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
-            "name": "Lethargiegift",
-            "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 2,
@@ -19171,7 +19575,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -19239,8 +19643,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Verlangsamt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19255,7 +19659,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-1",
-                  "name": "Lethargiegift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19275,8 +19679,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Verlangsamt 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -19291,7 +19695,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-2",
-                  "name": "Lethargiegift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19311,8 +19715,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19332,7 +19736,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-3",
-                  "name": "Lethargiegift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19351,8 +19755,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-4",
                 "number": 4,
-                "name": "Phase 4",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Description",
                 "duration": {
                   "value": 4,
                   "unit": "hours"
@@ -19372,7 +19776,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-4",
-                  "name": "Lethargiegift · Phase 4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19394,9 +19798,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 293,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -19407,14 +19811,17 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.lethargy-poison",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -19426,12 +19833,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "qIx6dqtzGpR9Bz72",
-      "name": "Geisttrübungsöl",
+      "name": "Mindfog Oil",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19. Die Bezeichnung ist bewusst neutral gehalten, damit kein möglicherweise setting-spezifischer Eigenname in der Bibliothek ausgeliefert wird.",
+          "value": "Injury level 3 poison with a DC 19 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -19471,12 +19878,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.mindfog-oil",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil",
-            "name": "Geisttrübungsöl",
-            "description": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19. Die Bezeichnung ist bewusst neutral gehalten, damit kein möglicherweise setting-spezifischer Eigenname in der Bibliothek ausgeliefert wird.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 3,
@@ -19508,7 +19915,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -19576,8 +19983,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19592,7 +19999,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-1",
-                  "name": "Geisttrübungsöl · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19612,8 +20019,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19628,7 +20035,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-2",
-                  "name": "Geisttrübungsöl · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19648,8 +20055,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19664,7 +20071,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-3",
-                  "name": "Geisttrübungsöl · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19687,9 +20094,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 291,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -19701,11 +20108,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
                 "The user-facing name is deliberately neutralized as a Reserved-Material precaution; mechanics remain unchanged."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -19717,12 +20127,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "EjEQSSEIdM3nglya",
-      "name": "Geistesnebel",
+      "name": "Mindmist",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingeatmetes Gift der Stufe 15 mit Zähigkeitswurf SG 35.",
+          "value": "Inhaled level 15 poison with a DC 35 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -19762,12 +20172,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.mindmist",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.mindmist",
-            "name": "Geistesnebel",
-            "description": "Eingeatmetes Gift der Stufe 15 mit Zähigkeitswurf SG 35.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 15,
@@ -19799,7 +20209,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -19870,8 +20280,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Benommen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19886,7 +20296,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.mindmist.stage-1",
-                  "name": "Geistesnebel · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19906,8 +20316,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Verwirrt und Benommen 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19922,7 +20332,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.mindmist.stage-2",
-                  "name": "Geistesnebel · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19946,8 +20356,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Verwirrt und Benommen 4.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -19962,7 +20372,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.mindmist.stage-3",
-                  "name": "Geistesnebel · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -19989,9 +20399,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -20002,13 +20412,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindmist.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.mindmist",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -20020,12 +20433,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "y8HUu1oBQFahJiCo",
-      "name": "Nesselkrautkonzentrat",
+      "name": "Nettleweed Concentrate",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 8 mit Zähigkeitswurf SG 27.",
+          "value": "Contact level 8 poison with a DC 27 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -20065,12 +20478,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate",
-            "name": "Nesselkrautkonzentrat",
-            "description": "Kontaktgift der Stufe 8 mit Zähigkeitswurf SG 27.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 8,
@@ -20102,7 +20515,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -20173,8 +20586,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "3W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -20189,7 +20602,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate.stage-1",
-                  "name": "Nesselkrautkonzentrat · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20209,8 +20622,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "4W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -20225,7 +20638,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate.stage-2",
-                  "name": "Nesselkrautkonzentrat · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20245,8 +20658,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "6W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -20261,7 +20674,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.nettleweed-concentrate.stage-3",
-                  "name": "Nesselkrautkonzentrat · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20284,9 +20697,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 293,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -20297,11 +20710,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.nettleweed-concentrate.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -20313,12 +20729,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "bAaOmtiWmJdZHEOO",
-      "name": "Wurzelorchideengift",
+      "name": "Root Orchid Poison",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 7 mit Zähigkeitswurf SG 26.",
+          "value": "Contact level 7 poison with a DC 26 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -20358,12 +20774,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison",
-            "name": "Wurzelorchideengift",
-            "description": "Kontaktgift der Stufe 7 mit Zähigkeitswurf SG 26.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 7,
@@ -20395,7 +20811,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -20466,8 +20882,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Unbeholfen 1 und Zustandsmalus 3 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -20482,7 +20898,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-1",
-                  "name": "Wurzelorchideengift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20501,7 +20917,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Wurzelorchideengift · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -20513,8 +20929,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Unbeholfen 2 und Zustandsmalus 6 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -20529,7 +20945,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-2",
-                  "name": "Wurzelorchideengift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20548,7 +20964,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Wurzelorchideengift · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -20560,8 +20976,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Unbeholfen 3 und Auf dem Falschen Fuß und Zustandsmalus 9 m auf alle Bewegungsraten.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -20576,7 +20992,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-3",
-                  "name": "Wurzelorchideengift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20599,7 +21015,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "numericModifiers": [
                   {
                     "id": "speed-penalty",
-                    "label": "Wurzelorchideengift · Bewegungsrate",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.NumericModifiers.1.Label",
                     "selectors": [
                       "all-speeds"
                     ],
@@ -20614,9 +21030,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -20627,11 +21043,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -20643,12 +21062,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "ReDygTTxxNttc33g",
-      "name": "Himmelblaue Geißel",
+      "name": "Sky-Blue Scourge",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 16 mit Zähigkeitswurf SG 37.",
+          "value": "Injury level 16 poison with a DC 37 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -20688,12 +21107,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge",
-            "name": "Himmelblaue Geißel",
-            "description": "Verwundungsgift der Stufe 16 mit Zähigkeitswurf SG 37.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 16,
@@ -20725,7 +21144,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -20793,8 +21212,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "10W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -20809,7 +21228,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge.stage-1",
-                  "name": "Himmelblaue Geißel · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20829,8 +21248,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "12W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -20845,7 +21264,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge.stage-2",
-                  "name": "Himmelblaue Geißel · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20865,8 +21284,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "14W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -20881,7 +21300,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.sky-blue-scourge.stage-3",
-                  "name": "Himmelblaue Geißel · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -20904,9 +21323,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -20917,11 +21336,14 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2"
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sky-blue-scourge.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -20933,12 +21355,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "skJROjaRGAUD69HW",
-      "name": "Schlummerwein",
+      "name": "Slumber Wine",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 12 mit Zähigkeitswurf SG 32. GM-Hinweis:  Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+          "value": "Ingested level 12 poison with a DC 32 Fortitude save. GM Note: While unconscious from the poison, the creature can't wake and doesn't need to eat or drink. The deathlike appearance and Medicine DC to recognize it are handled manually.",
           "gm": ""
         },
         "rules": [],
@@ -20979,12 +21401,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.slumber-wine",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine",
-            "name": "Schlummerwein",
-            "description": "Eingenommenes Gift der Stufe 12 mit Zähigkeitswurf SG 32. GM-Hinweis:  Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 12,
@@ -21017,7 +21439,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -21088,8 +21510,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "days"
@@ -21109,7 +21531,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine.stage-1",
-                  "name": "Schlummerwein · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21128,8 +21550,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.2.Description",
                 "duration": {
                   "value": 2,
                   "unit": "days"
@@ -21149,7 +21571,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine.stage-2",
-                  "name": "Schlummerwein · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21168,8 +21590,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "Bewusstlos.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.3.Description",
                 "duration": {
                   "value": 3,
                   "unit": "days"
@@ -21189,7 +21611,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.slumber-wine.stage-3",
-                  "name": "Schlummerwein · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21211,9 +21633,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 293,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -21224,14 +21646,17 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "manualComment": "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.slumber-wine.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.slumber-wine",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -21243,12 +21668,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "RqkqTpFV7LNEgCBX",
-      "name": "Spinnenwurz",
+      "name": "Spider Root",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 9 mit Zähigkeitswurf SG 28.",
+          "value": "Contact level 9 poison with a DC 28 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -21288,12 +21713,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.spider-root",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.spider-root",
-            "name": "Spinnenwurz",
-            "description": "Kontaktgift der Stufe 9 mit Zähigkeitswurf SG 28.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 9,
@@ -21325,7 +21750,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -21396,8 +21821,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "3W6 Giftschaden und Unbeholfen 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -21412,7 +21837,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.spider-root.stage-1",
-                  "name": "Spinnenwurz · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21437,8 +21862,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "4W6 Giftschaden und Unbeholfen 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -21453,7 +21878,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.spider-root.stage-2",
-                  "name": "Spinnenwurz · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21478,8 +21903,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "6W6 Giftschaden und Unbeholfen 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -21494,7 +21919,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.spider-root.stage-3",
-                  "name": "Spinnenwurz · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21522,9 +21947,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -21535,13 +21960,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-root.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.spider-root",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -21553,12 +21981,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "hZTCkTwFKRPrlCQM",
-      "name": "Spinnengift",
+      "name": "Spider Venom",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 5 mit Zähigkeitswurf SG 22.",
+          "value": "Injury level 5 poison with a DC 22 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -21598,12 +22026,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.spider-venom",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.spider-venom",
-            "name": "Spinnengift",
-            "description": "Verwundungsgift der Stufe 5 mit Zähigkeitswurf SG 22.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 5,
@@ -21635,7 +22063,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -21703,8 +22131,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "1W10 Giftschaden und Kränkelnd 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -21719,7 +22147,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.spider-venom.stage-1",
-                  "name": "Spinnengift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21744,8 +22172,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "1W12 Giftschaden und Unbeholfen 1 und Kränkelnd 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -21760,7 +22188,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.spider-venom.stage-2",
-                  "name": "Spinnengift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21790,8 +22218,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "2W6 Giftschaden und Unbeholfen 2 und Kränkelnd 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -21806,7 +22234,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.spider-venom.stage-3",
-                  "name": "Spinnengift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -21839,9 +22267,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -21852,13 +22280,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.spider-venom.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.spider-venom",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -21870,12 +22301,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "9zcuMarhFc3WSMCG",
-      "name": "Schwefelschwaden",
+      "name": "Sulfur Fumes",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+          "value": "Inhaled level 16 poison with a DC 36 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -21915,12 +22346,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes",
-            "name": "Schwefelschwaden",
-            "description": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 16,
@@ -21952,7 +22383,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -22023,8 +22454,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "7W8 Giftschaden und Kraftlos 1.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -22039,7 +22470,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-1",
-                  "name": "Schwefelschwaden · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22064,8 +22495,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "8W8 Giftschaden und Kraftlos 2.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -22080,7 +22511,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-2",
-                  "name": "Schwefelschwaden · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22105,8 +22536,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "10W8 Giftschaden und Kraftlos 3.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -22121,7 +22552,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.sulfur-fumes.stage-3",
-                  "name": "Schwefelschwaden · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22149,9 +22580,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -22162,13 +22593,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.sulfur-fumes.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.sulfur-fumes",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -22180,12 +22614,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "XN2H1UDxANAsxZUE",
-      "name": "Todestränen",
+      "name": "Tears of Death",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Kontaktgift der Stufe 20 mit Zähigkeitswurf SG 44.",
+          "value": "Contact level 20 poison with a DC 44 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -22225,12 +22659,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.tears-of-death",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death",
-            "name": "Todestränen",
-            "description": "Kontaktgift der Stufe 20 mit Zähigkeitswurf SG 44.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 20,
@@ -22262,7 +22696,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -22333,8 +22767,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "20W6 Giftschaden und Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -22349,7 +22783,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death.stage-1",
-                  "name": "Todestränen · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22373,8 +22807,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "22W6 Giftschaden und Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -22389,7 +22823,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death.stage-2",
-                  "name": "Todestränen · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22413,8 +22847,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "24W6 Giftschaden und Gelähmt.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -22429,7 +22863,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.tears-of-death.stage-3",
-                  "name": "Todestränen · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22456,9 +22890,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -22469,13 +22903,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.tears-of-death.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.tears-of-death",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -22487,12 +22924,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "85AA7CPfeEg9YBRD",
-      "name": "Eisenhut",
+      "name": "Wolfsbane",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Eingenommenes Gift der Stufe 10 mit Zähigkeitswurf SG 30. GM-Hinweis:  Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
+          "value": "Ingested level 10 poison with a DC 30 Fortitude save. GM Note: If a creature affected by lycanthropy survives Stage 3, that lycanthropy ends. This interaction with another affliction is handled manually.",
           "gm": ""
         },
         "rules": [],
@@ -22532,12 +22969,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.wolfsbane",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane",
-            "name": "Eisenhut",
-            "description": "Eingenommenes Gift der Stufe 10 mit Zähigkeitswurf SG 30. GM-Hinweis:  Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 10,
@@ -22569,7 +23006,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -22640,8 +23077,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "3W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -22656,7 +23093,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane.stage-1",
-                  "name": "Eisenhut · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22676,8 +23113,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "4W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -22692,7 +23129,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane.stage-2",
-                  "name": "Eisenhut · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22712,8 +23149,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "5W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "minutes"
@@ -22728,7 +23165,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.wolfsbane.stage-3",
-                  "name": "Eisenhut · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22751,9 +23188,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 292,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "manual",
               "licenseReview": {
@@ -22764,14 +23201,17 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "manualComment": "GM-Hinweis: Überlebt eine an Lykanthropie leidende Kreatur Phase 3, wird diese Lykanthropie beendet. Die Wechselwirkung mit einem anderen Leiden wird manuell abgewickelt.",
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Metadata.ManualComment",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wolfsbane.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.wolfsbane",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],
@@ -22783,12 +23223,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
     },
     {
       "_id": "kllMe2X1OsGYNA5f",
-      "name": "Wyverngift",
+      "name": "Wyvern Poison",
       "type": "effect",
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Verwundungsgift der Stufe 8 mit Zähigkeitswurf SG 26.",
+          "value": "Injury level 8 poison with a DC 26 Fortitude save.",
           "gm": ""
         },
         "rules": [],
@@ -22828,12 +23268,12 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "documentKind": "affliction-template",
           "schemaVersion": 2,
           "definitionId": "affliction-forge-remastered-rules.player-core-2.wyvern-poison",
-          "definitionVersion": 1,
+          "definitionVersion": 2,
           "definition": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison",
-            "name": "Wyverngift",
-            "description": "Verwundungsgift der Stufe 8 mit Zähigkeitswurf SG 26.",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Description",
             "img": "icons/svg/biohazard.svg",
             "afflictionType": "poison",
             "level": 8,
@@ -22865,7 +23305,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
             "checks": [
               {
                 "id": "primary",
-                "label": "Zähigkeit",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Checks.1.Label",
                 "kind": "save",
                 "statistic": "fortitude",
                 "dcMode": "fixed",
@@ -22933,8 +23373,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-1",
                 "number": 1,
-                "name": "Phase 1",
-                "description": "3W6 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.1.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -22949,7 +23389,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison.stage-1",
-                  "name": "Wyverngift · Phase 1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.1.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -22969,8 +23409,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-2",
                 "number": 2,
-                "name": "Phase 2",
-                "description": "3W8 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.2.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -22985,7 +23425,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison.stage-2",
-                  "name": "Wyverngift · Phase 2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.2.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -23005,8 +23445,8 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               {
                 "id": "stage-3",
                 "number": 3,
-                "name": "Phase 3",
-                "description": "3W10 Giftschaden.",
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.3.Description",
                 "duration": {
                   "value": 1,
                   "unit": "rounds"
@@ -23021,7 +23461,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "effect": {
                   "schemaVersion": 2,
                   "id": "affliction-forge-remastered-rules.player-core-2.wyvern-poison.stage-3",
-                  "name": "Wyverngift · Phase 3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Stages.3.Effect.Name",
                   "duration": {
                     "value": -1,
                     "unit": "unlimited",
@@ -23044,9 +23484,9 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "originFeature": "remastered-rules-library",
               "sourceWorkId": "player-core-2",
               "sourcePage": 294,
-              "sourceSection": "Alchemical Poisons",
-              "contentLanguage": "de",
-              "translation": "independent-from-english-orc-source",
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Metadata.SourceSection",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
               "license": "ORC",
               "automationStatus": "full",
               "licenseReview": {
@@ -23057,13 +23497,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "automationNotes": [
                 "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
               ],
-              "sourceWorkLabel": "Kernregeln: Spieler 2",
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.wyvern-poison.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.wyvern-poison",
               "sourceVariant": true
             }
           },
           "originModule": "affliction-forge-remastered-rules",
           "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
         }
       },
       "effects": [],

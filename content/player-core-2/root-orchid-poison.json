@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison",
-  "name": "Wurzelorchideengift",
-  "description": "Kontaktgift der Stufe 7 mit Zähigkeitswurf SG 26.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 7,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -105,8 +105,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Unbeholfen 1 und Zustandsmalus 3 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "minutes"
@@ -121,7 +121,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-1",
-        "name": "Wurzelorchideengift · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -140,7 +140,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Wurzelorchideengift · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.1.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -152,8 +152,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Unbeholfen 2 und Zustandsmalus 6 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "minutes"
@@ -168,7 +168,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-2",
-        "name": "Wurzelorchideengift · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -187,7 +187,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Wurzelorchideengift · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.2.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -199,8 +199,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Unbeholfen 3 und Auf dem Falschen Fuß und Zustandsmalus 9 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "minutes"
@@ -215,7 +215,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.root-orchid-poison.stage-3",
-        "name": "Wurzelorchideengift · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -238,7 +238,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Wurzelorchideengift · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Stages.3.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -253,9 +253,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "player-core-2",
     "sourcePage": 294,
-    "sourceSection": "Alchemical Poisons",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -266,6 +266,6 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "sourceWorkLabel": "Kernregeln: Spieler 2"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.root-orchid-poison.Metadata.SourceWorkLabel"
   }
 }

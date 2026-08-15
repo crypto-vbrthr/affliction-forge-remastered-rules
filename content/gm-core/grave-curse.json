@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.grave-curse",
-  "name": "Grabesfluch",
-  "description": "Teilautomatisierter Grabfluch mit variabler Stufe. Beim Anwenden muss der passende externe Willens-SG angegeben werden. GM-Hinweis: Jede Nacht und beim Betreten eines Bestattungsortes ist ein Einfacher Wurf SG 15 nötig; bei Fehlschlag erscheint vorübergehend ein passender Untoter. Rückgabe des entwendeten Grabguts beendet den Fluch. Die angezeigte Stufe 0 ist nur ein technischer Platzhalter für die variable Quellenstufe.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 0,
@@ -36,7 +36,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Willen",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Checks.1.Label",
       "kind": "save",
       "statistic": "will",
       "dcMode": "source",
@@ -78,8 +78,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "GM-Hinweis: Nächtliche und ortsgebundene SG-15-Würfe, vorübergehende Untote und die Rückgabe-Heilbedingung manuell abwickeln.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -106,10 +106,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 87,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Metadata.SourceSection",
     "sourceName": "Grave Curse",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -118,7 +118,7 @@
       "nameReview": "passed"
     },
     "sourceLevel": "varies",
-    "manualComment": "GM-Hinweis: Die Quellenstufe variiert; den zugehörigen hohen Zauber-SG beim Anwenden als externen SG übergeben. Untote werden nicht automatisch erzeugt.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.grave-curse.Metadata.SourceWorkLabel"
   }
 }

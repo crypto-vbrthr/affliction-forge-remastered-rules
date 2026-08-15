@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.bog-rot",
-  "name": "Sumpffäule",
-  "description": "Feuchtigkeitsbedingte Krankheit mit zunehmender Ungeschicklichkeit und verlangsamter Fortbewegung. Eine Amputation der betroffenen Gliedmaßen kann die Krankheit alternativ beenden; diese Heilungsmöglichkeit wird manuell abgewickelt.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 0,
@@ -33,7 +33,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -101,8 +101,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Unbeholfen 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -117,7 +117,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-1",
-        "name": "Sumpffäule · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -137,8 +137,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Unbeholfen 1 und Zustandsmalus von 1,50 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -153,7 +153,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-2",
-        "name": "Sumpffäule · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -172,7 +172,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Sumpffäule · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.2.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -184,8 +184,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Unbeholfen 2 und Zustandsmalus von 3 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -200,7 +200,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-3",
-        "name": "Sumpffäule · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -219,7 +219,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Sumpffäule · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Stages.3.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -234,10 +234,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Metadata.SourceSection",
     "sourceName": "Bog Rot",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -249,6 +249,6 @@
       "The alternate cure by amputating the affected limbs is intentionally handled manually and does not require a generic body-part subsystem.",
       "PF2e speed modifiers use the system-native 5-foot unit: -5 corresponds to -1.5 m and -10 to -3 m in metric display."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bog-rot.Metadata.SourceWorkLabel"
   }
 }

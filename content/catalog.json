@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "libraryId": "affliction-forge-remastered-rules.rules",
-  "contentLanguage": "de",
+  "contentLanguage": "i18n",
   "contentPolicy": "mechanics-only",
   "license": "ORC",
   "packs": [
@@ -15,7 +15,7 @@
       "id": "gm-core",
       "sourceWorkId": "gm-core",
       "status": "content-started",
-      "entries": 49
+      "entries": 50
     },
     {
       "id": "player-core-2",

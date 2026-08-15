@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy",
-  "name": "Karmesin-Lepra",
-  "description": "Ausgeprägte Krankheit mit zunehmenden inneren Verletzungen. Durch die Krankheit verursachter Schaden kann erst geheilt werden, wenn das Leiden endet; in der letzten Phase ist jegliche Trefferpunktheilung blockiert.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 4,
@@ -33,7 +33,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -101,8 +101,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "2W6 Wuchtschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -117,7 +117,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-1",
-        "name": "Karmesin-Lepra · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -138,8 +138,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "2W6 Wuchtschaden. Wenn Verletzt neu erhalten oder erhöht wird, steigt der Zustandswert zusätzlich um 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -154,7 +154,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-2",
-        "name": "Karmesin-Lepra · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -173,7 +173,7 @@
       "reactions": [
         {
           "id": "wounded-escalation",
-          "label": "Verletzt zusätzlich erhöhen",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.2.Reactions.1.Label",
           "trigger": {
             "event": "condition-increased",
             "damageTypes": [],
@@ -191,8 +191,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "4W6 Wuchtschaden; Trefferpunktschaden kann während dieser Phase nicht geheilt werden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -207,7 +207,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.scarlet-leprosy.stage-3",
-        "name": "Karmesin-Lepra · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -231,10 +231,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Metadata.SourceSection",
     "sourceName": "Scarlet Leprosy",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -248,6 +248,6 @@
       "Disease-caused damage is protected from healing for the whole affliction; Stage 3 additionally blocks all Hit Point healing.",
       "Virulent progression uses the native consecutive-success recovery contract."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.scarlet-leprosy.Metadata.SourceWorkLabel"
   }
 }

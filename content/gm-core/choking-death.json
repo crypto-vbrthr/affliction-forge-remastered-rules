@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.choking-death",
-  "name": "Erstickungsseuche",
-  "description": "Schwere Atemwegserkrankung mit fortschreitender Schwächung und Sprachverlust.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 6,
@@ -32,7 +32,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -100,8 +100,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Heisere Stimme; keine weiteren regeltechnischen Auswirkungen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -118,8 +118,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Ausgelaugt 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -134,7 +134,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.choking-death.stage-2",
-        "name": "Erstickungsseuche · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -154,8 +154,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Ausgelaugt 2; die betroffene Kreatur kann nicht sprechen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -172,7 +172,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.choking-death.stage-3",
-        "name": "Erstickungsseuche · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -192,8 +192,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Tod.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.4.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -208,7 +208,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.choking-death.stage-4",
-        "name": "Erstickungsseuche · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -230,10 +230,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Metadata.SourceSection",
     "sourceName": "Choking Death",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -241,6 +241,6 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.choking-death.Metadata.SourceWorkLabel"
   }
 }

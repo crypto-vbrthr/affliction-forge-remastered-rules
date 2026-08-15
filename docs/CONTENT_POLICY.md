@@ -6,7 +6,7 @@ This module is intentionally conservative. It is a software library provider plu
 
 1. Use the English ORC-licensed rules source as the mechanics source.
 2. Store only mechanics required by the Affliction Forge data/runtime model.
-3. Write the German wording independently; do not copy longer prose from a localized edition.
+3. Write both German and English mechanics wording independently; do not copy longer prose from published localized editions.
 4. Do not ship book artwork, logos, proprietary fonts, layout, trade dress, lore paragraphs, dialogue, plots, or setting descriptions.
 5. Review names separately. Proper nouns, deity/character/place/organization names, and names derived from them are blocked or replaced by a neutral original name.
 6. Every entry must identify one of the four approved upstream source works through a neutral `sourceWorkId` and must carry `license: "ORC"`.

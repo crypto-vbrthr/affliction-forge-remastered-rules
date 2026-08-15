@@ -2,9 +2,20 @@
   "schemaVersion": 1,
   "sourceWorkId": "gm-core",
   "sourceWorkLabel": "Kernregeln: Spielleitung",
-  "section": "Alchemistische Gifte",
-  "reviewPolicy": "Source variants remain separate from same-named Player Core 2 poisons; no silent replacement.",
+  "section": "Gifte",
+  "reviewPolicy": "Same-named GM Core / Player Core 2 variants remain separate; unique poison afflictions from other GM Core item sections are included without inventing a source variant.",
   "entries": [
+    {
+      "sourceName": "Dolchgift",
+      "level": 5,
+      "status": "full",
+      "sourcePage": 243,
+      "definitionId": "affliction-forge-remastered-rules.gm-core.dagger-venom",
+      "notes": [
+        "Das Leiden stammt aus der Aktivierung eines Gegenstands und nicht aus dem alchemistischen Giftkatalog.",
+        "Die Quelle nennt für Phase 1 kein Intervall; die Vorlage hält Phase 1 bis zum Ablauf der maximalen Wirkungsdauer von 4 Runden aktiv und führt keine erfundenen Zwischenwürfe ein."
+      ]
+    },
     {
       "sourceName": "Arsen",
       "level": 1,

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.wizards-ward",
-  "name": "Schutz des Magiers",
-  "description": "Teilautomatisierter Schutzfluch eines Buches. GM-Hinweis: Nach misslungenem Rettungswurf 5W6 Schaden derselben Schadensart wie die Beschädigung des geschützten Buches zufügen; dieser Schaden bleibt bis zur Reparatur des Buches unheilbar. Die Reparatur beendet den Fluch.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 6,
@@ -35,7 +35,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Willen",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Checks.1.Label",
       "kind": "save",
       "statistic": "will",
       "dcMode": "fixed",
@@ -77,8 +77,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "GM-Hinweis: Schadensart aus dem auslösenden Buchschaden übernehmen, 5W6 Schaden manuell zufügen und die Heilung dieses Schadens bis zur Reparatur blockieren.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -105,10 +105,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 86,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Metadata.SourceSection",
     "sourceName": "Wizard's Ward",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -116,7 +116,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Die auslösende Schadensart und die Reparatur des externen Buchgegenstands sind Weltkontext und werden nicht automatisch verfolgt.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wizards-ward.Metadata.SourceWorkLabel"
   }
 }

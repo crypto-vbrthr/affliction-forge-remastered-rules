@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.oath-of-the-flesh",
-  "name": "Schwur des Fleisches",
-  "description": "Teilautomatisierter Schwurfluch. GM-Hinweis: Jedes nach Eintritt des Fluchs gegebene Versprechen wird markiert; beim Bruch verursacht es 3W6 Hiebschaden, der nicht heilbar ist, solange der Fluch besteht.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 7,
@@ -35,7 +35,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -77,8 +77,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "GM-Hinweis: Versprechen und deren Bruch manuell protokollieren; bei Bruch 3W6 Hiebschaden zufügen und bis zum Ende des Fluchs als unheilbar behandeln.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -105,10 +105,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 87,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Metadata.SourceSection",
     "sourceName": "Oath of the Flesh",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -116,7 +116,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Versprechen sind narrativer Zustand und werden nicht als automatisch auswertbare Actor-Ressource modelliert.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.oath-of-the-flesh.Metadata.SourceWorkLabel"
   }
 }

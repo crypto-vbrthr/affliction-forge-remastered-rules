@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.player-core-2.hemlock",
-  "name": "Schierling",
-  "description": "Eingenommenes Gift der Stufe 17 mit Zähigkeitswurf SG 38.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 17,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -105,8 +105,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "16W6 Giftschaden und Kraftlos 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.1.Description",
       "duration": {
         "value": 10,
         "unit": "minutes"
@@ -121,7 +121,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-1",
-        "name": "Schierling · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -146,8 +146,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "17W6 Giftschaden und Kraftlos 3.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.2.Description",
       "duration": {
         "value": 10,
         "unit": "minutes"
@@ -162,7 +162,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-2",
-        "name": "Schierling · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -187,8 +187,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "18W6 Giftschaden und Kraftlos 4.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.3.Description",
       "duration": {
         "value": 10,
         "unit": "minutes"
@@ -203,7 +203,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.hemlock.stage-3",
-        "name": "Schierling · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -231,9 +231,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "player-core-2",
     "sourcePage": 293,
-    "sourceSection": "Alchemical Poisons",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -244,7 +244,7 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.hemlock.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.hemlock",
     "sourceVariant": true
   }

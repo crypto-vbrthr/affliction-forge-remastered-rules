@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.brain-worms",
-  "name": "Hirnwürmer",
-  "description": "Teilautomatisierte ausgeprägte Krankheit mit neurologischen Ausfällen. GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 11,
@@ -35,7 +35,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -44,7 +44,7 @@
     },
     {
       "id": "mind",
-      "label": "Willen",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Checks.2.Label",
       "kind": "save",
       "statistic": "will",
       "dcMode": "fixed",
@@ -112,8 +112,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Benommen 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -129,7 +129,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-1",
-        "name": "Hirnwürmer · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -151,8 +151,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Benommen 2. Nach erlittenem Schaden folgt ein Willenswurf gegen SG 28; bei Fehlschlag 1 Runde Verwirrt.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -168,7 +168,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-2",
-        "name": "Hirnwürmer · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -188,7 +188,7 @@
       "reactions": [
         {
           "id": "damage-confusion",
-          "label": "Verwirrung nach Schaden",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Reactions.1.Label",
           "trigger": {
             "event": "damage-taken",
             "damageTypes": []
@@ -201,7 +201,7 @@
           "effect": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-2.reaction",
-            "name": "Hirnwürmer · Verwirrt",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.2.Reactions.1.Effect.Name",
             "duration": {
               "value": 1,
               "unit": "rounds",
@@ -222,8 +222,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Benommen 3. Nach erlittenem Schaden folgt ein Willenswurf gegen SG 28; bei Fehlschlag 1 Minute Verwirrt.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -239,7 +239,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-3",
-        "name": "Hirnwürmer · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -259,7 +259,7 @@
       "reactions": [
         {
           "id": "damage-confusion",
-          "label": "Verwirrung nach Schaden",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Reactions.1.Label",
           "trigger": {
             "event": "damage-taken",
             "damageTypes": []
@@ -272,7 +272,7 @@
           "effect": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-3.reaction",
-            "name": "Hirnwürmer · Verwirrt",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.3.Reactions.1.Effect.Name",
             "duration": {
               "value": 1,
               "unit": "minutes",
@@ -293,8 +293,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Benommen 4 und Verwirrt. GM-Hinweis: Schaden beendet Verwirrt in dieser Phase nicht.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.4.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -310,7 +310,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-4",
-        "name": "Hirnwürmer · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -336,8 +336,8 @@
     {
       "id": "stage-5",
       "number": 5,
-      "name": "Phase 5",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.5.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.5.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -353,7 +353,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-5",
-        "name": "Hirnwürmer · Phase 5",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.5.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -374,8 +374,8 @@
     {
       "id": "stage-6",
       "number": 6,
-      "name": "Phase 6",
-      "description": "Tod.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.6.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.6.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -391,7 +391,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.brain-worms.stage-6",
-        "name": "Hirnwürmer · Phase 6",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Stages.6.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -415,10 +415,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 89,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Metadata.SourceSection",
     "sourceName": "Brain Worms",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -431,7 +431,7 @@
       "Stage 2 and 3 damage-triggered Will saves and temporary confused conditions use event reactions.",
       "Confusion-driven attack replacement with a bite and the Stage 4 exception that damage does not end confused are intentionally manual."
     ],
-    "manualComment": "GM-Hinweis: Angriffe, die aufgrund von Verwirrt ausgeführt werden, müssen als Biss abgewickelt werden. In Phase 4 beendet erlittener Schaden den Zustand Verwirrt nicht. Diese beiden Verhaltensregeln werden nicht automatisch verändert.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.brain-worms.Metadata.SourceWorkLabel"
   }
 }

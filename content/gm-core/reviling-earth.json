@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.reviling-earth",
-  "name": "Feindselige Erde",
-  "description": "Gebietsgebundener Fluch. Wird er beim Betreten des betroffenen Gebietes ausgelöst, verursacht ein misslungener Rettungswurf Todgeweiht 1; bei einem kritischen Fehlschlag Todgeweiht 2.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 12,
@@ -36,7 +36,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -78,8 +78,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "Todgeweiht 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -96,7 +96,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.reviling-earth.stage-1",
-        "name": "Feindselige Erde · Todgeweiht 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -120,8 +120,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Kritische Wirkung",
-      "description": "Todgeweiht 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.2.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -138,7 +138,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.reviling-earth.stage-2",
-        "name": "Feindselige Erde · Todgeweiht 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -165,10 +165,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 87,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Metadata.SourceSection",
     "sourceName": "Reviling Earth",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -180,6 +180,6 @@
       "The world/location trigger is external context; applying the template represents the curse trigger having occurred.",
       "Failure and critical failure are represented as separate unlimited stages solely to preserve the different doomed values."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviling-earth.Metadata.SourceWorkLabel"
   }
 }

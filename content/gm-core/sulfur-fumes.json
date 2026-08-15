@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes",
-  "name": "Schwefelschwaden",
-  "description": "Eingeatmetes Gift der Stufe 16 mit Zähigkeitswurf SG 36.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 16,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -105,8 +105,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "7W6 Giftschaden und Kraftlos 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -121,7 +121,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes.stage-1",
-        "name": "Schwefelschwaden · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -146,8 +146,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "8W6 Giftschaden und Kraftlos 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -162,7 +162,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes.stage-2",
-        "name": "Schwefelschwaden · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -187,8 +187,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "10W6 Giftschaden und Kraftlos 3.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -203,7 +203,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.sulfur-fumes.stage-3",
-        "name": "Schwefelschwaden · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -231,9 +231,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 250,
-    "sourceSection": "Alchemistische Gifte",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -245,7 +245,7 @@
       "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
       "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sulfur-fumes.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.sulfur-fumes",
     "sourceVariant": true
   }

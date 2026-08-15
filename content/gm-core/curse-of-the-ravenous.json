@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.curse-of-the-ravenous",
-  "name": "Fluch der Gefräßigen",
-  "description": "Teilautomatisierter Hungerfluch. Nach einem Tag beginnt der Betroffene trotz Nahrung zu hungern. Die Forge fordert danach jede Woche den erneuten Rettungswurf an. GM-Hinweis: Die eigentlichen Hungerfolgen werden über die normalen Überlebensregeln manuell geführt.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 5,
@@ -35,7 +35,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -100,8 +100,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "Nach einem Tag beginnt Hunger; der wöchentliche Rettungswurf wird automatisiert. GM-Hinweis: Hungerfolgen manuell anwenden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Stages.1.Description",
       "duration": {
         "value": 7,
         "unit": "days"
@@ -128,10 +128,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 86,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Metadata.SourceSection",
     "sourceName": "Curse of the Ravenous",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -139,7 +139,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Der wöchentliche Wiederholungswurf ist automatisiert; die Hunger-/Verhungern-Regeln selbst werden nicht von Affliction Forge verwaltet.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.curse-of-the-ravenous.Metadata.SourceWorkLabel"
   }
 }

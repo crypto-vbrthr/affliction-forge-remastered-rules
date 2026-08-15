@@ -5,12 +5,13 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { validateDefinition } from "../tools/lib/content-contract.mjs";
 import { BUNDLED_ITEM_SOURCES_BY_PACK } from "../scripts/bundled-content.js";
+import { readLocalizedJson } from "./helpers/localization.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const inventory = JSON.parse(fs.readFileSync(path.join(root, "inventory/player-core-2-poisons.json"), "utf8"));
 const files = fs.readdirSync(path.join(root, "content/player-core-2")).filter((name) => name.endsWith(".json")).sort();
-const poisons = files.map((name) => JSON.parse(fs.readFileSync(path.join(root, "content/player-core-2", name), "utf8")));
+const poisons = files.map((name) => readLocalizedJson(path.join(root, "content/player-core-2", name), "de"));
 const byKey = new Map(poisons.map((entry) => [entry.id.split(".").at(-1), entry]));
 
 function stage(definition, number) { return definition.stages.find((entry) => entry.number === number); }
@@ -75,8 +76,8 @@ test("Lethargy Poison surfaces the variable 1d4-hour Stage 4 limitation without 
   assert.deepEqual(stage(poison, 4).restrictions.conditionLocks, [{ slug: "unconscious", minimum: null }]);
 });
 
-test("runtime seed contains all seventy-eight definitions with twenty-nine Player II poisons and GM variants", () => {
-  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].length, 49);
+test("runtime seed contains all seventy-nine definitions with twenty-nine Player II poisons and complete reviewed GM poison content", () => {
+  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].length, 50);
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["player-core-2"].length, 29);
-  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 78);
+  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 79);
 });

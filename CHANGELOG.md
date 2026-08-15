@@ -1,4 +1,27 @@
+## 0.1.14
+- Converted all user-facing bundled content fields to language-neutral `@i18n:` tokens.
+- Added complete German and English localization coverage for names, descriptions, stage text, checks, reaction labels, source labels, and GM comments.
+- Added a content-revision migration that replaces previously seeded German-only definitions with tokenized definitions while preserving deterministic document IDs.
+- Requires Affliction Forge 0.1.60 for per-client provider-content localization.
+
 # Changelog
+
+## 0.1.13 - 2026-08-15
+
+### Added
+
+- **Dolchgift** (`Dagger Venom` mechanics) from the level-5 GM Core weapon activation: Fortitude DC 21, maximum duration 4 rounds, Stage 1 1d8 poison damage and Enfeebled 1.
+- Explicit regression coverage for the source's omitted Stage 1 interval: no invented repeat save is scheduled; the single stage persists until the four-round maximum duration expires.
+- Coverage metadata distinguishing this weapon-bound poison from the 19 alchemical GM Core / Player Core 2 source variants.
+
+### Coverage
+
+- GM diseases: **14/14 published**.
+- GM curses: **16/16 published**.
+- Player II alchemical poisons: **29/29 published**.
+- GM Core alchemical poison variants: **19/19 published**.
+- Additional GM Core weapon poison afflictions: **1/1 published**.
+- Total bundled definitions: **79**.
 
 ## 0.1.12 - 2026-08-15
 

@@ -54,8 +54,8 @@ function validDefinition(overrides = {}) {
       originModule: MODULE_ID,
       originFeature: "remastered-rules-library",
       sourceWorkId: "gm-core",
-      contentLanguage: "de",
-      translation: "independent-from-english-orc-source",
+      contentLanguage: "i18n",
+      translation: "localized-independent-mechanics",
       license: "ORC",
       automationStatus: "full",
       licenseReview: { mechanicsOnly: true, reservedMaterial: "passed", nameReview: "passed" }
@@ -255,8 +255,8 @@ test("0.1.55 pre-action concentrate gates are accepted by the content contract",
 test("manual-exception entries require visible GM guidance", () => {
   const definition = validDefinition();
   definition.metadata.automationStatus = "manual";
-  definition.metadata.manualComment = "GM-Hinweis: Manuell abwickeln.";
-  definition.description = "Teilautomatisiert. GM-Hinweis: Manuell abwickeln.";
+  definition.metadata.manualComment = "@i18n:TEST.ManualComment";
+  definition.description = "@i18n:TEST.Description";
   assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
 
   delete definition.metadata.manualComment;

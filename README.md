@@ -1,6 +1,6 @@
 # Affliction Forge: Remastered Rules Library
 
-Version **0.1.12** adds the **19 GM Core alchemical poison source variants** alongside the existing 29-entry Player II poison catalog. It requires **PF2E Affliction Forge 0.1.58+** so same-named source variants can be distinguished by source work and page in the library.
+Version **0.1.13** completes the reviewed **GM Core poison set** by adding the weapon-bound **Dolchgift / Dagger Venom** affliction alongside the 19 alchemical source variants. It requires **PF2E Affliction Forge 0.1.58+**.
 
 ## Current scope
 
@@ -11,7 +11,7 @@ Version **0.1.12** adds the **19 GM Core alchemical poison source variants** alo
 - complete reviewed **14-entry GM disease catalog**
 - complete reviewed **16-entry GM curse catalog**
 - complete reviewed **29-entry Player II alchemical poison catalog**
-- complete reviewed **19-entry GM Core alchemical poison source-variant catalog**
+- complete reviewed **19-entry GM Core alchemical poison source-variant catalog** plus **Dagger Venom** from the Serpent Dagger item
 - ORC notice and upstream attribution
 - mechanics-only content policy
 - per-entry license/review metadata contract
@@ -90,10 +90,14 @@ Eight same-named poisons have source-specific mechanical differences that are pr
 
 Every reviewed definition now supplies `metadata.sourceWorkLabel` and `metadata.sourcePage` where available. Affliction Forge 0.1.58 renders this source line separately from the common Remastered library label, so duplicate names remain unambiguous without changing user-facing affliction names.
 
+### Additional GM Core poison affliction
+
+- **Dolchgift** (`Dagger Venom` mechanics) is published from the level-5 weapon activation in GM Core: Fortitude DC 21, maximum duration 4 rounds, Stage 1 deals 1d8 poison damage and applies Enfeebled 1. The source gives Stage 1 no interval, so the template does not invent repeat stage saves; Stage 1 remains active until the four-round maximum duration ends. It is not tagged as a standard injury poison because the source item injects it through its own activation rather than by coating a weapon.
+
 ## Content workflow
 
 1. Extract only functional rules material from an approved ORC source.
-2. Independently formulate German user-facing mechanics text.
+2. Independently formulate user-facing mechanics text and maintain German and English locale entries.
 3. Remove or replace Reserved Material, including setting-specific proper nouns.
 4. Mark faithful entries as `automationStatus: "full"`; use `automationStatus: "manual"` only for intentional exceptions with a visible `GM-Hinweis` and structured `metadata.manualComment`.
 5. Prefer partial use of existing generic mechanics over bespoke one-entry runtime hooks.
@@ -101,7 +105,7 @@ Every reviewed definition now supplies `metadata.sourceWorkLabel` and `metadata.
 7. Run `npm run prepare:packs` and `npm run generate:seed`.
 8. Compile prepared Item JSON with the official Foundry VTT CLI into LevelDB packs for release builds. Until a pack is precompiled, the GM-only runtime bootstrap inserts missing bundled entries once and relocks the pack.
 
-Source JSON filenames are language-neutral and match the final stable definition-ID segment. User-facing localization is never encoded in filenames or stable IDs.
+Source JSON filenames and definition IDs are language-neutral. Every user-facing content field is stored as an `@i18n:` token and resolved by Affliction Forge 0.1.60+ from this module’s German or English locale. Stable IDs never change with the selected Foundry language.
 
 ## Runtime registration
 
@@ -110,3 +114,10 @@ The module listens for `pf2eAfflictionForgeReady`, ensures bundled reviewed cont
 ## License
 
 Software code is MIT-licensed. Rules data is governed by the ORC License. See `LICENSE` and `ORC_NOTICE.md`.
+
+
+## Localization
+
+Bundled definitions do not store German or English display text directly. Names, descriptions, stage text, check/reaction labels, source labels, and visible GM comments use `@i18n:` tokens. `lang/de.json` and `lang/en.json` provide the localized text. Affliction Forge 0.1.60+ resolves these tokens per client when listing, opening, or applying provider content.
+
+Version 0.1.14 migrates already-seeded deterministic compendium documents from the older German-only payload to tokenized definitions without changing document IDs.

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness",
-  "name": "Blindfieber",
-  "description": "Krankheit mit fortschreitender körperlicher Schwächung; in einer fortgeschrittenen Phase kann dauerhafte Blindheit zurückbleiben.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 7,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -99,8 +99,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Erkrankt, aber ohne weitere regeltechnische Auswirkungen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -120,8 +120,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Kraftlos 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -140,7 +140,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-2",
-        "name": "Blindfieber · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -161,8 +161,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Kraftlos 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -181,7 +181,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-3",
-        "name": "Blindfieber · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -202,8 +202,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Kraftlos 2 und dauerhaft Blind.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.4.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -223,7 +223,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-4",
-        "name": "Blindfieber · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -248,8 +248,8 @@
     {
       "id": "stage-5",
       "number": 5,
-      "name": "Phase 5",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.5.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.5.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -268,7 +268,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-5",
-        "name": "Blindfieber · Phase 5",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.5.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -288,8 +288,8 @@
     {
       "id": "stage-6",
       "number": 6,
-      "name": "Phase 6",
-      "description": "Tod.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.6.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.6.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -308,7 +308,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.blinding-sickness.stage-6",
-        "name": "Blindfieber · Phase 6",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Stages.6.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -331,10 +331,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 89,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Metadata.SourceSection",
     "sourceName": "Blinding Sickness",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -345,6 +345,6 @@
     "coverageNotes": [
       "Stage 4 uses Affliction Forge 0.1.51 component-specific persistence so only blindness survives permanently; enfeebled remains stage-bound."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.blinding-sickness.Metadata.SourceWorkLabel"
   }
 }

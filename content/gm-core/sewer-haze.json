@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.sewer-haze",
-  "name": "Kanalisationsdunst",
-  "description": "Ausgeprägte Krankheit mit zunehmend starker Benommenheit und Ausgelaugtheit.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 7,
@@ -28,7 +28,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -96,8 +96,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Benommen 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -106,7 +106,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.sewer-haze.stage-1",
-        "name": "Kanalisationsdunst · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -132,8 +132,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Ausgelaugt 2 und Benommen 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -142,7 +142,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.sewer-haze.stage-2",
-        "name": "Kanalisationsdunst · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -173,8 +173,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Ausgelaugt 3 und Benommen 3.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -183,7 +183,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.sewer-haze.stage-3",
-        "name": "Kanalisationsdunst · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -217,10 +217,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 89,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Metadata.SourceSection",
     "sourceName": "Sewer Haze",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -228,7 +228,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.sewer-haze.Metadata.SourceWorkLabel"
   },
   "restrictions": {
     "conditionLocks": [],

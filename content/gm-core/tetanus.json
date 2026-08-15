@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.tetanus",
-  "name": "Tetanus",
-  "description": "Krankheit mit zunehmender Muskelsteife und schweren Krämpfen.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 1,
@@ -32,7 +32,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -100,8 +100,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Unbeholfen 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.1.Description",
       "duration": {
         "value": 7,
         "unit": "days"
@@ -116,7 +116,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-1",
-        "name": "Tetanus · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -136,8 +136,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Unbeholfen 2; die betroffene Kreatur kann nicht sprechen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -154,7 +154,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-2",
-        "name": "Tetanus · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -174,8 +174,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Gelähmt; die Erkrankung äußert sich in schweren Muskelkrämpfen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -190,7 +190,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-3",
-        "name": "Tetanus · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -209,8 +209,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Tod.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.4.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -225,7 +225,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.tetanus.stage-4",
-        "name": "Tetanus · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -247,10 +247,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Metadata.SourceSection",
     "sourceName": "Tetanus",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -258,6 +258,6 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tetanus.Metadata.SourceWorkLabel"
   }
 }

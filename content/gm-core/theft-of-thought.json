@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.theft-of-thought",
-  "name": "Gedankendiebstahl",
-  "description": "Teilautomatisierter Fluch mit Gedächtnisverlust. GM-Hinweis: Beim ersten Fertigkeitswurf nach Eintritt des Fluchs, für den mindestens Geübt vorliegt, sinkt der Kompetenzgrad dieser verwendeten Fertigkeit um einen Rang, solange der Fluch anhält.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 3,
@@ -36,7 +36,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Willen",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Checks.1.Label",
       "kind": "save",
       "statistic": "will",
       "dcMode": "fixed",
@@ -78,8 +78,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "GM-Hinweis: Die erste passende Fertigkeit und deren Kompetenzgrad manuell verfolgen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -106,10 +106,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 86,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Metadata.SourceSection",
     "sourceName": "Theft of Thought",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -117,7 +117,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Die dynamische Wahl der ersten verwendeten Fertigkeit und eine temporäre Kompetenzgrad-Absenkung werden nicht automatisch verändert.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.theft-of-thought.Metadata.SourceWorkLabel"
   }
 }

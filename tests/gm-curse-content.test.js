@@ -5,12 +5,13 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { validateDefinition } from "../tools/lib/content-contract.mjs";
 import { BUNDLED_ITEM_SOURCES_BY_PACK } from "../scripts/bundled-content.js";
+import { readLocalizedJson } from "./helpers/localization.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const inventory = JSON.parse(fs.readFileSync(path.join(root, "inventory/gm-core-curses.json"), "utf8"));
 const files = fs.readdirSync(path.join(root, "content/gm-core")).filter((name) => name.endsWith(".json")).sort();
-const allGmDefinitions = files.map((name) => JSON.parse(fs.readFileSync(path.join(root, "content/gm-core", name), "utf8")));
+const allGmDefinitions = files.map((name) => readLocalizedJson(path.join(root, "content/gm-core", name), "de"));
 const curses = allGmDefinitions.filter((entry) => entry.afflictionType === "curse");
 const bySource = new Map(curses.map((entry) => [entry.metadata.sourceName, entry]));
 
@@ -112,7 +113,7 @@ test("all fourteen manual curse exceptions surface structured and visible GM gui
   }
 });
 
-test("runtime seed contains all sixteen curses, fourteen diseases, and nineteen GM poison variants", () => {
+test("runtime seed contains all sixteen curses, fourteen diseases, nineteen GM poison variants, and Dagger Venom", () => {
   const sources = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
   assert.ok(sources.every((source) => source._key === undefined));
   const curseSources = sources.filter((source) => source.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "curse");
@@ -120,6 +121,6 @@ test("runtime seed contains all sixteen curses, fourteen diseases, and nineteen 
   const poisonSources = sources.filter((source) => source.flags?.["pf2e-affliction-forge"]?.definition?.afflictionType === "poison");
   assert.equal(curseSources.length, 16);
   assert.equal(diseaseSources.length, 14);
-  assert.equal(poisonSources.length, 19);
-  assert.equal(sources.length, 49);
+  assert.equal(poisonSources.length, 20);
+  assert.equal(sources.length, 50);
 });

@@ -6,6 +6,8 @@ import { SUPPORTED_PACKS, buildItemSource, validateDefinition } from "./lib/cont
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const output = path.join(root, "scripts", "bundled-content.js");
+const english = JSON.parse(await fs.readFile(path.join(root, "lang", "en.json"), "utf8"));
+const localize = (key) => english[key] ?? key;
 const byPack = {};
 
 for (const pack of SUPPORTED_PACKS) {
@@ -20,7 +22,7 @@ for (const pack of SUPPORTED_PACKS) {
     const definition = JSON.parse(await fs.readFile(sourcePath, "utf8"));
     const issues = validateDefinition(definition, { pack });
     if (issues.length) throw new Error(`${filename} is not publishable:\n${issues.map((issue) => `- ${issue}`).join("\n")}`);
-    byPack[pack].push(buildItemSource(definition));
+    byPack[pack].push(buildItemSource(definition, { localize }));
   }
 }
 

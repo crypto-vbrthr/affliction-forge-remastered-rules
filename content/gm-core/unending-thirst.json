@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.unending-thirst",
-  "name": "Unendlicher Durst",
-  "description": "Teilautomatisierter Durstfluch. Flüssigkeiten verschaffen keinen Nutzen; die Forge fordert täglich den erneuten Rettungswurf an. GM-Hinweis: Durst- und Dehydrierungsfolgen werden über die normalen Überlebensregeln manuell geführt.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 15,
@@ -35,7 +35,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -100,8 +100,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "Täglicher Rettungswurf wird automatisiert. GM-Hinweis: Durstfolgen manuell anwenden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -128,10 +128,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 87,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Metadata.SourceSection",
     "sourceName": "Unending Thirst",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -139,7 +139,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Der tägliche Wiederholungswurf ist automatisiert; die Durst-/Dehydrierungsregeln selbst werden nicht von Affliction Forge verwaltet.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.unending-thirst.Metadata.SourceWorkLabel"
   }
 }

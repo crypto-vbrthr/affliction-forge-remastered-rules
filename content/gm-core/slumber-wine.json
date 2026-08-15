@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.slumber-wine",
-  "name": "Schlummerwein",
-  "description": "Eingenommenes Gift der Stufe 12 mit Zähigkeitswurf SG 32. GM-Hinweis:  Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 12,
@@ -35,7 +35,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -106,8 +106,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -127,7 +127,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.slumber-wine.stage-1",
-        "name": "Schlummerwein · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -146,8 +146,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.2.Description",
       "duration": {
         "value": 2,
         "unit": "days"
@@ -167,7 +167,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.slumber-wine.stage-2",
-        "name": "Schlummerwein · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -186,8 +186,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.3.Description",
       "duration": {
         "value": 3,
         "unit": "days"
@@ -207,7 +207,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.slumber-wine.stage-3",
-        "name": "Schlummerwein · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -229,9 +229,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 250,
-    "sourceSection": "Alchemistische Gifte",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -243,8 +243,8 @@
       "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
       "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
     ],
-    "manualComment": "GM-Hinweis: Während der giftbedingten Bewusstlosigkeit kann die Kreatur nicht aufwachen und muss nicht essen oder trinken. Der täuschend tote Eindruck und der Heilkunde-SG zur Erkennung werden manuell behandelt.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung",
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slumber-wine.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.slumber-wine",
     "sourceVariant": true
   }

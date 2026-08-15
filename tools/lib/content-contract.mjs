@@ -340,14 +340,14 @@ export function validateDefinition(definition, { pack }) {
     if (metadata.license !== "ORC") errors.push("metadata.license must be ORC.");
     if (!SOURCE_WORK_IDS.has(metadata.sourceWorkId)) errors.push(`Unsupported metadata.sourceWorkId: ${metadata.sourceWorkId}`);
     if (metadata.sourceWorkId !== pack) errors.push(`metadata.sourceWorkId must match pack ${pack}.`);
-    if (metadata.contentLanguage !== "de") errors.push("metadata.contentLanguage must be de for the first library release.");
-    if (metadata.translation !== "independent-from-english-orc-source") {
-      errors.push("metadata.translation must declare independent-from-english-orc-source.");
+    if (metadata.contentLanguage !== "i18n") errors.push("metadata.contentLanguage must be i18n for localized library content.");
+    if (metadata.translation !== "localized-independent-mechanics") {
+      errors.push("metadata.translation must declare localized-independent-mechanics.");
     }
     if (!AUTOMATION_STATUSES.has(metadata.automationStatus)) errors.push(`Unsupported metadata.automationStatus: ${metadata.automationStatus}`);
     if (metadata.automationStatus === "manual") {
       if (!nonEmptyString(metadata.manualComment)) errors.push("metadata.manualComment is required for manual-exception entries.");
-      if (!/gm-hinweis/i.test(String(definition.description ?? ""))) errors.push("Manual-exception entries must surface a visible GM-Hinweis in description.");
+      if (!String(definition.description ?? "").startsWith("@i18n:") && !/(gm-hinweis|gm note)/i.test(String(definition.description ?? ""))) errors.push("Manual-exception entries must surface localized visible GM guidance.");
     }
     if (!isObject(metadata.licenseReview)) errors.push("metadata.licenseReview is required.");
     else {
@@ -367,15 +367,21 @@ export function validateDefinition(definition, { pack }) {
   return errors;
 }
 
-export function buildItemSource(definition) {
+function resolveDisplayToken(value, localize = null) {
+  if (typeof value !== "string" || !value.startsWith("@i18n:")) return value;
+  const key = value.slice(6);
+  return typeof localize === "function" ? (localize(key) ?? key) : key;
+}
+
+export function buildItemSource(definition, { localize = null } = {}) {
   const id = deterministicDocumentId(definition.id);
   return {
     _id: id,
-    name: definition.name,
+    name: resolveDisplayToken(definition.name, localize),
     type: "effect",
     img: definition.img,
     system: {
-      description: { value: definition.description ?? "", gm: "" },
+      description: { value: resolveDisplayToken(definition.description ?? "", localize), gm: "" },
       rules: [],
       slug: null,
       traits: {
@@ -395,11 +401,12 @@ export function buildItemSource(definition) {
         documentKind: "affliction-template",
         schemaVersion: 2,
         definitionId: definition.id,
-        definitionVersion: 1,
+        definitionVersion: 2,
         definition,
         originModule: MODULE_ID,
         originFeature: "remastered-rules-library"
-      }
+      },
+      [MODULE_ID]: { contentRevision: 2 }
     },
     effects: [],
     folder: null,
@@ -408,8 +415,8 @@ export function buildItemSource(definition) {
   };
 }
 
-export function buildPackSource(definition) {
-  const item = buildItemSource(definition);
+export function buildPackSource(definition, options = {}) {
+  const item = buildItemSource(definition, options);
   return {
     _key: `!items!${item._id}`,
     ...item

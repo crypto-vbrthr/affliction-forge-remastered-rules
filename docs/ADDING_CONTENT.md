@@ -9,7 +9,7 @@ content/gm-core/nightmare-fever.json
 affliction-forge-remastered-rules.gm-core.nightmare-fever
 ```
 
-The visible `name` may be localized; filenames and stable IDs must not be localized.
+All user-facing fields must be `@i18n:` tokens with matching German and English locale keys; filenames and stable IDs must never be localized.
 
 Required metadata shape:
 

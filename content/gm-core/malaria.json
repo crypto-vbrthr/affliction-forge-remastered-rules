@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.malaria",
-  "name": "Malaria",
-  "description": "Krankheit mit wiederkehrendem Fieber; der durch sie verursachte Zustand Kränkelnd kann während des Leidens nicht reduziert werden.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 2,
@@ -38,7 +38,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -106,8 +106,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Kränkelnd 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -122,7 +122,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-1",
-        "name": "Malaria · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -142,8 +142,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Kränkelnd 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -158,7 +158,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-2",
-        "name": "Malaria · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -178,8 +178,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Kränkelnd 2. Nach Erreichen dieser Phase kann die Krankheit später erneut auftreten; dies wird durch erneutes Anwenden derselben Definition gehandhabt.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -194,7 +194,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-3",
-        "name": "Malaria · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -214,8 +214,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.4.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -230,7 +230,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-4",
-        "name": "Malaria · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -249,8 +249,8 @@
     {
       "id": "stage-5",
       "number": 5,
-      "name": "Phase 5",
-      "description": "Tod.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.5.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.5.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -265,7 +265,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.malaria.stage-5",
-        "name": "Malaria · Phase 5",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Stages.5.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -287,10 +287,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Metadata.SourceSection",
     "sourceName": "Malaria",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -301,6 +301,6 @@
     "automationNotes": [
       "A later recurrence is represented by manually reapplying the same Affliction definition; no dormant controller is retained."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.malaria.Metadata.SourceWorkLabel"
   }
 }

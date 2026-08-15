@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder",
-  "name": "Knollenblätterpilzpulver",
-  "description": "Eingenommenes Gift der Stufe 13 mit Zähigkeitswurf SG 33.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 13,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -105,8 +105,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "7W8 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "minutes"
@@ -121,7 +121,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-1",
-        "name": "Knollenblätterpilzpulver · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -141,8 +141,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "9W6 Giftschaden und Kränkelnd 2.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "minutes"
@@ -157,7 +157,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-2",
-        "name": "Knollenblätterpilzpulver · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -182,8 +182,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "8W10 Giftschaden und Kränkelnd 3.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "minutes"
@@ -198,7 +198,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.deathcap-powder.stage-3",
-        "name": "Knollenblätterpilzpulver · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -226,9 +226,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "player-core-2",
     "sourcePage": 292,
-    "sourceSection": "Alchemical Poisons",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -239,7 +239,7 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.deathcap-powder.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.deathcap-powder",
     "sourceVariant": true
   }

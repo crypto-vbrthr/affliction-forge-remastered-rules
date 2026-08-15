@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.slayers-haunt",
-  "name": "Spuk der Erschlagenen",
-  "description": "Teilautomatisierter Illusionsfluch. GM-Hinweis: Vor Identifikation, Wissen abrufen oder anderer Interaktion, die die wahre Gestalt einer Kreatur voraussetzt, ist ein Willenswurf SG 19 nötig; bei kritischem Fehlschlag zusätzlich Verängstigt 1.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 4,
@@ -37,7 +37,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Willen",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Checks.1.Label",
       "kind": "save",
       "statistic": "will",
       "dcMode": "fixed",
@@ -79,8 +79,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "GM-Hinweis: Wahrnehmungsabhängige Zusatzwürfe und Verängstigt 1 bei kritischem Fehlschlag manuell abwickeln.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -107,10 +107,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 86,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Metadata.SourceSection",
     "sourceName": "Slayer's Haunt",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -118,7 +118,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Die Forge überschreibt keine Kreaturenidentität und erzwingt keine Vorabwürfe vor Wissens- oder Interaktionshandlungen.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.slayers-haunt.Metadata.SourceWorkLabel"
   }
 }

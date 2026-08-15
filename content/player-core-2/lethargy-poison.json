@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
-  "name": "Lethargiegift",
-  "description": "Verwundungsgift der Stufe 2 mit Zähigkeitswurf SG 18. GM-Hinweis:  Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 2,
@@ -36,7 +36,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -104,8 +104,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Verlangsamt 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -120,7 +120,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-1",
-        "name": "Lethargiegift · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -140,8 +140,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Verlangsamt 1.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "minutes"
@@ -156,7 +156,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-2",
-        "name": "Lethargiegift · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -176,8 +176,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -197,7 +197,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-3",
-        "name": "Lethargiegift · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -216,8 +216,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Description",
       "duration": {
         "value": 4,
         "unit": "hours"
@@ -237,7 +237,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.lethargy-poison.stage-4",
-        "name": "Lethargiegift · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -259,9 +259,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "player-core-2",
     "sourcePage": 293,
-    "sourceSection": "Alchemical Poisons",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -272,8 +272,8 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen.",
-    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.lethargy-poison",
     "sourceVariant": true
   }

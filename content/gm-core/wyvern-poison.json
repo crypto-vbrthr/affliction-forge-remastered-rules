@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison",
-  "name": "Wyverngift",
-  "description": "Verwundungsgift der Stufe 8 mit Zähigkeitswurf SG 26.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 8,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -102,8 +102,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "3W6 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -118,7 +118,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison.stage-1",
-        "name": "Wyverngift · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -138,8 +138,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "3W8 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -154,7 +154,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison.stage-2",
-        "name": "Wyverngift · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -174,8 +174,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "3W10 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -190,7 +190,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.wyvern-poison.stage-3",
-        "name": "Wyverngift · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -213,9 +213,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 250,
-    "sourceSection": "Alchemistische Gifte",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -227,7 +227,7 @@
       "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
       "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.wyvern-poison.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.wyvern-poison",
     "sourceVariant": true
   }

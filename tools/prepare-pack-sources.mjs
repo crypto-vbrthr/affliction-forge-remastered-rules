@@ -6,6 +6,8 @@ import { SUPPORTED_PACKS, buildPackSource, validateDefinition } from "./lib/cont
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const outRoot = path.join(root, ".build", "pack-sources");
+const english = JSON.parse(await fs.readFile(path.join(root, "lang", "en.json"), "utf8"));
+const localize = (key) => english[key] ?? key;
 
 function safeFilename(definition) {
   const slug = String(definition.id).split(".").pop().replace(/[^a-z0-9_-]+/gi, "-").replace(/^-+|-+$/g, "");
@@ -30,7 +32,7 @@ for (const pack of SUPPORTED_PACKS) {
     if (issues.length) {
       throw new Error(`${path.relative(root, sourcePath)} is not publishable:\n${issues.map((issue) => `- ${issue}`).join("\n")}`);
     }
-    const item = buildPackSource(definition);
+    const item = buildPackSource(definition, { localize });
     await fs.writeFile(path.join(outDir, safeFilename(definition)), `${JSON.stringify(item, null, 2)}\n`, "utf8");
     total += 1;
   }

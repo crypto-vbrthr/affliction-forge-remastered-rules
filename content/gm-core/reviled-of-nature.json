@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.reviled-of-nature",
-  "name": "Fluch des Verschmähten",
-  "description": "Teilautomatisierter Naturfluch. GM-Hinweis: Jedes Tier, das den Betroffenen wahrnimmt, legt einen Willenswurf SG 38 ab; bei Fehlschlag greift es ihn an und kämpft bis zum Tod.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 18,
@@ -37,7 +37,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Willen",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Checks.1.Label",
       "kind": "save",
       "statistic": "will",
       "dcMode": "fixed",
@@ -79,8 +79,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "GM-Hinweis: Wahrnehmung durch Tiere, deren Rettungswürfe und Feindseligkeit manuell abwickeln.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -107,10 +107,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 87,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Metadata.SourceSection",
     "sourceName": "Reviled of Nature",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -118,7 +118,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Affliction Forge erzwingt keine Rettungswürfe oder KI-/Verhaltensänderungen bei beliebigen Dritt-Aktoren.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.reviled-of-nature.Metadata.SourceWorkLabel"
   }
 }

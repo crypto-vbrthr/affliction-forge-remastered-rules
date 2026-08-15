@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil",
-  "name": "Geisttrübungsöl",
-  "description": "Verwundungsgift der Stufe 3 mit Zähigkeitswurf SG 19. Die Bezeichnung ist bewusst neutral gehalten, damit kein möglicherweise setting-spezifischer Eigenname in der Bibliothek ausgeliefert wird.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 3,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -102,8 +102,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "1W8 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -118,7 +118,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-1",
-        "name": "Geisttrübungsöl · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -138,8 +138,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "1W10 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -154,7 +154,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-2",
-        "name": "Geisttrübungsöl · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -174,8 +174,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "2W8 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -190,7 +190,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.mindfog-oil.stage-3",
-        "name": "Geisttrübungsöl · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -213,9 +213,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "player-core-2",
     "sourcePage": 291,
-    "sourceSection": "Alchemical Poisons",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -227,6 +227,6 @@
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
       "The user-facing name is deliberately neutralized as a Reserved-Material precaution; mechanics remain unchanged."
     ],
-    "sourceWorkLabel": "Kernregeln: Spieler 2"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.mindfog-oil.Metadata.SourceWorkLabel"
   }
 }

@@ -22,7 +22,7 @@ async function ensureSeeded() {
   seedPromise ??= seedBundledContent()
     .then((result) => {
       seeded = true;
-      if (result?.created) log("info", `Seeded ${result.created} bundled Affliction template(s) into module compendia.`, result);
+      if (result?.created || result?.updated) log("info", `Synchronized bundled Affliction templates (created ${result.created ?? 0}, updated ${result.updated ?? 0}).`, result);
       return result;
     })
     .catch((error) => {

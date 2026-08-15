@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.tuberculosis",
-  "name": "Tuberkulose",
-  "description": "Atemwegserkrankung mit schweren Hustenanfällen. In fortgeschrittenen Phasen können Konzentrationshandlungen durch einen Einfachen Wurf verhindert werden.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 1,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -102,8 +102,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Überträger ohne weitere regeltechnische Auswirkungen.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.1.Description",
       "duration": {
         "value": 7,
         "unit": "days"
@@ -123,8 +123,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Vor dem Wirken eines Zaubers oder Aktivieren eines Gegenstands mit Konzentration ist ein Einfacher Wurf gegen SG 5 nötig; bei Fehlschlag wird die Handlung verhindert.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.2.Description",
       "duration": {
         "value": 7,
         "unit": "days"
@@ -141,7 +141,7 @@
       "preActionGates": [
         {
           "id": "cough-concentrate",
-          "label": "Husten: Konzentration",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.2.PreActionGates.1.Label",
           "trigger": {
             "actionKinds": [
               "spell-cast",
@@ -163,8 +163,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Erschöpft; der Zustand kann in dieser Phase nicht entfernt werden. Vor Konzentrationshandlungen ist ein Einfacher Wurf gegen SG 15 nötig.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.Description",
       "duration": {
         "value": 7,
         "unit": "days"
@@ -185,7 +185,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-3",
-        "name": "Tuberkulose · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -203,7 +203,7 @@
       "preActionGates": [
         {
           "id": "cough-concentrate",
-          "label": "Husten: Konzentration",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.3.PreActionGates.1.Label",
           "trigger": {
             "actionKinds": [
               "spell-cast",
@@ -225,8 +225,8 @@
     {
       "id": "stage-4",
       "number": 4,
-      "name": "Phase 4",
-      "description": "Bewusstlos.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.4.Description",
       "duration": {
         "value": 7,
         "unit": "days"
@@ -242,7 +242,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-4",
-        "name": "Tuberkulose · Phase 4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -263,8 +263,8 @@
     {
       "id": "stage-5",
       "number": 5,
-      "name": "Phase 5",
-      "description": "Tod.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.5.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.5.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -280,7 +280,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.tuberculosis.stage-5",
-        "name": "Tuberkulose · Phase 5",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Stages.5.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -304,10 +304,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Metadata.SourceSection",
     "sourceName": "Tuberculosis",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -320,6 +320,6 @@
       "Stage 2 and 3 use Affliction Forge 0.1.55 pre-action flat-check gates for concentrate spell casts and item activations.",
       "Stage 3 locks the fatigued condition while the stage remains active."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.tuberculosis.Metadata.SourceWorkLabel"
   }
 }

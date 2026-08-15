@@ -5,12 +5,13 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 import { validateDefinition } from "../tools/lib/content-contract.mjs";
 import { BUNDLED_ITEM_SOURCES_BY_PACK } from "../scripts/bundled-content.js";
+import { readLocalizedJson } from "./helpers/localization.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const inventory = JSON.parse(fs.readFileSync(path.join(root, "inventory/gm-core-diseases.json"), "utf8"));
 const files = fs.readdirSync(path.join(root, "content/gm-core")).filter((name) => name.endsWith(".json")).sort();
-const allGmDefinitions = files.map((name) => JSON.parse(fs.readFileSync(path.join(root, "content/gm-core", name), "utf8")));
+const allGmDefinitions = files.map((name) => readLocalizedJson(path.join(root, "content/gm-core", name), "de"));
 const diseases = allGmDefinitions.filter((entry) => entry.afflictionType === "disease");
 const bySource = new Map(diseases.map((entry) => [entry.metadata.sourceName, entry]));
 

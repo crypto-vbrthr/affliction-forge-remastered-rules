@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.player-core-2.leadfoot",
-  "name": "Bleibein",
-  "description": "Eingenommenes Gift der Stufe 4 mit Zähigkeitswurf SG 20.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 4,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -102,8 +102,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "1W10 Giftschaden und Zustandsmalus 1.5 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -118,7 +118,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-1",
-        "name": "Bleibein · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -137,7 +137,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Bleibein · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.1.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -149,8 +149,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "2W6 Giftschaden und Zustandsmalus 3 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -165,7 +165,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-2",
-        "name": "Bleibein · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -184,7 +184,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Bleibein · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.2.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -196,8 +196,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "2W6 Giftschaden und Zustandsmalus 6 m auf alle Bewegungsraten.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -212,7 +212,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.leadfoot.stage-3",
-        "name": "Bleibein · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -231,7 +231,7 @@
       "numericModifiers": [
         {
           "id": "speed-penalty",
-          "label": "Bleibein · Bewegungsrate",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Stages.3.NumericModifiers.1.Label",
           "selectors": [
             "all-speeds"
           ],
@@ -246,9 +246,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "player-core-2",
     "sourcePage": 291,
-    "sourceSection": "Alchemical Poisons",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -259,6 +259,6 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "sourceWorkLabel": "Kernregeln: Spieler 2"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.leadfoot.Metadata.SourceWorkLabel"
   }
 }

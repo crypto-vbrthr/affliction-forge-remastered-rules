@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.dagger-venom",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Description",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 5,
+  "rarity": "common",
+  "traits": [
+    "poison"
+  ],
+  "themes": [
+    "poison",
+    "weapon-activation"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Checks.1.Label",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 21,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 1
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": {
+    "value": 4,
+    "unit": "rounds"
+  },
+  "defaultStageCheck": null,
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Stages.1.Description",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.dagger-venom.stage-1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Stages.1.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "1d8",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 243,
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Metadata.SourceSection",
+    "sourceName": "Dagger Venom",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Die Quelle nennt für die einzige Phase kein Intervall. Die Vorlage führt daher keine wiederholten Phasenrettungswürfe aus und endet über die maximale Wirkungsdauer von 4 Runden.",
+      "Das Gift wird durch die Aktivierung eines Gegenstands nach verursachtem Schaden verabreicht und ist kein standardmäßiges Verwundungsgift zum Auftragen auf Waffen."
+    ],
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.dagger-venom.Metadata.SourceWorkLabel"
+  }
+}

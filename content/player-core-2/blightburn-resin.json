@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin",
-  "name": "Faulbrandharz",
-  "description": "Kontaktgift der Stufe 11 mit Zähigkeitswurf SG 30.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
   "level": 11,
@@ -34,7 +34,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -105,8 +105,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "6W6 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -121,7 +121,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-1",
-        "name": "Faulbrandharz · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -141,8 +141,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "7W6 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -157,7 +157,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-2",
-        "name": "Faulbrandharz · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -177,8 +177,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "9W6 Giftschaden.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
@@ -193,7 +193,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.player-core-2.blightburn-resin.stage-3",
-        "name": "Faulbrandharz · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -216,9 +216,9 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "player-core-2",
     "sourcePage": 292,
-    "sourceSection": "Alchemical Poisons",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Metadata.SourceSection",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -229,7 +229,7 @@
     "automationNotes": [
       "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
     ],
-    "sourceWorkLabel": "Kernregeln: Spieler 2",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.blightburn-resin.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.blightburn-resin",
     "sourceVariant": true
   }

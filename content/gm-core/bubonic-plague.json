@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague",
-  "name": "Beulenpest",
-  "description": "Schwere Krankheit mit zunehmender körperlicher Schwächung. Erschöpfung kann während des Leidens nicht entfernt werden; in der letzten Phase treten in zufälligen Abständen wiederkehrende Blutungen auf.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "disease",
   "level": 3,
@@ -38,7 +38,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -106,8 +106,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Phase 1",
-      "description": "Erschöpft.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -122,7 +122,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-1",
-        "name": "Beulenpest · Phase 1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -141,8 +141,8 @@
     {
       "id": "stage-2",
       "number": 2,
-      "name": "Phase 2",
-      "description": "Kraftlos 2 und Erschöpft.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.2.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -157,7 +157,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-2",
-        "name": "Beulenpest · Phase 2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -181,8 +181,8 @@
     {
       "id": "stage-3",
       "number": 3,
-      "name": "Phase 3",
-      "description": "Kraftlos 3 und Erschöpft; zusätzlich tritt alle 1W20 Minuten 1W6 anhaltender Blutungsschaden auf.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "days"
@@ -197,7 +197,7 @@
       "effect": {
         "schemaVersion": 2,
         "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3",
-        "name": "Beulenpest · Phase 3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -220,7 +220,7 @@
       "periodicEffects": [
         {
           "id": "recurring-bleed",
-          "label": "Wiederkehrende Blutung",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.PeriodicEffects.1.Label",
           "interval": {
             "formula": "1d20",
             "unit": "minutes"
@@ -228,7 +228,7 @@
           "effect": {
             "schemaVersion": 2,
             "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3.recurring-bleed.periodic-effect",
-            "name": "Beulenpest · Wiederkehrende Blutung",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Stages.3.PeriodicEffects.1.Effect.Name",
             "duration": {
               "value": -1,
               "unit": "unlimited",
@@ -254,10 +254,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 88,
-    "sourceSection": "Diseases",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Metadata.SourceSection",
     "sourceName": "Bubonic Plague",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "full",
     "licenseReview": {
@@ -269,6 +269,6 @@
       "Stage 3 uses Affliction Forge periodic stage effects. The 1d20-minute interval is rerolled after every execution.",
       "The recurring damage is applied as 1d6 persistent bleed damage through the Critical Forge effect contract."
     ],
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.bubonic-plague.Metadata.SourceWorkLabel"
   }
 }

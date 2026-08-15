@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "id": "affliction-forge-remastered-rules.gm-core.thiefs-retribution",
-  "name": "Vergeltung des Diebstahls",
-  "description": "Teilautomatisierter Diebstahlsfluch. GM-Hinweis: Bei jedem Diebstahl verschwindet ein wertvollerer Besitz; fehlt ein solcher Gegenstand, geht stattdessen eine Gliedmaße verloren und der Betroffene erleidet 10W6 Hiebschaden. Schaden und Gliedmaßenverlust bleiben bis zur Rückgabe des gestohlenen Gegenstands bestehen.",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Description",
   "img": "icons/svg/terror.svg",
   "afflictionType": "curse",
   "level": 19,
@@ -36,7 +36,7 @@
   "checks": [
     {
       "id": "primary",
-      "label": "Zähigkeit",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
@@ -78,8 +78,8 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "Wirkung",
-      "description": "GM-Hinweis: Diebstahl, Auswahl/Entfernung des Besitzes, Gliedmaßenverlust und 10W6 Hiebschaden manuell abwickeln.",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Stages.1.Description",
       "duration": {
         "value": -1,
         "unit": "unlimited"
@@ -106,10 +106,10 @@
     "originFeature": "remastered-rules-library",
     "sourceWorkId": "gm-core",
     "sourcePage": 87,
-    "sourceSection": "Curses",
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Metadata.SourceSection",
     "sourceName": "Thief's Retribution",
-    "contentLanguage": "de",
-    "translation": "independent-from-english-orc-source",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
     "license": "ORC",
     "automationStatus": "manual",
     "licenseReview": {
@@ -117,7 +117,7 @@
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
-    "manualComment": "GM-Hinweis: Inventarwert, narrativer Wert, Diebstahlereignisse und Körperteile sind keine generischen Affliction-Forge-Ressourcen.",
-    "sourceWorkLabel": "Kernregeln: Spielleitung"
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Metadata.ManualComment",
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.thiefs-retribution.Metadata.SourceWorkLabel"
   }
 }
