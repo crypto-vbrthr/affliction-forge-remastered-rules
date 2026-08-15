@@ -1,24 +1,36 @@
 # Changelog
 
+## 0.1.6 - 2026-08-15
+
+### Added
+
+- **Sumpffäule** (`Bog Rot` mechanics) with phase-dependent PF2e status penalties to all Speeds through Affliction Forge numeric modifiers.
+- **Beulenpest** (`Bubonic Plague` mechanics) with a Stage 3 formula-based periodic effect that rerolls `1d20` minutes and applies `1d6` persistent bleed damage.
+- Add-on content-contract validation for Affliction Forge 0.1.52 numeric modifiers and periodic stage effects.
+- Explicit `manual` coverage classification and GM comments for Bonechill, Brain Worms, and Crimson Ooze; these three intentionally do not drive new generic environment, body-part, or confusion-behavior subsystems.
+
+### Changed
+
+- GM disease coverage rises from **7/14 FULL** to **9/14 FULL**. Two diseases remain partial because reusable generic hooks are still worthwhile; three are intentional manual exceptions.
+- Tuberculosis carrier status is no longer treated as an automation blocker; only its pre-action concentrate check remains.
+- Sumpffäule's alternate cure by amputation is recorded as a manual cure note rather than an engine blocker.
+- Minimum Affliction Forge dependency raised to **0.1.53**.
+- Module/package/runtime constants and README are synchronized at version **0.1.6**.
+
+### Validation
+
+- Runtime seeding includes exactly nine deterministic GM disease templates and upgrade tests cover existing 0.1.1, 0.1.2, 0.1.4, and 0.1.5 content.
+
 ## 0.1.5 - 2026-08-15
 
 ### Added
 
-- **Blindfieber** (`Blinding Sickness` mechanics) as the seventh fully reviewed GM disease.
-- Stage 4 uses Affliction Forge 0.1.51 component-specific persistence: `Kraftlos 2` remains stage-bound while `Blind` is detached as a permanent residual consequence.
-- Content-contract validation for the additive 0.1.51 `effectComponentPersistence` and `unhealableDamageTypes` fields.
+- **Blindfieber** (`Blinding Sickness` mechanics), using Affliction Forge 0.1.51 component-specific persistence so only Blind remains permanent in the relevant phase while simultaneous Enfeebled remains stage-bound.
 
-### Coverage review
+### Changed
 
-- GM disease coverage rises to **7/14 FULL**.
-- `Bonechill` no longer needs a cold-damage healing-lock feature; 0.1.51 covers that rule. It remains PARTIAL because the increased severity of cold-temperature effects is not yet represented generically.
-- `Scarlet Leprosy`, `Tuberculosis`, `Bubonic Plague`, `Brain Worms`, `Bog Rot`, and `Crimson Ooze` remain outside the compiled pack for their listed unresolved runtime rules.
+- GM disease coverage increased to **7/14 FULL**.
 - Minimum Affliction Forge dependency raised to **0.1.51**.
-
-### Validation
-
-- Runtime seed and prepared pack sources regenerated for seven GM disease definitions.
-- **40/40 module tests green**; content validation **7/7 green**; all seven definitions also normalize and validate cleanly against Affliction Forge 0.1.51.
 
 ## 0.1.4 - 2026-08-15
 

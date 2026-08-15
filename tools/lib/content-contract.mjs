@@ -16,6 +16,7 @@ export const SAVE_STATISTICS = new Set(["fortitude", "reflex", "will"]);
 export const DURATION_UNITS = new Set(["rounds", "minutes", "hours", "days", "unlimited"]);
 export const HEALING_RESTRICTION_MODES = new Set(["none", "all", "affliction-damage"]);
 export const STAGE_EFFECT_PERSISTENCE_MODES = new Set(["stage", "affliction", "permanent"]);
+export const NUMERIC_MODIFIER_TYPES = new Set(["untyped", "status", "circumstance", "item"]);
 export const AFFLICTION_CAPABILITIES = new Set(["speak"]);
 export const EVENT_REACTION_EVENTS = new Set(["damage-taken"]);
 export const REACTION_OUTCOMES = new Set(["criticalSuccess", "success", "failure", "criticalFailure"]);
@@ -114,7 +115,7 @@ export function deterministicDocumentId(definitionId) {
 export function validateDefinition(definition, { pack }) {
   const errors = [];
   if (!isObject(definition)) return ["Definition must be an object."];
-  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.51.");
+  if (definition.schemaVersion !== 2) errors.push("schemaVersion must be 2 for Affliction Forge 0.1.53.");
   if (!nonEmptyString(definition.id)) errors.push("id is required.");
   if (nonEmptyString(definition.id) && !definition.id.startsWith(`${MODULE_ID}.`)) {
     errors.push(`id must use stable ${MODULE_ID}. prefix.`);
@@ -180,6 +181,52 @@ export function validateDefinition(definition, { pack }) {
           if (stage.effectComponentPersistence.length > componentCount) errors.push(`${path}.effectComponentPersistence has more entries than effect components.`);
           for (const [componentIndex, mode] of stage.effectComponentPersistence.entries()) {
             if (mode != null && !STAGE_EFFECT_PERSISTENCE_MODES.has(mode)) errors.push(`${path}.effectComponentPersistence[${componentIndex}] is unsupported: ${mode}`);
+          }
+        }
+      }
+      if (stage.numericModifiers != null) {
+        if (!Array.isArray(stage.numericModifiers)) errors.push(`${path}.numericModifiers must be an array.`);
+        else {
+          const modifierIds = new Set();
+          for (const [modifierIndex, modifier] of stage.numericModifiers.entries()) {
+            const modifierPath = `${path}.numericModifiers[${modifierIndex}]`;
+            if (!isObject(modifier)) { errors.push(`${modifierPath} must be an object.`); continue; }
+            if (!nonEmptyString(modifier.id)) errors.push(`${modifierPath}.id is required.`);
+            else if (modifierIds.has(modifier.id)) errors.push(`${modifierPath}.id is duplicated: ${modifier.id}`);
+            else modifierIds.add(modifier.id);
+            if (!Array.isArray(modifier.selectors) || modifier.selectors.length === 0) errors.push(`${modifierPath}.selectors must contain at least one PF2e selector.`);
+            else if (modifier.selectors.some((entry) => !nonEmptyString(entry))) errors.push(`${modifierPath}.selectors must contain only non-empty strings.`);
+            if (!NUMERIC_MODIFIER_TYPES.has(modifier.type)) errors.push(`${modifierPath}.type is unsupported: ${modifier.type}`);
+            if (!Number.isFinite(modifier.value) || modifier.value === 0) errors.push(`${modifierPath}.value must be a non-zero finite number.`);
+          }
+        }
+      }
+      if (stage.periodicEffects != null) {
+        if (!Array.isArray(stage.periodicEffects)) errors.push(`${path}.periodicEffects must be an array.`);
+        else {
+          const periodicIds = new Set();
+          for (const [periodicIndex, periodic] of stage.periodicEffects.entries()) {
+            const periodicPath = `${path}.periodicEffects[${periodicIndex}]`;
+            if (!isObject(periodic)) { errors.push(`${periodicPath} must be an object.`); continue; }
+            if (!nonEmptyString(periodic.id)) errors.push(`${periodicPath}.id is required.`);
+            else if (periodicIds.has(periodic.id)) errors.push(`${periodicPath}.id is duplicated: ${periodic.id}`);
+            else periodicIds.add(periodic.id);
+            const interval = periodic.interval;
+            if (!isObject(interval)) errors.push(`${periodicPath}.interval must be an object.`);
+            else {
+              if (!DURATION_UNITS.has(interval.unit) || interval.unit === "unlimited") errors.push(`${periodicPath}.interval.unit is unsupported: ${interval.unit}`);
+              const hasFormula = nonEmptyString(interval.formula);
+              const hasValue = Number.isFinite(interval.value) && interval.value > 0;
+              if (!hasFormula && !hasValue) errors.push(`${periodicPath}.interval requires a positive value or a dice formula.`);
+            }
+            if (!isObject(periodic.effect)) errors.push(`${periodicPath}.effect must be an effect object.`);
+            else {
+              if (periodic.effect.schemaVersion !== 2) errors.push(`${periodicPath}.effect.schemaVersion must be 2.`);
+              if (!nonEmptyString(periodic.effect.id)) errors.push(`${periodicPath}.effect.id is required.`);
+              if (!nonEmptyString(periodic.effect.name)) errors.push(`${periodicPath}.effect.name is required.`);
+              validateDuration(errors, periodic.effect.duration, `${periodicPath}.effect.duration`, { nullable: false });
+              if (!Array.isArray(periodic.effect.components)) errors.push(`${periodicPath}.effect.components must be an array.`);
+            }
           }
         }
       }

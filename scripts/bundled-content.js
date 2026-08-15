@@ -411,6 +411,650 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     },
     {
+      "_id": "12jCdSYC5489AmQ1",
+      "name": "Sumpffäule",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Feuchtigkeitsbedingte Krankheit mit zunehmender Ungeschicklichkeit und verlangsamter Fortbewegung. Eine Amputation der betroffenen Gliedmaßen kann die Krankheit alternativ beenden; diese Heilungsmöglichkeit wird manuell abgewickelt.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "disease"
+          ],
+          "otherTags": [
+            "disease",
+            "mobility",
+            "wet"
+          ]
+        },
+        "level": {
+          "value": 0
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.bog-rot",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.bog-rot",
+            "name": "Sumpffäule",
+            "description": "Feuchtigkeitsbedingte Krankheit mit zunehmender Ungeschicklichkeit und verlangsamter Fortbewegung. Eine Amputation der betroffenen Gliedmaßen kann die Krankheit alternativ beenden; diese Heilungsmöglichkeit wird manuell abgewickelt.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "disease",
+            "level": 0,
+            "rarity": "common",
+            "traits": [
+              "disease"
+            ],
+            "themes": [
+              "disease",
+              "mobility",
+              "wet"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 13,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Unbeholfen 1.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-1",
+                  "name": "Sumpffäule · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Unbeholfen 1 und Zustandsmalus von 1,50 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-2",
+                  "name": "Sumpffäule · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Sumpffäule · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -5
+                  }
+                ]
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Unbeholfen 2 und Zustandsmalus von 3 m auf alle Bewegungsraten.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bog-rot.stage-3",
+                  "name": "Sumpffäule · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [
+                  {
+                    "id": "speed-penalty",
+                    "label": "Sumpffäule · Bewegungsrate",
+                    "selectors": [
+                      "all-speeds"
+                    ],
+                    "type": "status",
+                    "value": -10
+                  }
+                ]
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 88,
+              "sourceSection": "Diseases",
+              "sourceName": "Bog Rot",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The alternate cure by amputating the affected limbs is intentionally handled manually and does not require a generic body-part subsystem.",
+                "PF2e speed modifiers use the system-native 5-foot unit: -5 corresponds to -1.5 m and -10 to -3 m in metric display."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "HgITTGjMFVc3Bjoe",
+      "name": "Beulenpest",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Schwere Krankheit mit zunehmender körperlicher Schwächung. Erschöpfung kann während des Leidens nicht entfernt werden; in der letzten Phase treten in zufälligen Abständen wiederkehrende Blutungen auf.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "disease"
+          ],
+          "otherTags": [
+            "disease",
+            "plague",
+            "bleeding"
+          ]
+        },
+        "level": {
+          "value": 3
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.gm-core.bubonic-plague",
+          "definitionVersion": 1,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague",
+            "name": "Beulenpest",
+            "description": "Schwere Krankheit mit zunehmender körperlicher Schwächung. Erschöpfung kann während des Leidens nicht entfernt werden; in der letzten Phase treten in zufälligen Abständen wiederkehrende Blutungen auf.",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "disease",
+            "level": 3,
+            "rarity": "common",
+            "traits": [
+              "disease"
+            ],
+            "themes": [
+              "disease",
+              "plague",
+              "bleeding"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "restrictions": {
+              "conditionLocks": [
+                {
+                  "slug": "fatigued",
+                  "minimum": null
+                }
+              ],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "Zähigkeit",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 17,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "days"
+            },
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "Phase 1",
+                "description": "Erschöpft.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-1",
+                  "name": "Beulenpest · Phase 1",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "Phase 2",
+                "description": "Kraftlos 2 und Erschöpft.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-2",
+                  "name": "Beulenpest · Phase 2",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                }
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "Phase 3",
+                "description": "Kraftlos 3 und Erschöpft; zusätzlich tritt alle 1W20 Minuten 1W6 anhaltender Blutungsschaden auf.",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3",
+                  "name": "Beulenpest · Phase 3",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 3
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "periodicEffects": [
+                  {
+                    "id": "recurring-bleed",
+                    "label": "Wiederkehrende Blutung",
+                    "interval": {
+                      "formula": "1d20",
+                      "unit": "minutes"
+                    },
+                    "effect": {
+                      "schemaVersion": 2,
+                      "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3.recurring-bleed.periodic-effect",
+                      "name": "Beulenpest · Wiederkehrende Blutung",
+                      "duration": {
+                        "value": -1,
+                        "unit": "unlimited",
+                        "expiry": null
+                      },
+                      "components": [
+                        {
+                          "type": "damage",
+                          "formula": "1d6",
+                          "damageType": "bleed",
+                          "persistent": true
+                        }
+                      ],
+                      "application": {},
+                      "metadata": {}
+                    }
+                  }
+                ]
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "gm-core",
+              "sourcePage": 88,
+              "sourceSection": "Diseases",
+              "sourceName": "Bubonic Plague",
+              "contentLanguage": "de",
+              "translation": "independent-from-english-orc-source",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Stage 3 uses Affliction Forge periodic stage effects. The 1d20-minute interval is rerolled after every execution.",
+                "The recurring damage is applied as 1d6 persistent bleed damage through the Critical Forge effect contract."
+              ]
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "UpYV0d7D6gL6z2B4",
       "name": "Erstickungsseuche",
       "type": "effect",

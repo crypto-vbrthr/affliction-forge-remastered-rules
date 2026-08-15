@@ -2,15 +2,17 @@
   "schemaVersion": 1,
   "sourceWorkId": "gm-core",
   "section": "Diseases",
-  "reviewPolicy": "Only entries whose complete runtime-relevant rules are represented by Affliction Forge 0.1.51 are publishable as full. Long-term recurrence may be represented by explicit manual reapplication when no dormant runtime state is required.",
+  "reviewPolicy": "Entries whose complete runtime-relevant rules are represented by Affliction Forge 0.1.53 may ship as full. Long-term recurrence may use explicit manual reapplication. Bonechill, Brain Worms, and Crimson Ooze are intentionally classified as manual exceptions rather than drivers for new generic engine subsystems; their unsupported source rules must be surfaced as explicit GM comments when those entries are later published.",
   "entries": [
     {
       "sourceName": "Bog Rot",
       "level": 0,
-      "status": "partial",
-      "blockers": [
-        "speed-status-penalty",
-        "alternate-amputation-cure"
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.bog-rot",
+      "notes": [
+        "Stage 2 and 3 speed penalties use Affliction Forge 0.1.52 numeric PF2e modifiers.",
+        "The alternate cure by amputating affected limbs is handled manually and is not an engine blocker."
       ]
     },
     {
@@ -35,8 +37,11 @@
       "level": 1,
       "status": "partial",
       "blockers": [
-        "carrier-transmission",
         "concentrate-flat-check"
+      ],
+      "notes": [
+        "Carrier status is descriptive/transmission metadata and is not an engine blocker.",
+        "The remaining blocker is the pre-action check that can prevent concentrate spells or item activations."
       ]
     },
     {
@@ -52,9 +57,11 @@
     {
       "sourceName": "Bubonic Plague",
       "level": 3,
-      "status": "partial",
-      "blockers": [
-        "repeating-persistent-bleed-timer"
+      "status": "full",
+      "blockers": [],
+      "definitionId": "affliction-forge-remastered-rules.gm-core.bubonic-plague",
+      "notes": [
+        "Stage 3 uses a 1d20-minute periodic stage effect that reapplies 1d6 persistent bleed damage."
       ]
     },
     {
@@ -68,13 +75,13 @@
     {
       "sourceName": "Bonechill",
       "level": 5,
-      "status": "partial",
-      "blockers": [
-        "environment-severity-shift"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Affliction Forge 0.1.51 now covers the cold-damage healing lock; the increased severity of cold-temperature effects remains unsupported generically."
-      ]
+        "Affliction Forge 0.1.51 already covers the cold-damage healing lock.",
+        "Intentional manual exception: environment severity shifting is not planned as a generic Affliction Forge feature."
+      ],
+      "manualComment": "In stages 3 and 4, effects of cold temperatures are one severity step worse for the victim. This environmental severity rewrite is intentionally left for the GM rather than added as a generic Affliction Forge subsystem."
     },
     {
       "sourceName": "Choking Death",
@@ -117,26 +124,23 @@
     {
       "sourceName": "Brain Worms",
       "level": 11,
-      "status": "partial",
-      "blockers": [
-        "confusion-attack-rewrite",
-        "confused-ending-exception"
-      ],
+      "status": "manual",
+      "blockers": [],
       "notes": [
-        "Affliction Forge 0.1.50 now covers the damage-triggered secondary Will saves.",
-        "The disease still requires attacks made due to confusion to become bites and later prevents damage from ending confused; these mechanics are not yet represented generically."
-      ]
+        "Affliction Forge 0.1.50 covers the damage-triggered secondary Will saves.",
+        "Intentional manual exception: confusion attack rewriting and the special confused-ending rule are not planned as generic engine behavior."
+      ],
+      "manualComment": "When confusion forces attacks, those attacks must become bites; at the later stage, taking damage does not end confused. These confusion-behavior overrides are intentionally handled manually."
     },
     {
       "sourceName": "Crimson Ooze",
       "level": 15,
-      "status": "partial",
-      "blockers": [
-        "alternate-amputation-cure",
-        "infected-hand-use-trigger",
-        "hand-usability",
-        "permanent-hand-loss",
-        "confused-ending-exception"
+      "status": "manual",
+      "blockers": [],
+      "manualComment": "The disease tracks one infected hand: using it can cause persistent bleed damage, later the hand becomes unusable and can be permanently lost, and the final confused stage is not ended by damage. These body-part and confusion exceptions are intentionally handled manually.",
+      "notes": [
+        "The alternate cure by amputation before stage 4 is a manual cure option, not an engine blocker.",
+        "Intentional manual exception: infected-hand use, hand usability/loss, and the special confused-ending rule are not planned as generic engine behavior."
       ]
     }
   ]

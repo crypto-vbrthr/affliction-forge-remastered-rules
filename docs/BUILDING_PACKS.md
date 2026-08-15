@@ -11,7 +11,7 @@ npm run prepare:packs
 npm run generate:seed
 ```
 
-`prepare:packs` converts each reviewed Affliction definition into the PF2e `effect` Item wrapper expected by Affliction Forge 0.1.51. The serialized pack source includes the `_key` required by the official Foundry pack compiler. `generate:seed` creates the browser-side fallback sources used only when an installed pack does not already contain the deterministic document ID. Stable definition IDs are deterministically mapped to stable 16-character Foundry document IDs.
+`prepare:packs` converts each reviewed Affliction definition into the PF2e `effect` Item wrapper expected by Affliction Forge 0.1.53. The serialized pack source includes the `_key` required by the official Foundry pack compiler. `generate:seed` creates the browser-side fallback sources used only when an installed pack does not already contain the deterministic document ID. Stable definition IDs are deterministically mapped to stable 16-character Foundry document IDs.
 
 ## 2. Compile LevelDB packs
 

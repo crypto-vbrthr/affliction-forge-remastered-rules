@@ -11,7 +11,7 @@ This module is intentionally conservative. It is a software library provider plu
 5. Review names separately. Proper nouns, deity/character/place/organization names, and names derived from them are blocked or replaced by a neutral original name.
 6. Every entry must identify one of the four approved upstream source works through a neutral `sourceWorkId` and must carry `license: "ORC"`.
 7. Every entry must pass `licenseReview.mechanicsOnly`, `licenseReview.reservedMaterial`, and `licenseReview.nameReview` before it can be compiled.
-8. The first content wave ships only `automationStatus: "full"`. Rules that Affliction Forge 0.1.51 cannot faithfully automate remain outside compiled packs until the engine contract covers them.
+8. The first content wave ships only `automationStatus: "full"`. Rules that Affliction Forge 0.1.53 cannot faithfully automate either remain outside compiled packs until a reusable engine contract covers them, or are explicitly classified as intentional manual exceptions when adding a generic subsystem would be disproportionate. Manual exceptions must carry visible GM guidance when published.
 9. Same-name source variants remain separate definitions with separate stable IDs. The library must not silently decide that one source supersedes another.
 
 ## Automated guard

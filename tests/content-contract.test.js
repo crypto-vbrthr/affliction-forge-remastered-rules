@@ -186,3 +186,41 @@ test("0.1.50 damage-taken event reactions are accepted by the content contract",
   }];
   assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
 });
+
+test("0.1.52 numeric modifiers and periodic stage effects are accepted by the content contract", () => {
+  const definition = validDefinition();
+  definition.stages[0].numericModifiers = [{
+    id: "slow-all-speeds",
+    label: "Slow",
+    selectors: ["all-speeds"],
+    type: "status",
+    value: -5
+  }];
+  definition.stages[0].periodicEffects = [{
+    id: "bleed-pulse",
+    label: "Bleeding pulse",
+    interval: { formula: "1d20", unit: "minutes" },
+    effect: {
+      schemaVersion: 2,
+      id: "test.periodic.effect",
+      name: "Recurring bleed",
+      duration: { value: -1, unit: "unlimited", expiry: null },
+      components: [{ type: "damage", formula: "1d6", damageType: "bleed", persistent: true }],
+      application: {},
+      metadata: {}
+    }
+  }];
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+});
+
+test("invalid numeric and periodic authoring values are rejected", () => {
+  const definition = validDefinition();
+  definition.stages[0].numericModifiers = [{ id: "bad", label: "Bad", selectors: [], type: "luck", value: 0 }];
+  definition.stages[0].periodicEffects = [{ id: "pulse", label: "Pulse", interval: { value: 0, unit: "minutes" }, effect: null }];
+  const issues = validateDefinition(definition, { pack: "gm-core" });
+  assert.ok(issues.some((issue) => /selectors/i.test(issue)));
+  assert.ok(issues.some((issue) => /unsupported: luck/i.test(issue)));
+  assert.ok(issues.some((issue) => /non-zero finite/i.test(issue)));
+  assert.ok(issues.some((issue) => /positive value or a dice formula/i.test(issue)));
+  assert.ok(issues.some((issue) => /effect must be an effect object/i.test(issue)));
+});

@@ -67,9 +67,9 @@ test("GM startup seeds a missing bundled template into its compendium and relock
   const mock = installFoundryMock();
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 7);
+    assert.equal(result.created, 9);
     assert.equal(mock.createCalls.length, 1);
-    assert.equal(mock.createCalls[0].data.length, 7);
+    assert.equal(mock.createCalls[0].data.length, 9);
     assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(mock.expectedIds));
     assert.equal(mock.createCalls[0].operation.pack, "affliction-forge-remastered-rules.gm-core");
     assert.equal(mock.createCalls[0].operation.keepId, true);
@@ -82,7 +82,7 @@ test("GM startup seeds a missing bundled template into its compendium and relock
 
 
 
-test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the six later GM diseases", async () => {
+test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the eight later GM diseases", async () => {
   const sewerSource = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].find((entry) =>
     entry.flags?.["pf2e-affliction-forge"]?.definitionId === "affliction-forge-remastered-rules.gm-core.sewer-haze"
   );
@@ -90,9 +90,9 @@ test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the six lat
   const mock = installFoundryMock({ existingIds: [sewerSource._id] });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 6);
+    assert.equal(result.created, 8);
     assert.equal(mock.createCalls.length, 1);
-    assert.equal(mock.createCalls[0].data.length, 6);
+    assert.equal(mock.createCalls[0].data.length, 8);
     assert.ok(mock.createCalls[0].data.every((entry) => entry._id !== sewerSource._id));
     assert.deepEqual(mock.configureCalls.filter((entry) => entry.name === "gm-core").map((entry) => entry.value.locked), [false, true]);
   } finally {
@@ -100,11 +100,54 @@ test("0.1.1 upgrade keeps the existing Sewer Haze document and seeds the six lat
   }
 });
 
-test("0.1.2 upgrade keeps the five existing GM diseases and seeds Nightmare Fever plus Blinding Sickness", async () => {
+test("0.1.2 upgrade keeps the five existing GM diseases and seeds the four later FULL diseases", async () => {
   const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
   const newDefinitions = new Set([
     "affliction-forge-remastered-rules.gm-core.nightmare-fever",
-    "affliction-forge-remastered-rules.gm-core.blinding-sickness"
+    "affliction-forge-remastered-rules.gm-core.blinding-sickness",
+    "affliction-forge-remastered-rules.gm-core.bog-rot",
+    "affliction-forge-remastered-rules.gm-core.bubonic-plague"
+  ]);
+  const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
+  assert.equal(newSources.length, 4);
+  const existingIds = current.filter((entry) => !newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId)).map((entry) => entry._id);
+  const mock = installFoundryMock({ existingIds });
+  try {
+    const result = await seedBundledContent();
+    assert.equal(result.created, 4);
+    assert.equal(mock.createCalls.length, 1);
+    assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
+    assert.deepEqual(mock.configureCalls.filter((entry) => entry.name === "gm-core").map((entry) => entry.value.locked), [false, true]);
+  } finally {
+    mock.restore();
+  }
+});
+
+test("0.1.4 upgrade seeds Blinding Sickness plus the two 0.1.6 diseases", async () => {
+  const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
+  const newDefinitions = new Set([
+    "affliction-forge-remastered-rules.gm-core.blinding-sickness",
+    "affliction-forge-remastered-rules.gm-core.bog-rot",
+    "affliction-forge-remastered-rules.gm-core.bubonic-plague"
+  ]);
+  const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
+  assert.equal(newSources.length, 3);
+  const existingIds = current.filter((entry) => !newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId)).map((entry) => entry._id);
+  const mock = installFoundryMock({ existingIds });
+  try {
+    const result = await seedBundledContent();
+    assert.equal(result.created, 3);
+    assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
+  } finally {
+    mock.restore();
+  }
+});
+
+test("0.1.5 upgrade seeds only Bog Rot and Bubonic Plague", async () => {
+  const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
+  const newDefinitions = new Set([
+    "affliction-forge-remastered-rules.gm-core.bog-rot",
+    "affliction-forge-remastered-rules.gm-core.bubonic-plague"
   ]);
   const newSources = current.filter((entry) => newDefinitions.has(entry.flags?.["pf2e-affliction-forge"]?.definitionId));
   assert.equal(newSources.length, 2);
@@ -115,26 +158,6 @@ test("0.1.2 upgrade keeps the five existing GM diseases and seeds Nightmare Feve
     assert.equal(result.created, 2);
     assert.equal(mock.createCalls.length, 1);
     assert.deepEqual(new Set(mock.createCalls[0].data.map((entry) => entry._id)), new Set(newSources.map((entry) => entry._id)));
-    assert.deepEqual(mock.configureCalls.filter((entry) => entry.name === "gm-core").map((entry) => entry.value.locked), [false, true]);
-  } finally {
-    mock.restore();
-  }
-});
-
-test("0.1.4 upgrade seeds only Blinding Sickness", async () => {
-  const current = BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"];
-  const blinding = current.find((entry) =>
-    entry.flags?.["pf2e-affliction-forge"]?.definitionId === "affliction-forge-remastered-rules.gm-core.blinding-sickness"
-  );
-  assert.ok(blinding);
-  const existingIds = current.filter((entry) => entry._id !== blinding._id).map((entry) => entry._id);
-  const mock = installFoundryMock({ existingIds });
-  try {
-    const result = await seedBundledContent();
-    assert.equal(result.created, 1);
-    assert.equal(mock.createCalls.length, 1);
-    assert.deepEqual(mock.createCalls[0].data.map((entry) => entry._id), [blinding._id]);
-    assert.deepEqual(mock.configureCalls.filter((entry) => entry.name === "gm-core").map((entry) => entry.value.locked), [false, true]);
   } finally {
     mock.restore();
   }

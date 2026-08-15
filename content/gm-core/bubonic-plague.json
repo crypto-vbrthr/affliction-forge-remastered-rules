@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague",
+  "name": "Beulenpest",
+  "description": "Schwere Krankheit mit zunehmender körperlicher Schwächung. Erschöpfung kann während des Leidens nicht entfernt werden; in der letzten Phase treten in zufälligen Abständen wiederkehrende Blutungen auf.",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "disease",
+  "level": 3,
+  "rarity": "common",
+  "traits": [
+    "disease"
+  ],
+  "themes": [
+    "disease",
+    "plague",
+    "bleeding"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "restrictions": {
+    "conditionLocks": [
+      {
+        "slug": "fatigued",
+        "minimum": null
+      }
+    ],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "Zähigkeit",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 17,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 1,
+    "unit": "days"
+  },
+  "maximumDuration": null,
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "Phase 1",
+      "description": "Erschöpft.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-1",
+        "name": "Beulenpest · Phase 1",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "Phase 2",
+      "description": "Kraftlos 2 und Erschöpft.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-2",
+        "name": "Beulenpest · Phase 2",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 2
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      }
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "Phase 3",
+      "description": "Kraftlos 3 und Erschöpft; zusätzlich tritt alle 1W20 Minuten 1W6 anhaltender Blutungsschaden auf.",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3",
+        "name": "Beulenpest · Phase 3",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 3
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "periodicEffects": [
+        {
+          "id": "recurring-bleed",
+          "label": "Wiederkehrende Blutung",
+          "interval": {
+            "formula": "1d20",
+            "unit": "minutes"
+          },
+          "effect": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.gm-core.bubonic-plague.stage-3.recurring-bleed.periodic-effect",
+            "name": "Beulenpest · Wiederkehrende Blutung",
+            "duration": {
+              "value": -1,
+              "unit": "unlimited",
+              "expiry": null
+            },
+            "components": [
+              {
+                "type": "damage",
+                "formula": "1d6",
+                "damageType": "bleed",
+                "persistent": true
+              }
+            ],
+            "application": {},
+            "metadata": {}
+          }
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "gm-core",
+    "sourcePage": 88,
+    "sourceSection": "Diseases",
+    "sourceName": "Bubonic Plague",
+    "contentLanguage": "de",
+    "translation": "independent-from-english-orc-source",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Stage 3 uses Affliction Forge periodic stage effects. The 1d20-minute interval is rerolled after every execution.",
+      "The recurring damage is applied as 1d6 persistent bleed damage through the Critical Forge effect contract."
+    ]
+  }
+}
