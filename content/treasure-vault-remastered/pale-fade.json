@@ -1,21 +1,20 @@
 {
   "schemaVersion": 2,
-  "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison",
-  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Name",
-  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Description",
+  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
-  "level": 2,
-  "rarity": "uncommon",
+  "level": 19,
+  "rarity": "common",
   "traits": [
     "poison",
-    "injury",
-    "incapacitation",
-    "sleep"
+    "injury"
   ],
   "themes": [
     "poison",
-    "injury"
+    "injury",
+    "manual"
   ],
   "saveDefaults": {
     "execution": "player",
@@ -27,7 +26,7 @@
   "delivery": {
     "injuryPoison": true
   },
-  "multipleExposure": "ignore",
+  "multipleExposure": "default",
   "restrictions": {
     "conditionLocks": [],
     "healing": "none",
@@ -36,11 +35,11 @@
   "checks": [
     {
       "id": "primary",
-      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Checks.1.Label",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
-      "dc": 18,
+      "dc": 42,
       "policy": null
     }
   ],
@@ -68,8 +67,8 @@
   },
   "onset": null,
   "maximumDuration": {
-    "value": 4,
-    "unit": "hours"
+    "value": 6,
+    "unit": "rounds"
   },
   "defaultStageCheck": {
     "checkIds": [
@@ -104,12 +103,13 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Description",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
       },
+      "expiryAction": "check",
       "check": null,
       "restrictions": {
         "conditionLocks": [],
@@ -117,10 +117,11 @@
         "blockedCapabilities": []
       },
       "effectPersistence": "stage",
+      "effectComponentPersistence": [],
       "effect": {
         "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-1",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Effect.Name",
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade.stage-1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -128,24 +129,34 @@
         },
         "components": [
           {
+            "type": "damage",
+            "formula": "10d6",
+            "damageType": "poison"
+          },
+          {
             "type": "condition",
-            "slug": "slowed",
+            "slug": "drained",
             "value": 1
           }
         ],
         "application": {},
         "metadata": {}
-      }
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
     },
     {
       "id": "stage-2",
       "number": 2,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Description",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.2.Description",
       "duration": {
         "value": 1,
-        "unit": "minutes"
+        "unit": "rounds"
       },
+      "expiryAction": "check",
       "check": null,
       "restrictions": {
         "conditionLocks": [],
@@ -153,10 +164,11 @@
         "blockedCapabilities": []
       },
       "effectPersistence": "stage",
+      "effectComponentPersistence": [],
       "effect": {
         "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-2",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Effect.Name",
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade.stage-2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -164,40 +176,50 @@
         },
         "components": [
           {
+            "type": "damage",
+            "formula": "12d6",
+            "damageType": "poison"
+          },
+          {
             "type": "condition",
-            "slug": "slowed",
+            "slug": "drained",
             "value": 1
+          },
+          {
+            "type": "condition",
+            "slug": "concealed"
           }
         ],
         "application": {},
         "metadata": {}
-      }
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
     },
     {
       "id": "stage-3",
       "number": 3,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Description",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
       },
+      "expiryAction": "check",
       "check": null,
       "restrictions": {
-        "conditionLocks": [
-          {
-            "slug": "unconscious",
-            "minimum": null
-          }
-        ],
+        "conditionLocks": [],
         "healing": "none",
         "blockedCapabilities": []
       },
       "effectPersistence": "stage",
+      "effectComponentPersistence": [],
       "effect": {
         "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-3",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Effect.Name",
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade.stage-3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -205,77 +227,49 @@
         },
         "components": [
           {
+            "type": "damage",
+            "formula": "15d6",
+            "damageType": "poison"
+          },
+          {
             "type": "condition",
-            "slug": "unconscious"
+            "slug": "drained",
+            "value": 1
+          },
+          {
+            "type": "condition",
+            "slug": "concealed"
           }
         ],
         "application": {},
         "metadata": {}
-      }
-    },
-    {
-      "id": "stage-4",
-      "number": 4,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Description",
-      "duration": {
-        "formula": "1d4",
-        "unit": "hours"
       },
-      "check": null,
-      "restrictions": {
-        "conditionLocks": [
-          {
-            "slug": "unconscious",
-            "minimum": null
-          }
-        ],
-        "healing": "none",
-        "blockedCapabilities": []
-      },
-      "effectPersistence": "stage",
-      "effect": {
-        "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-4",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Effect.Name",
-        "duration": {
-          "value": -1,
-          "unit": "unlimited",
-          "expiry": null
-        },
-        "components": [
-          {
-            "type": "condition",
-            "slug": "unconscious"
-          }
-        ],
-        "application": {},
-        "metadata": {}
-      }
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
     }
   ],
   "metadata": {
     "originModule": "affliction-forge-remastered-rules",
     "originFeature": "remastered-rules-library",
-    "sourceWorkId": "gm-core",
-    "sourcePage": 249,
-    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.SourceSection",
+    "sourceWorkId": "treasure-vault-remastered",
+    "sourcePage": 70,
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Metadata.SourceSection",
+    "sourceName": "Pale Fade",
     "contentLanguage": "i18n",
     "translation": "localized-independent-mechanics",
     "license": "ORC",
-    "automationStatus": "full",
+    "automationStatus": "manual",
     "licenseReview": {
       "mechanicsOnly": true,
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
     "automationNotes": [
-      "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61.",
-      "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung.",
-      "Stage 4 uses the source 1d4-hour formula duration through Affliction Forge 0.1.61."
+      "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
     ],
-    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.SourceWorkLabel",
-    "variantGroupId": "poison.lethargy-poison",
-    "sourceVariant": true
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Metadata.SourceWorkLabel",
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Metadata.ManualComment"
   }
 }

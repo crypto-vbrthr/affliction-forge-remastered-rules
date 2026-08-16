@@ -40,7 +40,7 @@ test("all bundled user-facing content is tokenized and translated in both locale
       }
     }
   }
-  assert.equal(definitions, 79);
+  assert.equal(definitions, 112);
 });
 
 test("the same tokenized definition resolves to German and English without changing its stable id", () => {

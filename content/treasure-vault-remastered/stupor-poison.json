@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison",
-  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Name",
-  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Description",
+  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Description",
   "img": "icons/svg/biohazard.svg",
   "afflictionType": "poison",
-  "level": 2,
+  "level": 7,
   "rarity": "uncommon",
   "traits": [
     "poison",
@@ -36,11 +36,11 @@
   "checks": [
     {
       "id": "primary",
-      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Checks.1.Label",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Checks.1.Label",
       "kind": "save",
       "statistic": "fortitude",
       "dcMode": "fixed",
-      "dc": 18,
+      "dc": 20,
       "policy": null
     }
   ],
@@ -68,7 +68,7 @@
   },
   "onset": null,
   "maximumDuration": {
-    "value": 4,
+    "value": 6,
     "unit": "hours"
   },
   "defaultStageCheck": {
@@ -104,12 +104,13 @@
     {
       "id": "stage-1",
       "number": 1,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Description",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.1.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
       },
+      "expiryAction": "check",
       "check": null,
       "restrictions": {
         "conditionLocks": [],
@@ -117,10 +118,11 @@
         "blockedCapabilities": []
       },
       "effectPersistence": "stage",
+      "effectComponentPersistence": [],
       "effect": {
         "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-1",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.1.Effect.Name",
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.1.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -131,21 +133,30 @@
             "type": "condition",
             "slug": "slowed",
             "value": 1
+          },
+          {
+            "type": "condition",
+            "slug": "off-guard"
           }
         ],
         "application": {},
         "metadata": {}
-      }
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
     },
     {
       "id": "stage-2",
       "number": 2,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Description",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.2.Description",
       "duration": {
         "value": 1,
-        "unit": "minutes"
+        "unit": "rounds"
       },
+      "expiryAction": "check",
       "check": null,
       "restrictions": {
         "conditionLocks": [],
@@ -153,10 +164,11 @@
         "blockedCapabilities": []
       },
       "effectPersistence": "stage",
+      "effectComponentPersistence": [],
       "effect": {
         "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-2",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.2.Effect.Name",
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.2.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -166,22 +178,31 @@
           {
             "type": "condition",
             "slug": "slowed",
-            "value": 1
+            "value": 2
+          },
+          {
+            "type": "condition",
+            "slug": "off-guard"
           }
         ],
         "application": {},
         "metadata": {}
-      }
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
     },
     {
       "id": "stage-3",
       "number": 3,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Description",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.3.Description",
       "duration": {
         "value": 1,
         "unit": "rounds"
       },
+      "expiryAction": "check",
       "check": null,
       "restrictions": {
         "conditionLocks": [
@@ -194,10 +215,11 @@
         "blockedCapabilities": []
       },
       "effectPersistence": "stage",
+      "effectComponentPersistence": [],
       "effect": {
         "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-3",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.3.Effect.Name",
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.3.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -211,17 +233,22 @@
         ],
         "application": {},
         "metadata": {}
-      }
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
     },
     {
       "id": "stage-4",
       "number": 4,
-      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Name",
-      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Description",
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.4.Description",
       "duration": {
-        "formula": "1d4",
+        "formula": "1d6",
         "unit": "hours"
       },
+      "expiryAction": "check",
       "check": null,
       "restrictions": {
         "conditionLocks": [
@@ -234,10 +261,11 @@
         "blockedCapabilities": []
       },
       "effectPersistence": "stage",
+      "effectComponentPersistence": [],
       "effect": {
         "schemaVersion": 2,
-        "id": "affliction-forge-remastered-rules.gm-core.lethargy-poison.stage-4",
-        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Effect.Name",
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.4.Effect.Name",
         "duration": {
           "value": -1,
           "unit": "unlimited",
@@ -251,15 +279,20 @@
         ],
         "application": {},
         "metadata": {}
-      }
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
     }
   ],
   "metadata": {
     "originModule": "affliction-forge-remastered-rules",
     "originFeature": "remastered-rules-library",
-    "sourceWorkId": "gm-core",
-    "sourcePage": 249,
-    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.SourceSection",
+    "sourceWorkId": "treasure-vault-remastered",
+    "sourcePage": 71,
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Metadata.SourceSection",
+    "sourceName": "Stupor Poison",
     "contentLanguage": "i18n",
     "translation": "localized-independent-mechanics",
     "license": "ORC",
@@ -270,12 +303,8 @@
       "nameReview": "passed"
     },
     "automationNotes": [
-      "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61.",
-      "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung.",
-      "Stage 4 uses the source 1d4-hour formula duration through Affliction Forge 0.1.61."
+      "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
     ],
-    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.SourceWorkLabel",
-    "variantGroupId": "poison.lethargy-poison",
-    "sourceVariant": true
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Metadata.SourceWorkLabel"
   }
 }

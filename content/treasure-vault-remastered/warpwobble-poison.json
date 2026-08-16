@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.warpwobble-poison",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Description",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 8,
+  "rarity": "common",
+  "traits": [
+    "poison",
+    "injury",
+    "mental"
+  ],
+  "themes": [
+    "poison",
+    "injury",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": true
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Checks.1.Label",
+      "kind": "save",
+      "statistic": "will",
+      "dcMode": "fixed",
+      "dc": 26,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": null,
+  "maximumDuration": {
+    "value": 6,
+    "unit": "rounds"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.1.Description",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": null,
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.2.Description",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": null,
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.3.Description",
+      "duration": {
+        "value": 1,
+        "unit": "rounds"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": null,
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "treasure-vault-remastered",
+    "sourcePage": 71,
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Metadata.SourceSection",
+    "sourceName": "Warpwobble Poison",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+    ],
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Metadata.SourceWorkLabel",
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Metadata.ManualComment"
+  }
+}

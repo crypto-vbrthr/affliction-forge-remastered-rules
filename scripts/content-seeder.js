@@ -2,7 +2,7 @@ import { BUNDLED_ITEM_SOURCES_BY_PACK } from "./bundled-content.js";
 import { MODULE_ID, PACK_NAMES } from "./constants.js";
 
 const LIBRARY_CHANGED_HOOK = "pf2eAfflictionForgeLibrariesChanged";
-const CONTENT_REVISION = 2;
+const CONTENT_REVISION = 3;
 
 function collectionId(packName) {
   return `${MODULE_ID}.${packName}`;

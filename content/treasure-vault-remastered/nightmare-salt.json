@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Description",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 20,
+  "rarity": "rare",
+  "traits": [
+    "poison",
+    "ingested"
+  ],
+  "themes": [
+    "poison",
+    "ingested",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Checks.1.Label",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 43,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 1,
+    "unit": "hours"
+  },
+  "maximumDuration": {
+    "value": 5,
+    "unit": "days"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.Description",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [
+        {
+          "id": "nightmare-frightened",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.PeriodicEffects.1.Label",
+          "interval": {
+            "formula": "1d4",
+            "unit": "hours"
+          },
+          "effect": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-1.nightmare-frightened",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.PeriodicEffects.1.Effect.Name",
+            "duration": {
+              "value": -1,
+              "unit": "unlimited",
+              "expiry": null
+            },
+            "components": [
+              {
+                "type": "condition",
+                "slug": "frightened",
+                "value": 2
+              }
+            ],
+            "application": {},
+            "metadata": {}
+          }
+        }
+      ],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.Description",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "frightened",
+            "value": 3
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [
+        {
+          "id": "nightmare-confusion",
+          "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.PeriodicEffects.1.Label",
+          "interval": {
+            "formula": "1d4",
+            "unit": "hours"
+          },
+          "effect": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-2.nightmare-confusion",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.PeriodicEffects.1.Effect.Name",
+            "duration": {
+              "value": 1,
+              "unit": "minutes",
+              "expiry": null
+            },
+            "components": [
+              {
+                "type": "condition",
+                "slug": "confused"
+              }
+            ],
+            "application": {},
+            "metadata": {}
+          }
+        }
+      ],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.3.Description",
+      "duration": {
+        "value": 1,
+        "unit": "days"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.3.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "frightened",
+            "value": 3
+          },
+          {
+            "type": "condition",
+            "slug": "fatigued"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-4",
+      "number": 4,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.4.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.4.Description",
+      "duration": {
+        "value": -1,
+        "unit": "unlimited"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-4",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.4.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "death",
+            "category": "direct"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "treasure-vault-remastered",
+    "sourcePage": 70,
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Metadata.SourceSection",
+    "sourceName": "Nightmare Salt",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+    ],
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Metadata.SourceWorkLabel",
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Metadata.ManualComment"
+  }
+}

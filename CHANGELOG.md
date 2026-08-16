@@ -1,10 +1,46 @@
+# Changelog
+
+## 0.1.15 - 2026-08-15
+
+### Added
+
+- Complete **33/33 Treasure Vault Remastered poison catalog** in the previously empty `treasure-vault-remastered` pack.
+- German and English localized mechanics for all new names, stage text, source labels, and visible GM exception notes.
+- Regression coverage for Treasure Vault count/delivery split, virulent progression, omitted stage intervals, secret-stage save policy, permanent petrification, poison-long Sickened persistence, formula clocks, periodic formula intervals, Reserved-Material neutralization, and runtime seeding.
+- Add-on content-contract support for Affliction Forge 0.1.61 formula onset/stage/maximum durations plus `timed` residual persistence and per-component timed residual durations.
+
+### Changed
+
+- Minimum Affliction Forge dependency raised to **0.1.61**.
+- Both GM Core and Player Core 2 **Lethargy Poison** variants now use the source **1d4-hour** Stage 4 formula directly and are fully automated instead of carrying a manual timing exception.
+- **False Hope** uses secret saves for initial/no-effect-stage checks and public progression checks on damaging stages while preserving the source's interval-less Stage 3.
+- **Mustard Powder** and **Taster's Folly** keep Sickened as an affliction-persistent condition and lock its removal until the poison ends.
+- Runtime content revision raised to **3** so deterministic documents from 0.1.14 are refreshed without changing their IDs.
+
+### Treasure Vault automation notes
+
+- Fully automated entries: **7/33**.
+- Intentional manual-exception entries: **26/33**; supported damage, conditions, delivery, virulent progression, repeated exposure, stage timing, and other generic mechanics remain automated inside those templates.
+- Formula stage timings are used for **Gnawbone Toxin (1d4 minutes)**, **Sightless Tincture (2d6 hours)**, and **Stupor Poison (1d6 hours)**.
+- **Nightmare Salt** uses formula periodic clocks for its supported 1d4-hour recurring effects; the variable-duration Stage 3 confusion remains an explicit GM exception.
+- Source omissions of stage intervals are preserved rather than replaced with invented saves.
+- One Reserved-Material proper name is replaced by the neutral display identity **Assassin's Kiss / Kuss des Assassinen**.
+
+### Coverage
+
+- GM diseases: **14/14 published**.
+- GM curses: **16/16 published**.
+- Player II alchemical poisons: **29/29 published**.
+- GM Core alchemical poison variants: **19/19 published**.
+- Additional GM Core weapon poison afflictions: **1/1 published**.
+- Treasure Vault Remastered poisons: **33/33 published**.
+- Total bundled definitions: **112**.
+
 ## 0.1.14
 - Converted all user-facing bundled content fields to language-neutral `@i18n:` tokens.
 - Added complete German and English localization coverage for names, descriptions, stage text, checks, reaction labels, source labels, and GM comments.
 - Added a content-revision migration that replaces previously seeded German-only definitions with tokenized definitions while preserving deterministic document IDs.
 - Requires Affliction Forge 0.1.60 for per-client provider-content localization.
-
-# Changelog
 
 ## 0.1.13 - 2026-08-15
 

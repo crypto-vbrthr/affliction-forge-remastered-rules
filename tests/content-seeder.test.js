@@ -5,7 +5,7 @@ import { seedBundledContent } from "../scripts/content-seeder.js";
 
 function fakeIndex(ids = [], revision = 0) { return new Map(ids.map((id) => [id, { _id: id, flags: { "affliction-forge-remastered-rules": { contentRevision: revision } } }])); }
 
-function installFoundryMock({ existing = false, existingIds = null, existingPc2 = true, isGM = true, currentRevision = false } = {}) {
+function installFoundryMock({ existing = false, existingIds = null, existingPc2 = true, existingTreasure = true, isGM = true, currentRevision = false, revision = null } = {}) {
   const previous = { game: globalThis.game, CONFIG: globalThis.CONFIG, Hooks: globalThis.Hooks, Item: globalThis.Item };
   const expectedByPack = Object.fromEntries(Object.entries(BUNDLED_ITEM_SOURCES_BY_PACK).map(([name, rows]) => [name, rows.map((entry) => entry._id)]));
   const createCalls = [], updateCalls = [], configureCalls = [], hookCalls = [], packs = new Map();
@@ -18,7 +18,8 @@ function installFoundryMock({ existing = false, existingIds = null, existingPc2 
         let ids = [];
         if (name === "gm-core") ids = Array.isArray(existingIds) ? existingIds : (existing ? expectedByPack[name] : []);
         else if (name === "player-core-2") ids = existingPc2 ? expectedByPack[name] : [];
-        return fakeIndex(ids, currentRevision ? 2 : 0);
+        else if (name === "treasure-vault-remastered") ids = existingTreasure ? expectedByPack[name] : [];
+        return fakeIndex(ids, revision ?? (currentRevision ? 3 : 0));
       },
       async configure(value) { configureCalls.push({ name, value }); this.locked = Boolean(value.locked); }
     });
@@ -54,21 +55,39 @@ function gmExistingExcluding(excludedIds) {
   return BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].map((entry) => entry._id).filter((id) => !excludedIds.has(id));
 }
 
-test("fresh GM startup seeds fifty GM templates plus twenty-nine Player II poison templates and relocks both packs", async () => {
-  const mock = installFoundryMock({ existingPc2: false });
+test("fresh GM startup seeds fifty GM templates, twenty-nine Player II poisons, and thirty-three Treasure Vault poisons", async () => {
+  const mock = installFoundryMock({ existingPc2: false, existingTreasure: false });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 79);
+    assert.equal(result.created, 112);
     assert.equal(result.updated, 0);
-    assert.equal(mock.createCalls.length, 2);
+    assert.equal(mock.createCalls.length, 3);
     const byPack = new Map(mock.createCalls.map((call) => [call.operation.pack, call]));
     assert.equal(byPack.get("affliction-forge-remastered-rules.gm-core").data.length, 50);
     assert.equal(byPack.get("affliction-forge-remastered-rules.player-core-2").data.length, 29);
+    assert.equal(byPack.get("affliction-forge-remastered-rules.treasure-vault-remastered").data.length, 33);
     assert.equal(byPack.get("affliction-forge-remastered-rules.gm-core").operation.keepId, true);
     assert.equal(byPack.get("affliction-forge-remastered-rules.player-core-2").operation.keepId, true);
+    assert.equal(byPack.get("affliction-forge-remastered-rules.treasure-vault-remastered").operation.keepId, true);
     assert.deepEqual(mock.configureCalls.filter((e) => e.name === "gm-core").map((e) => e.value.locked), [false, true]);
     assert.deepEqual(mock.configureCalls.filter((e) => e.name === "player-core-2").map((e) => e.value.locked), [false, true]);
+    assert.deepEqual(mock.configureCalls.filter((e) => e.name === "treasure-vault-remastered").map((e) => e.value.locked), [false, true]);
     assert.equal(mock.hookCalls.at(-1)[0], "pf2eAfflictionForgeLibrariesChanged");
+  } finally { mock.restore(); }
+});
+
+test("0.1.14 upgrade seeds the Treasure Vault pack and refreshes the prior localized definitions", async () => {
+  const mock = installFoundryMock({ existing: true, existingPc2: true, existingTreasure: false, revision: 2 });
+  try {
+    const result = await seedBundledContent();
+    assert.equal(result.created, 33);
+    assert.equal(result.updated, 79);
+    assert.equal(mock.createCalls.length, 1);
+    assert.equal(mock.createCalls[0].operation.pack, "affliction-forge-remastered-rules.treasure-vault-remastered");
+    assert.equal(mock.createCalls[0].data.length, 33);
+    const updatedByPack = new Map(mock.updateCalls.map((call) => [call.operation.pack, call.data.length]));
+    assert.equal(updatedByPack.get("affliction-forge-remastered-rules.gm-core"), 50);
+    assert.equal(updatedByPack.get("affliction-forge-remastered-rules.player-core-2"), 29);
   } finally { mock.restore(); }
 });
 

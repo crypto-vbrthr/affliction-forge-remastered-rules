@@ -318,3 +318,41 @@ test("non-poisons cannot use injury delivery or non-default repeated exposure", 
   assert.ok(issues.some((issue) => /multipleExposure/i.test(issue)));
   assert.ok(issues.some((issue) => /injury poisons/i.test(issue)));
 });
+
+test("0.1.61 formula timings and timed residual persistence are accepted", () => {
+  const definition = validDefinition();
+  definition.onset = { formula: "1d4", unit: "minutes" };
+  definition.maximumDuration = { formula: "2d6", unit: "hours" };
+  definition.stages[0].duration = { formula: "1d6", unit: "rounds" };
+  definition.stages[0].effect = {
+    schemaVersion: 2,
+    id: "test.timed.effect",
+    name: "Timed consequence",
+    duration: { value: -1, unit: "unlimited", expiry: null },
+    components: [{ type: "condition", slug: "blinded" }, { type: "condition", slug: "deafened" }],
+    application: {},
+    metadata: {}
+  };
+  definition.stages[0].effectPersistence = "timed";
+  definition.stages[0].effectPersistenceDuration = { value: 24, unit: "hours" };
+  definition.stages[0].effectComponentPersistence = [null, "timed"];
+  definition.stages[0].effectComponentPersistenceDurations = [null, { formula: "1d4", unit: "hours" }];
+  assert.deepEqual(validateDefinition(definition, { pack: "gm-core" }), []);
+});
+
+test("0.1.61 timed residual persistence requires a finite fixed or formula duration", () => {
+  const definition = validDefinition();
+  definition.stages[0].effect = {
+    schemaVersion: 2,
+    id: "test.bad-timed.effect",
+    name: "Timed consequence",
+    duration: { value: -1, unit: "unlimited", expiry: null },
+    components: [{ type: "condition", slug: "blinded" }],
+    application: {},
+    metadata: {}
+  };
+  definition.stages[0].effectPersistence = "timed";
+  definition.stages[0].effectPersistenceDuration = { value: -1, unit: "unlimited" };
+  const issues = validateDefinition(definition, { pack: "gm-core" });
+  assert.ok(issues.some((issue) => /cannot be unlimited/i.test(issue)));
+});

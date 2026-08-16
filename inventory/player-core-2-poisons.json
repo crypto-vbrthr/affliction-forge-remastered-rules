@@ -160,13 +160,12 @@
     {
       "sourceName": "Lethargiegift",
       "level": 2,
-      "status": "manual",
+      "status": "full",
       "delivery": "injury",
       "definitionId": "affliction-forge-remastered-rules.player-core-2.lethargy-poison",
       "notes": [
-        "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
-      ],
-      "manualComment": "GM-Hinweis: Phase 4 dauert 1W4 Stunden; die aktuelle Stage-Duration unterstützt keine Würfelformel. Rolle 1W4 Stunden beim Eintritt in Phase 4 und beende bzw. führe den nächsten Phasenwurf entsprechend manuell aus. Während Phase 3 und 4 kann die Kreatur nicht durch einen Wahrnehmungswurf aufwachen."
+        "Stage 4 uses the source 1d4-hour formula duration through Affliction Forge 0.1.61; unconsciousness in Stages 3 and 4 remains locked against Perception-based waking."
+      ]
     },
     {
       "sourceName": "Nesselkrautkonzentrat",

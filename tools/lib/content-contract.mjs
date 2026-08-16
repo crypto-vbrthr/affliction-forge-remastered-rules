@@ -16,7 +16,7 @@ export const MULTIPLE_EXPOSURE_MODES = new Set(["default", "ignore"]);
 export const SAVE_STATISTICS = new Set(["fortitude", "reflex", "will"]);
 export const DURATION_UNITS = new Set(["rounds", "minutes", "hours", "days", "unlimited"]);
 export const HEALING_RESTRICTION_MODES = new Set(["none", "all", "affliction-damage"]);
-export const STAGE_EFFECT_PERSISTENCE_MODES = new Set(["stage", "affliction", "permanent"]);
+export const STAGE_EFFECT_PERSISTENCE_MODES = new Set(["stage", "affliction", "permanent", "timed"]);
 export const NUMERIC_MODIFIER_TYPES = new Set(["untyped", "status", "circumstance", "item"]);
 export const AFFLICTION_CAPABILITIES = new Set(["speak"]);
 export const EVENT_REACTION_EVENTS = new Set(["damage-taken", "condition-increased", "initiative-rolled", "turn-start"]);
@@ -45,7 +45,7 @@ function nonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
 
-function validateDuration(errors, value, path, { nullable = true } = {}) {
+function validateDuration(errors, value, path, { nullable = true, allowFormula = false, allowUnlimited = true } = {}) {
   if (value == null) {
     if (!nullable) errors.push(`${path} is required.`);
     return;
@@ -54,11 +54,19 @@ function validateDuration(errors, value, path, { nullable = true } = {}) {
     errors.push(`${path} must be an object.`);
     return;
   }
-  if (!DURATION_UNITS.has(value.unit)) errors.push(`${path}.unit is unsupported: ${value.unit}`);
+  if (!DURATION_UNITS.has(value.unit)) {
+    errors.push(`${path}.unit is unsupported: ${value.unit}`);
+    return;
+  }
   if (value.unit === "unlimited") {
+    if (!allowUnlimited) errors.push(`${path} cannot be unlimited.`);
     if (Number(value.value) !== -1) errors.push(`${path}.value must be -1 for unlimited duration.`);
-  } else if (!Number.isFinite(Number(value.value)) || Number(value.value) <= 0) {
-    errors.push(`${path}.value must be a positive number.`);
+    return;
+  }
+  const hasFormula = allowFormula && nonEmptyString(value.formula);
+  const hasValue = Number.isFinite(Number(value.value)) && Number(value.value) > 0;
+  if (!hasFormula && !hasValue) {
+    errors.push(allowFormula ? `${path} requires a positive value or a dice formula.` : `${path}.value must be a positive number.`);
   }
 }
 
@@ -166,8 +174,8 @@ export function validateDefinition(definition, { pack }) {
     }
   }
 
-  validateDuration(errors, definition.onset, "onset");
-  validateDuration(errors, definition.maximumDuration, "maximumDuration");
+  validateDuration(errors, definition.onset, "onset", { allowFormula: true });
+  validateDuration(errors, definition.maximumDuration, "maximumDuration", { allowFormula: true });
 
   if (!isObject(definition.progression)) errors.push("progression is required.");
   else if (typeof definition.progression.virulent !== "boolean") errors.push("progression.virulent must be boolean.");
@@ -183,11 +191,14 @@ export function validateDefinition(definition, { pack }) {
       }
       if (stage.number !== index + 1) errors.push(`${path}.number must be ${index + 1}.`);
       if (!nonEmptyString(stage.id)) errors.push(`${path}.id is required.`);
-      validateDuration(errors, stage.duration, `${path}.duration`, { nullable: false });
+      validateDuration(errors, stage.duration, `${path}.duration`, { nullable: false, allowFormula: true });
       if (stage.expiryAction != null && !STAGE_EXPIRY_ACTIONS.has(stage.expiryAction)) errors.push(`${path}.expiryAction is unsupported: ${stage.expiryAction}`);
       if (stage.duration?.unit === "unlimited" && stage.expiryAction != null && stage.expiryAction !== "check") errors.push(`${path}.expiryAction ${stage.expiryAction} is unreachable for an unlimited stage.`);
       validateRestrictions(errors, stage.restrictions, `${path}.restrictions`);
       if (!STAGE_EFFECT_PERSISTENCE_MODES.has(stage.effectPersistence)) errors.push(`${path}.effectPersistence is unsupported: ${stage.effectPersistence}`);
+      if (stage.effectPersistence === "timed") {
+        validateDuration(errors, stage.effectPersistenceDuration, `${path}.effectPersistenceDuration`, { nullable: false, allowFormula: true, allowUnlimited: false });
+      }
       if (stage.effectComponentPersistence != null) {
         if (!Array.isArray(stage.effectComponentPersistence)) errors.push(`${path}.effectComponentPersistence must be an array when present.`);
         else {
@@ -195,7 +206,17 @@ export function validateDefinition(definition, { pack }) {
           if (stage.effectComponentPersistence.length > componentCount) errors.push(`${path}.effectComponentPersistence has more entries than effect components.`);
           for (const [componentIndex, mode] of stage.effectComponentPersistence.entries()) {
             if (mode != null && !STAGE_EFFECT_PERSISTENCE_MODES.has(mode)) errors.push(`${path}.effectComponentPersistence[${componentIndex}] is unsupported: ${mode}`);
+            if (mode === "timed") {
+              validateDuration(errors, stage.effectComponentPersistenceDurations?.[componentIndex] ?? null, `${path}.effectComponentPersistenceDurations[${componentIndex}]`, { nullable: false, allowFormula: true, allowUnlimited: false });
+            }
           }
+        }
+      }
+      if (stage.effectComponentPersistenceDurations != null) {
+        if (!Array.isArray(stage.effectComponentPersistenceDurations)) errors.push(`${path}.effectComponentPersistenceDurations must be an array when present.`);
+        else {
+          const componentCount = Array.isArray(stage.effect?.components) ? stage.effect.components.length : 0;
+          if (stage.effectComponentPersistenceDurations.length > componentCount) errors.push(`${path}.effectComponentPersistenceDurations has more entries than effect components.`);
         }
       }
       if (stage.numericModifiers != null) {

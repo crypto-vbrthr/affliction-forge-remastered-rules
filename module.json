@@ -2,7 +2,7 @@
   "id": "affliction-forge-remastered-rules",
   "title": "Affliction Forge: Remastered Rules Library",
   "description": "Localized read-only Remastered rules-content library for Affliction Forge. Content definitions use language-neutral i18n tokens with German and English presentation.",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "authors": [
     {
       "name": "crypto-vbrthr"
@@ -27,7 +27,7 @@
         "id": "pf2e-affliction-forge",
         "type": "module",
         "compatibility": {
-          "minimum": "0.1.60"
+          "minimum": "0.1.61"
         }
       }
     ]

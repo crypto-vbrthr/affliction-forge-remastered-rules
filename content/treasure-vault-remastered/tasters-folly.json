@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Description",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 4,
+  "rarity": "common",
+  "traits": [
+    "poison",
+    "ingested"
+  ],
+  "themes": [
+    "poison",
+    "ingested"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [
+      {
+        "slug": "sickened",
+        "minimum": null
+      }
+    ],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Checks.1.Label",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 21,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 10,
+    "unit": "minutes"
+  },
+  "maximumDuration": {
+    "value": 6,
+    "unit": "minutes"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.1.Description",
+      "duration": {
+        "value": 1,
+        "unit": "minutes"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly.stage-1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.1.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "2d4",
+            "damageType": "poison"
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.2.Description",
+      "duration": {
+        "value": 1,
+        "unit": "minutes"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [
+        null,
+        "affliction"
+      ],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly.stage-2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.2.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "3d4",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "sickened",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.3.Description",
+      "duration": {
+        "value": 1,
+        "unit": "minutes"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [
+        null,
+        "affliction"
+      ],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly.stage-3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.3.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "damage",
+            "formula": "4d4",
+            "damageType": "poison"
+          },
+          {
+            "type": "condition",
+            "slug": "sickened",
+            "value": 1
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "treasure-vault-remastered",
+    "sourcePage": 71,
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Metadata.SourceSection",
+    "sourceName": "Taster’s Folly",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
+    "license": "ORC",
+    "automationStatus": "full",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "The affliction is applied only after both harmless compounds have been consumed within the same hour; item detection and mixing rules remain outside the active-affliction engine."
+    ],
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Metadata.SourceWorkLabel"
+  }
+}

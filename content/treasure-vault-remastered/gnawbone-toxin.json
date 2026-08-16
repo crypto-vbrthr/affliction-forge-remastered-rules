@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 2,
+  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin",
+  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Name",
+  "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Description",
+  "img": "icons/svg/biohazard.svg",
+  "afflictionType": "poison",
+  "level": 11,
+  "rarity": "common",
+  "traits": [
+    "poison",
+    "contact"
+  ],
+  "themes": [
+    "poison",
+    "contact",
+    "manual"
+  ],
+  "saveDefaults": {
+    "execution": "player",
+    "visibility": "public"
+  },
+  "identification": {
+    "initialState": "identified"
+  },
+  "delivery": {
+    "injuryPoison": false
+  },
+  "multipleExposure": "default",
+  "restrictions": {
+    "conditionLocks": [],
+    "healing": "none",
+    "blockedCapabilities": []
+  },
+  "checks": [
+    {
+      "id": "primary",
+      "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Checks.1.Label",
+      "kind": "save",
+      "statistic": "fortitude",
+      "dcMode": "fixed",
+      "dc": 30,
+      "policy": null
+    }
+  ],
+  "initialCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "reject"
+      },
+      "success": {
+        "action": "reject"
+      },
+      "failure": {
+        "action": "set-stage",
+        "stage": 1
+      },
+      "criticalFailure": {
+        "action": "set-stage",
+        "stage": 2
+      }
+    }
+  },
+  "onset": {
+    "value": 1,
+    "unit": "minutes"
+  },
+  "maximumDuration": {
+    "value": 6,
+    "unit": "minutes"
+  },
+  "defaultStageCheck": {
+    "checkIds": [
+      "primary"
+    ],
+    "combine": "single",
+    "outcomes": {
+      "criticalSuccess": {
+        "action": "stage-delta",
+        "delta": -2
+      },
+      "success": {
+        "action": "stage-delta",
+        "delta": -1
+      },
+      "failure": {
+        "action": "stage-delta",
+        "delta": 1
+      },
+      "criticalFailure": {
+        "action": "stage-delta",
+        "delta": 2
+      }
+    }
+  },
+  "progression": {
+    "belowStageOne": "recover",
+    "aboveMaximumStage": "clamp",
+    "virulent": false
+  },
+  "stages": [
+    {
+      "id": "stage-1",
+      "number": 1,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.1.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.1.Description",
+      "duration": {
+        "value": 1,
+        "unit": "minutes"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin.stage-1",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.1.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 2
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-2",
+      "number": 2,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.2.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.2.Description",
+      "duration": {
+        "value": 1,
+        "unit": "minutes"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin.stage-2",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.2.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 3
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    },
+    {
+      "id": "stage-3",
+      "number": 3,
+      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.3.Name",
+      "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.3.Description",
+      "duration": {
+        "formula": "1d4",
+        "unit": "minutes"
+      },
+      "expiryAction": "check",
+      "check": null,
+      "restrictions": {
+        "conditionLocks": [],
+        "healing": "none",
+        "blockedCapabilities": []
+      },
+      "effectPersistence": "stage",
+      "effectComponentPersistence": [],
+      "effect": {
+        "schemaVersion": 2,
+        "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin.stage-3",
+        "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.3.Effect.Name",
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null
+        },
+        "components": [
+          {
+            "type": "condition",
+            "slug": "enfeebled",
+            "value": 4
+          }
+        ],
+        "application": {},
+        "metadata": {}
+      },
+      "numericModifiers": [],
+      "periodicEffects": [],
+      "preActionGates": [],
+      "reactions": []
+    }
+  ],
+  "metadata": {
+    "originModule": "affliction-forge-remastered-rules",
+    "originFeature": "remastered-rules-library",
+    "sourceWorkId": "treasure-vault-remastered",
+    "sourcePage": 69,
+    "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Metadata.SourceSection",
+    "sourceName": "Gnawbone Toxin",
+    "contentLanguage": "i18n",
+    "translation": "localized-independent-mechanics",
+    "license": "ORC",
+    "automationStatus": "manual",
+    "licenseReview": {
+      "mechanicsOnly": true,
+      "reservedMaterial": "passed",
+      "nameReview": "passed"
+    },
+    "automationNotes": [
+      "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+    ],
+    "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Metadata.SourceWorkLabel",
+    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Metadata.ManualComment"
+  }
+}

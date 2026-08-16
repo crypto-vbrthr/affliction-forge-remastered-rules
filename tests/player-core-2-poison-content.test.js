@@ -68,16 +68,18 @@ test("King's Sleep locks drained removal and keeps cumulative saves as visible G
   assert.match(poison.metadata.manualComment, /kumulativ/i);
 });
 
-test("Lethargy Poison surfaces the variable 1d4-hour Stage 4 limitation without losing the 4-hour maximum", () => {
+test("Lethargy Poison uses the 0.1.61 formula duration for Stage 4", () => {
   const poison = byKey.get("lethargy-poison");
   assert.deepEqual(poison.maximumDuration, { value: 4, unit: "hours" });
-  assert.deepEqual(stage(poison, 4).duration, { value: 4, unit: "hours" });
-  assert.match(poison.metadata.manualComment, /1W4 Stunden/i);
+  assert.deepEqual(stage(poison, 4).duration, { formula: "1d4", unit: "hours" });
+  assert.equal(poison.metadata.automationStatus, "full");
+  assert.equal(poison.metadata.manualComment, undefined);
   assert.deepEqual(stage(poison, 4).restrictions.conditionLocks, [{ slug: "unconscious", minimum: null }]);
 });
 
-test("runtime seed contains all seventy-nine definitions with twenty-nine Player II poisons and complete reviewed GM poison content", () => {
+test("runtime seed contains all 112 definitions including Treasure Vault", () => {
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].length, 50);
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["player-core-2"].length, 29);
-  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 79);
+  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["treasure-vault-remastered"].length, 33);
+  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 112);
 });

@@ -219,7 +219,7 @@
       "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Name",
       "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Description",
       "duration": {
-        "value": 4,
+        "formula": "1d4",
         "unit": "hours"
       },
       "check": null,
@@ -263,16 +263,16 @@
     "contentLanguage": "i18n",
     "translation": "localized-independent-mechanics",
     "license": "ORC",
-    "automationStatus": "manual",
+    "automationStatus": "full",
     "licenseReview": {
       "mechanicsOnly": true,
       "reservedMaterial": "passed",
       "nameReview": "passed"
     },
     "automationNotes": [
-      "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+      "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61.",
+      "Stage 4 uses the source 1d4-hour formula duration through Affliction Forge 0.1.61."
     ],
-    "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.ManualComment",
     "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.SourceWorkLabel",
     "variantGroupId": "poison.lethargy-poison",
     "sourceVariant": true

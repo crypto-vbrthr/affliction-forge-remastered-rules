@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "sourceWorkId": "treasure-vault-remastered",
+  "section": "Poisons",
+  "reviewPolicy": "All 33 Treasure Vault Remastered poison afflictions are published. Affliction Forge 0.1.61 supplies repeated exposure, injury-poison delivery, incapacitation for source-level traits, virulent progression, formula stage timing, periodic effects, and ordinary staged effects. Source-specific mechanics that exceed reusable engine contracts remain visible GM Note exceptions rather than bespoke one-entry runtime hooks.",
+  "entries": [
+    {
+      "sourceName": "Assassin's Kiss",
+      "level": 20,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.assassins-kiss",
+      "notes": [
+        "GM Note: If the victim dies while poisoned, the body fully decomposes after 1 minute; the special corpse-preservation and counteract interactions are not automated."
+      ],
+      "manualComment": "GM Note: If the victim dies while poisoned, the body fully decomposes after 1 minute; the special corpse-preservation and counteract interactions are not automated."
+    },
+    {
+      "sourceName": "Antipode Oil",
+      "level": 6,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.antipode-oil",
+      "notes": [
+        "GM Note: The Forge does not automate the round-by-round cold/fire alternation or the temporary save-DC changes caused by external cold or fire damage. Apply the current stage damage manually."
+      ],
+      "manualComment": "GM Note: The Forge does not automate the round-by-round cold/fire alternation or the temporary save-DC changes caused by external cold or fire damage. Apply the current stage damage manually."
+    },
+    {
+      "sourceName": "Astringent Venom",
+      "level": 12,
+      "status": "manual",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.astringent-venom",
+      "notes": [
+        "GM Note: At the start of each turn, the victim must also succeed at a DC 5 flat check or drop one random held item. This inventory/turn-start effect remains manual."
+      ],
+      "manualComment": "GM Note: At the start of each turn, the victim must also succeed at a DC 5 flat check or drop one random held item. This inventory/turn-start effect remains manual."
+    },
+    {
+      "sourceName": "Blisterwort",
+      "level": 11,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.blisterwort",
+      "notes": [
+        "GM Note: The stage-based weakness to physical and force damage is not created as a PF2e weakness. Because the source lists no interval for any stage, no stage saves are invented; repeated exposure can still raise the stage."
+      ],
+      "manualComment": "GM Note: The stage-based weakness to physical and force damage is not created as a PF2e weakness. Because the source lists no interval for any stage, no stage saves are invented; repeated exposure can still raise the stage."
+    },
+    {
+      "sourceName": "Blue Dragonfly Poison",
+      "level": 3,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.blue-dragonfly-poison",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Breathtaking Vapor",
+      "level": 17,
+      "status": "manual",
+      "delivery": "inhaled",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.breathtaking-vapor",
+      "notes": [
+        "GM Note: Inability to breathe and reductions to remaining air are not tracked automatically. Creatures that do not need to breathe are immune only to those extra effects, not to the poison damage. No saves are invented for the omitted stage intervals."
+      ],
+      "manualComment": "GM Note: Inability to breathe and reductions to remaining air are not tracked automatically. Creatures that do not need to breathe are immune only to those extra effects, not to the poison damage. No saves are invented for the omitted stage intervals."
+    },
+    {
+      "sourceName": "Brightshade",
+      "level": 4,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.brightshade",
+      "notes": [
+        "GM Note: The damage type depends on whether the target is living or undead. This target-dependent switch is not detected automatically; apply the stage damage manually."
+      ],
+      "manualComment": "GM Note: The damage type depends on whether the target is living or undead. This target-dependent switch is not detected automatically; apply the stage damage manually."
+    },
+    {
+      "sourceName": "Careless Delight",
+      "level": 9,
+      "status": "manual",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.careless-delight",
+      "notes": [
+        "GM Note: Doubling the Stupefied penalty for lying, Sense Motive, and detecting lies, plus the Stage 3 attitude change, is handled manually."
+      ],
+      "manualComment": "GM Note: Doubling the Stupefied penalty for lying, Sense Motive, and detecting lies, plus the Stage 3 attitude change, is handled manually."
+    },
+    {
+      "sourceName": "Choleric Contagion",
+      "level": 18,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.choleric-contagion",
+      "notes": [
+        "GM Note: The victim’s first successful unarmed attack each round also exposes the struck target to this poison. This transmission to a new target is not triggered automatically."
+      ],
+      "manualComment": "GM Note: The victim’s first successful unarmed attack each round also exposes the struck target to this poison. This transmission to a new target is not triggered automatically."
+    },
+    {
+      "sourceName": "Clown Monarch",
+      "level": 5,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.clown-monarch",
+      "notes": [
+        "GM Note: Prone is applied automatically. The stage-dependent flat check before the Stand action is not intercepted automatically."
+      ],
+      "manualComment": "GM Note: Prone is applied automatically. The stage-dependent flat check before the Stand action is not intercepted automatically."
+    },
+    {
+      "sourceName": "Clubhead Poison",
+      "level": 12,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.clubhead-poison",
+      "notes": [
+        "GM Note: Damage, Off-Guard, and Stunned are automated. The complete prohibition on reactions for the duration of each stage is not separately enforced."
+      ],
+      "manualComment": "GM Note: Damage, Off-Guard, and Stunned are automated. The complete prohibition on reactions for the duration of each stage is not separately enforced."
+    },
+    {
+      "sourceName": "Curare",
+      "level": 8,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.curare",
+      "notes": [
+        "GM Note: The special Stage 3 failure that immediately ends the poison and leaves the victim Paralyzed for 2d6 minutes is not represented by normal stage progression and must be resolved manually."
+      ],
+      "manualComment": "GM Note: The special Stage 3 failure that immediately ends the poison and leaves the victim Paralyzed for 2d6 minutes is not represented by normal stage progression and must be resolved manually."
+    },
+    {
+      "sourceName": "Dancing Lamentation",
+      "level": 11,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.dancing-lamentation",
+      "notes": [
+        "GM Note: Poison damage and Clumsy are automated. The forced random Steps at the start of each turn remain manual."
+      ],
+      "manualComment": "GM Note: Poison damage and Clumsy are automated. The forced random Steps at the start of each turn remain manual."
+    },
+    {
+      "sourceName": "Execution Powder",
+      "level": 14,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.execution-powder",
+      "notes": [
+        "GM Note: If the victim reaches 0 HP while poisoned, it must attempt a DC 34 Will save and dies on a failure. The subsequent random adjacent-creature benefit of 20 temporary HP and +1 to attack and damage for 10 minutes is also applied manually."
+      ],
+      "manualComment": "GM Note: If the victim reaches 0 HP while poisoned, it must attempt a DC 34 Will save and dies on a failure. The subsequent random adjacent-creature benefit of 20 temporary HP and +1 to attack and damage for 10 minutes is also applied manually."
+    },
+    {
+      "sourceName": "Eldritch Flare",
+      "level": 15,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.eldritch-flare",
+      "notes": [
+        "GM Note: Casting a spell raises the poison DC by 2 for that round and can convert half the stage damage to a spell damage type or mental damage. This dynamic linkage is not automated; apply stage damage manually."
+      ],
+      "manualComment": "GM Note: Casting a spell raises the poison DC by 2 for that round and can convert half the stage damage to a spell damage type or mental damage. This dynamic linkage is not automated; apply stage damage manually."
+    },
+    {
+      "sourceName": "False Hope",
+      "level": 17,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.false-hope",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Fraudslayer Oil",
+      "level": 14,
+      "status": "manual",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.fraudslayer-oil",
+      "notes": [
+        "GM Note: The Forge applies Stupefied automatically but does not detect voluntary lies. The triggered poison/mental damage and the Stage 3 death effect are resolved manually."
+      ],
+      "manualComment": "GM Note: The Forge applies Stupefied automatically but does not detect voluntary lies. The triggered poison/mental damage and the Stage 3 death effect are resolved manually."
+    },
+    {
+      "sourceName": "Gnawbone Toxin",
+      "level": 11,
+      "status": "manual",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin",
+      "notes": [
+        "GM Note: Eating at least a mouthful of humanoid flesh suppresses this poison’s Enfeebled for 1 minute and avoids its halved healing. These food-dependent exceptions remain manual; the Stage 3 1d4-minute interval is rolled automatically."
+      ],
+      "manualComment": "GM Note: Eating at least a mouthful of humanoid flesh suppresses this poison’s Enfeebled for 1 minute and avoids its halved healing. These food-dependent exceptions remain manual; the Stage 3 1d4-minute interval is rolled automatically."
+    },
+    {
+      "sourceName": "Gorgon's Breath",
+      "level": 13,
+      "status": "full",
+      "delivery": "inhaled",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.gorgons-breath",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Looter’s Lethargy",
+      "level": 2,
+      "status": "manual",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.looters-lethargy",
+      "notes": [
+        "GM Note: Off-Guard is automated. The reduction of Bulk limit by 3/4/5 is not integrated into PF2e encumbrance calculations."
+      ],
+      "manualComment": "GM Note: Off-Guard is automated. The reduction of Bulk limit by 3/4/5 is not integrated into PF2e encumbrance calculations."
+    },
+    {
+      "sourceName": "Mustard Powder",
+      "level": 5,
+      "status": "manual",
+      "delivery": "inhaled",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.mustard-powder",
+      "notes": [
+        "GM Note: Poison damage, Dazzled, and Sickened are automated; Sickened can’t be ended early in Stages 2/3. Loss of smell is not technically enforced."
+      ],
+      "manualComment": "GM Note: Poison damage, Dazzled, and Sickened are automated; Sickened can’t be ended early in Stages 2/3. Loss of smell is not technically enforced."
+    },
+    {
+      "sourceName": "Nightmare Salt",
+      "level": 20,
+      "status": "manual",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt",
+      "notes": [
+        "GM Note: The recurring Stage 1 and 2 effects trigger automatically with newly rolled 1d4-hour intervals. In Stage 3, the hourly 1d4-minute Confused duration remains manual because the repeated effect duration is variable. Stage 4 applies Death directly."
+      ],
+      "manualComment": "GM Note: The recurring Stage 1 and 2 effects trigger automatically with newly rolled 1d4-hour intervals. In Stage 3, the hourly 1d4-minute Confused duration remains manual because the repeated effect duration is variable. Stage 4 applies Death directly."
+    },
+    {
+      "sourceName": "Pale Fade",
+      "level": 19,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade",
+      "notes": [
+        "GM Note: In Stages 2 and 3, the dust not only Conceals the victim from others but also other creatures from the victim. This reciprocal visibility effect is not additionally automated."
+      ],
+      "manualComment": "GM Note: In Stages 2 and 3, the dust not only Conceals the victim from others but also other creatures from the victim. This reciprocal visibility effect is not additionally automated."
+    },
+    {
+      "sourceName": "Pummel-Growth Toxin",
+      "level": 13,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.pummel-growth-toxin",
+      "notes": [
+        "GM Note: Poison damage, Clumsy, and Slowed are automated. The flat check before manipulate actions and the Stage 2/3 bludgeoning damage that occurs only if the victim can act remain manual."
+      ],
+      "manualComment": "GM Note: Poison damage, Clumsy, and Slowed are automated. The flat check before manipulate actions and the Stage 2/3 bludgeoning damage that occurs only if the victim can act remain manual."
+    },
+    {
+      "sourceName": "Scarlet Mist",
+      "level": 8,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.scarlet-mist",
+      "notes": [
+        "GM Note: Poison and persistent bleed damage are created. The persistent bleed can still technically be ended normally, though the source forbids staunching it until the poison ends. Splash damage to nearby creatures on each bleed tick remains manual."
+      ],
+      "manualComment": "GM Note: Poison and persistent bleed damage are created. The persistent bleed can still technically be ended normally, though the source forbids staunching it until the poison ends. Splash damage to nearby creatures on each bleed tick remains manual."
+    },
+    {
+      "sourceName": "Sightless Tincture",
+      "level": 9,
+      "status": "manual",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.sightless-tincture",
+      "notes": [
+        "GM Note: Dazzled/Blinded and the 2d6-hour Stage 3 interval are automated. The visual-only Perception penalties, Stage-3-only incapacitation adjustment, and additional 24 hours of blindness if the poison expires during Stage 3 remain manual."
+      ],
+      "manualComment": "GM Note: Dazzled/Blinded and the 2d6-hour Stage 3 interval are automated. The visual-only Perception penalties, Stage-3-only incapacitation adjustment, and additional 24 hours of blindness if the poison expires during Stage 3 remain manual."
+    },
+    {
+      "sourceName": "Smother Shroud",
+      "level": 7,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.smother-shroud",
+      "notes": [
+        "GM Note: Damage and Dazzled/Blinded/Deafened are automated; speaking is blocked in Stage 3. Hearing/smell penalties, auditory actions in general, inability to breathe, identification DC changes, and poisoned-corpse rules remain manual. No Stage 3 interval is invented."
+      ],
+      "manualComment": "GM Note: Damage and Dazzled/Blinded/Deafened are automated; speaking is blocked in Stage 3. Hearing/smell penalties, auditory actions in general, inability to breathe, identification DC changes, and poisoned-corpse rules remain manual. No Stage 3 interval is invented."
+    },
+    {
+      "sourceName": "Spear Frog Poison",
+      "level": 1,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.spear-frog-poison",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Stupor Poison",
+      "level": 7,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Taster’s Folly",
+      "level": 4,
+      "status": "full",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Unending Itch",
+      "level": 14,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch",
+      "notes": [
+        "GM Note: Until the victim recognizes the poison, the GM makes its saves secretly. Recognition requires DC 34 Perception or Medicine, reduced to DC 30 at half HP or less. The Forge automates damage and secret saves, but not the dynamic recognition DC or later switch to public saves."
+      ],
+      "manualComment": "GM Note: Until the victim recognizes the poison, the GM makes its saves secretly. Recognition requires DC 34 Perception or Medicine, reduced to DC 30 at half HP or less. The Forge automates damage and secret saves, but not the dynamic recognition DC or later switch to public saves."
+    },
+    {
+      "sourceName": "Violet Venom",
+      "level": 3,
+      "status": "full",
+      "delivery": "contact",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.violet-venom",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Warpwobble Poison",
+      "level": 8,
+      "status": "manual",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.warpwobble-poison",
+      "notes": [
+        "GM Note: The terrain and Balance rules depend on scene movement and are not automated as actor conditions. Stage progression and saves work normally; the GM applies the movement effects."
+      ],
+      "manualComment": "GM Note: The terrain and Balance rules depend on scene movement and are not automated as actor conditions. Stage progression and saves work normally; the GM applies the movement effects."
+    }
+  ]
+}

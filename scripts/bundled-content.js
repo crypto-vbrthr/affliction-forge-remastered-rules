@@ -7027,7 +7027,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Injury level 2 poison with a DC 18 Fortitude save. GM Note: Stage 4 lasts 1d4 hours; the current stage-duration contract doesn't support a dice formula. Roll 1d4 hours on entering Stage 4 and handle its end or next stage save manually. During Stages 3 and 4, the creature can't wake with a Perception check.",
+          "value": "Level 2 injury poison with a DC 18 Fortitude save. Stage 4 lasts 1d4 hours; during Stages 3 and 4, the creature can’t wake with a Perception check.",
           "gm": ""
         },
         "rules": [],
@@ -7291,7 +7291,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Name",
                 "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Stages.4.Description",
                 "duration": {
-                  "value": 4,
+                  "formula": "1d4",
                   "unit": "hours"
                 },
                 "check": null,
@@ -7335,17 +7335,17 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "contentLanguage": "i18n",
               "translation": "localized-independent-mechanics",
               "license": "ORC",
-              "automationStatus": "manual",
+              "automationStatus": "full",
               "licenseReview": {
                 "mechanicsOnly": true,
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
               "automationNotes": [
-                "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57.",
-                "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung."
+                "GM Core poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61.",
+                "Diese Definition bewahrt die GM-Core-Fassung getrennt von der gleichnamigen Player-Core-2-Fassung.",
+                "Stage 4 uses the source 1d4-hour formula duration through Affliction Forge 0.1.61."
               ],
-              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.ManualComment",
               "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.gm-core.lethargy-poison.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.lethargy-poison",
               "sourceVariant": true
@@ -19494,7 +19494,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       "img": "icons/svg/biohazard.svg",
       "system": {
         "description": {
-          "value": "Injury level 2 poison with a DC 18 Fortitude save. GM Note: Stage 4 lasts 1d4 hours; the current stage-duration contract doesn't support a dice formula. Roll 1d4 hours on entering Stage 4 and handle its end or next stage save manually. During Stages 3 and 4, the creature can't wake with a Perception check.",
+          "value": "Level 2 injury poison with a DC 18 Fortitude save. Stage 4 lasts 1d4 hours; during Stages 3 and 4, the creature can’t wake with a Perception check.",
           "gm": ""
         },
         "rules": [],
@@ -19758,7 +19758,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
                 "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Name",
                 "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Stages.4.Description",
                 "duration": {
-                  "value": 4,
+                  "formula": "1d4",
                   "unit": "hours"
                 },
                 "check": null,
@@ -19802,16 +19802,16 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               "contentLanguage": "i18n",
               "translation": "localized-independent-mechanics",
               "license": "ORC",
-              "automationStatus": "manual",
+              "automationStatus": "full",
               "licenseReview": {
                 "mechanicsOnly": true,
                 "reservedMaterial": "passed",
                 "nameReview": "passed"
               },
               "automationNotes": [
-                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.57."
+                "Player Core 2 poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61.",
+                "Stage 4 uses the source 1d4-hour formula duration through Affliction Forge 0.1.61."
               ],
-              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.ManualComment",
               "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.player-core-2.lethargy-poison.Metadata.SourceWorkLabel",
               "variantGroupId": "poison.lethargy-poison",
               "sourceVariant": true
@@ -23517,5 +23517,10726 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     }
   ],
-  "treasure-vault-remastered": []
+  "treasure-vault-remastered": [
+    {
+      "_id": "KPsPtBu1ztlCiBUg",
+      "name": "Antipode Oil",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 6 injury poison with a DC 24 Fortitude save. GM Note: The Forge does not automate the round-by-round cold/fire alternation or the temporary save-DC changes caused by external cold or fire damage. Apply the current stage damage manually.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 6
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.antipode-oil",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.antipode-oil",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 6,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 24,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 67,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Metadata.SourceSection",
+              "sourceName": "Antipode Oil",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.antipode-oil.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "trJAJXHOCddjDWPc",
+      "name": "Assassin's Kiss",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 20 injury poison with a DC 42 Fortitude save. GM Note: If the victim dies while poisoned, the body fully decomposes after 1 minute; the special corpse-preservation and counteract interactions are not automated.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 20
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.assassins-kiss",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.assassins-kiss",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 20,
+            "rarity": "rare",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 42,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": null,
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.assassins-kiss.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "7d12",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "doomed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.assassins-kiss.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "9d12",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "doomed",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.assassins-kiss.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "11d12",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "doomed",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 66,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Metadata.SourceSection",
+              "sourceName": "Assassin's Kiss",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.assassins-kiss.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "KsgleorAaJlvMGdk",
+      "name": "Astringent Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 12 contact poison with a DC 32 Fortitude save. GM Note: At the start of each turn, the victim must also succeed at a DC 5 flat check or drop one random held item. This inventory/turn-start effect remains manual.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 12
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.astringent-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.astringent-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 12,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "rounds"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.astringent-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.astringent-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.astringent-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "10d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 67,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Metadata.SourceSection",
+              "sourceName": "Astringent Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.astringent-venom.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "hn3lDfoEC9d43zAh",
+      "name": "Blisterwort",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 11 injury poison with a DC 30 Fortitude save. GM Note: The stage-based weakness to physical and force damage is not created as a PF2e weakness. Because the source lists no interval for any stage, no stage saves are invented; repeated exposure can still raise the stage.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 11
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.blisterwort",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blisterwort",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 11,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 30,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.1.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blisterwort.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.2.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blisterwort.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "5d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.3.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blisterwort.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "7d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 67,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Metadata.SourceSection",
+              "sourceName": "Blisterwort",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blisterwort.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "t1dUg6oSf0PwRh2w",
+      "name": "Blue Dragonfly Poison",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 3 ingested poison with a DC 17 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 3
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.blue-dragonfly-poison",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blue-dragonfly-poison",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 3,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 17,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 30,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.1.Description",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blue-dragonfly-poison.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.2.Description",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blue-dragonfly-poison.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "frightened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.blue-dragonfly-poison.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "frightened",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 67,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Metadata.SourceSection",
+              "sourceName": "Blue Dragonfly Poison",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.blue-dragonfly-poison.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "Woaetx9tCYFNidlY",
+      "name": "Breathtaking Vapor",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 17 inhaled poison with a DC 38 Fortitude save. GM Note: Inability to breathe and reductions to remaining air are not tracked automatically. Creatures that do not need to breathe are immune only to those extra effects, not to the poison damage. No saves are invented for the omitted stage intervals.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "inhaled"
+          ],
+          "otherTags": [
+            "poison",
+            "inhaled",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 17
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.breathtaking-vapor",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.breathtaking-vapor",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 17,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "inhaled"
+            ],
+            "themes": [
+              "poison",
+              "inhaled",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 38,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "rounds"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.1.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.breathtaking-vapor.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.2.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.breathtaking-vapor.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.3.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.breathtaking-vapor.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "10d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 67,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Metadata.SourceSection",
+              "sourceName": "Breathtaking Vapor",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.breathtaking-vapor.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "ZyXR6b8Z1lwXbLTk",
+      "name": "Brightshade",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 4 injury poison with a DC 21 Fortitude save. GM Note: The damage type depends on whether the target is living or undead. This target-dependent switch is not detected automatically; apply the stage damage manually.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury",
+            "vitality"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 4
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.brightshade",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.brightshade",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 4,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury",
+              "vitality"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 21,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 67,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Metadata.SourceSection",
+              "sourceName": "Brightshade",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.brightshade.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "MazNcX4ItfNKL4I3",
+      "name": "Careless Delight",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 9 ingested poison with a DC 28 Fortitude save. GM Note: Doubling the Stupefied penalty for lying, Sense Motive, and detecting lies, plus the Stage 3 attitude change, is handled manually.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested",
+            "mental"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 9
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.careless-delight",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.careless-delight",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 9,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested",
+              "mental"
+            ],
+            "themes": [
+              "poison",
+              "ingested",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 28,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.careless-delight.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.careless-delight.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.careless-delight.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 67,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Metadata.SourceSection",
+              "sourceName": "Careless Delight",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.careless-delight.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "EXNHLJ6tCNnLmKrF",
+      "name": "Choleric Contagion",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 18 injury poison with a DC 40 Fortitude save. GM Note: The victim’s first successful unarmed attack each round also exposes the struck target to this poison. This transmission to a new target is not triggered automatically.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 18
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.choleric-contagion",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.choleric-contagion",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 18,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 40,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.choleric-contagion.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.choleric-contagion.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.choleric-contagion.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "10d10",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 68,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Metadata.SourceSection",
+              "sourceName": "Choleric Contagion",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.choleric-contagion.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "qu6Slz2WiopHhLTh",
+      "name": "Clown Monarch",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 5 injury poison with a DC 22 Fortitude save. GM Note: Prone is applied automatically. The stage-dependent flat check before the Stand action is not intercepted automatically.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 5
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.clown-monarch",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clown-monarch",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 5,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 22,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clown-monarch.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "prone"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clown-monarch.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "prone"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clown-monarch.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "prone"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 68,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Metadata.SourceSection",
+              "sourceName": "Clown Monarch",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clown-monarch.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "aamnYdF5kGMTMn7F",
+      "name": "Clubhead Poison",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 12 injury poison with a DC 32 Fortitude save. GM Note: Damage, Off-Guard, and Stunned are automated. The complete prohibition on reactions for the duration of each stage is not separately enforced.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 12
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.clubhead-poison",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clubhead-poison",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 12,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clubhead-poison.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clubhead-poison.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stunned",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.clubhead-poison.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "5d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stunned",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 68,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Metadata.SourceSection",
+              "sourceName": "Clubhead Poison",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.clubhead-poison.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "3GXgGrALzXm4Qchf",
+      "name": "Curare",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 8 injury poison with a DC 25 Fortitude save. GM Note: The special Stage 3 failure that immediately ends the poison and leaves the victim Paralyzed for 2d6 minutes is not represented by normal stage progression and must be resolved manually.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury",
+            "incapacitation"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 8
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.curare",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.curare",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 8,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury",
+              "incapacitation"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 25,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.curare.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.curare.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.curare.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 68,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Metadata.SourceSection",
+              "sourceName": "Curare",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.curare.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "b6oeFtmhUbFNUwFx",
+      "name": "Dancing Lamentation",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 11 injury poison with a DC 30 Fortitude save. GM Note: Poison damage and Clumsy are automated. The forced random Steps at the start of each turn remain manual.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 11
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.dancing-lamentation",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.dancing-lamentation",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 11,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 30,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.dancing-lamentation.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.dancing-lamentation.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.dancing-lamentation.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 68,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Metadata.SourceSection",
+              "sourceName": "Dancing Lamentation",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.dancing-lamentation.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "V16uXtQdoYlgbn3j",
+      "name": "Eldritch Flare",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 15 injury poison with a DC 35 Fortitude save. GM Note: Casting a spell raises the poison DC by 2 for that round and can convert half the stage damage to a spell damage type or mental damage. This dynamic linkage is not automated; apply stage damage manually.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 15
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.eldritch-flare",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.eldritch-flare",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 15,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 35,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 68,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Metadata.SourceSection",
+              "sourceName": "Eldritch Flare",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.eldritch-flare.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "7CMQtGRHMorFM6Kn",
+      "name": "Execution Powder",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 14 injury poison with a DC 34 Fortitude save. GM Note: If the victim reaches 0 HP while poisoned, it must attempt a DC 34 Will save and dies on a failure. The subsequent random adjacent-creature benefit of 20 temporary HP and +1 to attack and damage for 10 minutes is also applied manually.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 14
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.execution-powder",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.execution-powder",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 14,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 34,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.execution-powder.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "7d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.execution-powder.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "9d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.execution-powder.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "12d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 68,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Metadata.SourceSection",
+              "sourceName": "Execution Powder",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.execution-powder.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "JORocgM66NkBumLj",
+      "name": "False Hope",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 17 injury poison with a DC 37 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 17
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.false-hope",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.false-hope",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 17,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 37,
+                "policy": {
+                  "execution": "gm",
+                  "visibility": "gmOnly"
+                }
+              },
+              {
+                "id": "public",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 37,
+                "policy": {
+                  "execution": "player",
+                  "visibility": "public"
+                }
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 10,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "public"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": {
+                  "checkIds": [
+                    "primary"
+                  ],
+                  "combine": "single",
+                  "outcomes": {
+                    "criticalSuccess": {
+                      "action": "stage-delta",
+                      "delta": -2
+                    },
+                    "success": {
+                      "action": "stage-delta",
+                      "delta": -1
+                    },
+                    "failure": {
+                      "action": "stage-delta",
+                      "delta": 1
+                    },
+                    "criticalFailure": {
+                      "action": "stage-delta",
+                      "delta": 2
+                    }
+                  }
+                },
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.false-hope.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "10d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.3.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": {
+                  "checkIds": [
+                    "primary"
+                  ],
+                  "combine": "single",
+                  "outcomes": {
+                    "criticalSuccess": {
+                      "action": "stage-delta",
+                      "delta": -2
+                    },
+                    "success": {
+                      "action": "stage-delta",
+                      "delta": -1
+                    },
+                    "failure": {
+                      "action": "stage-delta",
+                      "delta": 1
+                    },
+                    "criticalFailure": {
+                      "action": "stage-delta",
+                      "delta": 2
+                    }
+                  }
+                },
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.4.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.false-hope.stage-4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Stages.4.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "12d8",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 69,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Metadata.SourceSection",
+              "sourceName": "False Hope",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Secret saves are delegated to Affliction Forge save policy; the omitted Stage 3 interval is preserved without invention."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.false-hope.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "VX8UcaxXwAHoUE69",
+      "name": "Fraudslayer Oil",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 14 contact poison with a DC 34 Fortitude save. GM Note: The Forge applies Stupefied automatically but does not detect voluntary lies. The triggered poison/mental damage and the Stage 3 death effect are resolved manually.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact",
+            "mental"
+          ],
+          "otherTags": [
+            "poison",
+            "contact",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 14
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.fraudslayer-oil",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.fraudslayer-oil",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 14,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "contact",
+              "mental"
+            ],
+            "themes": [
+              "poison",
+              "contact",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 34,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.fraudslayer-oil.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.fraudslayer-oil.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.fraudslayer-oil.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 69,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Metadata.SourceSection",
+              "sourceName": "Fraudslayer Oil",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.fraudslayer-oil.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "v3RHwp4JzLjz5nBA",
+      "name": "Gnawbone Toxin",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 11 contact poison with a DC 30 Fortitude save. GM Note: Eating at least a mouthful of humanoid flesh suppresses this poison’s Enfeebled for 1 minute and avoids its halved healing. These food-dependent exceptions remain manual; the Stage 3 1d4-minute interval is rolled automatically.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 11
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 11,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 30,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.3.Description",
+                "duration": {
+                  "formula": "1d4",
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gnawbone-toxin.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 4
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 69,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Metadata.SourceSection",
+              "sourceName": "Gnawbone Toxin",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gnawbone-toxin.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "WkXwcuGh6Kd0nHyV",
+      "name": "Gorgon's Breath",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 13 inhaled poison with a DC 32 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "inhaled"
+          ],
+          "otherTags": [
+            "poison",
+            "inhaled"
+          ]
+        },
+        "level": {
+          "value": 13
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.gorgons-breath",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gorgons-breath",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 13,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "inhaled"
+            ],
+            "themes": [
+              "poison",
+              "inhaled"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "rounds"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gorgons-breath.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gorgons-breath.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "bludgeoning"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gorgons-breath.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "petrified"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.4.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [
+                  "permanent"
+                ],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.gorgons-breath.stage-4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Stages.4.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "petrified"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 69,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Metadata.SourceSection",
+              "sourceName": "Gorgon's Breath",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.gorgons-breath.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "0Kc26alELqkoDczi",
+      "name": "Looter’s Lethargy",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 2 contact poison with a DC 19 Fortitude save. GM Note: Off-Guard is automated. The reduction of Bulk limit by 3/4/5 is not integrated into PF2e encumbrance calculations.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 2
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.looters-lethargy",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.looters-lethargy",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 2,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 19,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 1,
+              "unit": "hours"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.2.Description",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.looters-lethargy.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.3.Description",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.looters-lethargy.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 69,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Metadata.SourceSection",
+              "sourceName": "Looter’s Lethargy",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.looters-lethargy.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "xZQhtj1ljxzuRrBi",
+      "name": "Mustard Powder",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 5 inhaled poison with a DC 22 Fortitude save. GM Note: Poison damage, Dazzled, and Sickened are automated; Sickened can’t be ended early in Stages 2/3. Loss of smell is not technically enforced.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "inhaled"
+          ],
+          "otherTags": [
+            "poison",
+            "inhaled",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 5
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.mustard-powder",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.mustard-powder",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 5,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "inhaled"
+            ],
+            "themes": [
+              "poison",
+              "inhaled",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [
+                {
+                  "slug": "sickened",
+                  "minimum": null
+                }
+              ],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 22,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.mustard-powder.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [
+                  null,
+                  null,
+                  "affliction"
+                ],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.mustard-powder.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [
+                  null,
+                  null,
+                  "affliction"
+                ],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.mustard-powder.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 70,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Metadata.SourceSection",
+              "sourceName": "Mustard Powder",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.mustard-powder.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "GDIA37KjGEFUMU42",
+      "name": "Nightmare Salt",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 20 ingested poison with a DC 43 Fortitude save. GM Note: The recurring Stage 1 and 2 effects trigger automatically with newly rolled 1d4-hour intervals. In Stage 3, the hourly 1d4-minute Confused duration remains manual because the repeated effect duration is variable. Stage 4 applies Death directly.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 20
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 20,
+            "rarity": "rare",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 43,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "hours"
+            },
+            "maximumDuration": {
+              "value": 5,
+              "unit": "days"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [
+                  {
+                    "id": "nightmare-frightened",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.PeriodicEffects.1.Label",
+                    "interval": {
+                      "formula": "1d4",
+                      "unit": "hours"
+                    },
+                    "effect": {
+                      "schemaVersion": 2,
+                      "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-1.nightmare-frightened",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.1.PeriodicEffects.1.Effect.Name",
+                      "duration": {
+                        "value": -1,
+                        "unit": "unlimited",
+                        "expiry": null
+                      },
+                      "components": [
+                        {
+                          "type": "condition",
+                          "slug": "frightened",
+                          "value": 2
+                        }
+                      ],
+                      "application": {},
+                      "metadata": {}
+                    }
+                  }
+                ],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "frightened",
+                      "value": 3
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [
+                  {
+                    "id": "nightmare-confusion",
+                    "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.PeriodicEffects.1.Label",
+                    "interval": {
+                      "formula": "1d4",
+                      "unit": "hours"
+                    },
+                    "effect": {
+                      "schemaVersion": 2,
+                      "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-2.nightmare-confusion",
+                      "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.2.PeriodicEffects.1.Effect.Name",
+                      "duration": {
+                        "value": 1,
+                        "unit": "minutes",
+                        "expiry": null
+                      },
+                      "components": [
+                        {
+                          "type": "condition",
+                          "slug": "confused"
+                        }
+                      ],
+                      "application": {},
+                      "metadata": {}
+                    }
+                  }
+                ],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "days"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "frightened",
+                      "value": 3
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.4.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.nightmare-salt.stage-4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Stages.4.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "death",
+                      "category": "direct"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 70,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Metadata.SourceSection",
+              "sourceName": "Nightmare Salt",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.nightmare-salt.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "S27H1Al4YmR6vSTU",
+      "name": "Pale Fade",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 19 injury poison with a DC 42 Fortitude save. GM Note: In Stages 2 and 3, the dust not only Conceals the victim from others but also other creatures from the victim. This reciprocal visibility effect is not additionally automated.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 19
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 19,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 42,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "10d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "12d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "concealed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pale-fade.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "15d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "concealed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 70,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Metadata.SourceSection",
+              "sourceName": "Pale Fade",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pale-fade.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "TjOECqaQyGbTZgtb",
+      "name": "Pummel-Growth Toxin",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 13 injury poison with a DC 32 Fortitude save. GM Note: Poison damage, Clumsy, and Slowed are automated. The flat check before manipulate actions and the Stage 2/3 bludgeoning damage that occurs only if the victim can act remain manual.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury",
+            "morph"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 13
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.pummel-growth-toxin",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pummel-growth-toxin",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 13,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury",
+              "morph"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pummel-growth-toxin.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pummel-growth-toxin.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.pummel-growth-toxin.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 70,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Metadata.SourceSection",
+              "sourceName": "Pummel-Growth Toxin",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.pummel-growth-toxin.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "DerhFJ3e03I4dyr5",
+      "name": "Scarlet Mist",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 8 injury poison with a DC 25 Fortitude save. GM Note: Poison and persistent bleed damage are created. The persistent bleed can still technically be ended normally, though the source forbids staunching it until the poison ends. Splash damage to nearby creatures on each bleed tick remains manual.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 8
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.scarlet-mist",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.scarlet-mist",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 8,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 25,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.scarlet-mist.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "1d4",
+                      "damageType": "bleed",
+                      "persistent": true
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.scarlet-mist.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "2d4",
+                      "damageType": "bleed",
+                      "persistent": true
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.scarlet-mist.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "3d4",
+                      "damageType": "bleed",
+                      "persistent": true
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 70,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Metadata.SourceSection",
+              "sourceName": "Scarlet Mist",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.scarlet-mist.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "0dFjSs67e7qGVAvg",
+      "name": "Sightless Tincture",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 9 ingested poison with a DC 28 Fortitude save. GM Note: Dazzled/Blinded and the 2d6-hour Stage 3 interval are automated. The visual-only Perception penalties, Stage-3-only incapacitation adjustment, and additional 24 hours of blindness if the poison expires during Stage 3 remain manual.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 9
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.sightless-tincture",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.sightless-tincture",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 9,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 28,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 14,
+              "unit": "hours"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "hours"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.sightless-tincture.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "hours"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.sightless-tincture.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.3.Description",
+                "duration": {
+                  "formula": "2d6",
+                  "unit": "hours"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.sightless-tincture.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "blinded"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 70,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Metadata.SourceSection",
+              "sourceName": "Sightless Tincture",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.sightless-tincture.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "IW3MSCheihPtTUiK",
+      "name": "Smother Shroud",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 7 injury poison with a DC 22 Fortitude save. GM Note: Damage and Dazzled/Blinded/Deafened are automated; speaking is blocked in Stage 3. Hearing/smell penalties, auditory actions in general, inability to breathe, identification DC changes, and poisoned-corpse rules remain manual. No Stage 3 interval is invented.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 7
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.smother-shroud",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.smother-shroud",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 7,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 22,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 10,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.smother-shroud.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.smother-shroud.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "dazzled"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.3.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": [
+                    "speak"
+                  ]
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.smother-shroud.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "blinded"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "deafened"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 71,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Metadata.SourceSection",
+              "sourceName": "Smother Shroud",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.smother-shroud.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "blMuETkWIK5Bx2wm",
+      "name": "Spear Frog Poison",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 1 injury poison with a DC 15 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 1
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.spear-frog-poison",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.spear-frog-poison",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 1,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 15,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.spear-frog-poison.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d4",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.spear-frog-poison.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 71,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Metadata.SourceSection",
+              "sourceName": "Spear Frog Poison",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.spear-frog-poison.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "TcxlpIbwhDeA1I1u",
+      "name": "Stupor Poison",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 7 injury poison with a DC 20 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury",
+            "incapacitation",
+            "sleep"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 7
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 7,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "injury",
+              "incapacitation",
+              "sleep"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "ignore",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 20,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "hours"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "off-guard"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "unconscious",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.4.Description",
+                "duration": {
+                  "formula": "1d6",
+                  "unit": "hours"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [
+                    {
+                      "slug": "unconscious",
+                      "minimum": null
+                    }
+                  ],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.stupor-poison.stage-4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Stages.4.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "unconscious"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 71,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Metadata.SourceSection",
+              "sourceName": "Stupor Poison",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.stupor-poison.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "ov8qXimWdPKFnuWi",
+      "name": "Taster’s Folly",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 4 ingested poison with a DC 21 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 4
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 4,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [
+                {
+                  "slug": "sickened",
+                  "minimum": null
+                }
+              ],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 21,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 10,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d4",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [
+                  null,
+                  "affliction"
+                ],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [
+                  null,
+                  "affliction"
+                ],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.tasters-folly.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d4",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 71,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Metadata.SourceSection",
+              "sourceName": "Taster’s Folly",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction is applied only after both harmless compounds have been consumed within the same hour; item detection and mixing rules remain outside the active-affliction engine."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.tasters-folly.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "3YRi4XyBnlg1kVlG",
+      "name": "Unending Itch",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 14 injury poison with a DC 34 Fortitude save. GM Note: Until the victim recognizes the poison, the GM makes its saves secretly. Recognition requires DC 34 Perception or Medicine, reduced to DC 30 at half HP or less. The Forge automates damage and secret saves, but not the dynamic recognition DC or later switch to public saves.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 14
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 14,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "gm",
+              "visibility": "gmOnly"
+            },
+            "identification": {
+              "initialState": "hidden"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 34,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 5,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": true
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-4",
+                "number": 4,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.4.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.4.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch.stage-4",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.4.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-5",
+                "number": 5,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.5.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.5.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.unending-itch.stage-5",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Stages.5.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 71,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Metadata.SourceSection",
+              "sourceName": "Unending Itch",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.unending-itch.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "g6iKr6Sy1yxk35Fr",
+      "name": "Violet Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 3 contact poison with a DC 17 Fortitude save.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "contact"
+          ],
+          "otherTags": [
+            "poison",
+            "contact"
+          ]
+        },
+        "level": {
+          "value": 3
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.violet-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.violet-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 3,
+            "rarity": "uncommon",
+            "traits": [
+              "poison",
+              "contact"
+            ],
+            "themes": [
+              "poison",
+              "contact"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 17,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.violet-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.violet-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.treasure-vault-remastered.violet-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 71,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Metadata.SourceSection",
+              "sourceName": "Violet Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.violet-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "LmTrWLG3s489BsCc",
+      "name": "Warpwobble Poison",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 8 injury poison with a DC 26 Will save. GM Note: The terrain and Balance rules depend on scene movement and are not automated as actor conditions. Stage progression and saves work normally; the GM applies the movement effects.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury",
+            "mental"
+          ],
+          "otherTags": [
+            "poison",
+            "injury",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 8
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.treasure-vault-remastered.warpwobble-poison",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.treasure-vault-remastered.warpwobble-poison",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 8,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury",
+              "mental"
+            ],
+            "themes": [
+              "poison",
+              "injury",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Checks.1.Label",
+                "kind": "save",
+                "statistic": "will",
+                "dcMode": "fixed",
+                "dc": 26,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": null,
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "treasure-vault-remastered",
+              "sourcePage": 71,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Metadata.SourceSection",
+              "sourceName": "Warpwobble Poison",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Treasure Vault poison delivery and repeated-exposure rules are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.treasure-vault-remastered.warpwobble-poison.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 2
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    }
+  ]
 });
