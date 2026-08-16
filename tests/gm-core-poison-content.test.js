@@ -111,10 +111,10 @@ test("Dagger Venom preserves the weapon-bound one-stage source without inventing
   assert.equal(poison.metadata.sourceVariant, undefined);
 });
 
-test("runtime seed contains all 115 reviewed definitions", () => {
+test("runtime seed contains all 124 reviewed definitions", () => {
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].length, 50);
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["player-core-2"].length, 29);
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["treasure-vault-remastered"].length, 33);
-  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["howl-of-the-wild"].length, 3);
-  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 115);
+  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["howl-of-the-wild"].length, 12);
+  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 124);
 });

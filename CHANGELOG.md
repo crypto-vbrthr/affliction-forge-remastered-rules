@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.1.17 - 2026-08-16
+
+### Added
+
+- Complete **9/9 staged creature-affliction block** from the Howl of the Wild menagerie: Royal Basilisk Venom, Stonefish Venom, Stonefish Swarm Venom, Coppermouth Venom, Sun's Touch, Sky Fisher Venom, Spiny Venom, Manticore Venom, and Crying Cicada Poison.
+- German/English localized names, mechanics summaries, stage text, source labels, and the Sky Fisher whisper-only GM exception note.
+- Dedicated creature-affliction review inventory, including explicit exclusions for poison/disease-trait creature abilities that are not staged afflictions.
+- Upgrade regression coverage proving 0.1.16.1 installations seed only the nine newly added deterministic definitions.
+
+### Automation
+
+- **8/9 FULL** creature afflictions use existing staged poison, condition, damage, incapacitation, omitted-interval, and maximum-duration contracts.
+- **1/9 manual exception**: Sky Fisher Venom automates all stage effects except Stage 1's graded "whisper only" speech restriction; Stage 2's complete speaking prohibition uses the shared `speak` capability block.
+- Source-omitted stage intervals are preserved instead of silently inventing repeat saves. Coppermouth Venom Stage 3 and all Spiny Venom stages therefore keep non-expiring stage clocks while their printed maximum durations remain authoritative.
+- Creature poisons are not flagged as alchemical injury poisons and therefore do not enter weapon-coating/charge workflows.
+
+### Coverage
+
+- Howl of the Wild alchemical poisons: **3/3 published**.
+- Howl of the Wild creature afflictions: **9/9 published**.
+- Total bundled definitions: **124**.
+
 ## 0.1.16.1
 
 - Hotfix for Howl of the Wild alchemical afflictions not appearing after an in-place upgrade.

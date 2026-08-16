@@ -34241,6 +34241,678 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
   ],
   "howl-of-the-wild": [
     {
+      "_id": "kN23PjWF13JhrYhX",
+      "name": "Coppermouth Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 7 creature poison with a DC 25 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "electricity",
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 7
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.coppermouth-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.coppermouth-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 7,
+            "rarity": "common",
+            "traits": [
+              "electricity",
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 25,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.coppermouth-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "electricity"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.coppermouth-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "electricity"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.3.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.coppermouth-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "electricity"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 159,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Metadata.SourceSection",
+              "sourceName": "Coppermouth Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows.",
+                "Any source stage interval omitted by the printed stat block is preserved as an unlimited stage interval instead of inventing repeat saves; the listed maximum duration still ends the poison."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.coppermouth-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "CbnmVXsDFFIgXNat",
+      "name": "Crying Cicada Poison",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 3 creature poison with a DC 19 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "inhaled",
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 3
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.crying-cicada-poison",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.crying-cicada-poison",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 3,
+            "rarity": "common",
+            "traits": [
+              "inhaled",
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 19,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.crying-cicada-poison.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.crying-cicada-poison.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.crying-cicada-poison.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 2
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 196,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Metadata.SourceSection",
+              "sourceName": "Crying Cicada Poison",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.crying-cicada-poison.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "ufNweEOSjQK6QmW2",
       "name": "Essence of Mandragora",
       "type": "effect",
@@ -34576,6 +35248,1321 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
       }
     },
     {
+      "_id": "dj0NDcJShvzeX6Zg",
+      "name": "Manticore Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 12 creature poison with a DC 32 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 12
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.manticore-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.manticore-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 12,
+            "rarity": "common",
+            "traits": [
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 32,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.manticore-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.manticore-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.manticore-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "5d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "drained",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 180,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Metadata.SourceSection",
+              "sourceName": "Manticore Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.manticore-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "7ZOwZqZIhFkw31Xr",
+      "name": "Royal Basilisk Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 13 creature poison with a DC 36 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 13
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.royal-basilisk-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.royal-basilisk-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 13,
+            "rarity": "common",
+            "traits": [
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 36,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.royal-basilisk-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.royal-basilisk-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 3
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.royal-basilisk-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 3
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 131,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Metadata.SourceSection",
+              "sourceName": "Royal Basilisk Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.royal-basilisk-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "l0GVlQgKLxfZGxHR",
+      "name": "Sky Fisher Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 11 creature poison with a DC 25 Fortitude save and a maximum duration of 6 rounds. GM Note: the whisper-only restriction in Stage 1 is not enforced automatically; Stage 2 blocks speaking automatically.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature",
+            "manual"
+          ]
+        },
+        "level": {
+          "value": 11
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.sky-fisher-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.sky-fisher-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 11,
+            "rarity": "common",
+            "traits": [
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature",
+              "manual"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 25,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.sky-fisher-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": [
+                    "speak"
+                  ]
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.sky-fisher-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.sky-fisher-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "paralyzed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 174,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Metadata.SourceSection",
+              "sourceName": "Sky Fisher Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sky-fisher-venom.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "n57fF9ftWqERM8SF",
+      "name": "Spiny Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 8 creature poison with a DC 26 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "incapacitation",
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 8
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.spiny-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.spiny-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 8,
+            "rarity": "common",
+            "traits": [
+              "incapacitation",
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 26,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.1.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.spiny-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.2.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.spiny-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "slowed",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.3.Description",
+                "duration": {
+                  "value": -1,
+                  "unit": "unlimited"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.spiny-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "paralyzed"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 177,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Metadata.SourceSection",
+              "sourceName": "Spiny Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows.",
+                "Any source stage interval omitted by the printed stat block is preserved as an unlimited stage interval instead of inventing repeat saves; the listed maximum duration still ends the poison."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.spiny-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
       "_id": "YdoWXu6qw5zrAABI",
       "name": "Sportlebore Capsule",
       "type": "effect",
@@ -34881,6 +36868,973 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
               ],
               "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Metadata.SourceWorkLabel",
               "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "xPJwkGbMfB2HYdiA",
+      "name": "Stonefish Swarm Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 2 creature poison with a DC 18 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 2
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-swarm-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-swarm-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 2,
+            "rarity": "common",
+            "traits": [
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 18,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-swarm-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-swarm-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-swarm-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 153,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Metadata.SourceSection",
+              "sourceName": "Stonefish Swarm Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-swarm-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "i5CfN3A3pBoZJrry",
+      "name": "Stonefish Venom",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 0 creature poison with a DC 16 Fortitude save and a maximum duration of 3 hours.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 0
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-venom",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-venom",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 0,
+            "rarity": "common",
+            "traits": [
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 16,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 3,
+              "unit": "hours"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-venom.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.2.Description",
+                "duration": {
+                  "value": 10,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-venom.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "hours"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-venom.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "3d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 153,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Metadata.SourceSection",
+              "sourceName": "Stonefish Venom",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.stonefish-venom.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "EHJ18neCnBa6ZO0w",
+      "name": "Sun's Touch",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 14 creature poison with a DC 34 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison"
+          ],
+          "otherTags": [
+            "poison",
+            "creature"
+          ]
+        },
+        "level": {
+          "value": 14
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.suns-touch",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.suns-touch",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 14,
+            "rarity": "common",
+            "traits": [
+              "poison"
+            ],
+            "themes": [
+              "poison",
+              "creature"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 34,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.suns-touch.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d8",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.suns-touch.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "8d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "clumsy",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.suns-touch.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "6d10",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "fatigued"
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 160,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Metadata.SourceSection",
+              "sourceName": "Sun's Touch",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "The affliction level follows the source creature level because the affliction lists no separate level.",
+                "Creature poison exposure is not treated as an alchemical injury poison for weapon-coating workflows."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.suns-touch.Metadata.SourceWorkLabel"
             }
           },
           "originModule": "affliction-forge-remastered-rules",

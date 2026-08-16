@@ -5,7 +5,7 @@ import { seedBundledContent } from "../scripts/content-seeder.js";
 
 function fakeIndex(ids = [], revision = 0) { return new Map(ids.map((id) => [id, { _id: id, flags: { "affliction-forge-remastered-rules": { contentRevision: revision } } }])); }
 
-function installFoundryMock({ existing = false, existingIds = null, existingPc2 = true, existingTreasure = true, existingHowl = true, isGM = true, currentRevision = false, revision = null } = {}) {
+function installFoundryMock({ existing = false, existingIds = null, existingPc2 = true, existingTreasure = true, existingHowl = true, existingHowlIds = null, isGM = true, currentRevision = false, revision = null } = {}) {
   const previous = { game: globalThis.game, CONFIG: globalThis.CONFIG, Hooks: globalThis.Hooks, Item: globalThis.Item };
   const expectedByPack = Object.fromEntries(Object.entries(BUNDLED_ITEM_SOURCES_BY_PACK).map(([name, rows]) => [name, rows.map((entry) => entry._id)]));
   const createCalls = [], updateCalls = [], configureCalls = [], hookCalls = [], packs = new Map();
@@ -18,7 +18,10 @@ function installFoundryMock({ existing = false, existingIds = null, existingPc2 
         let ids = [];
         if (name === "gm-core") ids = Array.isArray(existingIds) ? existingIds : (existing ? expectedByPack[name] : []);
         else if (name === "player-core-2") ids = existingPc2 ? expectedByPack[name] : [];
-        else if (name === "treasure-vault-remastered") ids = existingTreasure ? [...expectedByPack[name], ...(existingHowl ? expectedByPack["howl-of-the-wild"] : [])] : [];
+        else if (name === "treasure-vault-remastered") {
+          const howlIds = Array.isArray(existingHowlIds) ? existingHowlIds : (existingHowl ? expectedByPack["howl-of-the-wild"] : []);
+          ids = existingTreasure ? [...expectedByPack[name], ...howlIds] : [];
+        }
         return fakeIndex(ids, revision ?? (currentRevision ? 3 : 0));
       },
       async configure(value) { configureCalls.push({ name, value }); this.locked = Boolean(value.locked); }
@@ -55,17 +58,17 @@ function gmExistingExcluding(excludedIds) {
   return BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].map((entry) => entry._id).filter((id) => !excludedIds.has(id));
 }
 
-test("fresh GM startup seeds all 115 bundled templates across the populated source packs", async () => {
+test("fresh GM startup seeds all 124 bundled templates across the populated source packs", async () => {
   const mock = installFoundryMock({ existingPc2: false, existingTreasure: false, existingHowl: false });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 115);
+    assert.equal(result.created, 124);
     assert.equal(result.updated, 0);
     assert.equal(mock.createCalls.length, 4);
     const callsFor = (collection) => mock.createCalls.filter((call) => call.operation.pack === collection);
     assert.equal(callsFor("affliction-forge-remastered-rules.gm-core").reduce((sum, call) => sum + call.data.length, 0), 50);
     assert.equal(callsFor("affliction-forge-remastered-rules.player-core-2").reduce((sum, call) => sum + call.data.length, 0), 29);
-    assert.equal(callsFor("affliction-forge-remastered-rules.treasure-vault-remastered").reduce((sum, call) => sum + call.data.length, 0), 36);
+    assert.equal(callsFor("affliction-forge-remastered-rules.treasure-vault-remastered").reduce((sum, call) => sum + call.data.length, 0), 45);
     for (const call of mock.createCalls) assert.equal(call.operation.keepId, true);
     assert.deepEqual(mock.configureCalls.filter((e) => e.name === "gm-core").map((e) => e.value.locked), [false, true]);
     assert.deepEqual(mock.configureCalls.filter((e) => e.name === "player-core-2").map((e) => e.value.locked), [false, true]);
@@ -74,15 +77,32 @@ test("fresh GM startup seeds all 115 bundled templates across the populated sour
   } finally { mock.restore(); }
 });
 
-test("0.1.15 upgrade seeds the three new Howl definitions into the established supplemental pack", async () => {
-  const mock = installFoundryMock({ existing: true, existingPc2: true, existingTreasure: true, existingHowl: false, currentRevision: true });
+test("0.1.16.1 upgrade seeds only the nine new Howl creature-affliction definitions", async () => {
+  const oldHowlIds = BUNDLED_ITEM_SOURCES_BY_PACK["howl-of-the-wild"]
+    .filter((entry) => ["essence-of-mandragora", "tatzlwyrms-gasp", "sportlebore-capsule"].includes(entry.flags?.["pf2e-affliction-forge"]?.definitionId?.split(".").at(-1)))
+    .map((entry) => entry._id);
+  assert.equal(oldHowlIds.length, 3);
+  const mock = installFoundryMock({ existing: true, existingPc2: true, existingTreasure: true, existingHowlIds: oldHowlIds, currentRevision: true });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 3);
+    assert.equal(result.created, 9);
     assert.equal(result.updated, 0);
     assert.equal(mock.createCalls.length, 1);
     assert.equal(mock.createCalls[0].operation.pack, "affliction-forge-remastered-rules.treasure-vault-remastered");
-    assert.equal(mock.createCalls[0].data.length, 3);
+    assert.equal(mock.createCalls[0].data.length, 9);
+    assert.equal(mock.createCalls[0].operation.keepId, true);
+  } finally { mock.restore(); }
+});
+
+test("0.1.15 upgrade seeds all twelve Howl definitions into the established supplemental pack", async () => {
+  const mock = installFoundryMock({ existing: true, existingPc2: true, existingTreasure: true, existingHowl: false, currentRevision: true });
+  try {
+    const result = await seedBundledContent();
+    assert.equal(result.created, 12);
+    assert.equal(result.updated, 0);
+    assert.equal(mock.createCalls.length, 1);
+    assert.equal(mock.createCalls[0].operation.pack, "affliction-forge-remastered-rules.treasure-vault-remastered");
+    assert.equal(mock.createCalls[0].data.length, 12);
     assert.equal(mock.createCalls[0].operation.keepId, true);
   } finally { mock.restore(); }
 });
@@ -91,11 +111,11 @@ test("0.1.14 upgrade seeds Treasure Vault plus Howl and refreshes the prior loca
   const mock = installFoundryMock({ existing: true, existingPc2: true, existingTreasure: false, existingHowl: false, revision: 2 });
   try {
     const result = await seedBundledContent();
-    assert.equal(result.created, 36);
+    assert.equal(result.created, 45);
     assert.equal(result.updated, 79);
     assert.equal(mock.createCalls.length, 2);
     assert.ok(mock.createCalls.every((call) => call.operation.pack === "affliction-forge-remastered-rules.treasure-vault-remastered"));
-    assert.deepEqual(mock.createCalls.map((call) => call.data.length), [33, 3]);
+    assert.deepEqual(mock.createCalls.map((call) => call.data.length), [33, 12]);
     const updatedByPack = new Map(mock.updateCalls.map((call) => [call.operation.pack, call.data.length]));
     assert.equal(updatedByPack.get("affliction-forge-remastered-rules.gm-core"), 50);
     assert.equal(updatedByPack.get("affliction-forge-remastered-rules.player-core-2"), 29);

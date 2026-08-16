@@ -77,10 +77,10 @@ test("Lethargy Poison uses the 0.1.61 formula duration for Stage 4", () => {
   assert.deepEqual(stage(poison, 4).restrictions.conditionLocks, [{ slug: "unconscious", minimum: null }]);
 });
 
-test("runtime seed contains all 115 definitions including Treasure Vault and Howl of the Wild", () => {
+test("runtime seed contains all 124 definitions including Treasure Vault and Howl of the Wild", () => {
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["gm-core"].length, 50);
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["player-core-2"].length, 29);
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["treasure-vault-remastered"].length, 33);
-  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["howl-of-the-wild"].length, 3);
-  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 115);
+  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["howl-of-the-wild"].length, 12);
+  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 124);
 });

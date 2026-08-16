@@ -11,7 +11,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const pack = "howl-of-the-wild";
 const inventory = JSON.parse(fs.readFileSync(path.join(root, "inventory/howl-of-the-wild-alchemical-poisons.json"), "utf8"));
-const files = fs.readdirSync(path.join(root, "content", pack)).filter((name) => name.endsWith(".json")).sort();
+const files = inventory.entries.map((entry) => `${entry.definitionId.split(".").at(-1)}.json`).sort();
 const poisons = files.map((name) => readLocalizedJson(path.join(root, "content", pack, name), "de"));
 const byKey = new Map(poisons.map((entry) => [entry.id.split(".").at(-1), entry]));
 const stage = (definition, number) => definition.stages.find((entry) => entry.number === number);
@@ -59,7 +59,7 @@ test("Sportlebore Capsule exposes its non-generic Stage 3 cycle as a manual exce
   assert.match(poison.metadata.manualComment, /SG 23|4W6|Phase 1/i);
 });
 
-test("runtime seed contains the complete 115-definition library", () => {
-  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK[pack].length, 3);
-  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 115);
+test("runtime seed contains the complete 124-definition library", () => {
+  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK[pack].length, 12);
+  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 124);
 });

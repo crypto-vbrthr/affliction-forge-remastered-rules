@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "sourceWorkId": "howl-of-the-wild",
+  "section": "Creature Afflictions",
+  "reviewPolicy": "All staged creature afflictions in the Howl of the Wild menagerie were reviewed. Creature-affliction levels follow the source creature level when no separate level is printed. Omitted source stage intervals are preserved rather than inferred. Creature poisons are not flagged as alchemical injury poisons. Non-staged poison/disease-trait abilities are tracked as reviewed exclusions rather than forced into the affliction engine.",
+  "entries": [
+    {
+      "sourceName": "Royal Basilisk Venom",
+      "level": 13,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.royal-basilisk-venom",
+      "sourcePage": 131,
+      "notes": [
+        "Published with supported staged poison mechanics."
+      ]
+    },
+    {
+      "sourceName": "Stonefish Venom",
+      "level": 0,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-venom",
+      "sourcePage": 153,
+      "notes": [
+        "Published with supported staged poison mechanics."
+      ]
+    },
+    {
+      "sourceName": "Stonefish Swarm Venom",
+      "level": 2,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.stonefish-swarm-venom",
+      "sourcePage": 153,
+      "notes": [
+        "Published with supported staged poison mechanics."
+      ]
+    },
+    {
+      "sourceName": "Coppermouth Venom",
+      "level": 7,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.coppermouth-venom",
+      "sourcePage": 159,
+      "notes": [
+        "Published with supported staged poison mechanics.",
+        "Printed source omits one or more stage intervals; omitted intervals are preserved as non-expiring stage clocks and the maximum duration remains authoritative."
+      ]
+    },
+    {
+      "sourceName": "Sun's Touch",
+      "level": 14,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.suns-touch",
+      "sourcePage": 160,
+      "notes": [
+        "Published with supported staged poison mechanics."
+      ]
+    },
+    {
+      "sourceName": "Sky Fisher Venom",
+      "level": 11,
+      "status": "manual",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.sky-fisher-venom",
+      "sourcePage": 174,
+      "notes": [
+        "Published with supported staged poison mechanics.",
+        "Stage 1 whisper-only restriction remains manual; Stage 2 speaking prohibition is automated."
+      ]
+    },
+    {
+      "sourceName": "Spiny Venom",
+      "level": 8,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.spiny-venom",
+      "sourcePage": 177,
+      "notes": [
+        "Published with supported staged poison mechanics.",
+        "Printed source omits one or more stage intervals; omitted intervals are preserved as non-expiring stage clocks and the maximum duration remains authoritative."
+      ]
+    },
+    {
+      "sourceName": "Manticore Venom",
+      "level": 12,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.manticore-venom",
+      "sourcePage": 180,
+      "notes": [
+        "Published with supported staged poison mechanics."
+      ]
+    },
+    {
+      "sourceName": "Crying Cicada Poison",
+      "level": 3,
+      "status": "full",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.crying-cicada-poison",
+      "sourcePage": 196,
+      "notes": [
+        "Published with supported staged poison mechanics."
+      ]
+    }
+  ],
+  "reviewedExclusions": [
+    {
+      "sourceName": "Chimera Rot",
+      "sourcePage": 136,
+      "reason": "Disease-trait rider with one Fortitude save and Sickened 1; no staged affliction block."
+    },
+    {
+      "sourceName": "Chimera Venom",
+      "sourcePage": 137,
+      "reason": "Poison-trait critical-hit rider causing persistent poison damage; no staged affliction block."
+    },
+    {
+      "sourceName": "Soporific Spores",
+      "sourcePage": 157,
+      "reason": "Poison-trait action, but not a staged affliction block."
+    },
+    {
+      "sourceName": "Choking Fumes",
+      "sourcePage": 143,
+      "reason": "Poison-trait creature ability, but not a staged affliction block."
+    },
+    {
+      "sourceName": "Abysium",
+      "sourcePage": 170,
+      "reason": "Poison-trait aura, but not a staged affliction block."
+    },
+    {
+      "sourceName": "Stinging Anemones",
+      "sourcePage": 197,
+      "reason": "Poison-trait action with direct damage/condition, but not a staged affliction block."
+    },
+    {
+      "sourceName": "Full Bloom",
+      "sourcePage": 133,
+      "reason": "Poison-trait stance/ability, but not a staged affliction block."
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 # Affliction Forge: Remastered Rules Library
 
-Version **0.1.16.1** adds the first **Howl of the Wild** source block: all **3/3 alchemical poison afflictions** from its alchemical-items poison section. **Essence of Mandragora** and **Tatzlwyrm's Gasp** are fully automated; **Sportlebore Capsule** is a deliberate manual exception for its non-generic Stage 3 auxiliary save/cycle rules. The library now contains **115 deterministic definitions** and requires **PF2E Affliction Forge 0.1.61+**.
+Version **0.1.17** adds the second **Howl of the Wild** source block: all **9 staged creature afflictions** from the menagerie creature stat blocks. Eight are fully automated with the current generic contracts; **Sky Fisher Venom** keeps only its Stage 1 whisper-only speech restriction as a visible GM exception. Together with the existing three alchemical poisons, the Howl source now contains **12 definitions**. The library now contains **124 deterministic definitions** and requires **PF2E Affliction Forge 0.1.61+**.
 
 ## Current scope
 
 - one external provider
 - one visible, read-only Affliction Forge library
-- five internal PF2e Item compendium packs
+- four physical PF2e Item compendium packs hosting five logical source packs
 - required dependency on **PF2E Affliction Forge 0.1.61+**
 - complete reviewed **14-entry GM disease catalog**
 - complete reviewed **16-entry GM curse catalog**
@@ -14,7 +14,8 @@ Version **0.1.16.1** adds the first **Howl of the Wild** source block: all **3/3
 - complete reviewed **19-entry GM Core alchemical poison source-variant catalog** plus **Dagger Venom** from the Serpent Dagger item
 - complete reviewed **33-entry Treasure Vault Remastered poison catalog**
 - reviewed **3-entry Howl of the Wild alchemical poison catalog**
-- **115 bundled affliction definitions** total
+- complete reviewed **9-entry Howl of the Wild creature-affliction catalog**
+- **124 bundled affliction definitions** total
 - ORC notice and upstream attribution
 - mechanics-only content policy
 - per-entry license/review metadata contract
@@ -124,6 +125,28 @@ All **3/3 alchemical poisons** from the alchemical-items poison section are publ
 
 - **Wegzehrerkapsel** (`Sportlebore Capsule` mechanics): onset and ordinary stage conditions are automated. Stage 3's separate DC 23 basic Fortitude save against bludgeoning damage is not approximated as automatic damage; its forced Stage 3 → Stage 1 cycle, doubled damage on the second Stage 3, and magic-only recovery from its Sickened/Enfeebled conditions remain visible **GM-Hinweis / GM Note** rules. Stage 3 uses `expiryAction: "stay"` so the engine does not invent an incorrect ordinary progression save before the GM performs the source-specific cycle.
 
+
+## Howl of the Wild creature-affliction catalog
+
+All **9/9 staged creature afflictions** from the menagerie stat blocks are published. Where a creature affliction does not print a separate level, the template uses the causing creature's level, matching the general affliction format rules. These creature poisons are **not** marked as alchemical injury poisons, even when a creature delivers them with a Strike, so they cannot accidentally enter the weapon-coating/charge workflow.
+
+### Fully automated: 8/9
+
+- **Königsbasiliskengift** (`Royal Basilisk Venom`), level 13, Fortitude DC 36.
+- **Steinfischgift** (`Stonefish Venom`), level 0, Fortitude DC 16.
+- **Steinfischschwarmgift** (`Stonefish Swarm Venom`), level 2, Fortitude DC 18.
+- **Kupferkopfgift** (`Coppermouth Venom`), level 7, Fortitude DC 25, including poison/electricity damage. Its printed Stage 3 has no interval; the template preserves that omission rather than inventing another save.
+- **Berührung der Sonne** (`Sun's Touch`), level 14, Fortitude DC 34.
+- **Stachelgift** (`Spiny Venom`), level 8, Fortitude DC 26 and incapacitation. The printed stat block gives no stage intervals; those omissions are preserved, while the six-round maximum duration remains authoritative.
+- **Mantikorgift** (`Manticore Venom`), level 12, Fortitude DC 32.
+- **Gift der Weinenden Zikade** (`Crying Cicada Poison`), level 3, Fortitude DC 19 and inhaled.
+
+### Intentional manual exception: 1/9
+
+- **Himmelsfischergift** (`Sky Fisher Venom`), level 11, Fortitude DC 25. Damage, Clumsy, Stage 2's complete speaking prohibition, and Stage 3 paralysis are automated. Stage 1 allows whispering but forbids louder speech; the current capability contract is binary and therefore leaves only this graded speech restriction as a localized **GM-Hinweis / GM Note**.
+
+The creature review also records poison- or disease-trait abilities that are **not staged afflictions** and therefore are intentionally not converted into templates, including Chimera Rot, Chimera Venom, Soporific Spores, Choking Fumes, Abysium, Stinging Anemones, and Full Bloom. This keeps the library focused on actual affliction stat blocks instead of forcing ordinary save riders or direct poison effects into the staged engine.
+
 ## GM Core alchemical poison variants
 
 All **19/19 GM Core alchemical poisons that share a name with Player Core 2 poisons** are now published as separate source variants. They retain their own stable `gm-core.*` definition IDs and `poison.<slug>` variant-group metadata; no Player Core 2 entry is overwritten.
@@ -162,4 +185,4 @@ Software code is MIT-licensed. Rules data is governed by the ORC License. See `L
 
 Bundled definitions do not store German or English display text directly. Names, descriptions, stage text, check/reaction labels, source labels, and visible GM comments use `@i18n:` tokens. `lang/de.json` and `lang/en.json` provide the localized text. Affliction Forge 0.1.61+ resolves these tokens per client when listing, opening, or applying provider content.
 
-Version 0.1.16.1 keeps those stable localized IDs and publishes the first three reviewed Howl of the Wild alchemical poison afflictions through the established supplemental compendium, while preserving Howl of the Wild as their logical source.
+Version 0.1.17 keeps those stable localized IDs, adds the nine reviewed Howl of the Wild creature afflictions to the same logical source, and continues hosting all Howl content through the established supplemental physical compendium.
