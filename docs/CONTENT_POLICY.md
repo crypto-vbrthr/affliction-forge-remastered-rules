@@ -9,7 +9,7 @@ This module is intentionally conservative. It is a software library provider plu
 3. Write both German and English mechanics wording independently; do not copy longer prose from published localized editions.
 4. Do not ship book artwork, logos, proprietary fonts, layout, trade dress, lore paragraphs, dialogue, plots, or setting descriptions.
 5. Review names separately. Proper nouns, deity/character/place/organization names, and names derived from them are blocked or replaced by a neutral original name.
-6. Every entry must identify one of the four approved upstream source works through a neutral `sourceWorkId` and must carry `license: "ORC"`.
+6. Every entry must identify one of the five approved upstream source works through a neutral `sourceWorkId` and must carry `license: "ORC"`.
 7. Every entry must pass `licenseReview.mechanicsOnly`, `licenseReview.reservedMaterial`, and `licenseReview.nameReview` before it can be compiled.
 8. Entries that Affliction Forge 0.1.56 can faithfully automate ship as `automationStatus: "full"`. Intentional exceptions may ship as `automationStatus: "manual"` when adding a generic subsystem would be disproportionate. Manual exceptions must carry both a structured `metadata.manualComment` and a visible `GM-Hinweis` in the template description; supported portions should still be automated.
 9. Same-name source variants remain separate definitions with separate stable IDs. The library must not silently decide that one source supersedes another.

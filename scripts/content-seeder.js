@@ -1,5 +1,5 @@
 import { BUNDLED_ITEM_SOURCES_BY_PACK } from "./bundled-content.js";
-import { MODULE_ID, PACK_NAMES } from "./constants.js";
+import { CONTENT_PACK_HOSTS, CONTENT_PACK_NAMES, MODULE_ID } from "./constants.js";
 
 const LIBRARY_CHANGED_HOOK = "pf2eAfflictionForgeLibrariesChanged";
 const CONTENT_REVISION = 3;
@@ -37,10 +37,11 @@ function revisionOf(row) {
 
 async function ensurePackContent(packName) {
   const sources = BUNDLED_ITEM_SOURCES_BY_PACK[packName] ?? [];
-  if (sources.length === 0) return { packName, created: 0, updated: 0, skipped: 0 };
+  const hostPackName = CONTENT_PACK_HOSTS[packName] ?? packName;
+  if (sources.length === 0) return { packName, hostPackName, created: 0, updated: 0, skipped: 0 };
 
-  const pack = globalThis.game?.packs?.get?.(collectionId(packName));
-  if (!pack) throw new Error(`Compendium not found: ${collectionId(packName)}`);
+  const pack = globalThis.game?.packs?.get?.(collectionId(hostPackName));
+  if (!pack) throw new Error(`Compendium not found for ${packName}: ${collectionId(hostPackName)}`);
 
   const index = await pack.getIndex({ fields: ["flags"] });
   const rows = indexRows(index);
@@ -50,7 +51,7 @@ async function ensurePackContent(packName) {
     const row = byId.get(source._id);
     return row && revisionOf(row) < CONTENT_REVISION;
   }).map(updateItemSource);
-  if (missing.length === 0 && outdated.length === 0) return { packName, created: 0, updated: 0, skipped: sources.length };
+  if (missing.length === 0 && outdated.length === 0) return { packName, hostPackName, created: 0, updated: 0, skipped: sources.length };
 
   const wasLocked = Boolean(pack.locked);
   if (wasLocked) await pack.configure({ locked: false });
@@ -62,6 +63,7 @@ async function ensurePackContent(packName) {
     const updated = outdated.length ? await ItemClass.updateDocuments(outdated, { pack: pack.collection, render: false }) : [];
     return {
       packName,
+      hostPackName,
       created: created?.length ?? missing.length,
       updated: updated?.length ?? outdated.length,
       skipped: sources.length - missing.length - outdated.length
@@ -74,7 +76,7 @@ async function ensurePackContent(packName) {
 export async function seedBundledContent() {
   if (!globalThis.game?.user?.isGM) return { seeded: false, reason: "not-gm", packs: [] };
   const results = [];
-  for (const packName of PACK_NAMES) results.push(await ensurePackContent(packName));
+  for (const packName of CONTENT_PACK_NAMES) results.push(await ensurePackContent(packName));
   const created = results.reduce((sum, result) => sum + result.created, 0);
   const updated = results.reduce((sum, result) => sum + result.updated, 0);
   if (created > 0 || updated > 0) {

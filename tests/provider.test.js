@@ -8,7 +8,7 @@ import {
 } from "../scripts/constants.js";
 import { buildProviderRegistration, registerProvider } from "../scripts/provider.js";
 
-test("provider exposes one read-only library backed by all four packs", () => {
+test("provider exposes one read-only library backed by the four physical packs", () => {
   const registration = buildProviderRegistration();
   assert.equal(registration.id, PROVIDER_ID);
   assert.equal(registration.moduleId, MODULE_ID);

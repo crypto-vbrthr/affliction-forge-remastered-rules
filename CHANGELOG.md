@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.1.16.1
+
+- Hotfix for Howl of the Wild alchemical afflictions not appearing after an in-place upgrade.
+- Logical Howl of the Wild content is now hosted in the established supplemental compendium instead of requiring a newly initialized physical pack.
+- Provider registration continues to expose the same read-only Remastered Rules library and source metadata still identifies Howl of the Wild correctly.
+- Added upgrade regression coverage for the physical-pack/bootstrap distinction.
+
+## 0.1.16 - 2026-08-16
+
+### Added
+
+- New `howl-of-the-wild` source pack and ORC attribution for **Howl of the Wild**.
+- Complete **3/3 alchemical poison affliction block** from the source's alchemical-items poison section: **Essence of Mandragora**, **Tatzlwyrm's Gasp**, and **Sportlebore Capsule**.
+- German/English localized names, mechanics summaries, stage text, source labels, and the Sportlebore GM exception note.
+- Regression coverage for the three-entry source count, delivery types, supported stage mechanics, Sportlebore's non-generic Stage 3 handling, localization, manifest wiring, and the 115-definition runtime seed.
+
+### Automation
+
+- **2/3 FULL**: Essence of Mandragora and Tatzlwyrm's Gasp map entirely to existing 0.1.61 staged poison contracts.
+- **1/3 manual exception**: Sportlebore Capsule automates onset and staged conditions, but leaves its Stage 3 DC 23 basic Fortitude damage save, forced Stage 3 → Stage 1 cycle, second-cycle doubled damage, and magic-only condition recovery to the GM. Stage 3 uses `expiryAction: "stay"` to avoid inventing an incorrect normal stage save.
+
+### Coverage
+
+- Existing reviewed core and Treasure Vault content remains unchanged.
+- Howl of the Wild alchemical poisons: **3/3 published**.
+- Total bundled definitions: **115**.
+
 ## 0.1.15 - 2026-08-15
 
 ### Added

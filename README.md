@@ -1,19 +1,20 @@
 # Affliction Forge: Remastered Rules Library
 
-Version **0.1.15** publishes the complete reviewed **Treasure Vault Remastered poison catalog** with **33/33** afflictions. It also upgrades both existing **Lethargiegift / Lethargy Poison** source variants to Affliction Forge 0.1.61 formula timing. The library now contains **112 deterministic definitions** and requires **PF2E Affliction Forge 0.1.61+**.
+Version **0.1.16.1** adds the first **Howl of the Wild** source block: all **3/3 alchemical poison afflictions** from its alchemical-items poison section. **Essence of Mandragora** and **Tatzlwyrm's Gasp** are fully automated; **Sportlebore Capsule** is a deliberate manual exception for its non-generic Stage 3 auxiliary save/cycle rules. The library now contains **115 deterministic definitions** and requires **PF2E Affliction Forge 0.1.61+**.
 
 ## Current scope
 
 - one external provider
 - one visible, read-only Affliction Forge library
-- four internal PF2e Item compendium packs
+- five internal PF2e Item compendium packs
 - required dependency on **PF2E Affliction Forge 0.1.61+**
 - complete reviewed **14-entry GM disease catalog**
 - complete reviewed **16-entry GM curse catalog**
 - complete reviewed **29-entry Player II alchemical poison catalog**
 - complete reviewed **19-entry GM Core alchemical poison source-variant catalog** plus **Dagger Venom** from the Serpent Dagger item
 - complete reviewed **33-entry Treasure Vault Remastered poison catalog**
-- **112 bundled affliction definitions** total
+- reviewed **3-entry Howl of the Wild alchemical poison catalog**
+- **115 bundled affliction definitions** total
 - ORC notice and upstream attribution
 - mechanics-only content policy
 - per-entry license/review metadata contract
@@ -109,6 +110,20 @@ The larger manual-exception group mainly covers mechanics that would otherwise d
 
 One source proper name is deliberately replaced by the neutral localized display name **Kuss des Assassinen / Assassin's Kiss** to keep Reserved Material out of the distributed rules data.
 
+
+## Howl of the Wild alchemical poison catalog
+
+All **3/3 alchemical poisons** from the alchemical-items poison section are published from source page 111. The source contains one injury, one inhaled, and one ingested poison.
+
+### Fully automated: 2/3
+
+- **Alraunenessenz** (`Essence of Mandragora` mechanics): injury poison, level 4, Fortitude DC 21, three one-round stages with poison damage, Stupefied, and Confused.
+- **Tatzelwurmodem** (`Tatzlwyrm's Gasp` mechanics): inhaled poison, level 2, Fortitude DC 15, three one-round stages with Sickened, poison damage, and Enfeebled.
+
+### Intentional manual exception: 1/3
+
+- **Wegzehrerkapsel** (`Sportlebore Capsule` mechanics): onset and ordinary stage conditions are automated. Stage 3's separate DC 23 basic Fortitude save against bludgeoning damage is not approximated as automatic damage; its forced Stage 3 → Stage 1 cycle, doubled damage on the second Stage 3, and magic-only recovery from its Sickened/Enfeebled conditions remain visible **GM-Hinweis / GM Note** rules. Stage 3 uses `expiryAction: "stay"` so the engine does not invent an incorrect ordinary progression save before the GM performs the source-specific cycle.
+
 ## GM Core alchemical poison variants
 
 All **19/19 GM Core alchemical poisons that share a name with Player Core 2 poisons** are now published as separate source variants. They retain their own stable `gm-core.*` definition IDs and `poison.<slug>` variant-group metadata; no Player Core 2 entry is overwritten.
@@ -136,7 +151,7 @@ Source JSON filenames and definition IDs are language-neutral. Every user-facing
 
 ## Runtime registration
 
-The module listens for `pf2eAfflictionForgeReady`, ensures bundled reviewed content exists in the declared module packs, and then registers a read-only provider library backed by all four packs. A `ready` fallback protects unusual load ordering. Both seeding and registration are idempotent.
+The module listens for `pf2eAfflictionForgeReady`, ensures bundled reviewed content exists in the declared module packs, and then registers a read-only provider library backed by the four physical packs. A `ready` fallback protects unusual load ordering. Both seeding and registration are idempotent.
 
 ## License
 
@@ -147,4 +162,4 @@ Software code is MIT-licensed. Rules data is governed by the ORC License. See `L
 
 Bundled definitions do not store German or English display text directly. Names, descriptions, stage text, check/reaction labels, source labels, and visible GM comments use `@i18n:` tokens. `lang/de.json` and `lang/en.json` provide the localized text. Affliction Forge 0.1.61+ resolves these tokens per client when listing, opening, or applying provider content.
 
-Version 0.1.15 keeps those stable localized IDs, adds the Treasure Vault pack, and bumps the content revision so existing 0.1.14 installations receive both the new pack and the 0.1.61 timing upgrades automatically.
+Version 0.1.16.1 keeps those stable localized IDs and publishes the first three reviewed Howl of the Wild alchemical poison afflictions through the established supplemental compendium, while preserving Howl of the Wild as their logical source.

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "sourceWorkId": "howl-of-the-wild",
+  "section": "Alchemical Poisons",
+  "reviewPolicy": "All three alchemical poison afflictions from the Howl of the Wild alchemical-items poison section are published. Ordinary saves, stages, conditions, damage, onset, maximum duration, injury delivery, and inhaled/ingested delivery metadata use Affliction Forge 0.1.61. Sportlebore Capsule remains an intentional manual exception for its auxiliary basic save, forced Stage 3 to Stage 1 cycle, second-cycle damage doubling, and magic-only condition-recovery rule.",
+  "entries": [
+    {
+      "sourceName": "Essence of Mandragora",
+      "level": 4,
+      "status": "full",
+      "delivery": "injury",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.essence-of-mandragora",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Tatzlwyrm's Gasp",
+      "level": 2,
+      "status": "full",
+      "delivery": "inhaled",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.tatzlwyrms-gasp",
+      "notes": [
+        "Published with complete supported mechanics under Affliction Forge 0.1.61."
+      ]
+    },
+    {
+      "sourceName": "Sportlebore Capsule",
+      "level": 7,
+      "status": "manual",
+      "delivery": "ingested",
+      "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.sportlebore-capsule",
+      "notes": [
+        "GM Note: Stage 1 and Stage 2 conditions plus Stage 3 Enfeebled 2 are automated. Stage 3 additionally requires a DC 23 basic Fortitude save against 4d6 bludgeoning damage; after Stage 3 return to Stage 1, and double that damage if Stage 3 is reached a second time. Enfeebled and Sickened from this poison can only be recovered from by magic. These special rules remain manual."
+      ],
+      "manualComment": "GM Note: Stage 1 and Stage 2 conditions plus Stage 3 Enfeebled 2 are automated. Stage 3 additionally requires a DC 23 basic Fortitude save against 4d6 bludgeoning damage; after Stage 3 return to Stage 1, and double that damage if Stage 3 is reached a second time. Enfeebled and Sickened from this poison can only be recovered from by magic. These special rules remain manual."
+    }
+  ]
+}

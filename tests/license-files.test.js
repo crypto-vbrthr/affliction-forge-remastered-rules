@@ -11,12 +11,13 @@ function read(name) {
   return fs.readFileSync(path.join(root, name), "utf8");
 }
 
-test("ORC notice carries all four upstream attribution blocks", () => {
+test("ORC notice carries all five upstream attribution blocks", () => {
   const notice = read("ORC_NOTICE.md");
   assert.match(notice, /Player Core © 2024/i);
   assert.match(notice, /GM Core © 2024/i);
   assert.match(notice, /Player Core 2 © 2024/i);
   assert.match(notice, /Treasure Vault \(Remastered\) © 2025/i);
+  assert.match(notice, /Howl of the Wild © 2024/i);
   assert.match(notice, /TX 9-307-067/);
 });
 

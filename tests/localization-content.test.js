@@ -25,7 +25,7 @@ function walk(value, findings = [], pathName = "") {
 
 test("all bundled user-facing content is tokenized and translated in both locales", () => {
   let definitions = 0;
-  for (const pack of ["player-core", "gm-core", "player-core-2", "treasure-vault-remastered"]) {
+  for (const pack of ["player-core", "gm-core", "player-core-2", "treasure-vault-remastered", "howl-of-the-wild"]) {
     const dir = path.join(root, "content", pack);
     for (const filename of fs.readdirSync(dir).filter((name) => name.endsWith(".json"))) {
       definitions += 1;
@@ -40,7 +40,7 @@ test("all bundled user-facing content is tokenized and translated in both locale
       }
     }
   }
-  assert.equal(definitions, 112);
+  assert.equal(definitions, 115);
 });
 
 test("the same tokenized definition resolves to German and English without changing its stable id", () => {

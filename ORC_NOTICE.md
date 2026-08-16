@@ -14,6 +14,8 @@ Pathfinder Player Core 2 © 2024, Paizo Inc.; Authors: Amirali Attar Olyaee, Ale
 
 Pathfinder Treasure Vault (Remastered) © 2025, Paizo Inc.; Authors: Michael Sayre, Mark Seifter, and Kendra Leigh Speedling, with Logan Bonner, Dan Cascone, Jessica Catalan, Kim Frandsen, Andrew Geels, Sen H.H.S., Steven Hammond, Joshua Kim, Dustin Knight, Luis Loza, Jacob W. Michaels, Matt Morris, Dave Nelson, Stephen Radney-McFarland, Jessica Redekop, Andrew Stoeckle, Mari Tokuda, and Andrew White.
 
+Pathfinder Howl of the Wild © 2024 Paizo Inc. Authors: Kate Baker, Joshua Birdsong, Rigby Bendele, Chris Bissette, Jeremy Blum, Logan Bonner, Dan Cascone, James Case, Jessica Catalan, Brite Cheney, Rue Dickey, Caryn DiMarco, Matthew Fu, Leo Glass, Steven Hammond, Patrick Hurley, Michelle Y. Kim, Dustin Knight, Kendra Leigh Speedling, Christiana Lewis, Jessie “Aki” Lo, Luis Loza, Letterio Mammoliti, Jonathan “Ryomasa” Mendoza, Quinn Murphy, Dave Nelson, Mikhail Rekun, Kai Revius, Ember Rose, Simone D. Sallé, Michael Sayre, Shay Snow, Levi Steadman, Kyle Tam, Ruvaid Virk, and Andrew White.
+
 ## Reserved Material
 
 Reserved Material in this module includes the product title "Affliction Forge: Remastered Rules Library", original software source code, original documentation text, and any original UI or visual assets, except to the extent any portion is Licensed Material under the ORC License or otherwise cannot be reserved under that license.

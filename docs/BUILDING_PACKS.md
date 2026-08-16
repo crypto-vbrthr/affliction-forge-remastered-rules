@@ -25,7 +25,7 @@ fvtt package pack -n "player-core" \
   --outputDirectory "packs"
 ```
 
-Repeat for `gm-core`, `player-core-2`, and `treasure-vault-remastered` when they contain reviewed entries.
+Repeat for `gm-core`, `player-core-2`, and `treasure-vault-remastered` when they contain reviewed entries. Supplement-source definitions such as Howl of the Wild are runtime-hosted in `treasure-vault-remastered` until the release pipeline compiles a dedicated physical supplemental pack.
 
 Do not ship `.build/`. Do ship the generated LevelDB directories in `packs/`.
 

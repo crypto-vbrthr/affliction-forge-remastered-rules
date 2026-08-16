@@ -311,7 +311,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -625,7 +625,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -921,7 +921,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -1220,7 +1220,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -1632,7 +1632,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -1948,7 +1948,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -2298,7 +2298,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -2798,7 +2798,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -3134,7 +3134,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -3441,7 +3441,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -3634,7 +3634,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -4067,7 +4067,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -4254,7 +4254,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -4545,7 +4545,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -4753,7 +4753,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -4962,7 +4962,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -5271,7 +5271,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -5582,7 +5582,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -5891,7 +5891,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -6202,7 +6202,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -6390,7 +6390,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -6696,7 +6696,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -7010,7 +7010,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -7355,7 +7355,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -7723,7 +7723,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -8030,7 +8030,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -8507,7 +8507,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -8692,7 +8692,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -8881,7 +8881,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -9130,7 +9130,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -9460,7 +9460,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -9775,7 +9775,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -10006,7 +10006,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -10306,7 +10306,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -10495,7 +10495,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -10809,7 +10809,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -11123,7 +11123,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -11444,7 +11444,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -11631,7 +11631,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -11945,7 +11945,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -12132,7 +12132,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -12443,7 +12443,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -12767,7 +12767,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -12954,7 +12954,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -13141,7 +13141,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -13528,7 +13528,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -13736,7 +13736,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -13921,7 +13921,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -14221,7 +14221,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -14517,7 +14517,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -14837,7 +14837,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -15146,7 +15146,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -15459,7 +15459,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -15754,7 +15754,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -16052,7 +16052,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -16360,7 +16360,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -16668,7 +16668,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -16975,7 +16975,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -17285,7 +17285,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -17593,7 +17593,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -17903,7 +17903,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -18208,7 +18208,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -18539,7 +18539,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -18852,7 +18852,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -19151,7 +19151,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -19477,7 +19477,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -19821,7 +19821,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -20115,7 +20115,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -20421,7 +20421,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -20717,7 +20717,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -21050,7 +21050,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -21343,7 +21343,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -21656,7 +21656,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -21969,7 +21969,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -22289,7 +22289,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -22602,7 +22602,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -22912,7 +22912,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -23211,7 +23211,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -23506,7 +23506,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -23742,7 +23742,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -24069,7 +24069,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -24391,7 +24391,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -24706,7 +24706,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -25028,7 +25028,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -25361,7 +25361,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -25600,7 +25600,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -25920,7 +25920,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -26235,7 +26235,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -26547,7 +26547,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -26884,7 +26884,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -27241,7 +27241,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -27566,7 +27566,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -27827,7 +27827,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -28142,7 +28142,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -28521,7 +28521,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -28841,7 +28841,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -29159,7 +29159,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -29521,7 +29521,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -29819,7 +29819,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -30169,7 +30169,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -30590,7 +30590,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -30928,7 +30928,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -31270,7 +31270,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -31603,7 +31603,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -31918,7 +31918,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -32251,7 +32251,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -32526,7 +32526,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -32900,7 +32900,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -33236,7 +33236,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -33635,7 +33635,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -33965,7 +33965,7 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
         }
       },
       "effects": [],
@@ -34228,7 +34228,988 @@ export const BUNDLED_ITEM_SOURCES_BY_PACK = Object.freeze({
           "originFeature": "remastered-rules-library"
         },
         "affliction-forge-remastered-rules": {
-          "contentRevision": 2
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "howl-of-the-wild": [
+    {
+      "_id": "ufNweEOSjQK6QmW2",
+      "name": "Essence of Mandragora",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 4 injury poison with a DC 21 Fortitude save and a maximum duration of 6 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "injury"
+          ],
+          "otherTags": [
+            "poison",
+            "injury"
+          ]
+        },
+        "level": {
+          "value": 4
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.essence-of-mandragora",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.essence-of-mandragora",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 4,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "injury"
+            ],
+            "themes": [
+              "poison",
+              "injury"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": true
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 21,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 6,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.essence-of-mandragora.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.essence-of-mandragora.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "1d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.essence-of-mandragora.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "confused"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "stupefied",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 111,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Metadata.SourceSection",
+              "sourceName": "Essence of Mandragora",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Ordinary poison delivery and staged progression are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.essence-of-mandragora.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "YdoWXu6qw5zrAABI",
+      "name": "Sportlebore Capsule",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 7 ingested poison with a DC 22 Fortitude save, 1-minute onset, and a maximum duration of 6 minutes. GM Note: Stage 1 and Stage 2 conditions plus Stage 3 Enfeebled 2 are automated. At Stage 3, roll a DC 23 basic Fortitude save against 4d6 bludgeoning damage manually. After Stage 3, manually return to Stage 1; if Stage 3 is reached a second time, double that damage. Enfeebled and Sickened from this poison can be recovered from only by magic.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "ingested"
+          ],
+          "otherTags": [
+            "poison",
+            "ingested"
+          ]
+        },
+        "level": {
+          "value": 7
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.sportlebore-capsule",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.sportlebore-capsule",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 7,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "ingested"
+            ],
+            "themes": [
+              "poison",
+              "ingested"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 22,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": {
+              "value": 1,
+              "unit": "minutes"
+            },
+            "maximumDuration": {
+              "value": 6,
+              "unit": "minutes"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.sportlebore-capsule.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.sportlebore-capsule.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "minutes"
+                },
+                "expiryAction": "stay",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.sportlebore-capsule.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 2
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 111,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Metadata.SourceSection",
+              "sourceName": "Sportlebore Capsule",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "manual",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Stage 1 and Stage 2 conditions plus Stage 3 Enfeebled 2 are automated.",
+                "The Stage 3 DC 23 basic Fortitude damage save, Stage 3 to Stage 1 cycle, second-cycle doubled damage, and magic-only recovery exception remain manual."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Metadata.SourceWorkLabel",
+              "manualComment": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.sportlebore-capsule.Metadata.ManualComment"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "8u0ypXlFIcpSlMGL",
+      "name": "Tatzlwyrm's Gasp",
+      "type": "effect",
+      "img": "icons/svg/biohazard.svg",
+      "system": {
+        "description": {
+          "value": "Level 2 inhaled poison with a DC 15 Fortitude save and a maximum duration of 3 rounds.",
+          "gm": ""
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "inhaled"
+          ],
+          "otherTags": [
+            "poison",
+            "inhaled"
+          ]
+        },
+        "level": {
+          "value": 2
+        },
+        "duration": {
+          "value": -1,
+          "unit": "unlimited",
+          "expiry": null,
+          "sustained": false
+        },
+        "start": {
+          "value": 0,
+          "initiative": null
+        },
+        "badge": null,
+        "tokenIcon": {
+          "show": true
+        },
+        "unidentified": false
+      },
+      "flags": {
+        "pf2e-affliction-forge": {
+          "managed": true,
+          "documentKind": "affliction-template",
+          "schemaVersion": 2,
+          "definitionId": "affliction-forge-remastered-rules.howl-of-the-wild.tatzlwyrms-gasp",
+          "definitionVersion": 2,
+          "definition": {
+            "schemaVersion": 2,
+            "id": "affliction-forge-remastered-rules.howl-of-the-wild.tatzlwyrms-gasp",
+            "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Name",
+            "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Description",
+            "img": "icons/svg/biohazard.svg",
+            "afflictionType": "poison",
+            "level": 2,
+            "rarity": "common",
+            "traits": [
+              "poison",
+              "inhaled"
+            ],
+            "themes": [
+              "poison",
+              "inhaled"
+            ],
+            "saveDefaults": {
+              "execution": "player",
+              "visibility": "public"
+            },
+            "identification": {
+              "initialState": "identified"
+            },
+            "delivery": {
+              "injuryPoison": false
+            },
+            "multipleExposure": "default",
+            "restrictions": {
+              "conditionLocks": [],
+              "healing": "none",
+              "blockedCapabilities": []
+            },
+            "checks": [
+              {
+                "id": "primary",
+                "label": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Checks.1.Label",
+                "kind": "save",
+                "statistic": "fortitude",
+                "dcMode": "fixed",
+                "dc": 15,
+                "policy": null
+              }
+            ],
+            "initialCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "reject"
+                },
+                "success": {
+                  "action": "reject"
+                },
+                "failure": {
+                  "action": "set-stage",
+                  "stage": 1
+                },
+                "criticalFailure": {
+                  "action": "set-stage",
+                  "stage": 2
+                }
+              }
+            },
+            "onset": null,
+            "maximumDuration": {
+              "value": 3,
+              "unit": "rounds"
+            },
+            "defaultStageCheck": {
+              "checkIds": [
+                "primary"
+              ],
+              "combine": "single",
+              "outcomes": {
+                "criticalSuccess": {
+                  "action": "stage-delta",
+                  "delta": -2
+                },
+                "success": {
+                  "action": "stage-delta",
+                  "delta": -1
+                },
+                "failure": {
+                  "action": "stage-delta",
+                  "delta": 1
+                },
+                "criticalFailure": {
+                  "action": "stage-delta",
+                  "delta": 2
+                }
+              }
+            },
+            "progression": {
+              "belowStageOne": "recover",
+              "aboveMaximumStage": "clamp",
+              "virulent": false
+            },
+            "stages": [
+              {
+                "id": "stage-1",
+                "number": 1,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.1.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.1.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.tatzlwyrms-gasp.stage-1",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.1.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "condition",
+                      "slug": "sickened",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-2",
+                "number": 2,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.2.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.2.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.tatzlwyrms-gasp.stage-2",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.2.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "2d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              },
+              {
+                "id": "stage-3",
+                "number": 3,
+                "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.3.Name",
+                "description": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.3.Description",
+                "duration": {
+                  "value": 1,
+                  "unit": "rounds"
+                },
+                "expiryAction": "check",
+                "check": null,
+                "restrictions": {
+                  "conditionLocks": [],
+                  "healing": "none",
+                  "blockedCapabilities": []
+                },
+                "effectPersistence": "stage",
+                "effectComponentPersistence": [],
+                "effect": {
+                  "schemaVersion": 2,
+                  "id": "affliction-forge-remastered-rules.howl-of-the-wild.tatzlwyrms-gasp.stage-3",
+                  "name": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Stages.3.Effect.Name",
+                  "duration": {
+                    "value": -1,
+                    "unit": "unlimited",
+                    "expiry": null
+                  },
+                  "components": [
+                    {
+                      "type": "damage",
+                      "formula": "4d6",
+                      "damageType": "poison"
+                    },
+                    {
+                      "type": "condition",
+                      "slug": "enfeebled",
+                      "value": 1
+                    }
+                  ],
+                  "application": {},
+                  "metadata": {}
+                },
+                "numericModifiers": [],
+                "periodicEffects": [],
+                "preActionGates": [],
+                "reactions": []
+              }
+            ],
+            "metadata": {
+              "originModule": "affliction-forge-remastered-rules",
+              "originFeature": "remastered-rules-library",
+              "sourceWorkId": "howl-of-the-wild",
+              "sourcePage": 111,
+              "sourceSection": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Metadata.SourceSection",
+              "sourceName": "Tatzlwyrm's Gasp",
+              "contentLanguage": "i18n",
+              "translation": "localized-independent-mechanics",
+              "license": "ORC",
+              "automationStatus": "full",
+              "licenseReview": {
+                "mechanicsOnly": true,
+                "reservedMaterial": "passed",
+                "nameReview": "passed"
+              },
+              "automationNotes": [
+                "Ordinary poison delivery and staged progression are delegated to Affliction Forge 0.1.61."
+              ],
+              "sourceWorkLabel": "@i18n:AFFLICTION_FORGE_REMASTERED.Content.howl-of-the-wild.tatzlwyrms-gasp.Metadata.SourceWorkLabel"
+            }
+          },
+          "originModule": "affliction-forge-remastered-rules",
+          "originFeature": "remastered-rules-library"
+        },
+        "affliction-forge-remastered-rules": {
+          "contentRevision": 3
         }
       },
       "effects": [],

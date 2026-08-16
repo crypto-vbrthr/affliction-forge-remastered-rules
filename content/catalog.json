@@ -28,6 +28,12 @@
       "sourceWorkId": "treasure-vault-remastered",
       "status": "complete",
       "entries": 33
+    },
+    {
+      "id": "howl-of-the-wild",
+      "sourceWorkId": "howl-of-the-wild",
+      "status": "content-started",
+      "entries": 3
     }
   ]
 }

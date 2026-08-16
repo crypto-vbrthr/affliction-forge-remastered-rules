@@ -18,7 +18,7 @@ test("manifest requires Affliction Forge 0.1.61 and PF2e", () => {
   assert.equal(dependency.compatibility.minimum, "0.1.61");
 });
 
-test("manifest declares exactly the four planned Item packs", () => {
+test("manifest declares exactly the four physical Item packs", () => {
   assert.equal(manifest.packs.length, 4);
   assert.deepEqual(manifest.packs.map((entry) => entry.name), [...PACK_NAMES]);
   for (const pack of manifest.packs) {

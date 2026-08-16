@@ -6,7 +6,8 @@ export const SUPPORTED_PACKS = Object.freeze([
   "player-core",
   "gm-core",
   "player-core-2",
-  "treasure-vault-remastered"
+  "treasure-vault-remastered",
+  "howl-of-the-wild"
 ]);
 export const SOURCE_WORK_IDS = new Set(SUPPORTED_PACKS);
 export const AFFLICTION_TYPES = new Set(["poison", "disease", "curse", "other"]);
@@ -427,7 +428,7 @@ export function buildItemSource(definition, { localize = null } = {}) {
         originModule: MODULE_ID,
         originFeature: "remastered-rules-library"
       },
-      [MODULE_ID]: { contentRevision: 2 }
+      [MODULE_ID]: { contentRevision: 3 }
     },
     effects: [],
     folder: null,

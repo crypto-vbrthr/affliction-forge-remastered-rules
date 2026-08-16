@@ -101,7 +101,8 @@ test("reserved proper names do not leak into the published Treasure Vault defini
   assert.doesNotMatch(JSON.stringify(poison), /achaekek/i);
 });
 
-test("runtime seed contains the complete 112-definition library", () => {
+test("runtime seed contains the complete 115-definition library", () => {
   assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK[pack].length, 33);
-  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 112);
+  assert.equal(BUNDLED_ITEM_SOURCES_BY_PACK["howl-of-the-wild"].length, 3);
+  assert.equal(Object.values(BUNDLED_ITEM_SOURCES_BY_PACK).flat().length, 115);
 });
