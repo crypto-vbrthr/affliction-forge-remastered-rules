@@ -94,5 +94,8 @@
     }
   ],
   "license": "LICENSE",
-  "readme": "README.md"
+  "readme": "README.md",
+  "url": "https://github.com/crypto-vbrthr/affliction-forge-remastered-rules",
+  "manifest": "https://raw.githubusercontent.com/crypto-vbrthr/affliction-forge-remastered-rules/main/module.json",
+  "download": "https://github.com/crypto-vbrthr/affliction-forge-remastered-rules/releases/download/0.1.17/affliction-forge-remastered-rules.zip"
 }
